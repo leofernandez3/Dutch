@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Dutch Foundation Course</title>
+    <!-- Bootstrap 5 CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        .card {
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .lesson-item {
+            cursor: pointer;
+            transition: all 0.2s;
+            border-left: 4px solid transparent;
+        }
+        .lesson-item:hover {
+            background-color: #f8f9fa;
+            transform: translateX(5px);
+        }
+        .lesson-item.completed {
+            border-left-color: #28a745;
+            background-color: #f0fff4;
+        }
+        .lesson-item.current {
+            border-left-color: #667eea;
+            background-color: #e8eaff;
+        }
+        .xp-badge {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 50px;
+            padding: 5px 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .streak-badge {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        .level-badge {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .achievement-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .progress-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: conic-gradient(#28a745 0deg, #e9ecef 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 -5px 30px rgba(0,0,0,0.2);
+            padding: 15px;
+            z-index: 1000;
+        }
+        .quiz-option {
+            cursor: pointer;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #f8f9fa;
+            border-color: #667eea;
+        }
+        .quiz-option.correct {
+            background-color: #d4edda;
+            border-color: #28a745;
+        }
+        .quiz-option.incorrect {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+        }
+        .toast-custom {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            z-index: 1050;
+            min-width: 250px;
+        }
+        .progress-bar-animated {
+            transition: width 0.5s ease;
+        }
+        .badge-achievement {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .badge-achievement:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .card-title {
+                font-size: 1rem;
+            }
+            .display-4 {
+                font-size: 2rem;
+            }
+        }
+        .disc-group {
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .disc-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .note-textarea {
+            font-size: 0.9rem;
+            border-radius: 12px;
+        }
+        .speed-btn {
+            border-radius: 20px;
+            margin: 0 3px;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+        }
+        .speed-btn.active {
+            background-color: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid px-3 px-md-4 py-3">
+    <!-- Header -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="text-white mb-0">
+                <i class="bi bi-headphones"></i> Michel Thomas
+            </h1>
+            <p class="text-white-50">Dutch Foundation Course</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+            <div class="xp-badge">
+                <i class="bi bi-star-fill"></i> <span id="xpPoints">0</span> XP
+            </div>
+            <div class="xp-badge streak-badge">
+                <i class="bi bi-fire"></i> <span id="streakDays">0</span> day streak
+            </div>
+            <div class="xp-badge level-badge">
+                <i class="bi bi-trophy-fill"></i> Level <span id="userLevel">1</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Sidebar - Progress & Achievements -->
+        <div class="col-lg-3 mb-4">
+            <div class="card mb-3">
+                <div class="card-body text-center">
+                    <div class="progress-circle mb-3" id="progressCircle">
+                        <span class="h4 mb-0 fw-bold" id="progressPercent">0%</span>
+                    </div>
+                    <h5>Course Progress</h5>
+                    <div class="progress mb-3" style="height: 10px;">
+                        <div class="progress-bar progress-bar-animated" id="globalProgress" style="width: 0%;"></div>
+                    </div>
+                    <hr>
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <h6><i class="bi bi-check-circle-fill text-success"></i> <span id="completedCount">0</span>/<span id="totalLessons">0</span></h6>
+                            <small>Lessons</small>
+                        </div>
+                        <div class="col-6">
+                            <h6><i class="bi bi-question-circle-fill text-info"></i> <span id="quizAvg">0</span>%</h6>
+                            <small>Quiz Avg</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="card">
+                <div class="card-header bg-white fw-bold">
+                    <i class="bi bi-award-fill text-warning"></i> Achievements
+                </div>
+                <div class="card-body" id="achievementsList">
+                    <!-- Dynamic achievements -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content - Lessons -->
+        <div class="col-lg-9">
+            <div class="card">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-book"></i> Course Lessons</h5>
+                    <div class="mt-2 mt-md-0">
+                        <button class="btn btn-sm btn-outline-secondary" onclick="resetProgress()">
+                            <i class="bi bi-arrow-repeat"></i> Reset Progress
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" id="lessonsContainer">
+                    <!-- Dynamic lessons from JS -->
+                </div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="card mt-4" id="quizCard" style="display: none;">
+                <div class="card-header bg-white fw-bold">
+                    <i class="bi bi-puzzle-fill text-primary"></i> Quick Quiz
+                </div>
+                <div class="card-body" id="quizContainer">
+                    <!-- Dynamic quiz -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fixed Audio Player -->
+<div class="audio-player">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5 mb-2 mb-md-0">
+                <div class="fw-bold" id="currentLessonTitle">Select a lesson to start</div>
+                <small class="text-muted" id="currentLessonTrack"></small>
+            </div>
+            <div class="col-md-7">
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="togglePlayPause()" id="playPauseBtn">
+                        <i class="bi bi-play-fill"></i>
+                    </button>
+                    <span id="currentTime">0:00</span>
+                    <input type="range" id="audioProgress" style="flex:1; min-width: 100px;" value="0" step="0.01">
+                    <span id="duration">0:00</span>
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-outline-secondary speed-btn" data-speed="0.75">0.75x</button>
+                        <button class="btn btn-sm btn-outline-secondary speed-btn active" data-speed="1">1x</button>
+                        <button class="btn btn-sm btn-outline-secondary speed-btn" data-speed="1.25">1.25x</button>
+                        <button class="btn btn-sm btn-outline-secondary speed-btn" data-speed="1.5">1.5x</button>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger" onclick="saveBookmark()">
+                        <i class="bi bi-bookmark-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast notifications -->
+<div class="toast-custom" id="toast" style="display: none;">
+    <div class="toast show" role="alert">
+        <div class="toast-header">
+            <i class="bi bi-gift-fill text-warning me-2"></i>
+            <strong class="me-auto">🎉 Achievement Unlocked!</strong>
+            <button type="button" class="btn-close" onclick="$('#toast').fadeOut()"></button>
+        </div>
+        <div class="toast-body" id="toastMessage">
+            You earned a new badge!
+        </div>
+    </div>
+</div>
+
+<script>
+    // Full track data from PDF (all 8 CDs with descriptions)
+    const trackData = [
+        // Disc 1
+        { disc: 1, track: 1, title: "Introduction", description: "Introduction; relationship of Dutch to English", keyPhrases: ["welkom = welcome", "de kat zat op de mat = the cat sat on the mat"] },
+        { disc: 1, track: 2, title: "Similarities", description: "Similarities in sound and spelling", keyPhrases: ["leren = to learn", "een, twee, drie = one, two, three", "water = water", "het = it", "hier = here", "warm = warm"] },
+        { disc: 1, track: 3, title: "Questions and Negatives", description: "Using 'he?' for questions, 'niet' for not", keyPhrases: ["niet = not", "good = good/right", "zo = like that", "te = too", "heel = very", "dit = this", "dat = that", "wat = what"] },
+        { disc: 1, track: 4, title: "Basic Verbs", description: "Basic verbs and pronouns", keyPhrases: ["daar = there", "ik = I", "ik drink = I drink", "werk = work", "nu = now", "ik doe = I do", "later = later", "ik wil = I want", "je = you", "en = and"] },
+        { disc: 1, track: 5, title: "Infinitives", description: "Dutch infinitive always ends in -en", keyPhrases: ["drinken = to drink", "werken = to work", "eten = to eat", "doen = to do", "waar = where"] },
+        { disc: 1, track: 6, title: "Trigger Verbs", description: "Trigger verbs send second verb to end", keyPhrases: ["voor = for", "kan je? = can you?", "ik kan = I can"] },
+        { disc: 1, track: 7, title: "Negation", description: "Word order with niet", keyPhrases: ["zien = to see", "ik wil het niet = I don't want it", "waarom = why"] },
+        { disc: 1, track: 8, title: "Pronunciation", description: "Pronouncing Dutch 'ij' sound", keyPhrases: ["heel goed = very good/well", "zijn = to be", "komen = to come"] },
+        { disc: 1, track: 9, title: "We Form", description: "Using 'we' for we", keyPhrases: ["we = we", "we willen = we want", "gauw = soon", "wat eten we? = what are we eating?"] },
+        { disc: 1, track: 10, title: "Time Expressions", description: "Using 'middag', 'dag', 'gaan'", keyPhrases: ["middag = afternoon", "dag = day/hello/goodbye", "vanmiddag = this afternoon", "gaan = to go"] },
+        { disc: 1, track: 11, title: "More Negation", description: "Using 'maar', 'nu niet'", keyPhrases: ["beginnen = to begin", "maar = but", "nu niet = not now", "hier niet = not here"] },
+        { disc: 1, track: 12, title: "Object Pronouns", description: "him, her, me", keyPhrases: ["hem = him", "haar = her", "helpen = to help", "me = me", "het spijt me = I'm sorry"] },
+        { disc: 1, track: 13, title: "Must/Have to", description: "Using 'moeten'", keyPhrases: ["ik moet = I must/have to", "moeten = to have to", "vinden = to find"] },
+        { disc: 1, track: 14, title: "To Know", description: "Using 'weten'", keyPhrases: ["weten = to know", "ik weet het = I know it", "weet je? = do you know?"] },
+        // Disc 2
+        { disc: 2, track: 1, title: "Understanding", description: "Using 'begrijpen'", keyPhrases: ["begrijpen = to understand", "ik begrijp het = I understand it", "begrijp je me? = do you understand me?"] },
+        { disc: 2, track: 2, title: "To Have", description: "Using 'hebben'", keyPhrases: ["hebben = to have", "ik heb = I have", "niets = nothing", "iets = something"] },
+        { disc: 2, track: 3, title: "To Say/Tell", description: "Using 'zeggen'", keyPhrases: ["zeggen = to say/tell", "want = because", "ik wil je iets zeggen = I want to tell you something"] },
+        { disc: 2, track: 4, title: "To Give", description: "Using 'geven'", keyPhrases: ["ze = they", "geven = to give", "ik geef = I give"] },
+        { disc: 2, track: 5, title: "Needed/Necessary", description: "Using 'nodig'", keyPhrases: ["nodig = needed/necessary", "nee = no", "ja = yes", "ik heb het nodig = I need it"] },
+        { disc: 2, track: 6, title: "Tomorrow", description: "Using 'morgen'", keyPhrases: ["morgen = tomorrow", "ik wil morgen hier zijn = I want to be here tomorrow"] },
+        { disc: 2, track: 7, title: "Today and Time", description: "Time expressions", keyPhrases: ["vandag = today", "laat = late", "hoe = how", "hoe laat is het? = what time is it?"] },
+        { disc: 2, track: 8, title: "Future Tense", description: "Present tense used for future", keyPhrases: ["ik doe het morgen = I will do it tomorrow", "bellen = to phone"] },
+        { disc: 2, track: 9, title: "To Stay", description: "Using 'blijven'", keyPhrases: ["blijven = to stay", "lang = long", "hoe lang? = how long?"] },
+        { disc: 2, track: 10, title: "-ation Words", description: "English -ation becomes -atie", keyPhrases: ["informatie = information", "situatie = situation", "de = the"] },
+        { disc: 2, track: 11, title: "He/She/It", description: "Third person forms", keyPhrases: ["hij = he", "ze = she", "slecht = bad"] },
+        { disc: 2, track: 12, title: "Adjectives", description: "Adding -e to adjectives", keyPhrases: ["goede informatie = good information", "een = a", "goedemorgen = good morning"] },
+        // Disc 3
+        { disc: 3, track: 1, title: "Good Afternoon", description: "Using 'goedemiddag'", keyPhrases: ["goedemiddag = good afternoon", "al = already", "ik ga het morgen doen = I'm going to do it tomorrow"] },
+        { disc: 3, track: 2, title: "You (Plural)", description: "Using 'jullie'", keyPhrases: ["jullie = you all", "naar = to (a place)"] },
+        { disc: 3, track: 3, title: "To Be Able", description: "Using 'kunnen'", keyPhrases: ["kunnen = to be able", "we kunnen = we can"] },
+        { disc: 3, track: 4, title: "Commands", description: "Using 'even' for polite requests", keyPhrases: ["blijf even hier = stay here a moment", "wachten = to wait", "weg = away"] },
+        { disc: 3, track: 5, title: "He Has It", description: "Third person possession", keyPhrases: ["hij heeft het al = he has it already", "ze heeft het al nodig = she needs it already"] },
+        { disc: 3, track: 6, title: "Formal You", description: "Using 'U'", keyPhrases: ["U = formal you", "werkt u hier? = do you work here?"] },
+        { disc: 3, track: 7, title: "Verb Forms", description: "Verb conjugations", keyPhrases: ["je kunt dat doen = you can do that", "jullie drinken = you all drink"] },
+        { disc: 3, track: 8, title: "Verb Endings", description: "Verbs ending in -t", keyPhrases: ["hij werkt = he works", "je gaat = you go"] },
+        { disc: 3, track: 9, title: "With Us", description: "Using 'met'", keyPhrases: ["met = with", "hoe gaat het met je? = how are you?", "ons = us"] },
+        { disc: 3, track: 10, title: "Polite Requests", description: "Using 'alstublieft'", keyPhrases: ["alstublieft = please (formal)", "alsjeblieft = please (informal)"] },
+        { disc: 3, track: 11, title: "Expensive", description: "Using 'duur'", keyPhrases: ["duur = expensive", "kopen = to buy", "te duur = too expensive"] },
+        { disc: 3, track: 12, title: "Everything/Nothing", description: "Using 'alles', 'niets'", keyPhrases: ["klaar = ready/finished", "alles = everything", "hij kan alles zien = he can see everything"] },
+        // Disc 4
+        { disc: 4, track: 1, title: "Nice/Pretty", description: "Using 'leuk'", keyPhrases: ["leuk = nice/pretty/fun", "ik vind het leuk = I like it", "allemaal = all of it"] },
+        { disc: 4, track: 2, title: "Friend", description: "Using 'vriend'", keyPhrases: ["vriend = friend", "vrienden = friends"] },
+        { disc: 4, track: 3, title: "Beautiful", description: "Using 'mooi'", keyPhrases: ["mooi = nice/beautiful", "een mooie dag = a nice day"] },
+        { disc: 4, track: 4, title: "Liking Activities", description: "Using 'graag'", keyPhrases: ["graag = with pleasure/gladly", "ik drink graag = I like drinking"] },
+        { disc: 4, track: 5, title: "Stressed Pronouns", description: "Using 'jij', 'zij', 'wij'", keyPhrases: ["jij = you (stressed)", "ook = too/also", "ik ook = me too"] },
+        { disc: 4, track: 6, title: "Thank You", description: "Polite refusals", keyPhrases: ["nee dank je = no thank you", "ik wil graag water = I would like water"] },
+        { disc: 4, track: 7, title: "Possible/Impossible", description: "Using 'mogelijk'", keyPhrases: ["mogelijk = possible", "onmogelijk = impossible"] },
+        { disc: 4, track: 8, title: "Home", description: "Using 'huis'", keyPhrases: ["huis = house/home", "ik ga naar huis = I'm going home", "thuis = at home", "ik ben = I am"] },
+        { disc: 4, track: 9, title: "Because", description: "Using 'omdat'", keyPhrases: ["moe = tired", "omdat = because (sends verb to end)"] },
+        { disc: 4, track: 10, title: "Boring", description: "Using 'saai'", keyPhrases: ["saai = boring", "het is een saaie dag = it's a boring day"] },
+        // Disc 5
+        { disc: 5, track: 1, title: "Busy", description: "Using 'druk'", keyPhrases: ["druk = busy", "ze heeft het heel druk = she is busy"] },
+        { disc: 5, track: 2, title: "To Cost", description: "Using 'kosten'", keyPhrases: ["kosten = to cost", "veel = much/a lot", "hoeveel = how much"] },
+        { disc: 5, track: 3, title: "When", description: "Using 'wanneer'", keyPhrases: ["wanneer = when", "ik weet niet wanneer ze begint = I don't know when she begins"] },
+        { disc: 5, track: 4, title: "Who", description: "Using 'wie'", keyPhrases: ["wie = who", "wie is dat? = who is that?"] },
+        { disc: 5, track: 5, title: "May I", description: "Using 'mogen'", keyPhrases: ["mag ik? = may I?", "mogen = to be allowed to"] },
+        { disc: 5, track: 6, title: "To Ask", description: "Using 'vragen'", keyPhrases: ["vragen = to ask", "de vraag = the question"] },
+        { disc: 5, track: 7, title: "Easy", description: "Using 'makkelijk'", keyPhrases: ["makkelijk = easy", "nieuw = new"] },
+        { disc: 5, track: 8, title: "Diminutives", description: "Adding -je to make things small", keyPhrases: ["vraagje = little question", "huisje = little house", "katje = kitten"] },
+        { disc: 5, track: 9, title: "Feelings", description: "Reflexive verbs", keyPhrases: ["voelen = to feel", "ik voel me beter = I feel better", "zich = himself/herself"] },
+        { disc: 5, track: 10, title: "Reflexive Verbs", description: "Washing, hurrying", keyPhrases: ["zich wassen = to wash oneself", "zich haasten = to hurry"] },
+        { disc: 5, track: 11, title: "No/None", description: "Using 'geen'", keyPhrases: ["geen = no/none/not any"] },
+        // Disc 6
+        { disc: 6, track: 1, title: "Hunger", description: "Expressing hunger", keyPhrases: ["tijd = time", "honger = hunger", "ik heb honger = I'm hungry"] },
+        { disc: 6, track: 2, title: "Interest", description: "Expressing interest", keyPhrases: ["interesse = interest", "kans = chance/opportunity"] },
+        { disc: 6, track: 3, title: "Om te", description: "Using 'om te' for 'in order to'", keyPhrases: ["om te = for to", "tijd om te werken = time to work"] },
+        { disc: 6, track: 4, title: "Always/Often", description: "Adverbs of frequency", keyPhrases: ["altijd = always", "vaak = often", "belangrijk = important"] },
+        { disc: 6, track: 5, title: "To Speak", description: "Using 'spreken'", keyPhrases: ["spreken = to speak", "Engels = English", "Nederlands = Dutch", "het = the (for het-words)"] },
+        { disc: 6, track: 6, title: "In Dutch", description: "Saying 'in het Nederlands'", keyPhrases: ["in het Nederlands = in Dutch", "leren = to learn"] },
+        { disc: 6, track: 7, title: "Would/Supposed to", description: "Using 'zou'", keyPhrases: ["zou = would/supposed to"] },
+        { disc: 6, track: 8, title: "Going to Be", description: "Using 'gaan' only for action verbs", keyPhrases: ["als = if"] },
+        { disc: 6, track: 9, title: "If", description: "Using 'als'", keyPhrases: ["als = if (sends verb to end)"] },
+        { disc: 6, track: 10, title: "America", description: "Using 'Amerika'", keyPhrases: ["Amerika = America", "mogen = to be allowed"] },
+        { disc: 6, track: 11, title: "Waiting", description: "Using 'wachten'", keyPhrases: ["ik wacht hier als je dat wil = I'll wait here if you want"] },
+        // Disc 7
+        { disc: 7, track: 1, title: "If/Whether", description: "Using 'of'", keyPhrases: ["of = if/whether"] },
+        { disc: 7, track: 2, title: "To Live", description: "Using 'wonen'", keyPhrases: ["wonen = to live (in a place)", "Engeland = England"] },
+        { disc: 7, track: 3, title: "Year/Century", description: "Time expressions", keyPhrases: ["jaar = year", "eeuw = century/ages"] },
+        { disc: 7, track: 4, title: "Past Tense Intro", description: "Introduction to past tense", keyPhrases: ["trigger verbs in past tense"] },
+        { disc: 7, track: 5, title: "I Could", description: "Using 'kon'", keyPhrases: ["ik kon = I could (was able to)", "gisteren = yesterday"] },
+        { disc: 7, track: 6, title: "Evening", description: "Using 'avond'", keyPhrases: ["avond = evening", "gisteravond = yesterday evening"] },
+        { disc: 7, track: 7, title: "We Could", description: "Using 'konden'", keyPhrases: ["wij konden = we could"] },
+        { disc: 7, track: 8, title: "Was/Were", description: "Past tense of 'zijn'", keyPhrases: ["was = was", "waren = were"] },
+        { disc: 7, track: 9, title: "Had", description: "Past tense of 'hebben'", keyPhrases: ["had = had", "hadden = had (plural)"] },
+        { disc: 7, track: 10, title: "To Try", description: "Using 'proberen'", keyPhrases: ["proberen = to try"] },
+        { disc: 7, track: 11, title: "To Wait For", description: "Using 'wachten op'", keyPhrases: ["wachten op = to wait for", "moest = had to"] },
+        { disc: 7, track: 12, title: "Shall/Will", description: "Using 'zal' for promises", keyPhrases: ["zal = shall/will", "ik zal je morgen helpen = I'll help you tomorrow"] },
+        // Disc 8
+        { disc: 8, track: 1, title: "Wanted", description: "Past tense of 'willen'", keyPhrases: ["wilde = wanted", "wij wilden hier wonen = we wanted to live here"] },
+        { disc: 8, track: 2, title: "-eren Verbs", description: "Verbs ending in -eren", keyPhrases: ["combineren = to combine", "repareren = to repair"] },
+        { disc: 8, track: 3, title: "To Let/Allow", description: "Using 'laten'", keyPhrases: ["laten = to let/allow", "laat me gaan = let me go"] },
+        { disc: 8, track: 4, title: "To Clean", description: "Using 'schoonmaken'", keyPhrases: ["schoon = clean", "schoonmaken = to clean"] },
+        { disc: 8, track: 5, title: "To Go Away", description: "Using 'weggaan'", keyPhrases: ["weggaan = to go away", "zonder = without"] },
+        { disc: 8, track: 6, title: "To Go Out", description: "Using 'uitgaan'", keyPhrases: ["uitgaan = to go out", "vanavond = this evening"] },
+        { disc: 8, track: 7, title: "To Come Along", description: "Using 'meekomen'", keyPhrases: ["meekomen = to come along", "meedoen = to join in"] },
+        { disc: 8, track: 8, title: "Separable Prefixes", description: "Prefixes that separate", keyPhrases: ["aankomen = to arrive", "binnenkomen = to come in"] },
+        { disc: 8, track: 9, title: "To Fetch", description: "Using 'halen'", keyPhrases: ["halen = to fetch", "ophalen = to pick up", "herhalen = to repeat"] },
+        { disc: 8, track: 10, title: "To Hope", description: "Using 'hopen'", keyPhrases: ["hopen = to hope", "moeilijk = difficult"] },
+        { disc: 8, track: 11, title: "To Think", description: "Using 'denken'", keyPhrases: ["denken = to think", "zitten = to sit"] },
+        { disc: 8, track: 12, title: "There", description: "Using 'er'", keyPhrases: ["er = there", "erop = on it", "erin = in it", "ermee = with it"] }
+    ];
+
+    let totalLessons = trackData.length;
+    let userProgress = JSON.parse(localStorage.getItem('dutchProgress')) || {
+        completed: [],
+        xp: 0,
+        streak: 0,
+        lastActive: null,
+        level: 1,
+        notes: {},
+        bookmarks: {},
+        quizScores: {},
+        achievements: []
+    };
+    
+    let currentAudio = null;
+    let currentLessonIndex = -1;
+    let currentAudioSrc = null;
+    
+    // Initialize
+    function init() {
+        updateUI();
+        renderLessons();
+        renderAchievements();
+        checkStreak();
+        document.getElementById('totalLessons').innerText = totalLessons;
+        
+        // Load last played lesson if exists
+        let lastLesson = localStorage.getItem('lastLesson');
+        if (lastLesson && userProgress.bookmarks[lastLesson]) {
+            loadLesson(parseInt(lastLesson), userProgress.bookmarks[lastLesson]);
+        }
+    }
+    
+    function checkStreak() {
+        let today = new Date().toDateString();
+        if (userProgress.lastActive === today) return;
+        
+        let yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        
+        if (userProgress.lastActive === yesterday.toDateString()) {
+            userProgress.streak++;
+            addXP(10, "Daily streak bonus!");
+            showToast(`🔥 ${userProgress.streak} day streak! +10 XP`);
+        } else if (userProgress.lastActive !== today) {
+            userProgress.streak = 1;
+            addXP(5, "First login today!");
+        }
+        userProgress.lastActive = today;
+        saveProgress();
+    }
+    
+    function addXP(amount, reason) {
+        userProgress.xp += amount;
+        let newLevel = Math.floor(userProgress.xp / 500) + 1;
+        if (newLevel > userProgress.level) {
+            userProgress.level = newLevel;
+            showToast(`🎉 LEVEL UP! You reached level ${newLevel}!`);
+            checkAchievements();
+        }
+        saveProgress();
+        updateUI();
+    }
+    
+    function checkAchievements() {
+        let completed = userProgress.completed.length;
+        let achievements = userProgress.achievements;
+        
+        if (completed >= 10 && !achievements.includes('beginner')) {
+            achievements.push('beginner');
+            showToast("🏅 Achievement Unlocked: Beginner! (10 lessons)");
+        }
+        if (completed >= 50 && !achievements.includes('dedicated')) {
+            achievements.push('dedicated');
+            showToast("🏅 Achievement Unlocked: Dedicated! (50 lessons)");
+        }
+        if (completed === totalLessons && !achievements.includes('master')) {
+            achievements.push('master');
+            showToast("🏆 Achievement Unlocked: Master! Completed all lessons!");
+        }
+        if (userProgress.streak >= 7 && !achievements.includes('streak7')) {
+            achievements.push('streak7');
+            showToast("🔥 Achievement Unlocked: 7-Day Streak!");
+        }
+        if (userProgress.xp >= 1000 && !achievements.includes('xp1000')) {
+            achievements.push('xp1000');
+            showToast("⭐ Achievement Unlocked: 1000 XP!");
+        }
+        saveProgress();
+        renderAchievements();
+    }
+    
+    function renderAchievements() {
+        let achievements = userProgress.achievements;
+        let html = '';
+        let allAchievements = [
+            {id: 'beginner', name: 'Beginner', icon: '🌱', desc: 'Complete 10 lessons'},
+            {id: 'dedicated', name: 'Dedicated', icon: '📚', desc: 'Complete 50 lessons'},
+            {id: 'master', name: 'Master', icon: '👑', desc: 'Complete all lessons'},
+            {id: 'streak7', name: '7-Day Streak', icon: '🔥', desc: 'Log in for 7 days straight'},
+            {id: 'xp1000', name: 'XP Collector', icon: '⭐', desc: 'Earn 1000 XP'}
+        ];
+        
+        allAchievements.forEach(ach => {
+            let unlocked = achievements.includes(ach.id);
+            html += `<div class="text-center mb-2 badge-achievement" onclick="alert('${ach.desc}')">
+                        <div class="achievement-card ${!unlocked ? 'opacity-50' : ''}" style="background: ${unlocked ? 'linear-gradient(135deg, #667eea, #764ba2)' : '#6c757d'}">
+                            <div class="fs-3">${ach.icon}</div>
+                            <div class="fw-bold small">${ach.name}</div>
+                            ${!unlocked ? '<small class="opacity-75">🔒 Locked</small>' : '<small>✅ Unlocked</small>'}
+                        </div>
+                    </div>`;
+        });
+        document.getElementById('achievementsList').innerHTML = html;
+    }
+    
+    function renderLessons() {
+        let container = document.getElementById('lessonsContainer');
+        let html = '';
+        
+        for (let disc = 1; disc <= 8; disc++) {
+            let discLessons = trackData.filter(t => t.disc === disc);
+            html += `<div class="disc-group">
+                        <div class="disc-header" onclick="$('#disc-${disc}').slideToggle()">
+                            <i class="bi bi-disc"></i> Disc ${disc} - ${discLessons.length} lessons
+                            <i class="bi bi-chevron-down float-end"></i>
+                        </div>
+                        <div id="disc-${disc}" class="collapse show">`;
+            
+            discLessons.forEach((lesson, idx) => {
+                let globalIdx = trackData.findIndex(t => t.disc === lesson.disc && t.track === lesson.track);
+                let isCompleted = userProgress.completed.includes(globalIdx);
+                let isCurrent = currentLessonIndex === globalIdx;
+                let completionClass = isCompleted ? 'completed' : '';
+                let currentClass = isCurrent ? 'current' : '';
+                
+                html += `<div class="lesson-item p-3 ${completionClass} ${currentClass}" onclick="loadLesson(${globalIdx})">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-2">Track ${lesson.track}</span>
+                                    <strong>${lesson.title}</strong>
+                                    <div class="small text-muted mt-1">${lesson.description.substring(0, 60)}...</div>
+                                </div>
+                                <div>
+                                    ${isCompleted ? '<i class="bi bi-check-circle-fill text-success fs-4"></i>' : '<i class="bi bi-play-circle text-primary fs-4"></i>'}
+                                </div>
+                            </div>
+                        </div>`;
+            });
+            html += `</div></div>`;
+        }
+        container.innerHTML = html;
+    }
+    
+    function loadLesson(index, seekTime = 0) {
+        let lesson = trackData[index];
+        if (!lesson) return;
+        
+        currentLessonIndex = index;
+        let audioPath = `/Dutch Foundation Course Audio/${String(lesson.disc).padStart(2,'0')}/Michel Thomas Dutch Foundation Disc ${lesson.disc} - ${String(lesson.track).padStart(2,'0')}.mp3`;
+        
+        if (currentAudio) {
+            currentAudio.pause();
+        }
+        
+        currentAudio = new Audio(audioPath);
+        currentAudioSrc = audioPath;
+        currentAudio.playbackRate = 1;
+        
+        currentAudio.addEventListener('loadedmetadata', () => {
+            document.getElementById('duration').innerText = formatTime(currentAudio.duration);
+            if (seekTime > 0 && seekTime < currentAudio.duration) {
+                currentAudio.currentTime = seekTime;
+            }
+        });
+        
+        currentAudio.addEventListener('timeupdate', () => {
+            document.getElementById('currentTime').innerText = formatTime(currentAudio.currentTime);
+            let progress = (currentAudio.currentTime / currentAudio.duration) * 100;
+            document.getElementById('audioProgress').value = progress;
+            
+            // Auto-save position every 10 seconds
+            if (Math.floor(currentAudio.currentTime) % 10 === 0 && currentAudio.currentTime > 0) {
+                userProgress.bookmarks[index] = currentAudio.currentTime;
+                saveProgress();
+            }
+        });
+        
+        currentAudio.addEventListener('ended', () => {
+            if (!userProgress.completed.includes(index)) {
+                userProgress.completed.push(index);
+                addXP(25, `Completed: ${lesson.title}`);
+                showToast(`✅ Completed "${lesson.title}"! +25 XP`);
+                renderLessons();
+                updateUI();
+                checkAchievements();
+            }
+            saveProgress();
+            document.getElementById('playPauseBtn').innerHTML = '<i class="bi bi-play-fill"></i>';
+        });
+        
+        currentAudio.play();
+        document.getElementById('playPauseBtn').innerHTML = '<i class="bi bi-pause-fill"></i>';
+        document.getElementById('currentLessonTitle').innerText = lesson.title;
+        document.getElementById('currentLessonTrack').innerText = `Disc ${lesson.disc} Track ${lesson.track}`;
+        
+        localStorage.setItem('lastLesson', index);
+        renderLessons();
+        
+        // Show quiz after loading lesson
+        showQuizForLesson(lesson);
+    }
+    
+    function showQuizForLesson(lesson) {
+        let phrases = lesson.keyPhrases;
+        if (!phrases || phrases.length < 2) {
+            document.getElementById('quizCard').style.display = 'none';
+            return;
+        }
+        
+        // Generate random quiz question
+        let randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+        let parts = randomPhrase.split(' = ');
+        if (parts.length !== 2) {
+            document.getElementById('quizCard').style.display = 'none';
+            return;
+        }
+        
+        let dutchWord = parts[0];
+        let englishMeaning = parts[1];
+        
+        // Generate distractors
+        let allMeanings = trackData.flatMap(t => t.keyPhrases || []).map(p => p.split(' = ')[1]).filter(m => m && m !== englishMeaning);
+        let distractors = [...new Set(allMeanings)].slice(0, 3);
+        
+        let options = [englishMeaning, ...distractors.slice(0, 3)];
+        options = options.sort(() => Math.random() - 0.5);
+        
+        let quizHtml = `
+            <div class="mb-3">
+                <h6>What does "${dutchWord}" mean?</h6>
+            </div>
+            ${options.map(opt => `<div class="quiz-option" onclick="answerQuiz(this, '${opt}', '${englishMeaning}', ${currentLessonIndex})">${opt}</div>`)}
+        `;
+        
+        document.getElementById('quizContainer').innerHTML = quizHtml;
+        document.getElementById('quizCard').style.display = 'block';
+    }
+    
+    function answerQuiz(element, selected, correct, lessonIndex) {
+        if ($(element).hasClass('correct') || $(element).hasClass('incorrect')) return;
+        
+        if (selected === correct) {
+            $(element).addClass('correct');
+            if (!userProgress.quizScores[lessonIndex]) {
+                userProgress.quizScores[lessonIndex] = { correct: 0, total: 0 };
+            }
+            userProgress.quizScores[lessonIndex].correct++;
+            userProgress.quizScores[lessonIndex].total++;
+            addXP(10, "Correct quiz answer!");
+            showToast("✅ Correct! +10 XP");
+        } else {
+            $(element).addClass('incorrect');
+            if (!userProgress.quizScores[lessonIndex]) {
+                userProgress.quizScores[lessonIndex] = { correct: 0, total: 0 };
+            }
+            userProgress.quizScores[lessonIndex].total++;
+            showToast("❌ Incorrect! The correct answer was: " + correct);
+            $(`.quiz-option:contains('${correct}')`).addClass('correct');
+        }
+        
+        saveProgress();
+        updateUI();
+        
+        // Load new quiz after 2 seconds
+        setTimeout(() => {
+            showQuizForLesson(trackData[lessonIndex]);
+        }, 2000);
+    }
+    
+    function togglePlayPause() {
+        if (!currentAudio) return;
+        if (currentAudio.paused) {
+            currentAudio.play();
+            document.getElementById('playPauseBtn').innerHTML = '<i class="bi bi-pause-fill"></i>';
+        } else {
+            currentAudio.pause();
+            document.getElementById('playPauseBtn').innerHTML = '<i class="bi bi-play-fill"></i>';
+        }
+    }
+    
+    function saveBookmark() {
+        if (currentAudio && currentLessonIndex >= 0) {
+            userProgress.bookmarks[currentLessonIndex] = currentAudio.currentTime;
+            saveProgress();
+            showToast("📖 Bookmark saved at " + formatTime(currentAudio.currentTime));
+        }
+    }
+    
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return "0:00";
+        let mins = Math.floor(seconds / 60);
+        let secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2,'0')}`;
+    }
+    
+    function updateUI() {
+        let completedCount = userProgress.completed.length;
+        let percent = (completedCount / totalLessons) * 100;
+        document.getElementById('completedCount').innerText = completedCount;
+        document.getElementById('progressPercent').innerText = Math.round(percent) + '%';
+        document.getElementById('globalProgress').style.width = percent + '%';
+        document.getElementById('xpPoints').innerText = userProgress.xp;
+        document.getElementById('streakDays').innerText = userProgress.streak;
+        document.getElementById('userLevel').innerText = userProgress.level;
+        
+        // Update progress circle
+        let angle = (percent / 100) * 360;
+        document.getElementById('progressCircle').style.background = `conic-gradient(#28a745 ${angle}deg, #e9ecef ${angle}deg)`;
+        
+        // Calculate quiz average
+        let scores = Object.values(userProgress.quizScores);
+        let totalCorrect = scores.reduce((sum, s) => sum + s.correct, 0);
+        let totalQuestions = scores.reduce((sum, s) => sum + s.total, 0);
+        let avg = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+        document.getElementById('quizAvg').innerText = avg;
+    }
+    
+    function saveProgress() {
+        localStorage.setItem('dutchProgress', JSON.stringify(userProgress));
+        updateUI();
+    }
+    
+    function resetProgress() {
+        if (confirm("Are you sure you want to reset all progress? This cannot be undone!")) {
+            localStorage.removeItem('dutchProgress');
+            localStorage.removeItem('lastLesson');
+            location.reload();
+        }
+    }
+    
+    function showToast(message) {
+        $('#toastMessage').text(message);
+        $('#toast').fadeIn().delay(3000).fadeOut();
+    }
+    
+    // Speed control
+    $(document).on('click', '.speed-btn', function() {
+        $('.speed-btn').removeClass('active');
+        $(this).addClass('active');
+        let speed = parseFloat($(this).data('speed'));
+        if (currentAudio) {
+            currentAudio.playbackRate = speed;
+        }
+    });
+    
+    // Audio progress seek
+    document.getElementById('audioProgress').addEventListener('input', function(e) {
+        if (currentAudio && currentAudio.duration) {
+            let seekTo = (e.target.value / 100) * currentAudio.duration;
+            currentAudio.currentTime = seekTo;
+        }
+    });
+    
+    init();
+</script>
+</body>
+</html>
