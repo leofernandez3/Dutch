@@ -568,7 +568,7 @@
         if (!lesson) return;
         
         currentLessonIndex = index;
-        let audioPath = `/Dutch Foundation Course Audio/${String(lesson.disc).padStart(2,'0')}/Michel Thomas Dutch Foundation Disc ${lesson.disc} - ${String(lesson.track).padStart(2,'0')}.mp3`;
+        let audioPath = `/Dutch/Dutch Foundation Course Audio/${String(lesson.disc).padStart(2,'0')}/Michel Thomas Dutch Foundation Disc ${lesson.disc} - ${String(lesson.track).padStart(2,'0')}.mp3`;
         
         if (currentAudio) {
             currentAudio.pause();
