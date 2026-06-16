@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Dutch Stories - Learn Dutch Through Reading</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js for progress charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        :root {
+            --hostgator-orange: #F58220;
+            --hostgator-dark: #1A1A2E;
+            --hostgator-gray: #2D2D44;
+            --hostgator-light-gray: #F5F5F7;
+            --hostgator-success: #2E8B57;
+            --hostgator-white: #FFFFFF;
+            --hostgator-warning: #FFC107;
+        }
+        
+        body {
+            background-color: var(--hostgator-light-gray);
+            color: var(--hostgator-dark);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, var(--hostgator-dark) 0%, var(--hostgator-gray) 100%);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--hostgator-white) !important;
+        }
+        
+        .navbar-brand span {
+            color: var(--hostgator-orange);
+        }
+        
+        .nav-link {
+            color: var(--hostgator-white) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--hostgator-orange) !important;
+        }
+        
+        /* Cards */
+        .story-card {
+            background: var(--hostgator-white);
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        
+        .story-card-header {
+            background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%);
+            padding: 1.5rem;
+            color: white;
+        }
+        
+        .story-card-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            opacity: 0.3;
+        }
+        
+        .story-card-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        
+        .story-card-location {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .story-card-body {
+            padding: 1.5rem;
+        }
+        
+        .story-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .badge-theme {
+            background-color: var(--hostgator-orange);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+        }
+        
+        .progress-section {
+            background: var(--hostgator-white);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        /* Reading Panel */
+        .reading-panel {
+            background: var(--hostgator-white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .dutch-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--hostgator-dark);
+        }
+        
+        .english-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #666;
+            background: var(--hostgator-light-gray);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 1rem;
+        }
+        
+        .vocab-word {
+            background-color: #FFF3E0;
+            color: var(--hostgator-orange);
+            padding: 0.2rem 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        
+        .vocab-word:hover {
+            background-color: var(--hostgator-orange);
+            color: white;
+        }
+        
+        /* Quiz Panel */
+        .quiz-option {
+            background: var(--hostgator-light-gray);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        
+        .quiz-option:hover {
+            background: #E8E8EE;
+        }
+        
+        .quiz-option.selected {
+            border-color: var(--hostgator-orange);
+            background: #FFF3E0;
+        }
+        
+        .quiz-option.correct {
+            background: #D4EDDA;
+            border-color: var(--hostgator-success);
+        }
+        
+        .quiz-option.wrong {
+            background: #F8D7DA;
+            border-color: #DC3545;
+        }
+        
+        .letter-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--hostgator-orange);
+            color: white;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+        
+        /* Buttons */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%);
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(245,130,32,0.3);
+        }
+        
+        .btn-outline-custom {
+            border: 2px solid var(--hostgator-orange);
+            color: var(--hostgator-orange);
+            background: transparent;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-custom:hover {
+            background: var(--hostgator-orange);
+            color: white;
+        }
+        
+        /* Vocabulary Modal */
+        .modal-header-custom {
+            background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%);
+            color: white;
+        }
+        
+        /* Progress */
+        .progress {
+            height: 10px;
+            border-radius: 10px;
+        }
+        
+        .progress-bar-custom {
+            background: linear-gradient(90deg, var(--hostgator-orange) 0%, #FF8C42 100%);
+            border-radius: 10px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: var(--hostgator-white);
+            border-radius: 20px;
+            padding: 1.5rem;
+            position: sticky;
+            top: 90px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--hostgator-dark);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .reading-panel {
+                padding: 1rem;
+            }
+            .dutch-text {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Loading spinner */
+        .spinner-custom {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--hostgator-light-gray);
+            border-top-color: var(--hostgator-orange);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Word strength indicator */
+        .strength-indicator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        .strength-0 { background: #DC3545; }
+        .strength-1 { background: #FFC107; }
+        .strength-2 { background: #28A745; }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#" id="homeLink">
+            <i class="fas fa-book-open me-2"></i>Dutch<span>Stories</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navHome">
+                        <i class="fas fa-home me-1"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navStories">
+                        <i class="fas fa-book me-1"></i> Stories
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navVocabulary">
+                        <i class="fas fa-graduation-cap me-1"></i> My Words
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navProgress">
+                        <i class="fas fa-chart-line me-1"></i> Progress
+                    </a>
+                </li>
+            </ul>
+            <div class="ms-3">
+                <span class="badge bg-light text-dark p-2" id="streakBadge">
+                    <i class="fas fa-fire text-warning"></i> <span id="streakCount">0</span> day streak
+                </span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="container py-4" id="mainContent">
+    <!-- Loading -->
+    <div class="text-center py-5" id="loadingDiv">
+        <div class="spinner-custom mx-auto mb-3"></div>
+        <p class="text-muted">Loading Dutch stories...</p>
+    </div>
+</main>
+
+<!-- Vocabulary Modal -->
+<div class="modal fade" id="vocabModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+                <h5 class="modal-title"><i class="fas fa-language me-2"></i>Word Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="vocabModalBody">
+                <!-- Dynamic content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-custom" id="markKnownBtn">
+                    <i class="fas fa-check me-1"></i> Mark as Known
+                </button>
+                <button class="btn btn-primary-custom" id="markNeedsReviewBtn">
+                    <i class="fas fa-repeat me-1"></i> Needs Review
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="successToast" class="toast bg-success text-white" role="alert">
+        <div class="d-flex">
+            <div class="toast-body">
+                <i class="fas fa-check-circle me-2"></i> <span id="toastMessage">Word saved!</span>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Global state
+    let appData = null;
+    let currentView = 'home';
+    let currentStoryId = null;
+    let currentQuizAnswers = {};
+    let userProgress = {
+        completedStories: [],
+        storyStars: {},
+        vocabularyStrength: {},
+        wordReviewQueue: [],
+        lastLoginDate: null,
+        streak: 0,
+        totalXP: 0,
+        dailyChallenges: []
+    };
+    let vocabChart = null;
+
+    // Initialize
+    $(document).ready(function() {
+        loadData();
+        setupEventListeners();
+        loadUserProgress();
+    });
+
+    // Load JSON data
+    function loadData() {
+        $.getJSON('dutch-stories.json')
+            .done(function(data) {
+                appData = data;
+                $('#loadingDiv').hide();
+                renderHomePage();
+                updateStreakDisplay();
+            })
+            .fail(function(error) {
+                console.error('Error loading data:', error);
+                $('#loadingDiv').html(`
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Could not load stories. Make sure dutch-stories.json is in the same directory.
+                        <br><br>
+                        <small>Current data includes Stories 1-4. Add more stories to the JSON file.</small>
+                    </div>
+                `);
+            });
+    }
+
+    // Load user progress from localStorage
+    function loadUserProgress() {
+        const saved = localStorage.getItem('dutchLearnerProgress');
+        if (saved) {
+            userProgress = JSON.parse(saved);
+        } else {
+            // Initialize
+            if (appData && appData.stories) {
+                appData.stories.forEach(story => {
+                    userProgress.storyStars[story.id] = 0;
+                    if (story.vocabulary) {
+                        story.vocabulary.forEach(word => {
+                            if (!userProgress.vocabularyStrength[word.dutch]) {
+                                userProgress.vocabularyStrength[word.dutch] = 0;
+                            }
+                        });
+                    }
+                });
+            }
+            saveUserProgress();
+        }
+        
+        // Update streak
+        const today = new Date().toDateString();
+        if (userProgress.lastLoginDate !== today) {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            if (userProgress.lastLoginDate === yesterday.toDateString()) {
+                userProgress.streak++;
+            } else {
+                userProgress.streak = 1;
+            }
+            userProgress.lastLoginDate = today;
+            saveUserProgress();
+        }
+        updateStreakDisplay();
+    }
+
+    function saveUserProgress() {
+        localStorage.setItem('dutchLearnerProgress', JSON.stringify(userProgress));
+        updateStreakDisplay();
+    }
+
+    function updateStreakDisplay() {
+        $('#streakCount').text(userProgress.streak || 0);
+    }
+
+    function addXP(amount) {
+        userProgress.totalXP += amount;
+        saveUserProgress();
+        showToast(`+${amount} XP earned!`);
+        updateProgressDisplay();
+    }
+
+    function showToast(message) {
+        $('#toastMessage').text(message);
+        const toast = new bootstrap.Toast($('#successToast'));
+        toast.show();
+    }
+
+    // Setup navigation
+    function setupEventListeners() {
+        $('#homeLink, #navHome').click(function(e) {
+            e.preventDefault();
+            renderHomePage();
+        });
+        $('#navStories').click(function(e) {
+            e.preventDefault();
+            renderStoriesPage();
+        });
+        $('#navVocabulary').click(function(e) {
+            e.preventDefault();
+            renderVocabularyPage();
+        });
+        $('#navProgress').click(function(e) {
+            e.preventDefault();
+            renderProgressPage();
+        });
+    }
+
+    // Render Home Page
+    function renderHomePage() {
+        currentView = 'home';
+        if (!appData || !appData.stories) return;
+        
+        const completedCount = userProgress.completedStories.length;
+        const totalStories = appData.stories.length;
+        const completionPercent = Math.round((completedCount / totalStories) * 100);
+        
+        const wordsLearned = Object.values(userProgress.vocabularyStrength).filter(s => s >= 2).length;
+        const totalWords = appData.stories.reduce((sum, s) => sum + (s.vocabulary ? s.vocabulary.length : 0), 0);
+        
+        const html = `
+            <div class="fade-in">
+                <!-- Hero -->
+                <div class="reading-panel text-center mb-4" style="background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%); color: white;">
+                    <h1 class="display-5 fw-bold mb-3">🇳🇱 Learn Dutch Through Stories</h1>
+                    <p class="lead mb-4">20 captivating short stories to build vocabulary and improve comprehension</p>
+                    <button class="btn btn-light btn-lg rounded-pill px-4" id="startLearningBtn">
+                        <i class="fas fa-play me-2"></i> Start Learning
+                    </button>
+                </div>
+                
+                <!-- Stats -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="story-card text-center">
+                            <div class="p-4">
+                                <i class="fas fa-book fa-3x" style="color: var(--hostgator-orange);"></i>
+                                <h2 class="display-6 fw-bold mt-2">${totalStories}</h2>
+                                <p class="text-muted mb-0">Stories</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="story-card text-center">
+                            <div class="p-4">
+                                <i class="fas fa-language fa-3x" style="color: var(--hostgator-orange);"></i>
+                                <h2 class="display-6 fw-bold mt-2">${totalWords}</h2>
+                                <p class="text-muted mb-0">Vocabulary Words</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="story-card text-center">
+                            <div class="p-4">
+                                <i class="fas fa-check-circle fa-3x" style="color: var(--hostgator-orange);"></i>
+                                <h2 class="display-6 fw-bold mt-2">${wordsLearned}</h2>
+                                <p class="text-muted mb-0">Words Learned</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="story-card text-center">
+                            <div class="p-4">
+                                <i class="fas fa-fire fa-3x" style="color: var(--hostgator-orange);"></i>
+                                <h2 class="display-6 fw-bold mt-2">${userProgress.streak || 0}</h2>
+                                <p class="text-muted mb-0">Day Streak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Continue where left off -->
+                <div class="progress-section">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold mb-0"><i class="fas fa-chart-simple me-2" style="color: var(--hostgator-orange);"></i>Your Progress</h5>
+                        <span class="badge-theme">${completionPercent}% Complete</span>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar progress-bar-custom" style="width: ${completionPercent}%"></div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h6><i class="fas fa-star me-2" style="color: gold;"></i>Completed Stories: ${completedCount}/${totalStories}</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><i class="fas fa-trophy me-2" style="color: gold;"></i>Total XP: ${userProgress.totalXP || 0}</h6>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Story -->
+                <h4 class="fw-bold mb-3"><i class="fas fa-star me-2" style="color: var(--hostgator-orange);"></i>Featured Story</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        ${renderStoryCard(appData.stories[0])}
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="story-card">
+                            <div class="card-body p-4">
+                                <i class="fas fa-calendar-alt fa-2x mb-3" style="color: var(--hostgator-orange);"></i>
+                                <h5 class="fw-bold">Daily Challenge</h5>
+                                <p class="text-muted">Learn 5 new words from any story today to keep your streak alive!</p>
+                                <button class="btn btn-outline-custom btn-sm" id="dailyChallengeBtn">
+                                    <i class="fas fa-check me-1"></i> Start Challenge
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- All Stories Preview -->
+                <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
+                    <h4 class="fw-bold mb-0"><i class="fas fa-book me-2" style="color: var(--hostgator-orange);"></i>All Stories</h4>
+                    <button class="btn btn-outline-custom btn-sm" id="viewAllStoriesBtn">View All <i class="fas fa-arrow-right ms-1"></i></button>
+                </div>
+                <div class="row">
+                    ${appData.stories.slice(0, 4).map(story => renderStoryCard(story)).join('')}
+                </div>
+            </div>
+        `;
+        
+        $('#mainContent').html(html);
+        
+        $('#startLearningBtn, #viewAllStoriesBtn, #dailyChallengeBtn').click(function(e) {
+            e.preventDefault();
+            renderStoriesPage();
+        });
+    }
+
+    function renderStoryCard(story) {
+        const isCompleted = userProgress.completedStories.includes(story.id);
+        const stars = userProgress.storyStars[story.id] || 0;
+        
+        return `
+            <div class="story-card" onclick="openStory(${story.id})">
+                <div class="story-card-header">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <div class="story-card-number">#${story.id}</div>
+                            <h5 class="story-card-title">${story.title}</h5>
+                            <div class="story-card-location">
+                                <i class="fas fa-map-marker-alt me-1"></i>${story.location || 'Netherlands'}
+                            </div>
+                        </div>
+                        ${isCompleted ? '<i class="fas fa-check-circle fa-2x" style="opacity: 0.8;"></i>' : ''}
+                    </div>
+                </div>
+                <div class="story-card-body">
+                    <div class="story-meta">
+                        <span><i class="far fa-clock me-1"></i> ${story.difficulty?.estimatedReadTime || 8} min</span>
+                        <span><i class="fas fa-signal me-1"></i> ${story.difficulty?.level || 'A2'}</span>
+                    </div>
+                    <p class="text-muted small mb-3">${story.summaryEnglish?.substring(0, 100)}...</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            ${[1,2,3,4,5].map(i => `<i class="fas fa-star${stars >= i ? '' : '-o'}" style="color: gold; font-size: 0.8rem;"></i>`).join('')}
+                        </div>
+                        <span class="badge-theme">${story.vocabulary?.length || 0} words</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Render Stories Page
+    function renderStoriesPage() {
+        currentView = 'stories';
+        if (!appData || !appData.stories) return;
+        
+        let html = `
+            <div class="fade-in">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold"><i class="fas fa-book me-2" style="color: var(--hostgator-orange);"></i>All Stories</h2>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-custom btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-filter me-1"></i> Filter
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item filter-btn" data-filter="all">All Stories</a></li>
+                            <li><a class="dropdown-item filter-btn" data-filter="completed">Completed</a></li>
+                            <li><a class="dropdown-item filter-btn" data-filter="incomplete">In Progress</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" id="storiesGrid">
+                    ${appData.stories.map(story => `
+                        <div class="col-md-4 col-lg-3 mb-4 story-item" data-story-id="${story.id}" data-completed="${userProgress.completedStories.includes(story.id)}">
+                            ${renderStoryCard(story)}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        
+        $('#mainContent').html(html);
+        
+        $('.filter-btn').click(function() {
+            const filter = $(this).data('filter');
+            if (filter === 'completed') {
+                $('.story-item').each(function() {
+                    if ($(this).data('completed') === true) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            } else if (filter === 'incomplete') {
+                $('.story-item').each(function() {
+                    if ($(this).data('completed') === false) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            } else {
+                $('.story-item').show();
+            }
+        });
+    }
+
+    // Open a story
+    window.openStory = function(storyId) {
+        const story = appData.stories.find(s => s.id === storyId);
+        if (!story) return;
+        
+        currentStoryId = storyId;
+        currentQuizAnswers = {};
+        
+        renderStoryReader(story);
+    };
+
+    function renderStoryReader(story) {
+        const stars = userProgress.storyStars[story.id] || 0;
+        
+        let html = `
+            <div class="fade-in">
+                <button class="btn btn-outline-custom btn-sm mb-3" onclick="renderStoriesPage()">
+                    <i class="fas fa-arrow-left me-1"></i> Back to Stories
+                </button>
+                
+                <div class="reading-panel">
+                    <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-2">
+                        <div>
+                            <h2 class="fw-bold mb-1">${story.title}</h2>
+                            <p class="text-muted">${story.titleEnglish}</p>
+                        </div>
+                        <div class="text-end">
+                            <div class="mb-2">
+                                ${[1,2,3,4,5].map(i => `<i class="fas fa-star${stars >= i ? '' : '-o'}" style="color: gold; font-size: 1.2rem;"></i>`).join('')}
+                            </div>
+                            <span class="badge-theme"><i class="fas fa-map-marker-alt me-1"></i> ${story.location || 'Netherlands'}</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs mb-4" id="storyTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#readTab" type="button">
+                                <i class="fas fa-book-open me-1"></i> Read
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vocabTab" type="button">
+                                <i class="fas fa-graduation-cap me-1"></i> Vocabulary (${story.vocabulary?.length || 0})
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#quizTab" type="button">
+                                <i class="fas fa-question-circle me-1"></i> Quiz
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <!-- Reading Tab -->
+                        <div class="tab-pane fade show active" id="readTab">
+                            <div class="mb-3">
+                                <div class="btn-group btn-group-sm mb-3">
+                                    <button class="btn btn-outline-secondary" id="showDutchBtn">Show Dutch</button>
+                                    <button class="btn btn-outline-secondary" id="showEnglishBtn">Show English</button>
+                                    <button class="btn btn-outline-secondary" id="showBothBtn">Show Both</button>
+                                </div>
+                            </div>
+                            <div id="dutchText" class="dutch-text">
+                                ${formatDutchTextWithVocab(story.fullTextDutch, story.vocabulary)}
+                            </div>
+                            <div id="englishText" class="english-text" style="display: none;">
+                                ${story.fullTextEnglish}
+                            </div>
+                        </div>
+                        
+                        <!-- Vocabulary Tab -->
+                        <div class="tab-pane fade" id="vocabTab">
+                            <div class="row">
+                                <div class="col-md-8 mx-auto">
+                                    <div class="input-group mb-4">
+                                        <input type="text" class="form-control" id="vocabSearch" placeholder="Search words...">
+                                        <button class="btn btn-outline-custom" id="reviewAllBtn">
+                                            <i class="fas fa-repeat me-1"></i> Review All
+                                        </button>
+                                    </div>
+                                    <div id="vocabList">
+                                        ${story.vocabulary?.map(word => `
+                                            <div class="vocab-card d-flex justify-content-between align-items-center p-3 border-bottom" data-word="${word.dutch}">
+                                                <div>
+                                                    <span class="strength-indicator strength-${Math.min(2, Math.floor((userProgress.vocabularyStrength[word.dutch] || 0) / 50))}"></span>
+                                                    <strong class="vocab-word" onclick="showWordDetail('${word.dutch}', '${word.english}', '${word.category || 'noun'}')">${word.dutch}</strong>
+                                                    <span class="text-muted ms-2">→ ${word.english}</span>
+                                                    <span class="badge bg-light text-dark ms-2">${word.category || 'word'}</span>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-sm btn-outline-success me-1" onclick="markWordKnown('${word.dutch}')">
+                                                        <i class="fas fa-check"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-warning" onclick="markWordForReview('${word.dutch}')">
+                                                        <i class="fas fa-repeat"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quiz Tab -->
+                        <div class="tab-pane fade" id="quizTab">
+                            <div class="text-center mb-4">
+                                <h4>Test Your Comprehension</h4>
+                                <p class="text-muted">Answer these 5 questions about the story</p>
+                            </div>
+                            <div id="quizContainer">
+                                ${story.questions?.map((q, idx) => `
+                                    <div class="quiz-question mb-4" data-qid="${q.id}">
+                                        <h6 class="fw-bold mb-3">${idx + 1}. ${q.text}</h6>
+                                        ${q.options.map((opt, optIdx) => `
+                                            <div class="quiz-option" data-question="${q.id}" data-option-index="${optIdx}">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="letter-badge">${String.fromCharCode(65 + optIdx)}</span>
+                                                    <span>${opt}</span>
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                `).join('')}
+                                <button class="btn btn-primary-custom w-100 mt-3" id="submitQuizBtn">Submit Answers</button>
+                                <div id="quizResult" class="mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        $('#mainContent').html(html);
+        
+        // Setup reading view toggles
+        $('#showDutchBtn').click(function() {
+            $('#dutchText').show();
+            $('#englishText').hide();
+        });
+        $('#showEnglishBtn').click(function() {
+            $('#dutchText').hide();
+            $('#englishText').show();
+        });
+        $('#showBothBtn').click(function() {
+            $('#dutchText').show();
+            $('#englishText').show();
+        });
+        
+        // Setup quiz
+        $('.quiz-option').click(function() {
+            const qid = $(this).data('question');
+            const optionIndex = $(this).data('option-index');
+            $(this).closest('.quiz-question').find('.quiz-option').removeClass('selected');
+            $(this).addClass('selected');
+            currentQuizAnswers[qid] = optionIndex;
+        });
+        
+        $('#submitQuizBtn').click(function() {
+            const storyQuestions = story.questions;
+            let correctCount = 0;
+            storyQuestions.forEach(q => {
+                if (currentQuizAnswers[q.id] === q.correctIndex) {
+                    correctCount++;
+                }
+            });
+            
+            const resultHtml = `
+                <div class="alert ${correctCount >= 4 ? 'alert-success' : 'alert-info'} text-center">
+                    <i class="fas ${correctCount >= 4 ? 'fa-trophy' : 'fa-book'} fa-2x mb-2"></i>
+                    <h5>You got ${correctCount}/5 correct!</h5>
+                    ${correctCount === 5 ? '<p>Perfect! You\'ve mastered this story!</p>' : '<p>Review the vocabulary and try again!</p>'}
+                </div>
+            `;
+            $('#quizResult').html(resultHtml);
+            
+            if (correctCount >= 4 && !userProgress.completedStories.includes(story.id)) {
+                userProgress.completedStories.push(story.id);
+                const newStars = Math.min(5, userProgress.storyStars[story.id] + 1);
+                userProgress.storyStars[story.id] = newStars;
+                addXP(50);
+                saveUserProgress();
+                showToast(`✨ Story completed! +50 XP`);
+            }
+            
+            storyQuestions.forEach((q, idx) => {
+                const $questionDiv = $(`.quiz-question[data-qid="${q.id}"]`);
+                $questionDiv.find('.quiz-option').each(function(idx, opt) {
+                    const optIndex = $(opt).data('option-index');
+                    if (optIndex === q.correctIndex) {
+                        $(opt).addClass('correct');
+                    } else if (optIndex === currentQuizAnswers[q.id] && optIndex !== q.correctIndex) {
+                        $(opt).addClass('wrong');
+                    }
+                });
+            });
+        });
+        
+        $('#vocabSearch').on('input', function() {
+            const search = $(this).val().toLowerCase();
+            $('#vocabList .vocab-card').each(function() {
+                const text = $(this).text().toLowerCase();
+                if (text.includes(search)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+        
+        $('#reviewAllBtn').click(function() {
+            story.vocabulary?.forEach(word => {
+                markWordForReview(word.dutch);
+            });
+            showToast(`Added ${story.vocabulary?.length} words to review queue`);
+        });
+    }
+    
+    function formatDutchTextWithVocab(text, vocabulary) {
+        if (!vocabulary) return text;
+        let formatted = text;
+        vocabulary.forEach(word => {
+            const regex = new RegExp(`\\b(${word.dutch})\\b`, 'gi');
+            formatted = formatted.replace(regex, `<span class="vocab-word" onclick="showWordDetail('${word.dutch}', '${word.english}', '${word.category || 'word'}')">$1</span>`);
+        });
+        return formatted.replace(/\n/g, '<br>');
+    }
+    
+    // Word detail modal
+    window.showWordDetail = function(dutch, english, category) {
+        const strength = userProgress.vocabularyStrength[dutch] || 0;
+        const strengthPercent = Math.min(100, strength);
+        let strengthText = '';
+        if (strengthPercent < 30) strengthText = 'New - Learn this word';
+        else if (strengthPercent < 70) strengthText = 'In Progress - Keep reviewing';
+        else strengthText = 'Mastered! Great job!';
+        
+        $('#vocabModalBody').html(`
+            <div class="text-center mb-3">
+                <h3 class="fw-bold" style="color: var(--hostgator-orange);">${dutch}</h3>
+                <h5 class="text-muted">→ ${english}</h5>
+                <span class="badge-theme mt-2">${category || 'vocabulary'}</span>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between small mb-1">
+                    <span>Memory Strength</span>
+                    <span>${strengthPercent}%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-custom" style="width: ${strengthPercent}%"></div>
+                </div>
+                <p class="small text-muted mt-2">${strengthText}</p>
+            </div>
+            <div class="alert alert-light">
+                <i class="fas fa-lightbulb me-2" style="color: var(--hostgator-orange);"></i>
+                <strong>Tip:</strong> Try using this word in a sentence today!
+            </div>
+        `);
+        
+        $('#markKnownBtn').off('click').on('click', function() {
+            markWordKnown(dutch);
+            $('#vocabModal').modal('hide');
+        });
+        $('#markNeedsReviewBtn').off('click').on('click', function() {
+            markWordForReview(dutch);
+            $('#vocabModal').modal('hide');
+        });
+        
+        const modal = new bootstrap.Modal($('#vocabModal'));
+        modal.show();
+    };
+    
+    window.markWordKnown = function(word) {
+        const oldStrength = userProgress.vocabularyStrength[word] || 0;
+        const newStrength = Math.min(100, oldStrength + 25);
+        userProgress.vocabularyStrength[word] = newStrength;
+        if (oldStrength < 50 && newStrength >= 50) {
+            addXP(10);
+        }
+        saveUserProgress();
+        showToast(`👍 "${word}" strengthened!`);
+    };
+    
+    window.markWordForReview = function(word) {
+        const oldStrength = userProgress.vocabularyStrength[word] || 0;
+        const newStrength = Math.max(0, oldStrength - 15);
+        userProgress.vocabularyStrength[word] = newStrength;
+        if (!userProgress.wordReviewQueue.includes(word)) {
+            userProgress.wordReviewQueue.push(word);
+        }
+        saveUserProgress();
+        showToast(`📚 "${word}" added to review queue`);
+    };
+    
+    // Vocabulary Page
+    function renderVocabularyPage() {
+        if (!appData || !appData.stories) return;
+        
+        const allWords = [];
+        appData.stories.forEach(story => {
+            if (story.vocabulary) {
+                story.vocabulary.forEach(word => {
+                    allWords.push({
+                        ...word,
+                        storyId: story.id,
+                        storyTitle: story.title
+                    });
+                });
+            }
+        });
+        
+        const learnedCount = Object.values(userProgress.vocabularyStrength).filter(s => s >= 70).length;
+        const inProgressCount = Object.values(userProgress.vocabularyStrength).filter(s => s > 0 && s < 70).length;
+        const newCount = allWords.length - learnedCount - inProgressCount;
+        
+        let html = `
+            <div class="fade-in">
+                <h2 class="fw-bold mb-4"><i class="fas fa-graduation-cap me-2" style="color: var(--hostgator-orange);"></i>My Vocabulary</h2>
+                
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="story-card text-center p-3">
+                            <i class="fas fa-check-circle fa-2x" style="color: var(--hostgator-success);"></i>
+                            <h3 class="display-6 fw-bold mt-2">${learnedCount}</h3>
+                            <p class="text-muted">Mastered Words</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="story-card text-center p-3">
+                            <i class="fas fa-chart-line fa-2x" style="color: var(--hostgator-warning);"></i>
+                            <h3 class="display-6 fw-bold mt-2">${inProgressCount}</h3>
+                            <p class="text-muted">In Progress</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="story-card text-center p-3">
+                            <i class="fas fa-book fa-2x" style="color: var(--hostgator-orange);"></i>
+                            <h3 class="display-6 fw-bold mt-2">${newCount}</h3>
+                            <p class="text-muted">New Words</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reading-panel">
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <h5 class="fw-bold mb-0"><i class="fas fa-list me-2" style="color: var(--hostgator-orange);"></i>All Vocabulary</h5>
+                        <div>
+                            <select class="form-select form-select-sm d-inline-block w-auto" id="categoryFilter">
+                                <option value="all">All Categories</option>
+                                <option value="noun">Nouns</option>
+                                <option value="verb">Verbs</option>
+                                <option value="adjective">Adjectives</option>
+                                <option value="adverb">Adverbs</option>
+                                <option value="phrase">Phrases</option>
+                            </select>
+                            <button class="btn btn-outline-custom btn-sm ms-2" id="reviewQueueBtn">
+                                <i class="fas fa-list me-1"></i> Review Queue (${userProgress.wordReviewQueue.length})
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="vocabMasterSearch" placeholder="Search Dutch or English...">
+                        <button class="btn btn-outline-custom" id="shuffleWordsBtn"><i class="fas fa-random"></i> Shuffle</button>
+                    </div>
+                    
+                    <div id="vocabMasterList">
+                        ${allWords.slice(0, 20).map(word => `
+                            <div class="vocab-card d-flex justify-content-between align-items-center p-3 border-bottom" data-category="${word.category}" data-dutch="${word.dutch}" data-english="${word.english}">
+                                <div>
+                                    <span class="strength-indicator strength-${Math.min(2, Math.floor((userProgress.vocabularyStrength[word.dutch] || 0) / 50))}"></span>
+                                    <strong class="vocab-word" onclick="showWordDetail('${word.dutch}', '${word.english}', '${word.category || 'noun'}')">${word.dutch}</strong>
+                                    <span class="text-muted ms-2">→ ${word.english}</span>
+                                    <span class="badge bg-light text-dark ms-2">${word.category || 'word'}</span>
+                                    <small class="text-muted ms-2"><i class="fas fa-book"></i> ${word.storyTitle}</small>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-outline-success me-1" onclick="markWordKnown('${word.dutch}')">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-warning" onclick="markWordForReview('${word.dutch}')">
+                                        <i class="fas fa-repeat"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        $('#mainContent').html(html);
+        
+        $('#categoryFilter').change(function() {
+            const category = $(this).val();
+            if (category === 'all') {
+                $('#vocabMasterList .vocab-card').show();
+            } else {
+                $('#vocabMasterList .vocab-card').each(function() {
+                    if ($(this).data('category') === category) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+        });
+        
+        $('#vocabMasterSearch').on('input', function() {
+            const search = $(this).val().toLowerCase();
+            $('#vocabMasterList .vocab-card').each(function() {
+                const dutch = $(this).data('dutch')?.toLowerCase() || '';
+                const english = $(this).data('english')?.toLowerCase() || '';
+                if (dutch.includes(search) || english.includes(search)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+        
+        $('#reviewQueueBtn').click(function() {
+            if (userProgress.wordReviewQueue.length === 0) {
+                showToast('Your review queue is empty! Add some words to review.');
+                return;
+            }
+            const firstWord = userProgress.wordReviewQueue[0];
+            const wordData = allWords.find(w => w.dutch === firstWord);
+            if (wordData) {
+                showWordDetail(wordData.dutch, wordData.english, wordData.category);
+            }
+        });
+        
+        $('#shuffleWordsBtn').click(function() {
+            const container = $('#vocabMasterList');
+            const cards = container.children('.vocab-card').get();
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                cards[i].parentNode.insertBefore(cards[j], cards[i]);
+            }
+        });
+    }
+    
+    // Progress Page
+    function renderProgressPage() {
+        if (!appData || !appData.stories) return;
+        
+        const completedCount = userProgress.completedStories.length;
+        const totalStories = appData.stories.length;
+        const totalWords = appData.stories.reduce((sum, s) => sum + (s.vocabulary ? s.vocabulary.length : 0), 0);
+        const learnedWords = Object.values(userProgress.vocabularyStrength).filter(s => s >= 70).length;
+        
+        // Prepare chart data
+        const storyNames = appData.stories.map(s => `#${s.id}`);
+        const storyProgress = appData.stories.map(s => userProgress.completedStories.includes(s.id) ? 100 : 0);
+        
+        let html = `
+            <div class="fade-in">
+                <h2 class="fw-bold mb-4"><i class="fas fa-chart-line me-2" style="color: var(--hostgator-orange);"></i>Your Progress</h2>
+                
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="story-card text-center p-3">
+                            <i class="fas fa-book fa-2x" style="color: var(--hostgator-orange);"></i>
+                            <h3 class="display-6 fw-bold mt-2">${completedCount}/${totalStories}</h3>
+                            <p class="text-muted">Stories Completed</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="story-card text-center p-3">
+                            <i class="fas fa-fire fa-2x" style="color: var(--hostgator-orange);"></i>
+                            <h3 class="display-6 fw-bold mt-2">${userProgress.streak || 0}</h3>
+                            <p class="text-muted">Day Streak</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="story-card text-center p-3">
+                            <i class="fas fa-trophy fa-2x" style="color: var(--hostgator-orange);"></i>
+                            <h3 class="display-6 fw-bold mt-2">${userProgress.totalXP || 0}</h3>
+                            <p class="text-muted">Total XP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="reading-panel">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-pie me-2" style="color: var(--hostgator-orange);"></i>Vocabulary Mastery</h5>
+                            <canvas id="vocabChart" height="200"></canvas>
+                            <div class="mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span><i class="fas fa-circle" style="color: var(--hostgator-success);"></i> Mastered (${learnedWords})</span>
+                                    <span><i class="fas fa-circle" style="color: var(--hostgator-warning);"></i> Learning (${totalWords - learnedWords})</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="reading-panel">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-bar me-2" style="color: var(--hostgator-orange);"></i>Story Completion</h5>
+                            <canvas id="storyChart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reading-panel mt-4">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-medal me-2" style="color: var(--hostgator-orange);"></i>Achievements</h5>
+                    <div class="row">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="text-center ${completedCount >= 1 ? '' : 'opacity-50'}">
+                                <i class="fas fa-book fa-3x ${completedCount >= 1 ? 'text-success' : 'text-muted'}"></i>
+                                <p class="small mt-1">First Story</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="text-center ${completedCount >= 5 ? '' : 'opacity-50'}">
+                                <i class="fas fa-layer-group fa-3x ${completedCount >= 5 ? 'text-success' : 'text-muted'}"></i>
+                                <p class="small mt-1">5 Stories</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="text-center ${completedCount >= 10 ? '' : 'opacity-50'}">
+                                <i class="fas fa-crown fa-3x ${completedCount >= 10 ? 'text-warning' : 'text-muted'}"></i>
+                                <p class="small mt-1">10 Stories</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="text-center ${userProgress.streak >= 7 ? '' : 'opacity-50'}">
+                                <i class="fas fa-fire fa-3x ${userProgress.streak >= 7 ? 'text-danger' : 'text-muted'}"></i>
+                                <p class="small mt-1">7-Day Streak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reading-panel mt-4">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-lightbulb me-2" style="color: var(--hostgator-orange);"></i>Daily Tips</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Review 5 words before breakfast</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Read one story per day</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Try to use new words in sentences</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Listen to Dutch music or podcasts</li>
+                    </ul>
+                </div>
+            </div>
+        `;
+        
+        $('#mainContent').html(html);
+        
+        // Initialize charts
+        const ctx2 = document.getElementById('vocabChart')?.getContext('2d');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Mastered', 'Learning'],
+                    datasets: [{
+                        data: [learnedWords, totalWords - learnedWords],
+                        backgroundColor: ['#2E8B57', '#FFC107'],
+                        borderWidth: 0
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: true }
+            });
+        }
+        
+        const ctx3 = document.getElementById('storyChart')?.getContext('2d');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'bar',
+                data: {
+                    labels: storyNames,
+                    datasets: [{
+                        label: 'Completed',
+                        data: storyProgress,
+                        backgroundColor: '#F58220',
+                        borderRadius: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    scales: { y: { beginAtZero: true, max: 100 } }
+                }
+            });
+        }
+    }
+    
+    function updateProgressDisplay() {
+        if (currentView === 'progress') {
+            renderProgressPage();
+        }
+    }
+</script>
+
+</body>
+</html>
