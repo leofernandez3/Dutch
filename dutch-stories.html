@@ -2,345 +2,459 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Dutch Stories - Learn Dutch Through Reading</title>
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dutch Stories | Learn Dutch Through Reading</title>
+    
+    <!-- Google Fonts - Modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Chart.js for progress charts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     
+    <!-- Speech Synthesis API -->
+    <script src="https://cdn.jsdelivr.net/npm/speech-js@1.0.4/speech.min.js"></script>
+
     <style>
         * {
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
+
         :root {
-            --hostgator-orange: #F58220;
-            --hostgator-dark: #1A1A2E;
-            --hostgator-gray: #2D2D44;
-            --hostgator-light-gray: #F5F5F7;
-            --hostgator-success: #2E8B57;
-            --hostgator-white: #FFFFFF;
-            --hostgator-warning: #FFC107;
+            /* Google-inspired color palette */
+            --google-blue: #1A73E8;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC04;
+            --google-green: #34A853;
+            --google-gray-900: #202124;
+            --google-gray-800: #3C4043;
+            --google-gray-700: #5F6368;
+            --google-gray-200: #E8EAED;
+            --google-gray-100: #F1F3F4;
+            --google-white: #FFFFFF;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            
+            /* Border radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
         }
-        
+
         body {
-            background-color: var(--hostgator-light-gray);
-            color: var(--hostgator-dark);
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, var(--google-gray-100) 0%, var(--google-white) 100%);
+            color: var(--google-gray-900);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
         }
-        
-        /* Navbar */
+
+        /* Typography - Google-inspired */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .display-4 {
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--google-blue) 0%, var(--google-green) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Navigation */
         .navbar {
-            background: linear-gradient(135deg, var(--hostgator-dark) 0%, var(--hostgator-gray) 100%);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--google-gray-200);
             padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        
+
         .navbar-brand {
             font-weight: 700;
-            font-size: 1.6rem;
-            color: var(--hostgator-white) !important;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--google-blue) 0%, var(--google-green) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
-        
-        .navbar-brand span {
-            color: var(--hostgator-orange);
-        }
-        
+
         .nav-link {
-            color: var(--hostgator-white) !important;
+            color: var(--google-gray-700) !important;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: var(--transition-fast);
+            position: relative;
         }
-        
+
         .nav-link:hover {
-            color: var(--hostgator-orange) !important;
+            color: var(--google-blue) !important;
         }
-        
-        /* Cards */
-        .story-card {
-            background: var(--hostgator-white);
-            border-radius: 20px;
-            border: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--google-blue), var(--google-green));
+            transition: var(--transition-fast);
+            border-radius: 3px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        /* Cards - Material Design inspired */
+        .material-card {
+            background: var(--google-white);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+            transition: var(--transition-normal);
             overflow: hidden;
+            cursor: pointer;
             height: 100%;
         }
-        
-        .story-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+
+        .material-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px 0 rgba(60, 64, 67, 0.3), 0 6px 12px 4px rgba(60, 64, 67, 0.15);
         }
-        
+
         .story-card-header {
-            background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%);
+            background: linear-gradient(135deg, var(--google-blue) 0%, var(--google-green) 100%);
             padding: 1.5rem;
-            color: white;
+            color: var(--google-white);
+            position: relative;
+            overflow: hidden;
         }
-        
-        .story-card-number {
+
+        .story-card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+        }
+
+        /* Progress Cards */
+        .stat-card {
+            background: var(--google-white);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+            transition: var(--transition-normal);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px 0 rgba(60, 64, 67, 0.3);
+        }
+
+        .stat-icon {
             font-size: 2.5rem;
-            font-weight: 700;
-            opacity: 0.3;
-        }
-        
-        .story-card-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 0;
-        }
-        
-        .story-card-location {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-        
-        .story-card-body {
-            padding: 1.5rem;
-        }
-        
-        .story-meta {
-            display: flex;
-            gap: 1rem;
             margin-bottom: 1rem;
-            font-size: 0.85rem;
-            color: #666;
         }
-        
-        .badge-theme {
-            background-color: var(--hostgator-orange);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--google-blue);
         }
-        
-        .progress-section {
-            background: var(--hostgator-white);
-            border-radius: 20px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+        /* Buttons */
+        .btn-google {
+            background: var(--google-blue);
+            color: var(--google-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition-fast);
         }
-        
+
+        .btn-google:hover {
+            background: #1557b0;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
+        }
+
+        .btn-outline-google {
+            background: transparent;
+            color: var(--google-blue);
+            border: 2px solid var(--google-blue);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition-fast);
+        }
+
+        .btn-outline-google:hover {
+            background: var(--google-blue);
+            color: var(--google-white);
+        }
+
         /* Reading Panel */
         .reading-panel {
-            background: var(--hostgator-white);
-            border-radius: 20px;
+            background: var(--google-white);
+            border-radius: var(--radius-lg);
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3);
             margin-bottom: 2rem;
         }
-        
+
         .dutch-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--hostgator-dark);
+            font-family: 'Roboto Mono', monospace;
+            color: var(--google-gray-800);
         }
-        
+
         .english-text {
             font-size: 1rem;
             line-height: 1.8;
-            color: #666;
-            background: var(--hostgator-light-gray);
+            color: var(--google-gray-700);
+            background: var(--google-gray-100);
             padding: 1.5rem;
-            border-radius: 15px;
+            border-radius: var(--radius-md);
             margin-top: 1rem;
         }
-        
+
+        /* Vocabulary Highlighter */
         .vocab-word {
-            background-color: #FFF3E0;
-            color: var(--hostgator-orange);
-            padding: 0.2rem 0.5rem;
-            border-radius: 8px;
+            background: linear-gradient(120deg, rgba(251, 188, 4, 0.2) 0%, rgba(251, 188, 4, 0.2) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 30%;
+            background-position: 0 70%;
             cursor: pointer;
-            transition: all 0.2s ease;
-            font-weight: 500;
+            transition: var(--transition-fast);
+            padding: 0 2px;
+            border-radius: 4px;
         }
-        
+
         .vocab-word:hover {
-            background-color: var(--hostgator-orange);
-            color: white;
+            background-size: 100% 100%;
+            background: linear-gradient(120deg, var(--google-yellow) 0%, var(--google-yellow) 100%);
+            color: var(--google-gray-900);
         }
-        
-        /* Quiz Panel */
+
+        /* Quiz Options */
         .quiz-option {
-            background: var(--hostgator-light-gray);
-            border-radius: 12px;
+            background: var(--google-gray-100);
+            border-radius: var(--radius-md);
             padding: 1rem;
             margin-bottom: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: var(--transition-fast);
             border: 2px solid transparent;
         }
-        
+
         .quiz-option:hover {
-            background: #E8E8EE;
+            background: var(--google-gray-200);
+            transform: translateX(4px);
         }
-        
+
         .quiz-option.selected {
-            border-color: var(--hostgator-orange);
-            background: #FFF3E0;
+            border-color: var(--google-blue);
+            background: rgba(26, 115, 232, 0.1);
         }
-        
+
         .quiz-option.correct {
-            background: #D4EDDA;
-            border-color: var(--hostgator-success);
+            background: rgba(52, 168, 83, 0.15);
+            border-color: var(--google-green);
         }
-        
+
         .quiz-option.wrong {
-            background: #F8D7DA;
-            border-color: #DC3545;
+            background: rgba(234, 67, 53, 0.1);
+            border-color: var(--google-red);
         }
-        
-        .letter-badge {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background: var(--hostgator-orange);
-            color: white;
-            border-radius: 8px;
-            font-weight: 700;
-            margin-right: 1rem;
-        }
-        
-        /* Buttons */
-        .btn-primary-custom {
-            background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%);
-            border: none;
-            padding: 0.75rem 2rem;
+
+        /* Badges & Achievements */
+        .badge-google {
+            background: linear-gradient(135deg, var(--google-blue), var(--google-green));
+            color: var(--google-white);
+            padding: 0.5rem 1rem;
             border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            font-weight: 500;
         }
-        
-        .btn-primary-custom:hover {
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(245,130,32,0.3);
+
+        .achievement-card {
+            background: var(--google-white);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            text-align: center;
+            transition: var(--transition-normal);
         }
-        
-        .btn-outline-custom {
-            border: 2px solid var(--hostgator-orange);
-            color: var(--hostgator-orange);
-            background: transparent;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+
+        .achievement-card.locked {
+            opacity: 0.5;
+            filter: grayscale(0.3);
         }
-        
-        .btn-outline-custom:hover {
-            background: var(--hostgator-orange);
-            color: white;
+
+        .achievement-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
-        
-        /* Vocabulary Modal */
-        .modal-header-custom {
-            background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%);
-            color: white;
-        }
-        
-        /* Progress */
+
+        /* Progress Bar */
         .progress {
-            height: 10px;
+            height: 8px;
+            border-radius: 10px;
+            background: var(--google-gray-200);
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--google-blue), var(--google-green));
             border-radius: 10px;
         }
-        
-        .progress-bar-custom {
-            background: linear-gradient(90deg, var(--hostgator-orange) 0%, #FF8C42 100%);
-            border-radius: 10px;
+
+        /* Toast Notification */
+        .toast-google {
+            background: var(--google-gray-900);
+            color: var(--google-white);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.5rem;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
         }
-        
-        /* Sidebar */
-        .sidebar {
-            background: var(--hostgator-white);
-            border-radius: 20px;
-            padding: 1.5rem;
-            position: sticky;
-            top: 90px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+        .toast-google.show {
+            transform: translateX(0);
         }
-        
-        /* Footer */
-        footer {
-            background: var(--hostgator-dark);
-            color: white;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease forwards;
-        }
-        
-        /* Responsive */
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .reading-panel {
                 padding: 1rem;
             }
+            
             .dutch-text {
                 font-size: 1rem;
             }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .display-4 {
+                font-size: 2rem;
+            }
         }
-        
-        /* Loading spinner */
-        .spinner-custom {
-            width: 50px;
-            height: 50px;
-            border: 4px solid var(--hostgator-light-gray);
-            border-top-color: var(--hostgator-orange);
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        /* Loading Spinner */
+        .spinner-google {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--google-gray-200);
+            border-top-color: var(--google-blue);
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-        
+
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
-        
-        /* Word strength indicator */
-        .strength-indicator {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 8px;
+
+        /* Streak Calendar */
+        .streak-calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            margin-top: 1rem;
         }
-        
-        .strength-0 { background: #DC3545; }
-        .strength-1 { background: #FFC107; }
-        .strength-2 { background: #28A745; }
+
+        .streak-day {
+            aspect-ratio: 1;
+            background: var(--google-gray-200);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .streak-day.completed {
+            background: linear-gradient(135deg, var(--google-blue), var(--google-green));
+            color: white;
+        }
+
+        /* Level Progress */
+        .level-progress {
+            background: linear-gradient(135deg, var(--google-yellow), var(--google-red));
+            border-radius: var(--radius-lg);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg sticky-top">
+<nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="#" id="homeLink">
-            <i class="fas fa-book-open me-2"></i>Dutch<span>Stories</span>
+            <i class="fas fa-book-open me-2"></i>Dutch<span style="color: var(--google-blue);">Stories</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item">
                     <a class="nav-link" href="#" id="navHome">
                         <i class="fas fa-home me-1"></i> Home
@@ -353,7 +467,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" id="navVocabulary">
-                        <i class="fas fa-graduation-cap me-1"></i> My Words
+                        <i class="fas fa-graduation-cap me-1"></i> Words
                     </a>
                 </li>
                 <li class="nav-item">
@@ -361,10 +475,18 @@
                         <i class="fas fa-chart-line me-1"></i> Progress
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navStrategies">
+                        <i class="fas fa-lightbulb me-1"></i> Strategies
+                    </a>
+                </li>
             </ul>
-            <div class="ms-3">
-                <span class="badge bg-light text-dark p-2" id="streakBadge">
-                    <i class="fas fa-fire text-warning"></i> <span id="streakCount">0</span> day streak
+            <div class="ms-3 d-flex gap-2">
+                <span class="badge-google" id="levelBadge">
+                    <i class="fas fa-star me-1"></i> Level 1
+                </span>
+                <span class="badge-google" id="streakBadge">
+                    <i class="fas fa-fire me-1"></i> <span id="streakCount">0</span> days
                 </span>
             </div>
         </div>
@@ -373,114 +495,169 @@
 
 <!-- Main Content -->
 <main class="container py-4" id="mainContent">
-    <!-- Loading -->
     <div class="text-center py-5" id="loadingDiv">
-        <div class="spinner-custom mx-auto mb-3"></div>
-        <p class="text-muted">Loading Dutch stories...</p>
+        <div class="spinner-google mx-auto mb-3"></div>
+        <p class="text-muted">Loading your Dutch learning journey...</p>
     </div>
 </main>
 
-<!-- Vocabulary Modal -->
-<div class="modal fade" id="vocabModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header modal-header-custom">
-                <h5 class="modal-title"><i class="fas fa-language me-2"></i>Word Details</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body" id="vocabModalBody">
-                <!-- Dynamic content -->
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-outline-custom" id="markKnownBtn">
-                    <i class="fas fa-check me-1"></i> Mark as Known
-                </button>
-                <button class="btn btn-primary-custom" id="markNeedsReviewBtn">
-                    <i class="fas fa-repeat me-1"></i> Needs Review
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Toast Notifications -->
+<div id="toastContainer" style="position: fixed; bottom: 20px; right: 20px; z-index: 1090;"></div>
 
-<!-- Success Toast -->
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
-    <div id="successToast" class="toast bg-success text-white" role="alert">
-        <div class="d-flex">
-            <div class="toast-body">
-                <i class="fas fa-check-circle me-2"></i> <span id="toastMessage">Word saved!</span>
-            </div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-        </div>
-    </div>
-</div>
+<!-- Audio Player (hidden for TTS) -->
+<audio id="audioPlayer" style="display: none;"></audio>
 
 <script>
-    // Global state
+    // App State
     let appData = null;
     let currentView = 'home';
     let currentStoryId = null;
     let currentQuizAnswers = {};
+    let speechSynthesis = window.speechSynthesis;
+    let currentUtterance = null;
+    
+    // User Progress with Gamification
     let userProgress = {
+        // Stats
+        totalXP: 0,
+        level: 1,
+        levelProgress: 0,
+        streak: 0,
+        lastLoginDate: null,
+        totalTimeSpent: 0, // minutes
+        sessionStartTime: null,
+        
+        // Progress
         completedStories: [],
         storyStars: {},
-        vocabularyStrength: {},
-        wordReviewQueue: [],
-        lastLoginDate: null,
-        streak: 0,
-        totalXP: 0,
-        dailyChallenges: []
+        storyQuizScores: {},
+        vocabularyMastered: [], // words with strength >= 80
+        vocabularyLearning: {}, // word -> strength (0-100)
+        
+        // Achievements
+        badges: [],
+        
+        // Learning Analytics
+        wordsReviewed: 0,
+        quizzesTaken: 0,
+        correctAnswers: 0
     };
-    let vocabChart = null;
-
+    
+    // Achievement Definitions
+    const achievements = {
+        firstStory: { id: 'first_story', name: 'First Steps', description: 'Complete your first story', icon: 'fa-book', requirement: { type: 'stories', count: 1 }, xpReward: 50 },
+        fiveStories: { id: 'five_stories', name: 'Story Explorer', description: 'Complete 5 stories', icon: 'fa-layer-group', requirement: { type: 'stories', count: 5 }, xpReward: 100 },
+        tenStories: { id: 'ten_stories', name: 'Master Storyteller', description: 'Complete 10 stories', icon: 'fa-crown', requirement: { type: 'stories', count: 10 }, xpReward: 200 },
+        sevenDayStreak: { id: 'seven_day_streak', name: 'On Fire!', description: '7-day learning streak', icon: 'fa-fire', requirement: { type: 'streak', count: 7 }, xpReward: 150 },
+        thirtyDayStreak: { id: 'thirty_day_streak', name: 'Unstoppable', description: '30-day learning streak', icon: 'fa-bolt', requirement: { type: 'streak', count: 30 }, xpReward: 500 },
+        vocabularyMaster: { id: 'vocab_master', name: 'Word Wizard', description: 'Master 100 words', icon: 'fa-graduation-cap', requirement: { type: 'vocabulary', count: 100 }, xpReward: 250 },
+        perfectQuiz: { id: 'perfect_quiz', name: 'Perfect Score!', description: 'Get 5/5 on a quiz', icon: 'fa-star', requirement: { type: 'perfect_quiz', count: 1 }, xpReward: 75 }
+    };
+    
+    // Learning Strategies
+    const learningStrategies = {
+        spacedRepetition: {
+            name: 'Spaced Repetition',
+            description: 'Review words at optimal intervals for long-term memory retention',
+            technique: 'Review vocabulary after 1 day, 3 days, 7 days, 14 days, and 30 days',
+            icon: 'fa-clock'
+        },
+        activeRecall: {
+            name: 'Active Recall',
+            description: 'Test yourself instead of passive reading to strengthen neural pathways',
+            technique: 'Use flashcards and try to recall word meanings before flipping',
+            icon: 'fa-brain'
+        },
+        interleaving: {
+            name: 'Interleaving Practice',
+            description: 'Mix different topics to improve discrimination and flexible thinking',
+            technique: 'Study words from different stories in the same session',
+            icon: 'fa-random'
+        },
+        dualCoding: {
+            name: 'Dual Coding',
+            description: 'Combine verbal and visual learning for stronger memory',
+            technique: 'Visualize the word meaning or draw a quick sketch',
+            icon: 'fa-palette'
+        },
+        elaboration: {
+            name: 'Elaboration',
+            description: 'Connect new information to what you already know',
+            technique: 'Create sentences using new words in context',
+            icon: 'fa-link'
+        },
+        pomodoro: {
+            name: 'Pomodoro Technique',
+            description: 'Study in focused bursts with breaks for better concentration',
+            technique: 'Learn for 25 minutes, then take a 5-minute break',
+            icon: 'fa-hourglass-half'
+        }
+    };
+    
     // Initialize
     $(document).ready(function() {
-        loadData();
-        setupEventListeners();
         loadUserProgress();
+        setupEventListeners();
+        loadData();
     });
-
-    // Load JSON data
+    
+    // Load JSON Data
     function loadData() {
-        $.getJSON('dutch-stories.json')
-            .done(function(data) {
-                appData = data;
-                $('#loadingDiv').hide();
-                renderHomePage();
-                updateStreakDisplay();
-            })
-            .fail(function(error) {
-                console.error('Error loading data:', error);
-                $('#loadingDiv').html(`
-                    <div class="alert alert-danger">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        Could not load stories. Make sure dutch-stories.json is in the same directory.
-                        <br><br>
-                        <small>Current data includes Stories 1-4. Add more stories to the JSON file.</small>
-                    </div>
-                `);
-            });
+        // Using the original content from story 10 as placeholder
+        // In production, this would load from dutch-stories.json
+        appData = {
+            metadata: { totalStories: 1, title: "Dutch Primary School Stories" },
+            stories: [
+                {
+                    id: 1,
+                    title: "Papa en Mama Olifant - Twee Olifanten",
+                    titleEnglish: "Papa and Mama Elephant - Two Elephants",
+                    location: "Jungle",
+                    summaryDutch: "Papa Olifant is groot en sterk. Mama Olifant is lief en zorgzaam. Samen gaan ze op zoek naar water.",
+                    summaryEnglish: "Papa Elephant is big and strong. Mama Elephant is caring. Together they search for water.",
+                    fullTextDutch: "Papa Olifant is heel groot. Hij is heel sterk. Mama Olifant is ook groot, maar zij is heel lief.\n\nDe zon schijnt. Het is warm. Papa en Mama Olifant hebben dorst.\n\n\"Laten we naar de rivier gaan,\" zegt Papa Olifant.\n\n\"Ja,\" zegt Mama Olifant. \"Ik heb dorst.\"\n\nZe lopen door de jungle. Het is een lange weg.\n\nOnderweg zien ze een boom. De boom ligt op de grond. Hij blokkeert het pad.\n\n\"Kijk,\" zegt Mama Olifant. \"Kleine dieren kunnen er niet langs.\"\n\nPapa Olifant pakt de boom met zijn slurf. Hij tilt de boom op. Hij legt de boom aan de kant.\n\n\"Dank je wel!\" roepen de kleine dieren.\n\nPapa en Mama Olifant lopen verder.\n\nDan horen ze een geluidje. Piep piep piep.\n\nEen klein vogeltje zit op de grond. Het kan niet vliegen. Een tak ligt op zijn vleugel.\n\nMama Olifant tilt de tak voorzichtig op. Ze is heel zacht.\n\nHet vogeltje kan bewegen. Het fladdert met zijn vleugels.\n\n\"Dank je wel!\" piept het vogeltje. Het vliegt weg.\n\nPapa en Mama Olifant lopen verder.\n\nDe zon wordt nog heter. Papa Olifant zweet. Mama Olifant is moe.\n\nMaar ze geven niet op.\n\nDan zien ze het water! De rivier is blauw en mooi.\n\nPapa en Mama Olifant rennen naar de rivier. Ze drinken water met hun slurven.\n\nSlurp slurp slurp. Het water is heerlijk.\n\nNa het drinken spelen ze in het water. Ze spetteren. Ze lachen.\n\n\"Wat was het warm,\" zegt Mama Olifant.\n\n\"Ja,\" zegt Papa Olifant. \"Maar samen zijn we sterk.\"\n\nZe rusten uit onder een grote boom. De zon gaat onder. De lucht wordt roze.\n\n\"Tijd om naar huis te gaan,\" zegt Papa Olifant.\n\nSamen lopen ze terug door de jungle. Ze zijn moe, maar hun hart is vol.\n\nZe hebben kleine dieren geholpen. Ze hebben water gevonden.\n\nEn ze hebben elkaar.\n\n\"Slaap lekker,\" zegt Mama Olifant.\n\n\"Slaap lekker,\" zegt Papa Olifant.\n\nDe sterren schijnen. Papa en Mama Olifant slapen tevreden.",
+                    fullTextEnglish: "Papa Elephant is very big. He is very strong. Mama Elephant is also big, but she is very sweet.\n\nThe sun is shining. It is warm. Papa and Mama Elephant are thirsty.\n\n\"Let's go to the river,\" says Papa Elephant.\n\n\"Yes,\" says Mama Elephant. \"I am thirsty.\"\n\nThey walk through the jungle. It is a long way.\n\nAlong the way, they see a tree. The tree lies on the ground. It blocks the path.\n\n\"Look,\" says Mama Elephant. \"Small animals can't get past.\"\n\nPapa Elephant grabs the tree with his trunk. He lifts the tree. He puts the tree to the side.\n\n\"Thank you!\" shout the small animals.\n\nPapa and Mama Elephant walk on.\n\nThen they hear a little sound. Peep peep peep.\n\nA little bird sits on the ground. It cannot fly. A branch lies on its wing.\n\nMama Elephant carefully lifts the branch. She is very gentle.\n\nThe little bird can move. It flutters its wings.\n\n\"Thank you!\" peeps the little bird. It flies away.\n\nPapa and Mama Elephant walk on.\n\nThe sun gets even hotter. Papa Elephant is sweating. Mama Elephant is tired.\n\nBut they don't give up.\n\nThen they see the water! The river is blue and beautiful.\n\nPapa and Mama Elephant run to the river. They drink water with their trunks.\n\nSlurp slurp slurp. The water is wonderful.\n\nAfter drinking, they play in the water. They splash. They laugh.\n\n\"It was so hot,\" says Mama Elephant.\n\n\"Yes,\" says Papa Elephant. \"But together we are strong.\"\n\nThey rest under a big tree. The sun sets. The sky becomes pink.\n\n\"Time to go home,\" says Papa Elephant.\n\nTogether they walk back through the jungle. They are tired, but their hearts are full.\n\nThey have helped small animals. They have found water.\n\nAnd they have each other.\n\n\"Sleep well,\" says Mama Elephant.\n\n\"Sleep well,\" says Papa Elephant.\n\nThe stars shine. Papa and Mama Elephant sleep contentedly.",
+                    difficulty: { level: "A1", estimatedReadTime: 5, wordCount: 460 },
+                    vocabulary: [
+                        { dutch: "olifant", english: "elephant", category: "noun" },
+                        { dutch: "groot", english: "big", category: "adjective" },
+                        { dutch: "sterk", english: "strong", category: "adjective" },
+                        { dutch: "lief", english: "sweet/lovely", category: "adjective" },
+                        { dutch: "dorst", english: "thirst", category: "noun" },
+                        { dutch: "rivier", english: "river", category: "noun" },
+                        { dutch: "jungle", english: "jungle", category: "noun" },
+                        { dutch: "slurf", english: "trunk", category: "noun" },
+                        { dutch: "voorzichtig", english: "carefully", category: "adverb" },
+                        { dutch: "samen", english: "together", category: "adverb" },
+                        { dutch: "helpen", english: "to help", category: "verb" },
+                        { dutch: "zwemmen", english: "to swim", category: "verb" },
+                        { dutch: "lachen", english: "to laugh", category: "verb" },
+                        { dutch: "slapen", english: "to sleep", category: "verb" },
+                        { dutch: "blij", english: "happy", category: "adjective" },
+                        { dutch: "moe", english: "tired", category: "adjective" }
+                    ],
+                    questions: [
+                        { id: 1, text: "Wat hebben Papa en Mama Olifant?", options: ["Honger", "Dorst", "Slaap", "Pijn"], correctIndex: 1, explanation: "De zon schijnt en het is warm, dus hebben ze dorst." },
+                        { id: 2, text: "Wat doen de olifanten met de boom?", options: ["Eten de boom op", "Tillen de boom op", "Klimmen in de boom", "Gaan om de boom heen"], correctIndex: 1, explanation: "Papa Olifant tilt de boom op en legt hem aan de kant." },
+                        { id: 3, text: "Welk dier wordt gered?", options: ["Een muis", "Een vogeltje", "Een slang", "Een kikker"], correctIndex: 1, explanation: "Mama Olifant redt een klein vogeltje met een tak op zijn vleugel." },
+                        { id: 4, text: "Hoe drinken olifanten water?", options: ["Met hun mond", "Met hun slurven", "Met hun voeten", "Met hun oren"], correctIndex: 1, explanation: "Olifanten drinken water met hun slurven." },
+                        { id: 5, text: "Wat is de boodschap van het verhaal?", options: ["Olifanten zijn groot", "Water is belangrijk", "Samen helpen en samen zijn", "De jungle is gevaarlijk"], correctIndex: 2, explanation: "Papa Olifant zegt: 'Samen zijn we sterk.'" }
+                    ]
+                }
+            ]
+        };
+        
+        $('#loadingDiv').hide();
+        renderHomePage();
     }
-
-    // Load user progress from localStorage
+    
+    // Load User Progress from LocalStorage
     function loadUserProgress() {
-        const saved = localStorage.getItem('dutchLearnerProgress');
+        const saved = localStorage.getItem('dutch_learner_progress');
         if (saved) {
             userProgress = JSON.parse(saved);
         } else {
-            // Initialize
-            if (appData && appData.stories) {
-                appData.stories.forEach(story => {
-                    userProgress.storyStars[story.id] = 0;
-                    if (story.vocabulary) {
-                        story.vocabulary.forEach(word => {
-                            if (!userProgress.vocabularyStrength[word.dutch]) {
-                                userProgress.vocabularyStrength[word.dutch] = 0;
-                            }
-                        });
-                    }
-                });
-            }
+            userProgress.sessionStartTime = new Date().toISOString();
             saveUserProgress();
         }
         
@@ -491,365 +668,312 @@
             yesterday.setDate(yesterday.getDate() - 1);
             if (userProgress.lastLoginDate === yesterday.toDateString()) {
                 userProgress.streak++;
+                showToast(`🔥 ${userProgress.streak} day streak! Keep going!`);
             } else {
                 userProgress.streak = 1;
             }
             userProgress.lastLoginDate = today;
             saveUserProgress();
         }
-        updateStreakDisplay();
+        
+        updateLevelDisplay();
     }
-
+    
     function saveUserProgress() {
-        localStorage.setItem('dutchLearnerProgress', JSON.stringify(userProgress));
-        updateStreakDisplay();
+        localStorage.setItem('dutch_learner_progress', JSON.stringify(userProgress));
     }
-
-    function updateStreakDisplay() {
-        $('#streakCount').text(userProgress.streak || 0);
+    
+    function updateLevelDisplay() {
+        const level = Math.floor(userProgress.totalXP / 100) + 1;
+        userProgress.level = level;
+        $('#levelBadge').html(`<i class="fas fa-star me-1"></i> Level ${level}`);
+        $('#streakCount').text(userProgress.streak);
     }
-
+    
     function addXP(amount) {
         userProgress.totalXP += amount;
+        const oldLevel = userProgress.level;
+        updateLevelDisplay();
+        
+        if (userProgress.level > oldLevel) {
+            showToast(`🎉 LEVEL UP! You reached level ${userProgress.level}! 🎉`);
+        }
+        
         saveUserProgress();
-        showToast(`+${amount} XP earned!`);
-        updateProgressDisplay();
     }
-
-    function showToast(message) {
-        $('#toastMessage').text(message);
-        const toast = new bootstrap.Toast($('#successToast'));
-        toast.show();
+    
+    function showToast(message, type = 'success') {
+        const toast = $(`
+            <div class="toast-google show" style="background: ${type === 'success' ? '#202124' : '#EA4335'}">
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} me-2"></i>
+                ${message}
+            </div>
+        `);
+        $('#toastContainer').append(toast);
+        setTimeout(() => {
+            toast.removeClass('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
     }
-
-    // Setup navigation
+    
     function setupEventListeners() {
-        $('#homeLink, #navHome').click(function(e) {
-            e.preventDefault();
-            renderHomePage();
-        });
-        $('#navStories').click(function(e) {
-            e.preventDefault();
-            renderStoriesPage();
-        });
-        $('#navVocabulary').click(function(e) {
-            e.preventDefault();
-            renderVocabularyPage();
-        });
-        $('#navProgress').click(function(e) {
-            e.preventDefault();
-            renderProgressPage();
-        });
+        $('#homeLink, #navHome').click(e => { e.preventDefault(); renderHomePage(); });
+        $('#navStories').click(e => { e.preventDefault(); renderStoriesPage(); });
+        $('#navVocabulary').click(e => { e.preventDefault(); renderVocabularyPage(); });
+        $('#navProgress').click(e => { e.preventDefault(); renderProgressPage(); });
+        $('#navStrategies').click(e => { e.preventDefault(); renderStrategiesPage(); });
     }
-
-    // Render Home Page
+    
+    // Render Functions
     function renderHomePage() {
         currentView = 'home';
-        if (!appData || !appData.stories) return;
-        
-        const completedCount = userProgress.completedStories.length;
         const totalStories = appData.stories.length;
+        const completedCount = userProgress.completedStories.length;
         const completionPercent = Math.round((completedCount / totalStories) * 100);
-        
-        const wordsLearned = Object.values(userProgress.vocabularyStrength).filter(s => s >= 2).length;
-        const totalWords = appData.stories.reduce((sum, s) => sum + (s.vocabulary ? s.vocabulary.length : 0), 0);
+        const wordsMastered = Object.values(userProgress.vocabularyLearning || {}).filter(s => s >= 80).length;
         
         const html = `
-            <div class="fade-in">
-                <!-- Hero -->
-                <div class="reading-panel text-center mb-4" style="background: linear-gradient(135deg, var(--hostgator-orange) 0%, #FF8C42 100%); color: white;">
-                    <h1 class="display-5 fw-bold mb-3">🇳🇱 Learn Dutch Through Stories</h1>
-                    <p class="lead mb-4">20 captivating short stories to build vocabulary and improve comprehension</p>
-                    <button class="btn btn-light btn-lg rounded-pill px-4" id="startLearningBtn">
-                        <i class="fas fa-play me-2"></i> Start Learning
+            <div class="fade-in-up">
+                <!-- Hero Section -->
+                <div class="text-center mb-5">
+                    <h1 class="display-4 mb-3">🇳🇱 Learn Dutch Through Stories</h1>
+                    <p class="lead text-muted">Read, listen, and master Dutch with engaging stories designed for beginners</p>
+                    <button class="btn-google mt-3" id="startLearningBtn">
+                        <i class="fas fa-play me-2"></i> Start Your Journey
                     </button>
                 </div>
                 
-                <!-- Stats -->
+                <!-- Stats Grid -->
                 <div class="row g-4 mb-5">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="story-card text-center">
-                            <div class="p-4">
-                                <i class="fas fa-book fa-3x" style="color: var(--hostgator-orange);"></i>
-                                <h2 class="display-6 fw-bold mt-2">${totalStories}</h2>
-                                <p class="text-muted mb-0">Stories</p>
-                            </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-book-open" style="color: var(--google-blue);"></i></div>
+                            <div class="stat-number">${completedCount}/${totalStories}</div>
+                            <div class="text-muted small">Stories Completed</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="story-card text-center">
-                            <div class="p-4">
-                                <i class="fas fa-language fa-3x" style="color: var(--hostgator-orange);"></i>
-                                <h2 class="display-6 fw-bold mt-2">${totalWords}</h2>
-                                <p class="text-muted mb-0">Vocabulary Words</p>
-                            </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-graduation-cap" style="color: var(--google-green);"></i></div>
+                            <div class="stat-number">${wordsMastered}</div>
+                            <div class="text-muted small">Words Mastered</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="story-card text-center">
-                            <div class="p-4">
-                                <i class="fas fa-check-circle fa-3x" style="color: var(--hostgator-orange);"></i>
-                                <h2 class="display-6 fw-bold mt-2">${wordsLearned}</h2>
-                                <p class="text-muted mb-0">Words Learned</p>
-                            </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-fire" style="color: var(--google-red);"></i></div>
+                            <div class="stat-number">${userProgress.streak}</div>
+                            <div class="text-muted small">Day Streak</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="story-card text-center">
-                            <div class="p-4">
-                                <i class="fas fa-fire fa-3x" style="color: var(--hostgator-orange);"></i>
-                                <h2 class="display-6 fw-bold mt-2">${userProgress.streak || 0}</h2>
-                                <p class="text-muted mb-0">Day Streak</p>
-                            </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-trophy" style="color: var(--google-yellow);"></i></div>
+                            <div class="stat-number">${userProgress.totalXP}</div>
+                            <div class="text-muted small">Total XP</div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Continue where left off -->
-                <div class="progress-section">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="fw-bold mb-0"><i class="fas fa-chart-simple me-2" style="color: var(--hostgator-orange);"></i>Your Progress</h5>
-                        <span class="badge-theme">${completionPercent}% Complete</span>
+                <!-- Level Progress -->
+                <div class="level-progress mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-white"><i class="fas fa-star me-1"></i> Level ${userProgress.level}</span>
+                        <span class="text-white">${userProgress.totalXP % 100}/100 XP to next level</span>
                     </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar progress-bar-custom" style="width: ${completionPercent}%"></div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <h6><i class="fas fa-star me-2" style="color: gold;"></i>Completed Stories: ${completedCount}/${totalStories}</h6>
-                        </div>
-                        <div class="col-md-6">
-                            <h6><i class="fas fa-trophy me-2" style="color: gold;"></i>Total XP: ${userProgress.totalXP || 0}</h6>
-                        </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: ${userProgress.totalXP % 100}%"></div>
                     </div>
                 </div>
                 
                 <!-- Featured Story -->
-                <h4 class="fw-bold mb-3"><i class="fas fa-star me-2" style="color: var(--hostgator-orange);"></i>Featured Story</h4>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        ${renderStoryCard(appData.stories[0])}
+                <div class="reading-panel">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="h5 mb-0"><i class="fas fa-star me-2" style="color: var(--google-yellow);"></i>Featured Story</h3>
+                        <span class="badge-google">New</span>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="story-card">
-                            <div class="card-body p-4">
-                                <i class="fas fa-calendar-alt fa-2x mb-3" style="color: var(--hostgator-orange);"></i>
-                                <h5 class="fw-bold">Daily Challenge</h5>
-                                <p class="text-muted">Learn 5 new words from any story today to keep your streak alive!</p>
-                                <button class="btn btn-outline-custom btn-sm" id="dailyChallengeBtn">
-                                    <i class="fas fa-check me-1"></i> Start Challenge
-                                </button>
-                            </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h2 class="h4 mb-2">${appData.stories[0].title}</h2>
+                            <p class="text-muted">${appData.stories[0].summaryEnglish}</p>
+                            <button class="btn-outline-google" onclick="openStory(1)">
+                                Read Story <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="fas fa-elephant" style="font-size: 5rem; color: var(--google-blue);"></i>
                         </div>
                     </div>
                 </div>
                 
-                <!-- All Stories Preview -->
-                <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
-                    <h4 class="fw-bold mb-0"><i class="fas fa-book me-2" style="color: var(--hostgator-orange);"></i>All Stories</h4>
-                    <button class="btn btn-outline-custom btn-sm" id="viewAllStoriesBtn">View All <i class="fas fa-arrow-right ms-1"></i></button>
-                </div>
+                <!-- Daily Challenge -->
                 <div class="row">
-                    ${appData.stories.slice(0, 4).map(story => renderStoryCard(story)).join('')}
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <i class="fas fa-calendar-alt fa-2x mb-2" style="color: var(--google-green);"></i>
+                            <h5 class="fw-bold">Daily Challenge</h5>
+                            <p class="small text-muted">Learn 3 new words today to keep your streak alive!</p>
+                            <button class="btn-google btn-sm" onclick="renderVocabularyPage()">
+                                <i class="fas fa-check me-1"></i> Start Challenge
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <i class="fas fa-chart-simple fa-2x mb-2" style="color: var(--google-blue);"></i>
+                            <h5 class="fw-bold">Learning Tip</h5>
+                            <p class="small text-muted">Try the Spaced Repetition strategy for better vocabulary retention</p>
+                            <button class="btn-outline-google btn-sm" onclick="renderStrategiesPage()">
+                                View Strategies <i class="fas fa-lightbulb ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
         
         $('#mainContent').html(html);
-        
-        $('#startLearningBtn, #viewAllStoriesBtn, #dailyChallengeBtn').click(function(e) {
-            e.preventDefault();
-            renderStoriesPage();
-        });
+        $('#startLearningBtn').click(() => renderStoriesPage());
     }
-
-    function renderStoryCard(story) {
-        const isCompleted = userProgress.completedStories.includes(story.id);
-        const stars = userProgress.storyStars[story.id] || 0;
-        
-        return `
-            <div class="story-card" onclick="openStory(${story.id})">
-                <div class="story-card-header">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div>
-                            <div class="story-card-number">#${story.id}</div>
-                            <h5 class="story-card-title">${story.title}</h5>
-                            <div class="story-card-location">
-                                <i class="fas fa-map-marker-alt me-1"></i>${story.location || 'Netherlands'}
-                            </div>
-                        </div>
-                        ${isCompleted ? '<i class="fas fa-check-circle fa-2x" style="opacity: 0.8;"></i>' : ''}
-                    </div>
-                </div>
-                <div class="story-card-body">
-                    <div class="story-meta">
-                        <span><i class="far fa-clock me-1"></i> ${story.difficulty?.estimatedReadTime || 8} min</span>
-                        <span><i class="fas fa-signal me-1"></i> ${story.difficulty?.level || 'A2'}</span>
-                    </div>
-                    <p class="text-muted small mb-3">${story.summaryEnglish?.substring(0, 100)}...</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            ${[1,2,3,4,5].map(i => `<i class="fas fa-star${stars >= i ? '' : '-o'}" style="color: gold; font-size: 0.8rem;"></i>`).join('')}
-                        </div>
-                        <span class="badge-theme">${story.vocabulary?.length || 0} words</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    // Render Stories Page
+    
     function renderStoriesPage() {
         currentView = 'stories';
-        if (!appData || !appData.stories) return;
-        
-        let html = `
-            <div class="fade-in">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="fw-bold"><i class="fas fa-book me-2" style="color: var(--hostgator-orange);"></i>All Stories</h2>
-                    <div class="dropdown">
-                        <button class="btn btn-outline-custom btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-filter me-1"></i> Filter
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item filter-btn" data-filter="all">All Stories</a></li>
-                            <li><a class="dropdown-item filter-btn" data-filter="completed">Completed</a></li>
-                            <li><a class="dropdown-item filter-btn" data-filter="incomplete">In Progress</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row" id="storiesGrid">
+        const html = `
+            <div class="fade-in-up">
+                <h2 class="h3 mb-4"><i class="fas fa-book me-2" style="color: var(--google-blue);"></i>All Stories</h2>
+                <div class="row">
                     ${appData.stories.map(story => `
-                        <div class="col-md-4 col-lg-3 mb-4 story-item" data-story-id="${story.id}" data-completed="${userProgress.completedStories.includes(story.id)}">
-                            ${renderStoryCard(story)}
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="material-card" onclick="openStory(${story.id})">
+                                <div class="story-card-header">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <div class="badge bg-white text-dark mb-2">#${story.id}</div>
+                                            <h5 class="mb-0 text-white">${story.title}</h5>
+                                            <small><i class="fas fa-map-marker-alt me-1"></i> ${story.location}</small>
+                                        </div>
+                                        ${userProgress.completedStories.includes(story.id) ? '<i class="fas fa-check-circle fa-2x"></i>' : ''}
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span><i class="far fa-clock me-1"></i> ${story.difficulty.estimatedReadTime} min</span>
+                                        <span><i class="fas fa-signal me-1"></i> ${story.difficulty.level}</span>
+                                        <span><i class="fas fa-words me-1"></i> ${story.vocabulary.length} words</span>
+                                    </div>
+                                    <p class="small text-muted mb-0">${story.summaryEnglish.substring(0, 80)}...</p>
+                                </div>
+                            </div>
                         </div>
                     `).join('')}
                 </div>
             </div>
         `;
-        
         $('#mainContent').html(html);
-        
-        $('.filter-btn').click(function() {
-            const filter = $(this).data('filter');
-            if (filter === 'completed') {
-                $('.story-item').each(function() {
-                    if ($(this).data('completed') === true) {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            } else if (filter === 'incomplete') {
-                $('.story-item').each(function() {
-                    if ($(this).data('completed') === false) {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            } else {
-                $('.story-item').show();
-            }
-        });
     }
-
-    // Open a story
+    
+    // TTS Function
+    function speakText(text, lang = 'nl-NL') {
+        if (speechSynthesis.speaking) {
+            speechSynthesis.cancel();
+        }
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+        speechSynthesis.speak(utterance);
+        showToast('🔊 Reading aloud...', 'success');
+    }
+    
     window.openStory = function(storyId) {
         const story = appData.stories.find(s => s.id === storyId);
         if (!story) return;
-        
         currentStoryId = storyId;
-        currentQuizAnswers = {};
         
-        renderStoryReader(story);
-    };
-
-    function renderStoryReader(story) {
-        const stars = userProgress.storyStars[story.id] || 0;
+        const stars = userProgress.storyStars[storyId] || 0;
+        const quizScore = userProgress.storyQuizScores[storyId] || null;
         
-        let html = `
-            <div class="fade-in">
-                <button class="btn btn-outline-custom btn-sm mb-3" onclick="renderStoriesPage()">
+        // Track time spent
+        const startTime = Date.now();
+        
+        const html = `
+            <div class="fade-in-up">
+                <button class="btn-outline-google btn-sm mb-3" onclick="renderStoriesPage()">
                     <i class="fas fa-arrow-left me-1"></i> Back to Stories
                 </button>
                 
                 <div class="reading-panel">
                     <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-2">
                         <div>
-                            <h2 class="fw-bold mb-1">${story.title}</h2>
+                            <h2 class="h3 mb-1">${story.title}</h2>
                             <p class="text-muted">${story.titleEnglish}</p>
                         </div>
                         <div class="text-end">
                             <div class="mb-2">
-                                ${[1,2,3,4,5].map(i => `<i class="fas fa-star${stars >= i ? '' : '-o'}" style="color: gold; font-size: 1.2rem;"></i>`).join('')}
+                                ${[1,2,3,4,5].map(i => `<i class="fas fa-star${stars >= i ? '' : '-o'}" style="color: gold;"></i>`).join('')}
                             </div>
-                            <span class="badge-theme"><i class="fas fa-map-marker-alt me-1"></i> ${story.location || 'Netherlands'}</span>
+                            ${quizScore !== null ? `<span class="badge-google">Quiz: ${quizScore}/5</span>` : ''}
+                            <button class="btn-outline-google btn-sm ms-2" onclick="speakText(${JSON.stringify(story.fullTextDutch)}, 'nl-NL')">
+                                <i class="fas fa-volume-up me-1"></i> Listen
+                            </button>
                         </div>
                     </div>
                     
-                    <!-- Tabs -->
-                    <ul class="nav nav-tabs mb-4" id="storyTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#readTab" type="button">
+                    <!-- Reading Mode Tabs -->
+                    <ul class="nav nav-tabs mb-4" id="storyTabs">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#readTab">
                                 <i class="fas fa-book-open me-1"></i> Read
                             </button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vocabTab" type="button">
-                                <i class="fas fa-graduation-cap me-1"></i> Vocabulary (${story.vocabulary?.length || 0})
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vocabTab">
+                                <i class="fas fa-graduation-cap me-1"></i> Words (${story.vocabulary.length})
                             </button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#quizTab" type="button">
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#quizTab">
                                 <i class="fas fa-question-circle me-1"></i> Quiz
                             </button>
                         </li>
                     </ul>
                     
                     <div class="tab-content">
-                        <!-- Reading Tab -->
                         <div class="tab-pane fade show active" id="readTab">
-                            <div class="mb-3">
-                                <div class="btn-group btn-group-sm mb-3">
-                                    <button class="btn btn-outline-secondary" id="showDutchBtn">Show Dutch</button>
-                                    <button class="btn btn-outline-secondary" id="showEnglishBtn">Show English</button>
-                                    <button class="btn btn-outline-secondary" id="showBothBtn">Show Both</button>
-                                </div>
+                            <div class="mb-3 btn-group">
+                                <button class="btn btn-sm btn-outline-secondary" id="showDutch">Dutch Only</button>
+                                <button class="btn btn-sm btn-outline-secondary" id="showEnglish">English Only</button>
+                                <button class="btn btn-sm btn-outline-secondary" id="showBoth">Both</button>
+                                <button class="btn btn-sm btn-outline-secondary" id="listenBtn">
+                                    <i class="fas fa-headphones me-1"></i> Listen
+                                </button>
                             </div>
-                            <div id="dutchText" class="dutch-text">
-                                ${formatDutchTextWithVocab(story.fullTextDutch, story.vocabulary)}
+                            <div id="dutchPanel" class="dutch-text">
+                                ${story.fullTextDutch.replace(/\n/g, '<br>')}
                             </div>
-                            <div id="englishText" class="english-text" style="display: none;">
-                                ${story.fullTextEnglish}
+                            <div id="englishPanel" class="english-text" style="display: none;">
+                                ${story.fullTextEnglish.replace(/\n/g, '<br>')}
                             </div>
                         </div>
                         
-                        <!-- Vocabulary Tab -->
                         <div class="tab-pane fade" id="vocabTab">
                             <div class="row">
                                 <div class="col-md-8 mx-auto">
-                                    <div class="input-group mb-4">
-                                        <input type="text" class="form-control" id="vocabSearch" placeholder="Search words...">
-                                        <button class="btn btn-outline-custom" id="reviewAllBtn">
-                                            <i class="fas fa-repeat me-1"></i> Review All
-                                        </button>
-                                    </div>
+                                    <input type="text" class="form-control mb-3" id="vocabSearch" placeholder="Search words...">
                                     <div id="vocabList">
-                                        ${story.vocabulary?.map(word => `
-                                            <div class="vocab-card d-flex justify-content-between align-items-center p-3 border-bottom" data-word="${word.dutch}">
+                                        ${story.vocabulary.map(word => `
+                                            <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
                                                 <div>
-                                                    <span class="strength-indicator strength-${Math.min(2, Math.floor((userProgress.vocabularyStrength[word.dutch] || 0) / 50))}"></span>
-                                                    <strong class="vocab-word" onclick="showWordDetail('${word.dutch}', '${word.english}', '${word.category || 'noun'}')">${word.dutch}</strong>
+                                                    <strong class="vocab-word" onclick="speakText('${word.dutch}', 'nl-NL')">${word.dutch}</strong>
                                                     <span class="text-muted ms-2">→ ${word.english}</span>
-                                                    <span class="badge bg-light text-dark ms-2">${word.category || 'word'}</span>
+                                                    <span class="badge bg-light text-dark ms-2">${word.category}</span>
                                                 </div>
                                                 <div>
                                                     <button class="btn btn-sm btn-outline-success me-1" onclick="markWordKnown('${word.dutch}')">
                                                         <i class="fas fa-check"></i>
                                                     </button>
-                                                    <button class="btn btn-sm btn-outline-warning" onclick="markWordForReview('${word.dutch}')">
-                                                        <i class="fas fa-repeat"></i>
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="speakText('${word.dutch}', 'nl-NL')">
+                                                        <i class="fas fa-volume-up"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -859,27 +983,22 @@
                             </div>
                         </div>
                         
-                        <!-- Quiz Tab -->
                         <div class="tab-pane fade" id="quizTab">
-                            <div class="text-center mb-4">
-                                <h4>Test Your Comprehension</h4>
-                                <p class="text-muted">Answer these 5 questions about the story</p>
-                            </div>
                             <div id="quizContainer">
-                                ${story.questions?.map((q, idx) => `
-                                    <div class="quiz-question mb-4" data-qid="${q.id}">
-                                        <h6 class="fw-bold mb-3">${idx + 1}. ${q.text}</h6>
+                                ${story.questions.map((q, idx) => `
+                                    <div class="mb-4" data-qid="${q.id}">
+                                        <h6 class="fw-bold mb-3">${idx+1}. ${q.text}</h6>
                                         ${q.options.map((opt, optIdx) => `
-                                            <div class="quiz-option" data-question="${q.id}" data-option-index="${optIdx}">
+                                            <div class="quiz-option" data-question="${q.id}" data-option="${optIdx}">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="letter-badge">${String.fromCharCode(65 + optIdx)}</span>
-                                                    <span>${opt}</span>
+                                                    <div class="me-2 fw-bold">${String.fromCharCode(65+optIdx)}.</div>
+                                                    <div>${opt}</div>
                                                 </div>
                                             </div>
                                         `).join('')}
                                     </div>
                                 `).join('')}
-                                <button class="btn btn-primary-custom w-100 mt-3" id="submitQuizBtn">Submit Answers</button>
+                                <button class="btn-google w-100 mt-3" id="submitQuiz">Submit Answers</button>
                                 <div id="quizResult" class="mt-4"></div>
                             </div>
                         </div>
@@ -890,257 +1009,142 @@
         
         $('#mainContent').html(html);
         
-        // Setup reading view toggles
-        $('#showDutchBtn').click(function() {
-            $('#dutchText').show();
-            $('#englishText').hide();
-        });
-        $('#showEnglishBtn').click(function() {
-            $('#dutchText').hide();
-            $('#englishText').show();
-        });
-        $('#showBothBtn').click(function() {
-            $('#dutchText').show();
-            $('#englishText').show();
-        });
+        // Reading mode toggles
+        $('#showDutch').click(() => { $('#dutchPanel').show(); $('#englishPanel').hide(); });
+        $('#showEnglish').click(() => { $('#dutchPanel').hide(); $('#englishPanel').show(); });
+        $('#showBoth').click(() => { $('#dutchPanel').show(); $('#englishPanel').show(); });
+        $('#listenBtn').click(() => speakText(story.fullTextDutch, 'nl-NL'));
         
-        // Setup quiz
+        // Quiz handling
+        let quizAnswers = {};
         $('.quiz-option').click(function() {
             const qid = $(this).data('question');
-            const optionIndex = $(this).data('option-index');
-            $(this).closest('.quiz-question').find('.quiz-option').removeClass('selected');
+            const option = $(this).data('option');
+            $(this).closest('div[data-qid]').find('.quiz-option').removeClass('selected');
             $(this).addClass('selected');
-            currentQuizAnswers[qid] = optionIndex;
+            quizAnswers[qid] = option;
         });
         
-        $('#submitQuizBtn').click(function() {
-            const storyQuestions = story.questions;
-            let correctCount = 0;
-            storyQuestions.forEach(q => {
-                if (currentQuizAnswers[q.id] === q.correctIndex) {
-                    correctCount++;
-                }
+        $('#submitQuiz').click(function() {
+            let correct = 0;
+            story.questions.forEach(q => {
+                if (quizAnswers[q.id] === q.correctIndex) correct++;
             });
             
+            // Save score
+            userProgress.storyQuizScores[storyId] = correct;
+            if (correct >= 4 && !userProgress.completedStories.includes(storyId)) {
+                userProgress.completedStories.push(storyId);
+                const newStars = Math.min(5, (userProgress.storyStars[storyId] || 0) + 1);
+                userProgress.storyStars[storyId] = newStars;
+                addXP(50);
+                
+                // Check achievements
+                checkAchievements();
+            }
+            saveUserProgress();
+            
             const resultHtml = `
-                <div class="alert ${correctCount >= 4 ? 'alert-success' : 'alert-info'} text-center">
-                    <i class="fas ${correctCount >= 4 ? 'fa-trophy' : 'fa-book'} fa-2x mb-2"></i>
-                    <h5>You got ${correctCount}/5 correct!</h5>
-                    ${correctCount === 5 ? '<p>Perfect! You\'ve mastered this story!</p>' : '<p>Review the vocabulary and try again!</p>'}
+                <div class="alert ${correct >= 4 ? 'alert-success' : 'alert-info'} text-center">
+                    <i class="fas ${correct >= 4 ? 'fa-trophy' : 'fa-book'} fa-2x mb-2"></i>
+                    <h5>You scored ${correct}/${story.questions.length}!</h5>
+                    ${correct === 5 ? '<p>Perfect! +75 XP bonus!</p>' : '<p>Review the vocabulary and try again!</p>'}
                 </div>
             `;
             $('#quizResult').html(resultHtml);
             
-            if (correctCount >= 4 && !userProgress.completedStories.includes(story.id)) {
-                userProgress.completedStories.push(story.id);
-                const newStars = Math.min(5, userProgress.storyStars[story.id] + 1);
-                userProgress.storyStars[story.id] = newStars;
-                addXP(50);
-                saveUserProgress();
-                showToast(`✨ Story completed! +50 XP`);
-            }
-            
-            storyQuestions.forEach((q, idx) => {
-                const $questionDiv = $(`.quiz-question[data-qid="${q.id}"]`);
-                $questionDiv.find('.quiz-option').each(function(idx, opt) {
-                    const optIndex = $(opt).data('option-index');
-                    if (optIndex === q.correctIndex) {
-                        $(opt).addClass('correct');
-                    } else if (optIndex === currentQuizAnswers[q.id] && optIndex !== q.correctIndex) {
-                        $(opt).addClass('wrong');
-                    }
+            // Show correct answers
+            story.questions.forEach(q => {
+                const $qDiv = $(`div[data-qid="${q.id}"]`);
+                $qDiv.find('.quiz-option').each(function(idx, el) {
+                    if (idx === q.correctIndex) $(el).addClass('correct');
+                    else if (quizAnswers[q.id] === idx && idx !== q.correctIndex) $(el).addClass('wrong');
                 });
             });
         });
         
         $('#vocabSearch').on('input', function() {
             const search = $(this).val().toLowerCase();
-            $('#vocabList .vocab-card').each(function() {
-                const text = $(this).text().toLowerCase();
-                if (text.includes(search)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
+            $('#vocabList > div').each(function() {
+                $(this).toggle($(this).text().toLowerCase().includes(search));
             });
         });
-        
-        $('#reviewAllBtn').click(function() {
-            story.vocabulary?.forEach(word => {
-                markWordForReview(word.dutch);
-            });
-            showToast(`Added ${story.vocabulary?.length} words to review queue`);
-        });
-    }
-    
-    function formatDutchTextWithVocab(text, vocabulary) {
-        if (!vocabulary) return text;
-        let formatted = text;
-        vocabulary.forEach(word => {
-            const regex = new RegExp(`\\b(${word.dutch})\\b`, 'gi');
-            formatted = formatted.replace(regex, `<span class="vocab-word" onclick="showWordDetail('${word.dutch}', '${word.english}', '${word.category || 'word'}')">$1</span>`);
-        });
-        return formatted.replace(/\n/g, '<br>');
-    }
-    
-    // Word detail modal
-    window.showWordDetail = function(dutch, english, category) {
-        const strength = userProgress.vocabularyStrength[dutch] || 0;
-        const strengthPercent = Math.min(100, strength);
-        let strengthText = '';
-        if (strengthPercent < 30) strengthText = 'New - Learn this word';
-        else if (strengthPercent < 70) strengthText = 'In Progress - Keep reviewing';
-        else strengthText = 'Mastered! Great job!';
-        
-        $('#vocabModalBody').html(`
-            <div class="text-center mb-3">
-                <h3 class="fw-bold" style="color: var(--hostgator-orange);">${dutch}</h3>
-                <h5 class="text-muted">→ ${english}</h5>
-                <span class="badge-theme mt-2">${category || 'vocabulary'}</span>
-            </div>
-            <div class="mb-3">
-                <div class="d-flex justify-content-between small mb-1">
-                    <span>Memory Strength</span>
-                    <span>${strengthPercent}%</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-custom" style="width: ${strengthPercent}%"></div>
-                </div>
-                <p class="small text-muted mt-2">${strengthText}</p>
-            </div>
-            <div class="alert alert-light">
-                <i class="fas fa-lightbulb me-2" style="color: var(--hostgator-orange);"></i>
-                <strong>Tip:</strong> Try using this word in a sentence today!
-            </div>
-        `);
-        
-        $('#markKnownBtn').off('click').on('click', function() {
-            markWordKnown(dutch);
-            $('#vocabModal').modal('hide');
-        });
-        $('#markNeedsReviewBtn').off('click').on('click', function() {
-            markWordForReview(dutch);
-            $('#vocabModal').modal('hide');
-        });
-        
-        const modal = new bootstrap.Modal($('#vocabModal'));
-        modal.show();
     };
     
     window.markWordKnown = function(word) {
-        const oldStrength = userProgress.vocabularyStrength[word] || 0;
+        if (!userProgress.vocabularyLearning) userProgress.vocabularyLearning = {};
+        const oldStrength = userProgress.vocabularyLearning[word] || 0;
         const newStrength = Math.min(100, oldStrength + 25);
-        userProgress.vocabularyStrength[word] = newStrength;
-        if (oldStrength < 50 && newStrength >= 50) {
-            addXP(10);
-        }
-        saveUserProgress();
-        showToast(`👍 "${word}" strengthened!`);
-    };
-    
-    window.markWordForReview = function(word) {
-        const oldStrength = userProgress.vocabularyStrength[word] || 0;
-        const newStrength = Math.max(0, oldStrength - 15);
-        userProgress.vocabularyStrength[word] = newStrength;
-        if (!userProgress.wordReviewQueue.includes(word)) {
-            userProgress.wordReviewQueue.push(word);
-        }
-        saveUserProgress();
-        showToast(`📚 "${word}" added to review queue`);
-    };
-    
-    // Vocabulary Page
-    function renderVocabularyPage() {
-        if (!appData || !appData.stories) return;
+        userProgress.vocabularyLearning[word] = newStrength;
         
+        if (newStrength >= 80 && !userProgress.vocabularyMastered.includes(word)) {
+            userProgress.vocabularyMastered.push(word);
+            addXP(10);
+            showToast(`🎓 Mastered "${word}"! +10 XP`);
+        } else {
+            showToast(`📚 "${word}" strengthened to ${newStrength}%`);
+        }
+        saveUserProgress();
+    };
+    
+    function renderVocabularyPage() {
         const allWords = [];
         appData.stories.forEach(story => {
-            if (story.vocabulary) {
-                story.vocabulary.forEach(word => {
-                    allWords.push({
-                        ...word,
-                        storyId: story.id,
-                        storyTitle: story.title
-                    });
-                });
-            }
+            story.vocabulary.forEach(word => {
+                allWords.push({ ...word, storyId: story.id });
+            });
         });
         
-        const learnedCount = Object.values(userProgress.vocabularyStrength).filter(s => s >= 70).length;
-        const inProgressCount = Object.values(userProgress.vocabularyStrength).filter(s => s > 0 && s < 70).length;
-        const newCount = allWords.length - learnedCount - inProgressCount;
+        const mastered = userProgress.vocabularyMastered.length;
         
-        let html = `
-            <div class="fade-in">
-                <h2 class="fw-bold mb-4"><i class="fas fa-graduation-cap me-2" style="color: var(--hostgator-orange);"></i>My Vocabulary</h2>
+        const html = `
+            <div class="fade-in-up">
+                <h2 class="h3 mb-4"><i class="fas fa-graduation-cap me-2" style="color: var(--google-blue);"></i>My Vocabulary</h2>
                 
                 <div class="row g-4 mb-4">
                     <div class="col-md-4">
-                        <div class="story-card text-center p-3">
-                            <i class="fas fa-check-circle fa-2x" style="color: var(--hostgator-success);"></i>
-                            <h3 class="display-6 fw-bold mt-2">${learnedCount}</h3>
-                            <p class="text-muted">Mastered Words</p>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-check-circle" style="color: var(--google-green);"></i></div>
+                            <div class="stat-number">${mastered}</div>
+                            <div class="text-muted">Mastered Words</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="story-card text-center p-3">
-                            <i class="fas fa-chart-line fa-2x" style="color: var(--hostgator-warning);"></i>
-                            <h3 class="display-6 fw-bold mt-2">${inProgressCount}</h3>
-                            <p class="text-muted">In Progress</p>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-chart-line" style="color: var(--google-yellow);"></i></div>
+                            <div class="stat-number">${Object.keys(userProgress.vocabularyLearning || {}).length}</div>
+                            <div class="text-muted">In Progress</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="story-card text-center p-3">
-                            <i class="fas fa-book fa-2x" style="color: var(--hostgator-orange);"></i>
-                            <h3 class="display-6 fw-bold mt-2">${newCount}</h3>
-                            <p class="text-muted">New Words</p>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-book" style="color: var(--google-blue);"></i></div>
+                            <div class="stat-number">${allWords.length}</div>
+                            <div class="text-muted">Total Words</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="reading-panel">
-                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-                        <h5 class="fw-bold mb-0"><i class="fas fa-list me-2" style="color: var(--hostgator-orange);"></i>All Vocabulary</h5>
-                        <div>
-                            <select class="form-select form-select-sm d-inline-block w-auto" id="categoryFilter">
-                                <option value="all">All Categories</option>
-                                <option value="noun">Nouns</option>
-                                <option value="verb">Verbs</option>
-                                <option value="adjective">Adjectives</option>
-                                <option value="adverb">Adverbs</option>
-                                <option value="phrase">Phrases</option>
-                            </select>
-                            <button class="btn btn-outline-custom btn-sm ms-2" id="reviewQueueBtn">
-                                <i class="fas fa-list me-1"></i> Review Queue (${userProgress.wordReviewQueue.length})
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="vocabMasterSearch" placeholder="Search Dutch or English...">
-                        <button class="btn btn-outline-custom" id="shuffleWordsBtn"><i class="fas fa-random"></i> Shuffle</button>
-                    </div>
-                    
-                    <div id="vocabMasterList">
-                        ${allWords.slice(0, 20).map(word => `
-                            <div class="vocab-card d-flex justify-content-between align-items-center p-3 border-bottom" data-category="${word.category}" data-dutch="${word.dutch}" data-english="${word.english}">
-                                <div>
-                                    <span class="strength-indicator strength-${Math.min(2, Math.floor((userProgress.vocabularyStrength[word.dutch] || 0) / 50))}"></span>
-                                    <strong class="vocab-word" onclick="showWordDetail('${word.dutch}', '${word.english}', '${word.category || 'noun'}')">${word.dutch}</strong>
-                                    <span class="text-muted ms-2">→ ${word.english}</span>
-                                    <span class="badge bg-light text-dark ms-2">${word.category || 'word'}</span>
-                                    <small class="text-muted ms-2"><i class="fas fa-book"></i> ${word.storyTitle}</small>
-                                </div>
-                                <div>
-                                    <button class="btn btn-sm btn-outline-success me-1" onclick="markWordKnown('${word.dutch}')">
-                                        <i class="fas fa-check"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-outline-warning" onclick="markWordForReview('${word.dutch}')">
-                                        <i class="fas fa-repeat"></i>
+                    <input type="text" class="form-control mb-3" id="wordSearch" placeholder="Search Dutch or English...">
+                    <div id="wordList">
+                        ${allWords.map(word => {
+                            const strength = (userProgress.vocabularyLearning?.[word.dutch] || 0);
+                            return `
+                                <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+                                    <div>
+                                        <div class="progress mb-1" style="width: 100px; height: 4px;">
+                                            <div class="progress-bar" style="width: ${strength}%"></div>
+                                        </div>
+                                        <strong class="vocab-word" onclick="speakText('${word.dutch}', 'nl-NL')">${word.dutch}</strong>
+                                        <span class="text-muted ms-2">→ ${word.english}</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-success" onclick="markWordKnown('${word.dutch}')">
+                                        <i class="fas fa-check"></i> Practice
                                     </button>
                                 </div>
-                            </div>
-                        `).join('')}
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             </div>
@@ -1148,156 +1152,100 @@
         
         $('#mainContent').html(html);
         
-        $('#categoryFilter').change(function() {
-            const category = $(this).val();
-            if (category === 'all') {
-                $('#vocabMasterList .vocab-card').show();
-            } else {
-                $('#vocabMasterList .vocab-card').each(function() {
-                    if ($(this).data('category') === category) {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            }
-        });
-        
-        $('#vocabMasterSearch').on('input', function() {
+        $('#wordSearch').on('input', function() {
             const search = $(this).val().toLowerCase();
-            $('#vocabMasterList .vocab-card').each(function() {
-                const dutch = $(this).data('dutch')?.toLowerCase() || '';
-                const english = $(this).data('english')?.toLowerCase() || '';
-                if (dutch.includes(search) || english.includes(search)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
+            $('#wordList > div').each(function() {
+                $(this).toggle($(this).text().toLowerCase().includes(search));
             });
-        });
-        
-        $('#reviewQueueBtn').click(function() {
-            if (userProgress.wordReviewQueue.length === 0) {
-                showToast('Your review queue is empty! Add some words to review.');
-                return;
-            }
-            const firstWord = userProgress.wordReviewQueue[0];
-            const wordData = allWords.find(w => w.dutch === firstWord);
-            if (wordData) {
-                showWordDetail(wordData.dutch, wordData.english, wordData.category);
-            }
-        });
-        
-        $('#shuffleWordsBtn').click(function() {
-            const container = $('#vocabMasterList');
-            const cards = container.children('.vocab-card').get();
-            for (let i = cards.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                cards[i].parentNode.insertBefore(cards[j], cards[i]);
-            }
         });
     }
     
-    // Progress Page
     function renderProgressPage() {
-        if (!appData || !appData.stories) return;
-        
-        const completedCount = userProgress.completedStories.length;
         const totalStories = appData.stories.length;
-        const totalWords = appData.stories.reduce((sum, s) => sum + (s.vocabulary ? s.vocabulary.length : 0), 0);
-        const learnedWords = Object.values(userProgress.vocabularyStrength).filter(s => s >= 70).length;
+        const completed = userProgress.completedStories.length;
         
         // Prepare chart data
-        const storyNames = appData.stories.map(s => `#${s.id}`);
-        const storyProgress = appData.stories.map(s => userProgress.completedStories.includes(s.id) ? 100 : 0);
+        const storyNames = appData.stories.map(s => `Story ${s.id}`);
+        const storyScores = appData.stories.map(s => userProgress.storyQuizScores?.[s.id] || 0);
         
-        let html = `
-            <div class="fade-in">
-                <h2 class="fw-bold mb-4"><i class="fas fa-chart-line me-2" style="color: var(--hostgator-orange);"></i>Your Progress</h2>
+        const html = `
+            <div class="fade-in-up">
+                <h2 class="h3 mb-4"><i class="fas fa-chart-line me-2" style="color: var(--google-blue);"></i>Your Progress</h2>
                 
                 <div class="row g-4 mb-4">
-                    <div class="col-md-4">
-                        <div class="story-card text-center p-3">
-                            <i class="fas fa-book fa-2x" style="color: var(--hostgator-orange);"></i>
-                            <h3 class="display-6 fw-bold mt-2">${completedCount}/${totalStories}</h3>
-                            <p class="text-muted">Stories Completed</p>
+                    <div class="col-md-6">
+                        <div class="reading-panel">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-pie me-2"></i>Story Completion</h5>
+                            <canvas id="completionChart" height="200"></canvas>
+                            <div class="text-center mt-3">
+                                <span class="badge-google">${completed}/${totalStories} stories</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="story-card text-center p-3">
-                            <i class="fas fa-fire fa-2x" style="color: var(--hostgator-orange);"></i>
-                            <h3 class="display-6 fw-bold mt-2">${userProgress.streak || 0}</h3>
-                            <p class="text-muted">Day Streak</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="story-card text-center p-3">
-                            <i class="fas fa-trophy fa-2x" style="color: var(--hostgator-orange);"></i>
-                            <h3 class="display-6 fw-bold mt-2">${userProgress.totalXP || 0}</h3>
-                            <p class="text-muted">Total XP</p>
+                    <div class="col-md-6">
+                        <div class="reading-panel">
+                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-bar me-2"></i>Quiz Scores</h5>
+                            <canvas id="quizChart" height="200"></canvas>
                         </div>
                     </div>
                 </div>
                 
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="reading-panel">
-                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-pie me-2" style="color: var(--hostgator-orange);"></i>Vocabulary Mastery</h5>
-                            <canvas id="vocabChart" height="200"></canvas>
-                            <div class="mt-3">
-                                <div class="d-flex justify-content-between">
-                                    <span><i class="fas fa-circle" style="color: var(--hostgator-success);"></i> Mastered (${learnedWords})</span>
-                                    <span><i class="fas fa-circle" style="color: var(--hostgator-warning);"></i> Learning (${totalWords - learnedWords})</span>
+                <!-- Streak Calendar -->
+                <div class="reading-panel mb-4">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-calendar-alt me-2"></i>Activity Streak</h5>
+                    <div class="streak-calendar" id="streakCalendar">
+                        ${generateStreakCalendar()}
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="badge-google">🔥 ${userProgress.streak} day streak!</span>
+                    </div>
+                </div>
+                
+                <!-- Achievements -->
+                <div class="reading-panel">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-medal me-2"></i>Achievements</h5>
+                    <div class="row g-3">
+                        ${Object.values(achievements).map(ach => {
+                            const unlocked = userProgress.badges.includes(ach.id);
+                            return `
+                                <div class="col-md-4 col-6">
+                                    <div class="achievement-card ${!unlocked ? 'locked' : ''}">
+                                        <div class="achievement-icon">
+                                            <i class="fas ${ach.icon} ${unlocked ? 'text-success' : 'text-muted'}"></i>
+                                        </div>
+                                        <h6 class="small fw-bold mb-1">${ach.name}</h6>
+                                        <p class="small text-muted mb-0">${ach.description}</p>
+                                        ${!unlocked ? `<span class="badge bg-secondary mt-2">Locked</span>` : '<i class="fas fa-check-circle text-success mt-1"></i>'}
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="reading-panel">
-                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-bar me-2" style="color: var(--hostgator-orange);"></i>Story Completion</h5>
-                            <canvas id="storyChart" height="200"></canvas>
-                        </div>
+                            `;
+                        }).join('')}
                     </div>
                 </div>
                 
-                <div class="reading-panel mt-4">
-                    <h5 class="fw-bold mb-3"><i class="fas fa-medal me-2" style="color: var(--hostgator-orange);"></i>Achievements</h5>
-                    <div class="row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="text-center ${completedCount >= 1 ? '' : 'opacity-50'}">
-                                <i class="fas fa-book fa-3x ${completedCount >= 1 ? 'text-success' : 'text-muted'}"></i>
-                                <p class="small mt-1">First Story</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="text-center ${completedCount >= 5 ? '' : 'opacity-50'}">
-                                <i class="fas fa-layer-group fa-3x ${completedCount >= 5 ? 'text-success' : 'text-muted'}"></i>
-                                <p class="small mt-1">5 Stories</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="text-center ${completedCount >= 10 ? '' : 'opacity-50'}">
-                                <i class="fas fa-crown fa-3x ${completedCount >= 10 ? 'text-warning' : 'text-muted'}"></i>
-                                <p class="small mt-1">10 Stories</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="text-center ${userProgress.streak >= 7 ? '' : 'opacity-50'}">
-                                <i class="fas fa-fire fa-3x ${userProgress.streak >= 7 ? 'text-danger' : 'text-muted'}"></i>
-                                <p class="small mt-1">7-Day Streak</p>
-                            </div>
+                <!-- Learning Stats -->
+                <div class="row g-4 mt-2">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <i class="fas fa-clock fa-2x mb-2" style="color: var(--google-blue);"></i>
+                            <div class="stat-number">${userProgress.totalTimeSpent || 0}</div>
+                            <div class="text-muted">Minutes Learned</div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="reading-panel mt-4">
-                    <h5 class="fw-bold mb-3"><i class="fas fa-lightbulb me-2" style="color: var(--hostgator-orange);"></i>Daily Tips</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Review 5 words before breakfast</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Read one story per day</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Try to use new words in sentences</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Listen to Dutch music or podcasts</li>
-                    </ul>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <i class="fas fa-question-circle fa-2x mb-2" style="color: var(--google-green);"></i>
+                            <div class="stat-number">${userProgress.quizzesTaken || 0}</div>
+                            <div class="text-muted">Quizzes Taken</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <i class="fas fa-percent fa-2x mb-2" style="color: var(--google-yellow);"></i>
+                            <div class="stat-number">${userProgress.quizzesTaken ? Math.round((userProgress.correctAnswers / (userProgress.quizzesTaken * 5)) * 100) : 0}%</div>
+                            <div class="text-muted">Accuracy Rate</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
@@ -1305,50 +1253,139 @@
         $('#mainContent').html(html);
         
         // Initialize charts
-        const ctx2 = document.getElementById('vocabChart')?.getContext('2d');
-        if (ctx2) {
-            new Chart(ctx2, {
+        const ctx1 = document.getElementById('completionChart')?.getContext('2d');
+        if (ctx1) {
+            new Chart(ctx1, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Mastered', 'Learning'],
-                    datasets: [{
-                        data: [learnedWords, totalWords - learnedWords],
-                        backgroundColor: ['#2E8B57', '#FFC107'],
-                        borderWidth: 0
-                    }]
+                    labels: ['Completed', 'Remaining'],
+                    datasets: [{ data: [completed, totalStories - completed], backgroundColor: ['#1A73E8', '#E8EAED'] }]
                 },
                 options: { responsive: true, maintainAspectRatio: true }
             });
         }
         
-        const ctx3 = document.getElementById('storyChart')?.getContext('2d');
-        if (ctx3) {
-            new Chart(ctx3, {
+        const ctx2 = document.getElementById('quizChart')?.getContext('2d');
+        if (ctx2) {
+            new Chart(ctx2, {
                 type: 'bar',
-                data: {
-                    labels: storyNames,
-                    datasets: [{
-                        label: 'Completed',
-                        data: storyProgress,
-                        backgroundColor: '#F58220',
-                        borderRadius: 10
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    scales: { y: { beginAtZero: true, max: 100 } }
-                }
+                data: { labels: storyNames, datasets: [{ label: 'Score', data: storyScores, backgroundColor: '#34A853', borderRadius: 10 }] },
+                options: { responsive: true, maintainAspectRatio: true, scales: { y: { beginAtZero: true, max: 5 } } }
             });
         }
     }
     
-    function updateProgressDisplay() {
-        if (currentView === 'progress') {
-            renderProgressPage();
+    function generateStreakCalendar() {
+        let days = '';
+        const today = new Date();
+        for (let i = 6; i >= 0; i--) {
+            const date = new Date(today);
+            date.setDate(today.getDate() - i);
+            days += `<div class="streak-day ${i < userProgress.streak ? 'completed' : ''}">${date.getDate()}</div>`;
         }
+        return days;
+    }
+    
+    function renderStrategiesPage() {
+        const html = `
+            <div class="fade-in-up">
+                <h2 class="h3 mb-4"><i class="fas fa-lightbulb me-2" style="color: var(--google-yellow);"></i>Learning Strategies</h2>
+                <p class="lead mb-4">Proven techniques to help you learn Dutch faster and remember it longer</p>
+                
+                <div class="row g-4">
+                    ${Object.values(learningStrategies).map(strategy => `
+                        <div class="col-md-6 col-lg-4">
+                            <div class="material-card" style="cursor: default;">
+                                <div class="p-4">
+                                    <i class="fas ${strategy.icon} fa-2x mb-3" style="color: var(--google-blue);"></i>
+                                    <h4 class="h5 fw-bold">${strategy.name}</h4>
+                                    <p class="text-muted small">${strategy.description}</p>
+                                    <div class="alert alert-light small mt-2">
+                                        <i class="fas fa-microphone-alt me-1"></i> ${strategy.technique}
+                                    </div>
+                                    <button class="btn-outline-google btn-sm w-100" onclick="showStrategyTip('${strategy.name}')">
+                                        Try This Technique <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <!-- Daily Learning Routine -->
+                <div class="reading-panel mt-4">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-clock me-2"></i>Recommended Daily Routine</h5>
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3 bg-light rounded-3">
+                                <i class="fas fa-book-open fa-2x mb-2" style="color: var(--google-blue);"></i>
+                                <h6 class="fw-bold mb-0">5 min</h6>
+                                <small class="text-muted">Read a story</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3 bg-light rounded-3">
+                                <i class="fas fa-graduation-cap fa-2x mb-2" style="color: var(--google-green);"></i>
+                                <h6 class="fw-bold mb-0">5 min</h6>
+                                <small class="text-muted">Learn 5 new words</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3 bg-light rounded-3">
+                                <i class="fas fa-repeat fa-2x mb-2" style="color: var(--google-yellow);"></i>
+                                <h6 class="fw-bold mb-0">3 min</h6>
+                                <small class="text-muted">Review old words</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3 bg-light rounded-3">
+                                <i class="fas fa-question-circle fa-2x mb-2" style="color: var(--google-red);"></i>
+                                <h6 class="fw-bold mb-0">2 min</h6>
+                                <small class="text-muted">Take a quiz</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        $('#mainContent').html(html);
+    }
+    
+    window.showStrategyTip = function(strategyName) {
+        const strategy = Object.values(learningStrategies).find(s => s.name === strategyName);
+        if (strategy) {
+            showToast(`💡 ${strategy.name}: ${strategy.technique}`);
+        }
+    };
+    
+    function checkAchievements() {
+        let newBadges = [];
+        
+        // Check story count achievements
+        if (userProgress.completedStories.length >= 1 && !userProgress.badges.includes('first_story')) newBadges.push('first_story');
+        if (userProgress.completedStories.length >= 5 && !userProgress.badges.includes('five_stories')) newBadges.push('five_stories');
+        if (userProgress.completedStories.length >= 10 && !userProgress.badges.includes('ten_stories')) newBadges.push('ten_stories');
+        
+        // Check streak achievements
+        if (userProgress.streak >= 7 && !userProgress.badges.includes('seven_day_streak')) newBadges.push('seven_day_streak');
+        if (userProgress.streak >= 30 && !userProgress.badges.includes('thirty_day_streak')) newBadges.push('thirty_day_streak');
+        
+        // Check vocabulary achievement
+        if (userProgress.vocabularyMastered.length >= 100 && !userProgress.badges.includes('vocab_master')) newBadges.push('vocab_master');
+        
+        // Award new badges
+        newBadges.forEach(badgeId => {
+            userProgress.badges.push(badgeId);
+            const achievement = achievements[badgeId];
+            if (achievement) {
+                addXP(achievement.xpReward);
+                showToast(`🏆 Achievement Unlocked: ${achievement.name}! +${achievement.xpReward} XP`);
+            }
+        });
+        
+        if (newBadges.length) saveUserProgress();
     }
 </script>
-
 </body>
 </html>
