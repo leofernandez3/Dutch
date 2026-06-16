@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Dutch Stories | Learn Dutch Through Reading</title>
     
-    <!-- Google Fonts - Modern typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5 CSS -->
@@ -22,9 +22,6 @@
     
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    
-    <!-- Speech Synthesis API -->
-    <script src="https://cdn.jsdelivr.net/npm/speech-js@1.0.4/speech.min.js"></script>
 
     <style>
         * {
@@ -34,7 +31,6 @@
         }
 
         :root {
-            /* Google-inspired color palette */
             --google-blue: #1A73E8;
             --google-red: #EA4335;
             --google-yellow: #FBBC04;
@@ -45,20 +41,9 @@
             --google-gray-200: #E8EAED;
             --google-gray-100: #F1F3F4;
             --google-white: #FFFFFF;
-            
-            /* Spacing */
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 1.5rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
-            
-            /* Border radius */
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 24px;
-            
-            /* Transitions */
             --transition-fast: 0.2s ease;
             --transition-normal: 0.3s ease;
         }
@@ -68,24 +53,8 @@
             background: linear-gradient(135deg, var(--google-gray-100) 0%, var(--google-white) 100%);
             color: var(--google-gray-900);
             line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* Typography - Google-inspired */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 500;
-            letter-spacing: -0.01em;
-        }
-
-        .display-4 {
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--google-blue) 0%, var(--google-green) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        /* Navigation */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -116,25 +85,6 @@
             color: var(--google-blue) !important;
         }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--google-blue), var(--google-green));
-            transition: var(--transition-fast);
-            border-radius: 3px;
-        }
-
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 80%;
-        }
-
-        /* Cards - Material Design inspired */
         .material-card {
             background: var(--google-white);
             border-radius: var(--radius-lg);
@@ -150,6 +100,22 @@
             box-shadow: 0 4px 8px 0 rgba(60, 64, 67, 0.3), 0 6px 12px 4px rgba(60, 64, 67, 0.15);
         }
 
+        .game-card {
+            background: linear-gradient(135deg, var(--google-white) 0%, var(--google-gray-100) 100%);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-normal);
+            height: 100%;
+            border: 1px solid var(--google-gray-200);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
         .story-card-header {
             background: linear-gradient(135deg, var(--google-blue) 0%, var(--google-green) 100%);
             padding: 1.5rem;
@@ -158,18 +124,6 @@
             overflow: hidden;
         }
 
-        .story-card-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            transform: rotate(45deg);
-        }
-
-        /* Progress Cards */
         .stat-card {
             background: var(--google-white);
             border-radius: var(--radius-lg);
@@ -179,23 +133,12 @@
             transition: var(--transition-normal);
         }
 
-        .stat-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px 0 rgba(60, 64, 67, 0.3);
-        }
-
-        .stat-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
             color: var(--google-blue);
         }
 
-        /* Buttons */
         .btn-google {
             background: var(--google-blue);
             color: var(--google-white);
@@ -208,8 +151,6 @@
 
         .btn-google:hover {
             background: #1557b0;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
         }
 
         .btn-outline-google {
@@ -227,7 +168,6 @@
             color: var(--google-white);
         }
 
-        /* Reading Panel */
         .reading-panel {
             background: var(--google-white);
             border-radius: var(--radius-lg);
@@ -236,42 +176,19 @@
             margin-bottom: 2rem;
         }
 
+        .game-panel {
+            background: var(--google-white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+        }
+
         .dutch-text {
             font-size: 1.1rem;
             line-height: 1.8;
             font-family: 'Roboto Mono', monospace;
-            color: var(--google-gray-800);
         }
 
-        .english-text {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--google-gray-700);
-            background: var(--google-gray-100);
-            padding: 1.5rem;
-            border-radius: var(--radius-md);
-            margin-top: 1rem;
-        }
-
-        /* Vocabulary Highlighter */
-        .vocab-word {
-            background: linear-gradient(120deg, rgba(251, 188, 4, 0.2) 0%, rgba(251, 188, 4, 0.2) 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 30%;
-            background-position: 0 70%;
-            cursor: pointer;
-            transition: var(--transition-fast);
-            padding: 0 2px;
-            border-radius: 4px;
-        }
-
-        .vocab-word:hover {
-            background-size: 100% 100%;
-            background: linear-gradient(120deg, var(--google-yellow) 0%, var(--google-yellow) 100%);
-            color: var(--google-gray-900);
-        }
-
-        /* Quiz Options */
         .quiz-option {
             background: var(--google-gray-100);
             border-radius: var(--radius-md);
@@ -284,7 +201,6 @@
 
         .quiz-option:hover {
             background: var(--google-gray-200);
-            transform: translateX(4px);
         }
 
         .quiz-option.selected {
@@ -302,7 +218,6 @@
             border-color: var(--google-red);
         }
 
-        /* Badges & Achievements */
         .badge-google {
             background: linear-gradient(135deg, var(--google-blue), var(--google-green));
             color: var(--google-white);
@@ -311,25 +226,6 @@
             font-weight: 500;
         }
 
-        .achievement-card {
-            background: var(--google-white);
-            border-radius: var(--radius-md);
-            padding: 1rem;
-            text-align: center;
-            transition: var(--transition-normal);
-        }
-
-        .achievement-card.locked {
-            opacity: 0.5;
-            filter: grayscale(0.3);
-        }
-
-        .achievement-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Progress Bar */
         .progress {
             height: 8px;
             border-radius: 10px;
@@ -341,7 +237,13 @@
             border-radius: 10px;
         }
 
-        /* Toast Notification */
+        .level-progress {
+            background: linear-gradient(135deg, var(--google-yellow), var(--google-red));
+            border-radius: var(--radius-lg);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
         .toast-google {
             background: var(--google-gray-900);
             color: var(--google-white);
@@ -351,7 +253,6 @@
             bottom: 2rem;
             right: 2rem;
             z-index: 1100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transform: translateX(400px);
             transition: transform 0.3s ease;
         }
@@ -360,42 +261,85 @@
             transform: translateX(0);
         }
 
-        /* Responsive Design */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .game-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-difficulty {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .difficulty-easy { background: #34A853; color: white; }
+        .difficulty-medium { background: #FBBC04; color: #202124; }
+        .difficulty-hard { background: #EA4335; color: white; }
+
+        .match-card {
+            background: var(--google-gray-100);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            min-width: 100px;
+        }
+
+        .match-card.selected {
+            background: var(--google-blue);
+            color: white;
+        }
+
+        .match-card.matched {
+            background: var(--google-green);
+            color: white;
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .word-tile {
+            background: var(--google-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            margin: 0.25rem;
+            display: inline-block;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .word-tile:hover {
+            transform: scale(1.05);
+        }
+
+        .sentence-builder-area {
+            min-height: 80px;
+            background: var(--google-gray-100);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
         @media (max-width: 768px) {
-            .reading-panel {
-                padding: 1rem;
-            }
-            
-            .dutch-text {
-                font-size: 1rem;
-            }
-            
-            .stat-number {
-                font-size: 1.5rem;
-            }
-            
-            .display-4 {
-                font-size: 2rem;
-            }
+            .reading-panel, .game-panel { padding: 1rem; }
+            .game-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        /* Animations */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .fade-in-up {
-            animation: fadeInUp 0.5s ease forwards;
-        }
+        .fade-in-up { animation: fadeInUp 0.5s ease forwards; }
 
-        /* Loading Spinner */
         .spinner-google {
             width: 40px;
             height: 40px;
@@ -405,40 +349,13 @@
             animation: spin 1s linear infinite;
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* Streak Calendar */
-        .streak-calendar {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 4px;
-            margin-top: 1rem;
-        }
-
-        .streak-day {
-            aspect-ratio: 1;
-            background: var(--google-gray-200);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .streak-day.completed {
-            background: linear-gradient(135deg, var(--google-blue), var(--google-green));
-            color: white;
-        }
-
-        /* Level Progress */
-        .level-progress {
-            background: linear-gradient(135deg, var(--google-yellow), var(--google-red));
-            border-radius: var(--radius-lg);
-            padding: 1rem;
-            margin-bottom: 1rem;
+        .vocab-word {
+            background: linear-gradient(120deg, rgba(251, 188, 4, 0.2) 0%, rgba(251, 188, 4, 0.2) 100%);
+            cursor: pointer;
+            padding: 0 2px;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -455,39 +372,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="navHome">
-                        <i class="fas fa-home me-1"></i> Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="navStories">
-                        <i class="fas fa-book me-1"></i> Stories
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="navVocabulary">
-                        <i class="fas fa-graduation-cap me-1"></i> Words
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="navProgress">
-                        <i class="fas fa-chart-line me-1"></i> Progress
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="navStrategies">
-                        <i class="fas fa-lightbulb me-1"></i> Strategies
-                    </a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#" id="navHome"><i class="fas fa-home me-1"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="navStories"><i class="fas fa-book me-1"></i> Stories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="navVocabulary"><i class="fas fa-graduation-cap me-1"></i> Words</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="navGames"><i class="fas fa-gamepad me-1"></i> Games</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="navProgress"><i class="fas fa-chart-line me-1"></i> Progress</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="navStrategies"><i class="fas fa-lightbulb me-1"></i> Strategies</a></li>
             </ul>
             <div class="ms-3 d-flex gap-2">
-                <span class="badge-google" id="levelBadge">
-                    <i class="fas fa-star me-1"></i> Level 1
-                </span>
-                <span class="badge-google" id="streakBadge">
-                    <i class="fas fa-fire me-1"></i> <span id="streakCount">0</span> days
-                </span>
+                <span class="badge-google" id="levelBadge"><i class="fas fa-star me-1"></i> Level 1</span>
+                <span class="badge-google" id="streakBadge"><i class="fas fa-fire me-1"></i> <span id="streakCount">0</span> days</span>
             </div>
         </div>
     </div>
@@ -497,882 +391,848 @@
 <main class="container py-4" id="mainContent">
     <div class="text-center py-5" id="loadingDiv">
         <div class="spinner-google mx-auto mb-3"></div>
-        <p class="text-muted">Loading your Dutch learning journey...</p>
+        <p class="text-muted">Loading your Dutch stories...</p>
     </div>
 </main>
 
-<!-- Toast Notifications -->
 <div id="toastContainer" style="position: fixed; bottom: 20px; right: 20px; z-index: 1090;"></div>
 
-<!-- Audio Player (hidden for TTS) -->
-<audio id="audioPlayer" style="display: none;"></audio>
-
 <script>
-    // App State
+    // ============================================
+    // APP STATE
+    // ============================================
     let appData = null;
     let currentView = 'home';
-    let currentStoryId = null;
-    let currentQuizAnswers = {};
-    let speechSynthesis = window.speechSynthesis;
-    let currentUtterance = null;
+    let currentStoryId = 1;
+    let currentGameWords = [];
     
-    // User Progress with Gamification
+    // Game state variables
+    let matchGameSelected = null;
+    let matchGameMatches = [];
+    let hangmanWord = '';
+    let hangmanGuessed = [];
+    let hangmanWrong = 0;
+    let speedTypingCurrentWord = null;
+    let speedTypingScore = 0;
+    let speedTypingTimer = null;
+    let bingoBoard = [];
+    let bingoMarked = [];
+    let sentenceBuilderWords = [];
+    let sentenceBuilderCurrent = [];
+    let wheelSpinning = false;
+    let treasureMapLevel = 1;
+    let storyOrderEvents = [];
+    
+    // ============================================
+    // USER PROGRESS
+    // ============================================
     let userProgress = {
-        // Stats
-        totalXP: 0,
-        level: 1,
-        levelProgress: 0,
-        streak: 0,
-        lastLoginDate: null,
-        totalTimeSpent: 0, // minutes
-        sessionStartTime: null,
-        
-        // Progress
-        completedStories: [],
-        storyStars: {},
-        storyQuizScores: {},
-        vocabularyMastered: [], // words with strength >= 80
-        vocabularyLearning: {}, // word -> strength (0-100)
-        
-        // Achievements
-        badges: [],
-        
-        // Learning Analytics
-        wordsReviewed: 0,
-        quizzesTaken: 0,
-        correctAnswers: 0
+        totalXP: 0, level: 1, streak: 0, lastLoginDate: null,
+        completedStories: [], storyStars: {}, storyQuizScores: {},
+        vocabularyLearning: {}, vocabularyMastered: [], wordReviewQueue: [],
+        badges: [], quizzesTaken: 0, correctAnswers: 0,
+        gameScores: {}
     };
     
-    // Achievement Definitions
     const achievements = {
-        firstStory: { id: 'first_story', name: 'First Steps', description: 'Complete your first story', icon: 'fa-book', requirement: { type: 'stories', count: 1 }, xpReward: 50 },
-        fiveStories: { id: 'five_stories', name: 'Story Explorer', description: 'Complete 5 stories', icon: 'fa-layer-group', requirement: { type: 'stories', count: 5 }, xpReward: 100 },
-        tenStories: { id: 'ten_stories', name: 'Master Storyteller', description: 'Complete 10 stories', icon: 'fa-crown', requirement: { type: 'stories', count: 10 }, xpReward: 200 },
-        sevenDayStreak: { id: 'seven_day_streak', name: 'On Fire!', description: '7-day learning streak', icon: 'fa-fire', requirement: { type: 'streak', count: 7 }, xpReward: 150 },
-        thirtyDayStreak: { id: 'thirty_day_streak', name: 'Unstoppable', description: '30-day learning streak', icon: 'fa-bolt', requirement: { type: 'streak', count: 30 }, xpReward: 500 },
-        vocabularyMaster: { id: 'vocab_master', name: 'Word Wizard', description: 'Master 100 words', icon: 'fa-graduation-cap', requirement: { type: 'vocabulary', count: 100 }, xpReward: 250 },
-        perfectQuiz: { id: 'perfect_quiz', name: 'Perfect Score!', description: 'Get 5/5 on a quiz', icon: 'fa-star', requirement: { type: 'perfect_quiz', count: 1 }, xpReward: 75 }
+        first_story: { id: 'first_story', name: 'First Steps', description: 'Complete your first story', icon: 'fa-book', xpReward: 50 },
+        five_stories: { id: 'five_stories', name: 'Story Explorer', description: 'Complete 5 stories', icon: 'fa-layer-group', xpReward: 100 },
+        ten_stories: { id: 'ten_stories', name: 'Master Storyteller', description: 'Complete 10 stories', icon: 'fa-crown', xpReward: 200 },
+        seven_day_streak: { id: 'seven_day_streak', name: 'On Fire!', description: '7-day learning streak', icon: 'fa-fire', xpReward: 150 },
+        game_master: { id: 'game_master', name: 'Game Master', description: 'Play all 10 games', icon: 'fa-gamepad', xpReward: 100 }
     };
     
-    // Learning Strategies
-    const learningStrategies = {
-        spacedRepetition: {
-            name: 'Spaced Repetition',
-            description: 'Review words at optimal intervals for long-term memory retention',
-            technique: 'Review vocabulary after 1 day, 3 days, 7 days, 14 days, and 30 days',
-            icon: 'fa-clock'
-        },
-        activeRecall: {
-            name: 'Active Recall',
-            description: 'Test yourself instead of passive reading to strengthen neural pathways',
-            technique: 'Use flashcards and try to recall word meanings before flipping',
-            icon: 'fa-brain'
-        },
-        interleaving: {
-            name: 'Interleaving Practice',
-            description: 'Mix different topics to improve discrimination and flexible thinking',
-            technique: 'Study words from different stories in the same session',
-            icon: 'fa-random'
-        },
-        dualCoding: {
-            name: 'Dual Coding',
-            description: 'Combine verbal and visual learning for stronger memory',
-            technique: 'Visualize the word meaning or draw a quick sketch',
-            icon: 'fa-palette'
-        },
-        elaboration: {
-            name: 'Elaboration',
-            description: 'Connect new information to what you already know',
-            technique: 'Create sentences using new words in context',
-            icon: 'fa-link'
-        },
-        pomodoro: {
-            name: 'Pomodoro Technique',
-            description: 'Study in focused bursts with breaks for better concentration',
-            technique: 'Learn for 25 minutes, then take a 5-minute break',
-            icon: 'fa-hourglass-half'
-        }
-    };
-    
-    // Initialize
+    // ============================================
+    // INITIALIZATION
+    // ============================================
     $(document).ready(function() {
         loadUserProgress();
         setupEventListeners();
         loadData();
     });
     
-    // Load JSON Data
     function loadData() {
-        // Load from the JSON file you created
         $.getJSON('dutch-stories.json')
             .done(function(data) {
                 appData = data;
-                console.log('Loaded', appData.stories.length, 'stories');
                 $('#loadingDiv').hide();
-                renderHomePage();
-                
-                // Initialize vocabulary learning tracker for all words
-                if (!userProgress.vocabularyLearning) {
-                    userProgress.vocabularyLearning = {};
+                if (!userProgress.vocabularyLearning) userProgress.vocabularyLearning = {};
+                if (appData.stories) {
                     appData.stories.forEach(story => {
                         if (story.vocabulary) {
                             story.vocabulary.forEach(word => {
-                                if (!userProgress.vocabularyLearning[word.dutch]) {
+                                if (userProgress.vocabularyLearning[word.dutch] === undefined)
                                     userProgress.vocabularyLearning[word.dutch] = 0;
-                                }
                             });
                         }
                     });
-                    saveUserProgress();
                 }
+                saveUserProgress();
+                renderHomePage();
             })
-            .fail(function(error) {
-                console.error('Error loading JSON:', error);
-                $('#loadingDiv').html(`
-                    <div class="alert alert-danger">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        Could not load dutch-stories.json. Make sure the file is in the same directory.
-                        <br><br>
-                        <small>Expected path: ./dutch-stories.json</small>
-                    </div>
-                `);
+            .fail(function() {
+                $('#loadingDiv').html(`<div class="alert alert-danger">Could not load dutch-stories.json. Make sure the file exists.</div>`);
             });
     }
     
-    // Load User Progress from LocalStorage
     function loadUserProgress() {
         const saved = localStorage.getItem('dutch_learner_progress');
-        if (saved) {
-            userProgress = JSON.parse(saved);
-        } else {
-            userProgress.sessionStartTime = new Date().toISOString();
-            saveUserProgress();
-        }
-        
-        // Update streak
+        if (saved) Object.assign(userProgress, JSON.parse(saved));
         const today = new Date().toDateString();
         if (userProgress.lastLoginDate !== today) {
-            const yesterday = new Date();
-            yesterday.setDate(yesterday.getDate() - 1);
-            if (userProgress.lastLoginDate === yesterday.toDateString()) {
-                userProgress.streak++;
-                showToast(`🔥 ${userProgress.streak} day streak! Keep going!`);
-            } else {
-                userProgress.streak = 1;
-            }
+            const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+            userProgress.streak = userProgress.lastLoginDate === yesterday.toDateString() ? (userProgress.streak || 0) + 1 : 1;
             userProgress.lastLoginDate = today;
             saveUserProgress();
         }
-        
         updateLevelDisplay();
     }
     
-    function saveUserProgress() {
-        localStorage.setItem('dutch_learner_progress', JSON.stringify(userProgress));
-    }
-    
+    function saveUserProgress() { localStorage.setItem('dutch_learner_progress', JSON.stringify(userProgress)); }
     function updateLevelDisplay() {
-        const level = Math.floor(userProgress.totalXP / 100) + 1;
-        userProgress.level = level;
-        $('#levelBadge').html(`<i class="fas fa-star me-1"></i> Level ${level}`);
-        $('#streakCount').text(userProgress.streak);
+        userProgress.level = Math.floor(userProgress.totalXP / 100) + 1;
+        $('#levelBadge').html(`<i class="fas fa-star me-1"></i> Level ${userProgress.level}`);
+        $('#streakCount').text(userProgress.streak || 0);
     }
-    
-    function addXP(amount) {
-        userProgress.totalXP += amount;
-        const oldLevel = userProgress.level;
-        updateLevelDisplay();
-        
-        if (userProgress.level > oldLevel) {
-            showToast(`🎉 LEVEL UP! You reached level ${userProgress.level}! 🎉`);
-        }
-        
-        saveUserProgress();
-    }
-    
-    function showToast(message, type = 'success') {
-        const toast = $(`
-            <div class="toast-google show" style="background: ${type === 'success' ? '#202124' : '#EA4335'}">
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} me-2"></i>
-                ${message}
-            </div>
-        `);
+    function addXP(amount) { userProgress.totalXP += amount; updateLevelDisplay(); saveUserProgress(); showToast(`+${amount} XP`); }
+    function showToast(msg) {
+        const toast = $(`<div class="toast-google show">${msg}</div>`);
         $('#toastContainer').append(toast);
-        setTimeout(() => {
-            toast.removeClass('show');
-            setTimeout(() => toast.remove(), 300);
-        }, 3000);
+        setTimeout(() => { toast.removeClass('show'); setTimeout(() => toast.remove(), 300); }, 3000);
     }
+    
+    window.speakText = function(text, lang = 'nl-NL') {
+        if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang; utterance.rate = 0.85;
+        window.speechSynthesis.speak(utterance);
+    };
     
     function setupEventListeners() {
         $('#homeLink, #navHome').click(e => { e.preventDefault(); renderHomePage(); });
         $('#navStories').click(e => { e.preventDefault(); renderStoriesPage(); });
         $('#navVocabulary').click(e => { e.preventDefault(); renderVocabularyPage(); });
+        $('#navGames').click(e => { e.preventDefault(); renderGamesHub(); });
         $('#navProgress').click(e => { e.preventDefault(); renderProgressPage(); });
         $('#navStrategies').click(e => { e.preventDefault(); renderStrategiesPage(); });
     }
     
-    // Render Functions
-    function renderHomePage() {
-        currentView = 'home';
-        const totalStories = appData.stories.length;
-        const completedCount = userProgress.completedStories.length;
-        const completionPercent = Math.round((completedCount / totalStories) * 100);
-        const wordsMastered = Object.values(userProgress.vocabularyLearning || {}).filter(s => s >= 80).length;
-        
+    // ============================================
+    // GAMES HUB
+    // ============================================
+    const games = [
+        { id: 1, name: "Match the Word", icon: "fas fa-puzzle-piece", difficulty: "easy", description: "Match Dutch words with their English meanings", color: "#1A73E8" },
+        { id: 2, name: "Fill the Blank", icon: "fas fa-edit", difficulty: "easy", description: "Complete sentences from the story", color: "#34A853" },
+        { id: 3, name: "Speed Typing", icon: "fas fa-tachometer-alt", difficulty: "medium", description: "Type translations before time runs out", color: "#FBBC04" },
+        { id: 4, name: "Word Bingo", icon: "fas fa-border-all", difficulty: "easy", description: "Listen and find the matching Dutch word", color: "#EA4335" },
+        { id: 5, name: "Sentence Builder", icon: "fas fa-layer-group", difficulty: "medium", description: "Put words in correct Dutch order", color: "#8E24AA" },
+        { id: 6, name: "Hangman", icon: "fas fa-skull", difficulty: "easy", description: "Guess the Dutch word letter by letter", color: "#D81B60" },
+        { id: 7, name: "Spin the Wheel", icon: "fas fa-sync-alt", difficulty: "easy", description: "Random challenges for extra XP", color: "#F06292" },
+        { id: 8, name: "Story Order", icon: "fas fa-sort-amount-down", difficulty: "medium", description: "Put story events in chronological order", color: "#43A047" },
+        { id: 9, name: "Pronunciation", icon: "fas fa-microphone-alt", difficulty: "hard", description: "Practice saying Dutch words", color: "#1E88E5" },
+        { id: 10, name: "Treasure Hunt", icon: "fas fa-map", difficulty: "medium", description: "Adventure through levels", color: "#FF6D00" }
+    ];
+    
+    function renderGamesHub() {
+        currentView = 'games';
+        const playedGames = userProgress.gameScores ? Object.keys(userProgress.gameScores).length : 0;
         const html = `
             <div class="fade-in-up">
-                <!-- Hero Section -->
-                <div class="text-center mb-5">
-                    <h1 class="display-4 mb-3">🇳🇱 Learn Dutch Through Stories</h1>
-                    <p class="lead text-muted">Read, listen, and master Dutch with engaging stories designed for beginners</p>
-                    <button class="btn-google mt-3" id="startLearningBtn">
-                        <i class="fas fa-play me-2"></i> Start Your Journey
-                    </button>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="h3 mb-0"><i class="fas fa-gamepad me-2" style="color: var(--google-blue);"></i>Learning Games</h2>
+                    <span class="badge-google">${playedGames}/10 Games Played</span>
                 </div>
-                
-                <!-- Stats Grid -->
-                <div class="row g-4 mb-5">
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-book-open" style="color: var(--google-blue);"></i></div>
-                            <div class="stat-number">${completedCount}/${totalStories}</div>
-                            <div class="text-muted small">Stories Completed</div>
+                <p class="text-muted mb-4">Choose a game to practice your Dutch skills. Each game gives XP rewards!</p>
+                <div class="game-grid">
+                    ${games.map(game => `
+                        <div class="game-card" onclick="startGame(${game.id})">
+                            <div class="game-icon"><i class="${game.icon}" style="color: ${game.color};"></i></div>
+                            <h5 class="fw-bold mb-1">${game.name}</h5>
+                            <span class="game-difficulty difficulty-${game.difficulty} mb-2 d-inline-block">${game.difficulty}</span>
+                            <p class="small text-muted mb-0">${game.description}</p>
+                            ${userProgress.gameScores && userProgress.gameScores[`game${game.id}`] ? `<div class="mt-2 small text-success"><i class="fas fa-check-circle"></i> Best: ${userProgress.gameScores[`game${game.id}`]} pts</div>` : ''}
                         </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-graduation-cap" style="color: var(--google-green);"></i></div>
-                            <div class="stat-number">${wordsMastered}</div>
-                            <div class="text-muted small">Words Mastered</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-fire" style="color: var(--google-red);"></i></div>
-                            <div class="stat-number">${userProgress.streak}</div>
-                            <div class="text-muted small">Day Streak</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-trophy" style="color: var(--google-yellow);"></i></div>
-                            <div class="stat-number">${userProgress.totalXP}</div>
-                            <div class="text-muted small">Total XP</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Level Progress -->
-                <div class="level-progress mb-4">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="text-white"><i class="fas fa-star me-1"></i> Level ${userProgress.level}</span>
-                        <span class="text-white">${userProgress.totalXP % 100}/100 XP to next level</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: ${userProgress.totalXP % 100}%"></div>
-                    </div>
-                </div>
-                
-                <!-- Featured Story -->
-                <div class="reading-panel">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h3 class="h5 mb-0"><i class="fas fa-star me-2" style="color: var(--google-yellow);"></i>Featured Story</h3>
-                        <span class="badge-google">New</span>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <h2 class="h4 mb-2">${appData.stories[0].title}</h2>
-                            <p class="text-muted">${appData.stories[0].summaryEnglish}</p>
-                            <button class="btn-outline-google" onclick="openStory(1)">
-                                Read Story <i class="fas fa-arrow-right ms-1"></i>
-                            </button>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <i class="fas fa-elephant" style="font-size: 5rem; color: var(--google-blue);"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Daily Challenge -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="stat-card">
-                            <i class="fas fa-calendar-alt fa-2x mb-2" style="color: var(--google-green);"></i>
-                            <h5 class="fw-bold">Daily Challenge</h5>
-                            <p class="small text-muted">Learn 3 new words today to keep your streak alive!</p>
-                            <button class="btn-google btn-sm" onclick="renderVocabularyPage()">
-                                <i class="fas fa-check me-1"></i> Start Challenge
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="stat-card">
-                            <i class="fas fa-chart-simple fa-2x mb-2" style="color: var(--google-blue);"></i>
-                            <h5 class="fw-bold">Learning Tip</h5>
-                            <p class="small text-muted">Try the Spaced Repetition strategy for better vocabulary retention</p>
-                            <button class="btn-outline-google btn-sm" onclick="renderStrategiesPage()">
-                                View Strategies <i class="fas fa-lightbulb ms-1"></i>
-                            </button>
-                        </div>
-                    </div>
+                    `).join('')}
                 </div>
             </div>
         `;
-        
         $('#mainContent').html(html);
-        $('#startLearningBtn').click(() => renderStoriesPage());
+    }
+    
+    // Get current story vocabulary for games
+    function getCurrentVocabulary() {
+        const story = appData?.stories?.find(s => s.id === currentStoryId);
+        if (story && story.vocabulary) return story.vocabulary;
+        return appData?.stories?.[0]?.vocabulary || [];
+    }
+    
+    // ============================================
+    // GAME 1: MATCH THE WORD
+    // ============================================
+    window.startGame = function(gameId) {
+        const vocabulary = getCurrentVocabulary();
+        if (vocabulary.length < 4) { showToast("Need at least 4 words for this game!"); return; }
+        
+        if (gameId === 1) {
+            const words = vocabulary.slice(0, 8);
+            const dutchWords = words.map(w => w.dutch);
+            const englishWords = words.map(w => w.english);
+            const shuffledEnglish = [...englishWords].sort(() => Math.random() - 0.5);
+            matchGameMatches = [];
+            matchGameSelected = null;
+            
+            const html = `
+                <div class="fade-in-up">
+                    <button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+                    <div class="game-panel">
+                        <h3 class="h4 mb-3"><i class="fas fa-puzzle-piece me-2"></i>Match the Word</h3>
+                        <p class="text-muted">Click on a Dutch word, then click on its English meaning.</p>
+                        <div id="matchGameScore" class="mb-3">Matches: 0/${words.length}</div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Dutch Words</h5>
+                                <div id="dutchColumn" class="d-flex flex-wrap gap-2">
+                                    ${dutchWords.map(word => `<div class="match-card" data-type="dutch" data-value="${word}" data-matched="false">${word}</div>`).join('')}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>English Meanings</h5>
+                                <div id="englishColumn" class="d-flex flex-wrap gap-2">
+                                    ${shuffledEnglish.map((eng, idx) => `<div class="match-card" data-type="english" data-value="${eng}" data-original="${words.find(w=>w.english===eng)?.dutch}" data-matched="false">${eng}</div>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                        <div id="matchGameMessage" class="mt-3"></div>
+                    </div>
+                </div>
+            `;
+            $('#mainContent').html(html);
+            
+            let matches = 0;
+            $('.match-card').click(function() {
+                if ($(this).data('matched') === true) return;
+                const type = $(this).data('type');
+                const value = $(this).data('value');
+                
+                if (matchGameSelected === null) {
+                    $('.match-card').removeClass('selected');
+                    $(this).addClass('selected');
+                    matchGameSelected = { type, value, element: this };
+                } else {
+                    const selected = matchGameSelected;
+                    matchGameSelected = null;
+                    $('.match-card').removeClass('selected');
+                    
+                    if ((selected.type === 'dutch' && type === 'english') || (selected.type === 'english' && type === 'dutch')) {
+                        const dutchWord = selected.type === 'dutch' ? selected.value : value;
+                        const englishWord = selected.type === 'english' ? selected.value : value;
+                        const isMatch = vocabulary.some(w => w.dutch === dutchWord && w.english === englishWord);
+                        
+                        if (isMatch) {
+                            matches++;
+                            $(selected.element).data('matched', true).addClass('matched');
+                            $(this).data('matched', true).addClass('matched');
+                            $('#matchGameScore').text(`Matches: ${matches}/${words.length}`);
+                            addXP(5);
+                            if (matches === words.length) {
+                                userProgress.gameScores = userProgress.gameScores || {};
+                                userProgress.gameScores.game1 = words.length * 10;
+                                saveUserProgress();
+                                $('#matchGameMessage').html(`<div class="alert alert-success">🎉 Perfect! +${words.length * 10} XP!</div>`);
+                            }
+                        } else {
+                            $('#matchGameMessage').html(`<div class="alert alert-danger">❌ "${selected.value}" does not match "${value}"</div>`);
+                            setTimeout(() => $('#matchGameMessage').empty(), 1500);
+                        }
+                    }
+                }
+            });
+        }
+        else if (gameId === 2) renderFillBlankGame();
+        else if (gameId === 3) renderSpeedTypingGame();
+        else if (gameId === 4) renderBingoGame();
+        else if (gameId === 5) renderSentenceBuilderGame();
+        else if (gameId === 6) renderHangmanGame();
+        else if (gameId === 7) renderSpinWheelGame();
+        else if (gameId === 8) renderStoryOrderGame();
+        else if (gameId === 9) renderPronunciationGame();
+        else if (gameId === 10) renderTreasureHuntGame();
+    };
+    
+    // ============================================
+    // GAME 2: FILL THE BLANK
+    // ============================================
+    function renderFillBlankGame() {
+        const story = appData?.stories?.find(s => s.id === currentStoryId) || appData?.stories?.[0];
+        if (!story) { renderGamesHub(); return; }
+        
+        const sentences = story.fullTextDutch.split(/[.!?]+/).filter(s => s.trim().length > 20).slice(0, 5);
+        const vocabulary = story.vocabulary || [];
+        let currentQuestion = 0;
+        let score = 0;
+        
+        function loadQuestion() {
+            if (currentQuestion >= sentences.length) {
+                $('#fillBlankContainer').html(`<div class="alert alert-success text-center"><i class="fas fa-trophy fa-3x"></i><h4>Game Complete!</h4><p>Score: ${score}/${sentences.length*10}</p><button class="btn-google mt-3" onclick="renderGamesHub()">Back to Games</button></div>`);
+                userProgress.gameScores = userProgress.gameScores || {};
+                userProgress.gameScores.game2 = Math.max(userProgress.gameScores.game2 || 0, score);
+                saveUserProgress();
+                return;
+            }
+            let sentence = sentences[currentQuestion];
+            const words = sentence.trim().split(' ');
+            const wordIndex = Math.floor(Math.random() * words.length);
+            const missingWord = words[wordIndex];
+            const correctWord = missingWord.replace(/[^a-zA-ZÀ-ÿ]/g, '');
+            const vocabMatch = vocabulary.find(v => v.dutch === correctWord);
+            words[wordIndex] = '______';
+            const displaySentence = words.join(' ');
+            
+            const options = [correctWord];
+            const otherWords = vocabulary.filter(v => v.dutch !== correctWord).slice(0, 3).map(v => v.dutch);
+            options.push(...otherWords);
+            options.sort(() => Math.random() - 0.5);
+            
+            $('#fillBlankContainer').html(`
+                <div class="text-center mb-4"><span class="badge-google">Question ${currentQuestion+1}/${sentences.length}</span></div>
+                <div class="p-4 bg-light rounded-3 mb-4"><p class="fs-5">${displaySentence}</p></div>
+                <div class="d-flex flex-wrap gap-2 justify-content-center">${options.map(opt => `<button class="btn btn-outline-google fill-option" data-word="${opt}">${opt}</button>`).join('')}</div>
+                <div id="fillResult" class="mt-3"></div>
+            `);
+            
+            $('.fill-option').click(function() {
+                const selected = $(this).data('word');
+                if (selected === correctWord) {
+                    score += 10;
+                    addXP(10);
+                    $('#fillResult').html(`<div class="alert alert-success">✅ Correct! +10 XP</div>`);
+                    currentQuestion++;
+                    setTimeout(loadQuestion, 1000);
+                } else {
+                    $('#fillResult').html(`<div class="alert alert-danger">❌ Incorrect. The answer was: ${correctWord}</div>`);
+                    currentQuestion++;
+                    setTimeout(loadQuestion, 1500);
+                }
+            });
+        }
+        
+        const html = `<div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button><div class="game-panel"><h3 class="h4 mb-3"><i class="fas fa-edit me-2"></i>Fill the Blank</h3><div id="fillBlankContainer"></div></div></div>`;
+        $('#mainContent').html(html);
+        loadQuestion();
+    }
+    
+    // ============================================
+    // GAME 3: SPEED TYPING
+    // ============================================
+    function renderSpeedTypingGame() {
+        const vocabulary = getCurrentVocabulary();
+        let words = vocabulary.slice(0, 10);
+        let currentIndex = 0;
+        let timeLeft = 10;
+        let score = 0;
+        let timer;
+        
+        function loadWord() {
+            if (currentIndex >= words.length) {
+                clearInterval(timer);
+                $('#speedTypingContainer').html(`<div class="alert alert-success"><h4>Game Over!</h4><p>Score: ${score}/${words.length*10}</p><button class="btn-google" onclick="renderGamesHub()">Back to Games</button></div>`);
+                userProgress.gameScores = userProgress.gameScores || {};
+                userProgress.gameScores.game3 = Math.max(userProgress.gameScores.game3 || 0, score);
+                saveUserProgress();
+                return;
+            }
+            const word = words[currentIndex];
+            timeLeft = 10;
+            $('#currentWord').text(word.dutch);
+            $('#timeLeft').text(timeLeft);
+            $('#userInput').val('').focus();
+            $('#speedResult').empty();
+            
+            if (timer) clearInterval(timer);
+            timer = setInterval(() => {
+                timeLeft--;
+                $('#timeLeft').text(timeLeft);
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    $('#speedResult').html(`<div class="alert alert-danger">Time's up! Answer: ${word.english}</div>`);
+                    currentIndex++;
+                    setTimeout(loadWord, 1500);
+                }
+            }, 1000);
+        }
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel text-center"><h3 class="h4 mb-3"><i class="fas fa-tachometer-alt me-2"></i>Speed Typing</h3>
+            <div id="speedTypingContainer"><div class="display-1 mb-3" id="currentWord">---</div>
+            <div class="mb-2">Time: <span id="timeLeft">10</span> seconds</div>
+            <input type="text" class="form-control form-control-lg text-center mb-3" id="userInput" placeholder="Type English translation...">
+            <div id="speedResult"></div></div></div></div>`;
+        $('#mainContent').html(html);
+        
+        $('#userInput').on('keypress', function(e) {
+            if (e.which === 13) {
+                const answer = $(this).val().toLowerCase().trim();
+                const correct = words[currentIndex].english.toLowerCase();
+                if (answer === correct) {
+                    clearInterval(timer);
+                    score += 10;
+                    addXP(10);
+                    $('#speedResult').html(`<div class="alert alert-success">✅ Correct! +10 XP</div>`);
+                    currentIndex++;
+                    setTimeout(loadWord, 800);
+                } else {
+                    $('#speedResult').html(`<div class="alert alert-danger">❌ Incorrect! Answer: ${correct}</div>`);
+                }
+                $(this).val('');
+            }
+        });
+        loadWord();
+    }
+    
+    // ============================================
+    // GAME 4: WORD BINGO
+    // ============================================
+    function renderBingoGame() {
+        const vocabulary = getCurrentVocabulary().slice(0, 16);
+        bingoBoard = vocabulary.slice(0, 16);
+        bingoMarked = new Array(16).fill(false);
+        let bingoScore = 0;
+        
+        function checkBingo() {
+            const rows = [0,1,2,3]; const cols = [0,1,2,3];
+            for (let r of rows) { if (bingoMarked[r*4] && bingoMarked[r*4+1] && bingoMarked[r*4+2] && bingoMarked[r*4+3]) return true; }
+            for (let c of cols) { if (bingoMarked[c] && bingoMarked[4+c] && bingoMarked[8+c] && bingoMarked[12+c]) return true; }
+            if (bingoMarked[0] && bingoMarked[5] && bingoMarked[10] && bingoMarked[15]) return true;
+            if (bingoMarked[3] && bingoMarked[6] && bingoMarked[9] && bingoMarked[12]) return true;
+            return false;
+        }
+        
+        function speakRandomWord() {
+            const unmarked = bingoBoard.filter((_, idx) => !bingoMarked[idx]);
+            if (unmarked.length === 0) return;
+            const word = unmarked[Math.floor(Math.random() * unmarked.length)];
+            speakText(word.dutch, 'nl-NL');
+            return word;
+        }
+        
+        function renderBoard() {
+            let html = '<div class="row g-2">';
+            bingoBoard.forEach((word, idx) => {
+                html += `<div class="col-3"><div class="p-3 text-center border rounded-3 ${bingoMarked[idx] ? 'bg-success text-white' : 'bg-light'}" onclick="markBingo(${idx})">${word.dutch}</div></div>`;
+            });
+            html += '</div>';
+            $('#bingoBoard').html(html);
+        }
+        
+        window.markBingo = function(idx) {
+            if (!bingoMarked[idx]) {
+                bingoMarked[idx] = true;
+                bingoScore += 10;
+                renderBoard();
+                if (checkBingo()) {
+                    addXP(100);
+                    showToast('🎉 BINGO! +100 XP!');
+                    userProgress.gameScores = userProgress.gameScores || {};
+                    userProgress.gameScores.game4 = Math.max(userProgress.gameScores.game4 || 0, bingoScore);
+                    saveUserProgress();
+                    setTimeout(() => renderGamesHub(), 2000);
+                } else {
+                    speakRandomWord();
+                }
+            }
+        };
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel"><h3 class="h4 mb-3"><i class="fas fa-border-all me-2"></i>Word Bingo</h3>
+            <p>Listen to the Dutch word and click the matching tile!</p>
+            <div id="bingoBoard"></div>
+            <div class="mt-3"><button class="btn-outline-google btn-sm" onclick="speakRandomWordFromBingo()"><i class="fas fa-volume-up me-1"></i> Say a Word</button></div>
+            </div></div>`;
+        $('#mainContent').html(html);
+        renderBoard();
+        window.speakRandomWordFromBingo = () => speakRandomWord();
+        setTimeout(() => speakRandomWord(), 1000);
+    }
+    
+    // ============================================
+    // GAME 5: SENTENCE BUILDER
+    // ============================================
+    function renderSentenceBuilderGame() {
+        const story = appData?.stories?.find(s => s.id === currentStoryId) || appData?.stories?.[0];
+        const sentences = story.fullTextDutch.split(/[.!?]+/).filter(s => s.trim().split(' ').length > 3 && s.trim().split(' ').length < 10);
+        let currentSentenceIdx = 0;
+        let score = 0;
+        
+        function loadSentence() {
+            if (currentSentenceIdx >= sentences.length) {
+                $('#builderContainer').html(`<div class="alert alert-success">🎉 Game Complete! Score: ${score}/${sentences.length*20}<br><button class="btn-google mt-2" onclick="renderGamesHub()">Back to Games</button></div>`);
+                return;
+            }
+            const sentence = sentences[currentSentenceIdx].trim();
+            const words = sentence.split(' ');
+            const shuffled = [...words].sort(() => Math.random() - 0.5);
+            sentenceBuilderCurrent = [];
+            
+            $('#targetSentence').text('Build this: ' + sentence);
+            $('#builderArea').html('<div class="d-flex flex-wrap gap-2 justify-content-center" id="availableWords"></div><div class="sentence-builder-area d-flex flex-wrap gap-2 justify-content-center" id="builtArea"></div>');
+            $('#availableWords').html(shuffled.map(w => `<span class="word-tile" data-word="${w}">${w}</span>`).join(''));
+            $('#builtArea').html('');
+            
+            $('.word-tile').click(function() {
+                const word = $(this).data('word');
+                sentenceBuilderCurrent.push(word);
+                $(this).remove();
+                $('#builtArea').append(`<span class="word-tile btn-outline-google" style="background: var(--google-green);" data-built="true">${word}</span>`);
+            });
+            
+            $('#checkBuilderBtn').off('click').on('click', function() {
+                const builtSentence = sentenceBuilderCurrent.join(' ');
+                if (builtSentence === sentence) {
+                    score += 20;
+                    addXP(20);
+                    showToast('✅ Correct sentence! +20 XP');
+                    currentSentenceIdx++;
+                    loadSentence();
+                } else {
+                    showToast('❌ Not quite right. Try again!');
+                }
+            });
+        }
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel"><h3 class="h4 mb-3"><i class="fas fa-layer-group me-2"></i>Sentence Builder</h3>
+            <div id="builderContainer"><div class="text-center mb-3" id="targetSentence"></div>
+            <div id="builderArea"></div><button class="btn-google mt-3" id="checkBuilderBtn">Check Sentence</button></div></div></div>`;
+        $('#mainContent').html(html);
+        loadSentence();
+    }
+    
+    // ============================================
+    // GAME 6: HANGMAN
+    // ============================================
+    function renderHangmanGame() {
+        const vocabulary = getCurrentVocabulary();
+        hangmanWord = vocabulary[Math.floor(Math.random() * vocabulary.length)].dutch;
+        hangmanGuessed = [];
+        hangmanWrong = 0;
+        
+        function renderHangman() {
+            const displayWord = hangmanWord.split('').map(l => hangmanGuessed.includes(l) ? l : '_').join(' ');
+            const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+            const letters = alphabet.map(l => `<button class="btn btn-sm ${hangmanGuessed.includes(l) ? 'btn-secondary' : 'btn-outline-google'} m-1" onclick="guessLetter('${l}')" ${hangmanGuessed.includes(l) ? 'disabled' : ''}>${l}</button>`).join('');
+            
+            $('#hangmanWord').html(`<div class="display-4 mb-3">${displayWord}</div>`);
+            $('#hangmanWrong').html(`<div class="mb-2">Wrong guesses: ${hangmanWrong}/6</div><div class="progress mb-3"><div class="progress-bar bg-danger" style="width: ${(hangmanWrong/6)*100}%"></div></div>`);
+            $('#hangmanLetters').html(letters);
+            
+            if (displayWord.replace(/ /g, '') === hangmanWord) {
+                addXP(50);
+                showToast('🎉 You saved the hangman! +50 XP');
+                userProgress.gameScores = userProgress.gameScores || {};
+                userProgress.gameScores.game6 = Math.max(userProgress.gameScores.game6 || 0, 50);
+                saveUserProgress();
+                setTimeout(() => renderGamesHub(), 2000);
+            } else if (hangmanWrong >= 6) {
+                $('#hangmanLetters').html(`<div class="alert alert-danger">Game Over! The word was: ${hangmanWord}</div><button class="btn-google mt-2" onclick="renderHangmanGame()">Play Again</button>`);
+            }
+        }
+        
+        window.guessLetter = function(letter) {
+            if (hangmanGuessed.includes(letter)) return;
+            hangmanGuessed.push(letter);
+            if (!hangmanWord.includes(letter)) hangmanWrong++;
+            renderHangman();
+        };
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel text-center"><h3 class="h4 mb-3"><i class="fas fa-skull me-2"></i>Hangman</h3>
+            <div id="hangmanWord"></div><div id="hangmanWrong"></div><div id="hangmanLetters"></div>
+            <div class="mt-3"><button class="btn-outline-google btn-sm" onclick="renderHangmanGame()">New Word</button></div></div></div>`;
+        $('#mainContent').html(html);
+        renderHangman();
+    }
+    
+    // ============================================
+    // GAME 7: SPIN THE WHEEL
+    // ============================================
+    function renderSpinWheelGame() {
+        const challenges = [
+            { text: "Say a sentence using 'de' and 'het'", points: 20 },
+            { text: "Translate: 'I am learning Dutch'", points: 15, answer: "Ik leer Nederlands" },
+            { text: "Name 3 animals in Dutch", points: 15, answer: "hond, kat, muis" },
+            { text: "What is the past tense of 'lopen'?", points: 20, answer: "liep" },
+            { text: "Count from 1 to 10 in Dutch", points: 15, answer: "een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien" },
+            { text: "Say 'Thank you very much' in Dutch", points: 10, answer: "Dank je wel" },
+            { text: "Name 5 colors in Dutch", points: 20, answer: "rood, blauw, groen, geel, zwart" },
+            { text: "What does 'gezellig' mean?", points: 15, answer: "cozy/pleasant" }
+        ];
+        let currentChallenge = null;
+        
+        function spinWheel() {
+            if (wheelSpinning) return;
+            wheelSpinning = true;
+            let spins = 0;
+            const interval = setInterval(() => {
+                const idx = Math.floor(Math.random() * challenges.length);
+                $('#wheelResult').text(challenges[idx].text);
+                spins++;
+                if (spins > 20) {
+                    clearInterval(interval);
+                    currentChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+                    $('#wheelResult').html(`<div class="alert alert-info"><strong>Challenge:</strong> ${currentChallenge.text}</div><input type="text" class="form-control mt-2" id="challengeAnswer" placeholder="Your answer..."><button class="btn-google mt-2" id="submitChallenge">Submit</button>`);
+                    $('#submitChallenge').off('click').on('click', function() {
+                        const userAnswer = $('#challengeAnswer').val().toLowerCase().trim();
+                        if (currentChallenge.answer && userAnswer === currentChallenge.answer.toLowerCase()) {
+                            addXP(currentChallenge.points);
+                            showToast(`🎉 Correct! +${currentChallenge.points} XP`);
+                            wheelSpinning = false;
+                            setTimeout(() => renderSpinWheelGame(), 1500);
+                        } else if (!currentChallenge.answer) {
+                            addXP(currentChallenge.points);
+                            showToast(`🎉 +${currentChallenge.points} XP for trying!`);
+                            wheelSpinning = false;
+                            setTimeout(() => renderSpinWheelGame(), 1500);
+                        } else {
+                            showToast(`❌ Incorrect. The answer was: ${currentChallenge.answer}`);
+                            wheelSpinning = false;
+                            setTimeout(() => renderSpinWheelGame(), 2000);
+                        }
+                    });
+                    wheelSpinning = false;
+                }
+            }, 50);
+        }
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel text-center"><h3 class="h4 mb-3"><i class="fas fa-sync-alt me-2"></i>Spin the Wheel</h3>
+            <div class="display-1 mb-4"><i class="fas fa-circle-notch fa-spin" style="color: var(--google-blue);"></i></div>
+            <button class="btn-google mb-3" onclick="spinWheel()">Spin the Wheel!</button>
+            <div id="wheelResult"></div></div></div>`;
+        $('#mainContent').html(html);
+        window.spinWheel = spinWheel;
+    }
+    
+    // ============================================
+    // GAME 8: STORY ORDER
+    // ============================================
+    function renderStoryOrderGame() {
+        const story = appData?.stories?.find(s => s.id === currentStoryId) || appData?.stories?.[0];
+        const events = story.fullTextDutch.split(/[.!?]+/).filter(s => s.trim().length > 30).slice(0, 5);
+        const shuffled = [...events].sort(() => Math.random() - 0.5);
+        let currentOrder = [...shuffled];
+        let score = 0;
+        
+        function renderOrder() {
+            let html = '<div class="list-group">';
+            currentOrder.forEach((event, idx) => {
+                html += `<div class="list-group-item d-flex justify-content-between align-items-center">${idx+1}. ${event.substring(0, 80)}... <div><button class="btn btn-sm btn-outline-google me-1" onclick="moveUp(${idx})"><i class="fas fa-arrow-up"></i></button><button class="btn btn-sm btn-outline-google" onclick="moveDown(${idx})"><i class="fas fa-arrow-down"></i></button></div></div>`;
+            });
+            html += '</div><button class="btn-google mt-3" id="checkOrderBtn">Check Order</button>';
+            $('#storyOrderList').html(html);
+        }
+        
+        window.moveUp = function(idx) { if (idx > 0) { [currentOrder[idx-1], currentOrder[idx]] = [currentOrder[idx], currentOrder[idx-1]]; renderOrder(); } };
+        window.moveDown = function(idx) { if (idx < currentOrder.length-1) { [currentOrder[idx], currentOrder[idx+1]] = [currentOrder[idx+1], currentOrder[idx]]; renderOrder(); } };
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel"><h3 class="h4 mb-3"><i class="fas fa-sort-amount-down me-2"></i>Story Order</h3>
+            <p>Arrange the events in the correct order!</p>
+            <div id="storyOrderList"></div></div></div>`;
+        $('#mainContent').html(html);
+        renderOrder();
+        
+        $('#checkOrderBtn').off('click').on('click', function() {
+            let correct = 0;
+            for (let i = 0; i < currentOrder.length; i++) {
+                if (currentOrder[i] === events[i]) correct++;
+            }
+            if (correct === events.length) {
+                addXP(75);
+                showToast('🎉 Perfect story order! +75 XP');
+                userProgress.gameScores = userProgress.gameScores || {};
+                userProgress.gameScores.game8 = Math.max(userProgress.gameScores.game8 || 0, 75);
+                saveUserProgress();
+                setTimeout(() => renderGamesHub(), 1500);
+            } else {
+                showToast(`Correct order: ${correct}/${events.length}. Try again!`);
+            }
+        });
+    }
+    
+    // ============================================
+    // GAME 9: PRONUNCIATION
+    // ============================================
+    function renderPronunciationGame() {
+        const vocabulary = getCurrentVocabulary();
+        let currentWord = null;
+        let score = 0;
+        let currentIndex = 0;
+        const words = vocabulary.slice(0, 10);
+        
+        function loadPronunciationWord() {
+            if (currentIndex >= words.length) {
+                $('#pronounceContainer').html(`<div class="alert alert-success">🎉 Game Complete! Score: ${score}/${words.length*10}<br><button class="btn-google mt-2" onclick="renderGamesHub()">Back to Games</button></div>`);
+                userProgress.gameScores = userProgress.gameScores || {};
+                userProgress.gameScores.game9 = Math.max(userProgress.gameScores.game9 || 0, score);
+                saveUserProgress();
+                return;
+            }
+            currentWord = words[currentIndex];
+            $('#pronounceWord').text(currentWord.dutch);
+            $('#pronounceResult').empty();
+        }
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel text-center"><h3 class="h4 mb-3"><i class="fas fa-microphone-alt me-2"></i>Pronunciation Challenge</h3>
+            <div class="display-3 mb-4" id="pronounceWord">---</div>
+            <button class="btn-google me-2" id="listenWordBtn"><i class="fas fa-volume-up me-1"></i> Listen</button>
+            <button class="btn-outline-google" id="nextWordBtn">Next Word</button>
+            <div id="pronounceResult" class="mt-4"></div></div></div>`;
+        $('#mainContent').html(html);
+        loadPronunciationWord();
+        
+        $('#listenWordBtn').click(function() { speakText(currentWord.dutch, 'nl-NL'); });
+        $('#nextWordBtn').click(function() {
+            score += 10;
+            addXP(10);
+            showToast('✅ Good effort! +10 XP');
+            currentIndex++;
+            loadPronunciationWord();
+        });
+    }
+    
+    // ============================================
+    // GAME 10: TREASURE HUNT
+    // ============================================
+    function renderTreasureHuntGame() {
+        const vocabulary = getCurrentVocabulary();
+        let level = 1;
+        let levelScore = 0;
+        
+        function loadLevel() {
+            if (level > 5) {
+                $('#treasureContainer').html(`<div class="alert alert-success text-center"><i class="fas fa-crown fa-3x"></i><h3>You found all treasure!</h3><p>Score: ${levelScore}</p><button class="btn-google mt-2" onclick="renderGamesHub()">Back to Games</button></div>`);
+                userProgress.gameScores = userProgress.gameScores || {};
+                userProgress.gameScores.game10 = Math.max(userProgress.gameScores.game10 || 0, levelScore);
+                saveUserProgress();
+                return;
+            }
+            const word = vocabulary[(level-1) % vocabulary.length];
+            const options = [word.english];
+            const otherWords = vocabulary.filter(w => w.dutch !== word.dutch).slice(0, 3).map(w => w.english);
+            options.push(...otherWords);
+            options.sort(() => Math.random() - 0.5);
+            
+            $('#treasureContainer').html(`
+                <div class="text-center"><div class="mb-3"><i class="fas fa-map fa-3x" style="color: var(--google-blue);"></i></div>
+                <h4>Level ${level}/5</h4><div class="display-4 mb-3">${word.dutch}</div>
+                <div class="d-flex flex-wrap gap-2 justify-content-center">${options.map(opt => `<button class="btn btn-outline-google treasure-option" data-answer="${opt}">${opt}</button>`).join('')}</div>
+                <div id="treasureResult" class="mt-3"></div></div>
+            `);
+            
+            $('.treasure-option').click(function() {
+                const selected = $(this).data('answer');
+                if (selected === word.english) {
+                    levelScore += 20;
+                    addXP(20);
+                    showToast('✅ Treasure found! +20 XP');
+                    level++;
+                    loadLevel();
+                } else {
+                    showToast('❌ Wrong answer! Try again.');
+                }
+            });
+        }
+        
+        const html = `
+            <div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderGamesHub()"><i class="fas fa-arrow-left me-1"></i> Back to Games</button>
+            <div class="game-panel" id="treasureContainer"></div></div>`;
+        $('#mainContent').html(html);
+        loadLevel();
+    }
+    
+    // ============================================
+    // RENDER OTHER PAGES (Simplified)
+    // ============================================
+    function renderHomePage() {
+        currentView = 'home';
+        if (!appData?.stories) return;
+        const completedCount = userProgress.completedStories?.length || 0;
+        const totalStories = appData.stories.length;
+        const html = `<div class="fade-in-up"><div class="text-center mb-5"><h1 class="display-4 mb-3">🇳🇱 Learn Dutch Through Stories</h1><p class="lead text-muted">Read, listen, and master Dutch with engaging beginner stories</p><button class="btn-google mt-3" id="startBtn"><i class="fas fa-play me-2"></i> Start Your Journey</button></div><div class="row g-4 mb-5"><div class="col-md-3 col-6"><div class="stat-card"><div class="stat-number">${completedCount}/${totalStories}</div><div class="text-muted">Stories Done</div></div></div><div class="col-md-3 col-6"><div class="stat-card"><div class="stat-number">${userProgress.vocabularyMastered?.length || 0}</div><div class="text-muted">Words Mastered</div></div></div><div class="col-md-3 col-6"><div class="stat-card"><div class="stat-number">${userProgress.streak || 0}</div><div class="text-muted">Day Streak</div></div></div><div class="col-md-3 col-6"><div class="stat-card"><div class="stat-number">${userProgress.totalXP}</div><div class="text-muted">Total XP</div></div></div></div><div class="level-progress mb-4"><div class="d-flex justify-content-between mb-2"><span class="text-white">Level ${userProgress.level}</span><span class="text-white">${userProgress.totalXP % 100}/100 XP</span></div><div class="progress"><div class="progress-bar" style="width: ${userProgress.totalXP % 100}%"></div></div></div></div>`;
+        $('#mainContent').html(html);
+        $('#startBtn').click(() => renderStoriesPage());
     }
     
     function renderStoriesPage() {
-        currentView = 'stories';
-        const html = `
-            <div class="fade-in-up">
-                <h2 class="h3 mb-4"><i class="fas fa-book me-2" style="color: var(--google-blue);"></i>All Stories</h2>
-                <div class="row">
-                    ${appData.stories.map(story => `
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="material-card" onclick="openStory(${story.id})">
-                                <div class="story-card-header">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <div class="badge bg-white text-dark mb-2">#${story.id}</div>
-                                            <h5 class="mb-0 text-white">${story.title}</h5>
-                                            <small><i class="fas fa-map-marker-alt me-1"></i> ${story.location}</small>
-                                        </div>
-                                        ${userProgress.completedStories.includes(story.id) ? '<i class="fas fa-check-circle fa-2x"></i>' : ''}
-                                    </div>
-                                </div>
-                                <div class="p-3">
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span><i class="far fa-clock me-1"></i> ${story.difficulty.estimatedReadTime} min</span>
-                                        <span><i class="fas fa-signal me-1"></i> ${story.difficulty.level}</span>
-                                        <span><i class="fas fa-words me-1"></i> ${story.vocabulary.length} words</span>
-                                    </div>
-                                    <p class="small text-muted mb-0">${story.summaryEnglish.substring(0, 80)}...</p>
-                                </div>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
+        if (!appData?.stories) return;
+        const html = `<div class="fade-in-up"><h2 class="h3 mb-4"><i class="fas fa-book me-2" style="color: var(--google-blue);"></i>All Stories</h2><div class="row">${appData.stories.map(story => `<div class="col-md-6 col-lg-4 mb-4"><div class="material-card" onclick="openStory(${story.id})"><div class="story-card-header"><div><div class="badge bg-white text-dark mb-2">#${story.id}</div><h5 class="mb-0 text-white">${story.title}</h5></div>${userProgress.completedStories?.includes(story.id) ? '<i class="fas fa-check-circle fa-2x"></i>' : ''}</div><div class="p-3"><div class="d-flex justify-content-between mb-2"><span><i class="far fa-clock me-1"></i> ${story.difficulty?.estimatedReadTime || 5} min</span><span><i class="fas fa-words me-1"></i> ${story.vocabulary?.length || 0} words</span></div><p class="small text-muted">${story.summaryEnglish?.substring(0, 80)}...</p></div></div></div>`).join('')}</div></div>`;
         $('#mainContent').html(html);
-    }
-    
-    // TTS Function
-    function speakText(text, lang = 'nl-NL') {
-        if (speechSynthesis.speaking) {
-            speechSynthesis.cancel();
-        }
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = lang;
-        utterance.rate = 0.9;
-        utterance.pitch = 1;
-        speechSynthesis.speak(utterance);
-        showToast('🔊 Reading aloud...', 'success');
     }
     
     window.openStory = function(storyId) {
-        const story = appData.stories.find(s => s.id === storyId);
-        if (!story) return;
         currentStoryId = storyId;
-        
-        const stars = userProgress.storyStars[storyId] || 0;
-        const quizScore = userProgress.storyQuizScores[storyId] || null;
-        
-        // Track time spent
-        const startTime = Date.now();
-        
-        const html = `
-            <div class="fade-in-up">
-                <button class="btn-outline-google btn-sm mb-3" onclick="renderStoriesPage()">
-                    <i class="fas fa-arrow-left me-1"></i> Back to Stories
-                </button>
-                
-                <div class="reading-panel">
-                    <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-2">
-                        <div>
-                            <h2 class="h3 mb-1">${story.title}</h2>
-                            <p class="text-muted">${story.titleEnglish}</p>
-                        </div>
-                        <div class="text-end">
-                            <div class="mb-2">
-                                ${[1,2,3,4,5].map(i => `<i class="fas fa-star${stars >= i ? '' : '-o'}" style="color: gold;"></i>`).join('')}
-                            </div>
-                            ${quizScore !== null ? `<span class="badge-google">Quiz: ${quizScore}/5</span>` : ''}
-                            <button class="btn-outline-google btn-sm ms-2" onclick="speakText(${JSON.stringify(story.fullTextDutch)}, 'nl-NL')">
-                                <i class="fas fa-volume-up me-1"></i> Listen
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Reading Mode Tabs -->
-                    <ul class="nav nav-tabs mb-4" id="storyTabs">
-                        <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#readTab">
-                                <i class="fas fa-book-open me-1"></i> Read
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vocabTab">
-                                <i class="fas fa-graduation-cap me-1"></i> Words (${story.vocabulary.length})
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#quizTab">
-                                <i class="fas fa-question-circle me-1"></i> Quiz
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="readTab">
-                            <div class="mb-3 btn-group">
-                                <button class="btn btn-sm btn-outline-secondary" id="showDutch">Dutch Only</button>
-                                <button class="btn btn-sm btn-outline-secondary" id="showEnglish">English Only</button>
-                                <button class="btn btn-sm btn-outline-secondary" id="showBoth">Both</button>
-                                <button class="btn btn-sm btn-outline-secondary" id="listenBtn">
-                                    <i class="fas fa-headphones me-1"></i> Listen
-                                </button>
-                            </div>
-                            <div id="dutchPanel" class="dutch-text">
-                                ${story.fullTextDutch.replace(/\n/g, '<br>')}
-                            </div>
-                            <div id="englishPanel" class="english-text" style="display: none;">
-                                ${story.fullTextEnglish.replace(/\n/g, '<br>')}
-                            </div>
-                        </div>
-                        
-                        <div class="tab-pane fade" id="vocabTab">
-                            <div class="row">
-                                <div class="col-md-8 mx-auto">
-                                    <input type="text" class="form-control mb-3" id="vocabSearch" placeholder="Search words...">
-                                    <div id="vocabList">
-                                        ${story.vocabulary.map(word => `
-                                            <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
-                                                <div>
-                                                    <strong class="vocab-word" onclick="speakText('${word.dutch}', 'nl-NL')">${word.dutch}</strong>
-                                                    <span class="text-muted ms-2">→ ${word.english}</span>
-                                                    <span class="badge bg-light text-dark ms-2">${word.category}</span>
-                                                </div>
-                                                <div>
-                                                    <button class="btn btn-sm btn-outline-success me-1" onclick="markWordKnown('${word.dutch}')">
-                                                        <i class="fas fa-check"></i>
-                                                    </button>
-                                                    <button class="btn btn-sm btn-outline-primary" onclick="speakText('${word.dutch}', 'nl-NL')">
-                                                        <i class="fas fa-volume-up"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        `).join('')}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-pane fade" id="quizTab">
-                            <div id="quizContainer">
-                                ${story.questions.map((q, idx) => `
-                                    <div class="mb-4" data-qid="${q.id}">
-                                        <h6 class="fw-bold mb-3">${idx+1}. ${q.text}</h6>
-                                        ${q.options.map((opt, optIdx) => `
-                                            <div class="quiz-option" data-question="${q.id}" data-option="${optIdx}">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-2 fw-bold">${String.fromCharCode(65+optIdx)}.</div>
-                                                    <div>${opt}</div>
-                                                </div>
-                                            </div>
-                                        `).join('')}
-                                    </div>
-                                `).join('')}
-                                <button class="btn-google w-100 mt-3" id="submitQuiz">Submit Answers</button>
-                                <div id="quizResult" class="mt-4"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        
+        const story = appData.stories.find(s => s.id === storyId);
+        const html = `<div class="fade-in-up"><button class="btn-outline-google btn-sm mb-3" onclick="renderStoriesPage()"><i class="fas fa-arrow-left me-1"></i> Back</button><div class="reading-panel"><div class="d-flex justify-content-between"><div><h2>${story.title}</h2><p class="text-muted">${story.titleEnglish}</p></div><button class="btn-outline-google btn-sm" onclick="speakText('${story.fullTextDutch.replace(/'/g, "\\'")}', 'nl-NL')"><i class="fas fa-volume-up"></i> Listen</button></div><ul class="nav nav-tabs mb-3"><li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#readTab">Read</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#vocabTab">Words</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#quizTab">Quiz</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#gameTab">🎮 Games</button></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="readTab"><div class="dutch-text">${story.fullTextDutch.replace(/\n/g, '<br>')}</div></div><div class="tab-pane fade" id="vocabTab">${story.vocabulary.map(w => `<div class="d-flex justify-content-between p-2 border-bottom"><span><strong>${w.dutch}</strong> → ${w.english}</span><button class="btn btn-sm btn-outline-google" onclick="speakText('${w.dutch}', 'nl-NL')"><i class="fas fa-volume-up"></i></button></div>`).join('')}</div><div class="tab-pane fade" id="quizTab"><div id="storyQuiz"></div><button class="btn-google mt-3" id="submitStoryQuiz">Submit</button><div id="storyQuizResult"></div></div><div class="tab-pane fade" id="gameTab"><div class="text-center"><p class="mb-3">Play games using vocabulary from this story!</p><button class="btn-google" onclick="renderGamesHub()"><i class="fas fa-gamepad me-2"></i>Go to Games Hub</button></div></div></div></div></div>`;
         $('#mainContent').html(html);
-        
-        // Reading mode toggles
-        $('#showDutch').click(() => { $('#dutchPanel').show(); $('#englishPanel').hide(); });
-        $('#showEnglish').click(() => { $('#dutchPanel').hide(); $('#englishPanel').show(); });
-        $('#showBoth').click(() => { $('#dutchPanel').show(); $('#englishPanel').show(); });
-        $('#listenBtn').click(() => speakText(story.fullTextDutch, 'nl-NL'));
-        
-        // Quiz handling
         let quizAnswers = {};
-        $('.quiz-option').click(function() {
-            const qid = $(this).data('question');
-            const option = $(this).data('option');
-            $(this).closest('div[data-qid]').find('.quiz-option').removeClass('selected');
-            $(this).addClass('selected');
-            quizAnswers[qid] = option;
+        story.questions.forEach((q, idx) => {
+            $(`#storyQuiz`).append(`<div class="mb-3"><strong>${idx+1}. ${q.text}</strong><div class="mt-2">${q.options.map((opt, i) => `<div class="quiz-option" data-q="${q.id}" data-opt="${i}">${String.fromCharCode(65+i)}. ${opt}</div>`).join('')}</div></div>`);
         });
-        
-        $('#submitQuiz').click(function() {
+        $('.quiz-option').click(function() { $(this).parent().find('.quiz-option').removeClass('selected'); $(this).addClass('selected'); quizAnswers[$(this).data('q')] = $(this).data('opt'); });
+        $('#submitStoryQuiz').click(() => {
             let correct = 0;
-            story.questions.forEach(q => {
-                if (quizAnswers[q.id] === q.correctIndex) correct++;
-            });
-            
-            // Save score
-            userProgress.storyQuizScores[storyId] = correct;
-            if (correct >= 4 && !userProgress.completedStories.includes(storyId)) {
-                userProgress.completedStories.push(storyId);
-                const newStars = Math.min(5, (userProgress.storyStars[storyId] || 0) + 1);
-                userProgress.storyStars[storyId] = newStars;
-                addXP(50);
-                
-                // Check achievements
-                checkAchievements();
-            }
+            story.questions.forEach(q => { if (quizAnswers[q.id] === q.correctIndex) correct++; });
+            if (correct >= 4 && !userProgress.completedStories.includes(storyId)) { userProgress.completedStories.push(storyId); addXP(50); }
             saveUserProgress();
-            
-            const resultHtml = `
-                <div class="alert ${correct >= 4 ? 'alert-success' : 'alert-info'} text-center">
-                    <i class="fas ${correct >= 4 ? 'fa-trophy' : 'fa-book'} fa-2x mb-2"></i>
-                    <h5>You scored ${correct}/${story.questions.length}!</h5>
-                    ${correct === 5 ? '<p>Perfect! +75 XP bonus!</p>' : '<p>Review the vocabulary and try again!</p>'}
-                </div>
-            `;
-            $('#quizResult').html(resultHtml);
-            
-            // Show correct answers
-            story.questions.forEach(q => {
-                const $qDiv = $(`div[data-qid="${q.id}"]`);
-                $qDiv.find('.quiz-option').each(function(idx, el) {
-                    if (idx === q.correctIndex) $(el).addClass('correct');
-                    else if (quizAnswers[q.id] === idx && idx !== q.correctIndex) $(el).addClass('wrong');
-                });
-            });
+            $('#storyQuizResult').html(`<div class="alert alert-info">Score: ${correct}/${story.questions.length}</div>`);
         });
-        
-        $('#vocabSearch').on('input', function() {
-            const search = $(this).val().toLowerCase();
-            $('#vocabList > div').each(function() {
-                $(this).toggle($(this).text().toLowerCase().includes(search));
-            });
-        });
-    };
-    
-    window.markWordKnown = function(word) {
-        if (!userProgress.vocabularyLearning) userProgress.vocabularyLearning = {};
-        const oldStrength = userProgress.vocabularyLearning[word] || 0;
-        const newStrength = Math.min(100, oldStrength + 25);
-        userProgress.vocabularyLearning[word] = newStrength;
-        
-        if (newStrength >= 80 && !userProgress.vocabularyMastered.includes(word)) {
-            userProgress.vocabularyMastered.push(word);
-            addXP(10);
-            showToast(`🎓 Mastered "${word}"! +10 XP`);
-        } else {
-            showToast(`📚 "${word}" strengthened to ${newStrength}%`);
-        }
-        saveUserProgress();
     };
     
     function renderVocabularyPage() {
+        if (!appData?.stories) return;
         const allWords = [];
-        appData.stories.forEach(story => {
-            story.vocabulary.forEach(word => {
-                allWords.push({ ...word, storyId: story.id });
-            });
-        });
-        
-        const mastered = userProgress.vocabularyMastered.length;
-        
-        const html = `
-            <div class="fade-in-up">
-                <h2 class="h3 mb-4"><i class="fas fa-graduation-cap me-2" style="color: var(--google-blue);"></i>My Vocabulary</h2>
-                
-                <div class="row g-4 mb-4">
-                    <div class="col-md-4">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-check-circle" style="color: var(--google-green);"></i></div>
-                            <div class="stat-number">${mastered}</div>
-                            <div class="text-muted">Mastered Words</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-chart-line" style="color: var(--google-yellow);"></i></div>
-                            <div class="stat-number">${Object.keys(userProgress.vocabularyLearning || {}).length}</div>
-                            <div class="text-muted">In Progress</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-book" style="color: var(--google-blue);"></i></div>
-                            <div class="stat-number">${allWords.length}</div>
-                            <div class="text-muted">Total Words</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="reading-panel">
-                    <input type="text" class="form-control mb-3" id="wordSearch" placeholder="Search Dutch or English...">
-                    <div id="wordList">
-                        ${allWords.map(word => {
-                            const strength = (userProgress.vocabularyLearning?.[word.dutch] || 0);
-                            return `
-                                <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
-                                    <div>
-                                        <div class="progress mb-1" style="width: 100px; height: 4px;">
-                                            <div class="progress-bar" style="width: ${strength}%"></div>
-                                        </div>
-                                        <strong class="vocab-word" onclick="speakText('${word.dutch}', 'nl-NL')">${word.dutch}</strong>
-                                        <span class="text-muted ms-2">→ ${word.english}</span>
-                                    </div>
-                                    <button class="btn btn-sm btn-outline-success" onclick="markWordKnown('${word.dutch}')">
-                                        <i class="fas fa-check"></i> Practice
-                                    </button>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </div>
-            </div>
-        `;
-        
+        appData.stories.forEach(s => s.vocabulary?.forEach(w => { if (!allWords.find(x => x.dutch === w.dutch)) allWords.push(w); }));
+        const html = `<div class="fade-in-up"><h2 class="h3 mb-4"><i class="fas fa-graduation-cap me-2"></i>My Vocabulary</h2><div class="row g-4 mb-4"><div class="col-md-4"><div class="stat-card"><div class="stat-number">${userProgress.vocabularyMastered?.length || 0}</div><div>Mastered</div></div></div><div class="col-md-4"><div class="stat-card"><div class="stat-number">${allWords.length}</div><div>Total Words</div></div></div><div class="col-md-4"><div class="stat-card"><div class="stat-number">${userProgress.wordReviewQueue?.length || 0}</div><div>To Review</div></div></div></div><div class="reading-panel"><input type="text" class="form-control mb-3" id="vocabSearch" placeholder="Search..."><div id="vocabList">${allWords.map(w => `<div class="d-flex justify-content-between p-2 border-bottom"><span><strong>${w.dutch}</strong> → ${w.english}</span><div><button class="btn btn-sm btn-outline-google me-1" onclick="speakText('${w.dutch}', 'nl-NL')"><i class="fas fa-volume-up"></i></button><button class="btn btn-sm btn-outline-success" onclick="markWordKnown('${w.dutch}')"><i class="fas fa-check"></i></button></div></div>`).join('')}</div></div></div>`;
         $('#mainContent').html(html);
-        
-        $('#wordSearch').on('input', function() {
-            const search = $(this).val().toLowerCase();
-            $('#wordList > div').each(function() {
-                $(this).toggle($(this).text().toLowerCase().includes(search));
-            });
-        });
+        $('#vocabSearch').on('input', function() { const s = $(this).val().toLowerCase(); $('#vocabList > div').each(function() { $(this).toggle($(this).text().toLowerCase().includes(s)); }); });
     }
+    
+    window.markWordKnown = function(word) {
+        userProgress.vocabularyLearning[word] = Math.min(100, (userProgress.vocabularyLearning[word] || 0) + 25);
+        if (!userProgress.vocabularyMastered.includes(word) && userProgress.vocabularyLearning[word] >= 80) userProgress.vocabularyMastered.push(word);
+        saveUserProgress();
+        showToast(`✅ "${word}" strengthened!`);
+        renderVocabularyPage();
+    };
     
     function renderProgressPage() {
-        const totalStories = appData.stories.length;
-        const completed = userProgress.completedStories.length;
-        
-        // Prepare chart data
-        const storyNames = appData.stories.map(s => `Story ${s.id}`);
-        const storyScores = appData.stories.map(s => userProgress.storyQuizScores?.[s.id] || 0);
-        
-        const html = `
-            <div class="fade-in-up">
-                <h2 class="h3 mb-4"><i class="fas fa-chart-line me-2" style="color: var(--google-blue);"></i>Your Progress</h2>
-                
-                <div class="row g-4 mb-4">
-                    <div class="col-md-6">
-                        <div class="reading-panel">
-                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-pie me-2"></i>Story Completion</h5>
-                            <canvas id="completionChart" height="200"></canvas>
-                            <div class="text-center mt-3">
-                                <span class="badge-google">${completed}/${totalStories} stories</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="reading-panel">
-                            <h5 class="fw-bold mb-3"><i class="fas fa-chart-bar me-2"></i>Quiz Scores</h5>
-                            <canvas id="quizChart" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Streak Calendar -->
-                <div class="reading-panel mb-4">
-                    <h5 class="fw-bold mb-3"><i class="fas fa-calendar-alt me-2"></i>Activity Streak</h5>
-                    <div class="streak-calendar" id="streakCalendar">
-                        ${generateStreakCalendar()}
-                    </div>
-                    <div class="text-center mt-3">
-                        <span class="badge-google">🔥 ${userProgress.streak} day streak!</span>
-                    </div>
-                </div>
-                
-                <!-- Achievements -->
-                <div class="reading-panel">
-                    <h5 class="fw-bold mb-3"><i class="fas fa-medal me-2"></i>Achievements</h5>
-                    <div class="row g-3">
-                        ${Object.values(achievements).map(ach => {
-                            const unlocked = userProgress.badges.includes(ach.id);
-                            return `
-                                <div class="col-md-4 col-6">
-                                    <div class="achievement-card ${!unlocked ? 'locked' : ''}">
-                                        <div class="achievement-icon">
-                                            <i class="fas ${ach.icon} ${unlocked ? 'text-success' : 'text-muted'}"></i>
-                                        </div>
-                                        <h6 class="small fw-bold mb-1">${ach.name}</h6>
-                                        <p class="small text-muted mb-0">${ach.description}</p>
-                                        ${!unlocked ? `<span class="badge bg-secondary mt-2">Locked</span>` : '<i class="fas fa-check-circle text-success mt-1"></i>'}
-                                    </div>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </div>
-                
-                <!-- Learning Stats -->
-                <div class="row g-4 mt-2">
-                    <div class="col-md-4">
-                        <div class="stat-card">
-                            <i class="fas fa-clock fa-2x mb-2" style="color: var(--google-blue);"></i>
-                            <div class="stat-number">${userProgress.totalTimeSpent || 0}</div>
-                            <div class="text-muted">Minutes Learned</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="stat-card">
-                            <i class="fas fa-question-circle fa-2x mb-2" style="color: var(--google-green);"></i>
-                            <div class="stat-number">${userProgress.quizzesTaken || 0}</div>
-                            <div class="text-muted">Quizzes Taken</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="stat-card">
-                            <i class="fas fa-percent fa-2x mb-2" style="color: var(--google-yellow);"></i>
-                            <div class="stat-number">${userProgress.quizzesTaken ? Math.round((userProgress.correctAnswers / (userProgress.quizzesTaken * 5)) * 100) : 0}%</div>
-                            <div class="text-muted">Accuracy Rate</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        
+        const html = `<div class="fade-in-up"><h2 class="h3 mb-4"><i class="fas fa-chart-line me-2"></i>Your Progress</h2><div class="row g-4"><div class="col-md-6"><div class="reading-panel"><h5>Story Completion</h5><canvas id="progressChart" height="200"></canvas></div></div><div class="col-md-6"><div class="reading-panel"><h5>XP Progress</h5><canvas id="xpChart" height="200"></canvas></div></div></div><div class="reading-panel mt-4"><h5>Achievements</h5><div class="row">${Object.values(achievements).map(a => `<div class="col-md-4 col-6 text-center mb-3"><i class="fas ${a.icon} fa-2x ${userProgress.badges?.includes(a.id) ? 'text-success' : 'text-muted'}"></i><p class="small">${a.name}</p></div>`).join('')}</div></div></div>`;
         $('#mainContent').html(html);
-        
-        // Initialize charts
-        const ctx1 = document.getElementById('completionChart')?.getContext('2d');
-        if (ctx1) {
-            new Chart(ctx1, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Completed', 'Remaining'],
-                    datasets: [{ data: [completed, totalStories - completed], backgroundColor: ['#1A73E8', '#E8EAED'] }]
-                },
-                options: { responsive: true, maintainAspectRatio: true }
-            });
-        }
-        
-        const ctx2 = document.getElementById('quizChart')?.getContext('2d');
-        if (ctx2) {
-            new Chart(ctx2, {
-                type: 'bar',
-                data: { labels: storyNames, datasets: [{ label: 'Score', data: storyScores, backgroundColor: '#34A853', borderRadius: 10 }] },
-                options: { responsive: true, maintainAspectRatio: true, scales: { y: { beginAtZero: true, max: 5 } } }
-            });
-        }
-    }
-    
-    function generateStreakCalendar() {
-        let days = '';
-        const today = new Date();
-        for (let i = 6; i >= 0; i--) {
-            const date = new Date(today);
-            date.setDate(today.getDate() - i);
-            days += `<div class="streak-day ${i < userProgress.streak ? 'completed' : ''}">${date.getDate()}</div>`;
-        }
-        return days;
+        setTimeout(() => {
+            const ctx = document.getElementById('progressChart')?.getContext('2d');
+            if (ctx) new Chart(ctx, { type: 'doughnut', data: { labels: ['Completed', 'Remaining'], datasets: [{ data: [userProgress.completedStories?.length || 0, (appData?.stories?.length || 10) - (userProgress.completedStories?.length || 0)], backgroundColor: ['#1A73E8', '#E8EAED'] }] } });
+            const ctx2 = document.getElementById('xpChart')?.getContext('2d');
+            if (ctx2) new Chart(ctx2, { type: 'bar', data: { labels: ['Total XP'], datasets: [{ data: [userProgress.totalXP], backgroundColor: '#34A853' }] } });
+        }, 100);
     }
     
     function renderStrategiesPage() {
-        const html = `
-            <div class="fade-in-up">
-                <h2 class="h3 mb-4"><i class="fas fa-lightbulb me-2" style="color: var(--google-yellow);"></i>Learning Strategies</h2>
-                <p class="lead mb-4">Proven techniques to help you learn Dutch faster and remember it longer</p>
-                
-                <div class="row g-4">
-                    ${Object.values(learningStrategies).map(strategy => `
-                        <div class="col-md-6 col-lg-4">
-                            <div class="material-card" style="cursor: default;">
-                                <div class="p-4">
-                                    <i class="fas ${strategy.icon} fa-2x mb-3" style="color: var(--google-blue);"></i>
-                                    <h4 class="h5 fw-bold">${strategy.name}</h4>
-                                    <p class="text-muted small">${strategy.description}</p>
-                                    <div class="alert alert-light small mt-2">
-                                        <i class="fas fa-microphone-alt me-1"></i> ${strategy.technique}
-                                    </div>
-                                    <button class="btn-outline-google btn-sm w-100" onclick="showStrategyTip('${strategy.name}')">
-                                        Try This Technique <i class="fas fa-arrow-right ms-1"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-                
-                <!-- Daily Learning Routine -->
-                <div class="reading-panel mt-4">
-                    <h5 class="fw-bold mb-3"><i class="fas fa-clock me-2"></i>Recommended Daily Routine</h5>
-                    <div class="row text-center">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="p-3 bg-light rounded-3">
-                                <i class="fas fa-book-open fa-2x mb-2" style="color: var(--google-blue);"></i>
-                                <h6 class="fw-bold mb-0">5 min</h6>
-                                <small class="text-muted">Read a story</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="p-3 bg-light rounded-3">
-                                <i class="fas fa-graduation-cap fa-2x mb-2" style="color: var(--google-green);"></i>
-                                <h6 class="fw-bold mb-0">5 min</h6>
-                                <small class="text-muted">Learn 5 new words</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="p-3 bg-light rounded-3">
-                                <i class="fas fa-repeat fa-2x mb-2" style="color: var(--google-yellow);"></i>
-                                <h6 class="fw-bold mb-0">3 min</h6>
-                                <small class="text-muted">Review old words</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="p-3 bg-light rounded-3">
-                                <i class="fas fa-question-circle fa-2x mb-2" style="color: var(--google-red);"></i>
-                                <h6 class="fw-bold mb-0">2 min</h6>
-                                <small class="text-muted">Take a quiz</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        
+        const strategies = [
+            { name: "Spaced Repetition", desc: "Review at optimal intervals", icon: "fa-clock" },
+            { name: "Active Recall", desc: "Test yourself, don't just read", icon: "fa-brain" },
+            { name: "Interleaving", desc: "Mix different topics", icon: "fa-random" },
+            { name: "Pomodoro", desc: "25 min study, 5 min break", icon: "fa-hourglass-half" }
+        ];
+        const html = `<div class="fade-in-up"><h2 class="h3 mb-4"><i class="fas fa-lightbulb me-2"></i>Learning Strategies</h2><div class="row g-4">${strategies.map(s => `<div class="col-md-6 col-lg-3"><div class="material-card p-4 text-center"><i class="fas ${s.icon} fa-3x mb-3" style="color: var(--google-blue);"></i><h5>${s.name}</h5><p class="small text-muted">${s.desc}</p></div></div>`).join('')}</div></div>`;
         $('#mainContent').html(html);
-    }
-    
-    window.showStrategyTip = function(strategyName) {
-        const strategy = Object.values(learningStrategies).find(s => s.name === strategyName);
-        if (strategy) {
-            showToast(`💡 ${strategy.name}: ${strategy.technique}`);
-        }
-    };
-    
-    function checkAchievements() {
-        let newBadges = [];
-        
-        // Check story count achievements
-        if (userProgress.completedStories.length >= 1 && !userProgress.badges.includes('first_story')) newBadges.push('first_story');
-        if (userProgress.completedStories.length >= 5 && !userProgress.badges.includes('five_stories')) newBadges.push('five_stories');
-        if (userProgress.completedStories.length >= 10 && !userProgress.badges.includes('ten_stories')) newBadges.push('ten_stories');
-        
-        // Check streak achievements
-        if (userProgress.streak >= 7 && !userProgress.badges.includes('seven_day_streak')) newBadges.push('seven_day_streak');
-        if (userProgress.streak >= 30 && !userProgress.badges.includes('thirty_day_streak')) newBadges.push('thirty_day_streak');
-        
-        // Check vocabulary achievement
-        if (userProgress.vocabularyMastered.length >= 100 && !userProgress.badges.includes('vocab_master')) newBadges.push('vocab_master');
-        
-        // Award new badges
-        newBadges.forEach(badgeId => {
-            userProgress.badges.push(badgeId);
-            const achievement = achievements[badgeId];
-            if (achievement) {
-                addXP(achievement.xpReward);
-                showToast(`🏆 Achievement Unlocked: ${achievement.name}! +${achievement.xpReward} XP`);
-            }
-        });
-        
-        if (newBadges.length) saveUserProgress();
     }
 </script>
 </body>
