@@ -1,194 +1,181 @@
 {
   "metadata": {
-    "title": "Dutch Short Stories for Beginners",
-    "subtitle": "20 Captivating Short Stories to Learn Dutch and Grow Your Vocabulary the Fun Way",
-    "totalStories": 20,
-    "difficulty": "A2-B1",
-    "vocabularyCount": 1847,
-    "totalWordsInStories": 28500,
-    "cefrLevel": "A2-B1",
-    "targetAudience": "upper beginner to lower intermediate",
-    "author": "Lingo Mastery",
-    "copyright": "Copyright © 2020 by Lingo Mastery",
-    "lastUpdated": "2024-01-01",
+    "title": "Dutch Stories for Beginners",
+    "subtitle": "Popular Stories for Learning Dutch",
+    "totalStories": 10,
+    "difficulty": "A1-A2",
+    "vocabularyCount": 578,
+    "totalWordsInStories": 5200,
+    "cefrLevel": "A1-A2",
+    "targetAudience": "absolute beginners to upper beginners",
+    "source": "Traditional Dutch children's literature and school reading lists",
+    "lastUpdated": "2024-01-15",
     "version": "1.0"
   },
   "stories": [
     {
       "id": 1,
-      "title": "Een bruiloft met een verrassing",
-      "titleEnglish": "A Wedding with a Surprise",
-      "location": "Maastricht",
-      "coordinates": {"lat": 50.8514, "lng": 5.6910},
+      "title": "Jip en Janneke - De Verjaardag",
+      "titleEnglish": "Jip and Janneke - The Birthday",
+      "location": "Netherlands (typical neighborhood)",
+      "coordinates": {"lat": 52.1326, "lng": 5.2913},
       "characters": [
-        {"name": "Peter de Wit", "role": "main", "description": "Main character who goes to wrong wedding"},
-        {"name": "Jan Smits", "role": "supporting", "description": "Peter's childhood friend, becomes math teacher"},
-        {"name": "Marieke", "role": "supporting", "description": "Jan's fiancée/bride"},
-        {"name": "Sophie", "role": "minor", "description": "Friend of Marieke"},
-        {"name": "Peter de Waal", "role": "minor", "description": "Guest at the wrong wedding"}
+        {"name": "Jip", "role": "main", "description": "A young boy with a striped shirt, curious and friendly"},
+        {"name": "Janneke", "role": "main", "description": "Jip's best friend, a girl with a red dress"},
+        {"name": "Mama", "role": "supporting", "description": "Jip's mother"},
+        {"name": "Papa", "role": "supporting", "description": "Jip's father"}
       ],
-      "settings": ["train", "castle", "wedding hall", "Emmen", "Maastricht", "Utrecht"],
-      "summaryDutch": "Peter krijgt een uitnodiging voor de bruiloft van zijn jeugdvriend Jan die hij al bijna 20 jaar niet gezien heeft. De bruiloft is aan de andere kant van het land, maar ze waren vroeger hele goede vrienden, dus Peter besluit dat hij zal gaan. Als hij in de trouwzaal zit, begint hij met een vriendin van de bruid te praten en zij geeft hem wat verrassende informatie over Jan. Zodra Jan en de bruid de zaal binnenkomen, ziet Peter dat het helemaal niet zijn vriend Jan is. Dan blijkt dat hij per ongeluk naar de verkeerde locatie is gegaan, waar toevallig ook een Jan met een Marieke ging trouwen, op dezelfde dag en dezelfde tijd.",
-      "summaryEnglish": "Peter gets a wedding invitation from his childhood friend, Jan, whom he hasn't seen for almost 20 years. The wedding is on the other side of the country, but they used to be really good friends, so Peter decides he'll attend. Once he's in the wedding reception hall, he starts talking to a friend of the bride and she gives him some surprising information about Jan. As soon as Jan and the bride enter the hall, Peter realizes that's not his friend Jan at all. Then it turns out he accidentally went to the wrong location, where another Jan and Marieke happened to be getting married on the same day and at the same time.",
-      "fullTextDutch": "Peter ontvangt een e-mail van een oude schoolvriend Jan. Wat een verrassing! Jan gaat trouwen en Peter is uitgenodigd. Ze hebben elkaar al 18 jaar niet gezien, maar op de middelbare school waren ze heel goede vrienden. Peter zal dus zeker naar de bruiloft gaan, zelfs al kent hij Jans verloofde Marieke niet.\n\nIn de e-mail staat dat de bruiloft op zaterdag 17 maart om 3 uur 's middags is. Daarnaast staan er ook gegevens over de locatie vermeld. De bruiloft is in een mooi kasteel in Maastricht, waar Jan tegenwoordig woont.\n\nPeter schrijft de datum en andere gegevens meteen in zijn agenda en daarna mailt hij Jan terug om hem te feliciteren en te zeggen dat hij zeker zal komen.\n\nOp de dag van Jans bruiloft gaat Peter met de trein naar Maastricht vanuit zijn woonplaats Emmen. Dat is best een lange reis, vooral voor Nederland. De treinreis duurt ongeveer 4 uur en geeft Peter genoeg tijd om terug te denken aan alle leuke momenten die hij als tiener met Jan heeft beleefd.\n\nBijvoorbeeld die ene keer dat ze samen hadden gespijbeld om stiekem een dagje naar Utrecht te gaan. Wat hadden ze daarna veel problemen gehad met hun ouders en school. Hij hoopt dat hij tijdens de bruiloft even tijd met Jan zal hebben om herinneringen op te halen.\n\nOm kwart voor drie staat Peter voor de ingang van de trouwzaal in het kasteel. Er hangt een groot bord met 'Jan & Marieke 2020' boven de deur. Hij gaat naar binnen en ziet op één van de tafels een naamkaartje staan waar 'Peter de W.' op staat, dus daar gaat hij zitten. Hij kent de andere mensen aan tafel niet, maar begint alvast een praatje met hen te maken.\n\n— Hallo, ik ben Peter. Ik ben een vroegere schoolvriend van Jan. Aangenaam kennis met je te maken!\n\n— Hoi, ik ben Sophie. Aangenaam. Ik zat op school met Marieke. Leuk hè, dat twee mensen met zo'n enorme taalknobbel nu gaan trouwen! Als ze kinderen krijgen, gaan die vast ook iets met taal doen.\n\n— Oh! Dat verrast me wel, moet ik eerlijk zeggen. Op school was Jan veel beter in wiskunde dan in taal, maar mensen kunnen veel veranderen in zo'n lange tijd. Weet je dan wat voor baan Jan nu heeft?\n\n— Wist je dat niet? — antwoordde Sophie — Hij is decaan van de Faculteit van Taalwetenschappen aan de Universiteit van Maastricht. En Marieke werkt ook op de universiteit, daar hebben ze elkaar leren kennen.\n\n— Zo zo, wat een verrassing. Ik zie al dat ik veel bij te praten heb met Jan.\n\n— Hé, volgens mij begint de bruiloft.\n\nOp dat moment begon een romantisch liedje te spelen, en kwamen de bruid en bruidegom samen aanlopen vanaf de ingang van de zaal. Peter draaide zich om en kon zijn ogen niet geloven. Dat was zijn vriend Jan helemaal niet. Mensen kunnen veel veranderen, maar hij wist zeker dat die man niet zijn jeugdvriend was. Toen voelde hij dat iemand op zijn schouder tikte.\n\n— Hallo. Sorry, maar volgens mij zit u op mijn plaats, ik ben Jans vriend Peter de Waal. Of heet u toevallig ook zo?\n\n— Nee, ik ben Peter de Wit. Ik ben even in de war, misschien ben ik wel op de verkeerde bruiloft. Wat is de achternaam van de bruidegom?\n\n— Haha, Jan van Haag natuurlijk! Gaat er soms nog een andere Jan met een Marieke trouwen vandaag?\n\n— O nee! Mijn vriend heet Jan Smits. Ik ben dus echt op de verkeerde bruiloft. Het spijt me.\n\nPeter liep zo onopvallend mogelijk naar buiten en ging snel online op zijn telefoon om de naam van het kasteel opnieuw op te zoeken. Hij zag dat hij zich vergist had en dat Jans bruiloft in Kasteel De Poort was, maar hij was nu in Kasteel Het Paard. Wat een grote fout van hem. Gelukkig kon hij snel een taxi vinden die hem naar Kasteel De Poort bracht. Peter was nog net op tijd voor het laatste deel van de bruiloft. Hij ging daarna naar Jan toe om hem te feliciteren en Jan zei:\n\n— Wat goed dat je kon komen. Emmen is ook zo ver. Beter laat dan nooit, hè.\n\n— Jan, je zal nooit geloven wat er is gebeurd, — zei Peter, — maar voordat ik het vertel, ben ik over één ding heel nieuwsgierig. Ben jij taalwetenschapper geworden?\n\n— Nee hoor, — zei Jan, — Ik heb absoluut geen talenknobbel, dat weet je toch! Ik ben al 12 jaar wiskundeleraar.\n\nPeter moest lachen en Jan ook toen hij het hele verhaal van Peters fout hoorde. Vanaf die dag zagen ze elkaar minstens één keer per jaar en iedere keer moesten ze weer opnieuw lachen om wat er gebeurd was op Jans trouwdag.",
-      "fullTextEnglish": "Peter receives an email from an old school friend Jan. What a surprise! Jan is getting married and Peter is invited. They haven't seen each other for 18 years, but in high school they were very good friends. So Peter will definitely go to the wedding, even though he doesn't know Jan's fiancée Marieke.\n\nThe email states that the wedding is on Saturday March 17th at 3 PM. It also includes details about the location. The wedding is in a beautiful castle in Maastricht, where Jan currently lives.\n\nPeter immediately writes the date and other details in his calendar and then emails Jan back to congratulate him and say he will definitely come.\n\nOn the day of Jan's wedding, Peter takes the train to Maastricht from his hometown Emmen. It's quite a long journey, especially for the Netherlands. The train ride takes about 4 hours and gives Peter enough time to think back to all the fun moments he experienced with Jan as a teenager.\n\nFor example, that one time they played hooky together to secretly go to Utrecht for a day. They had so many problems with their parents and school afterwards. He hopes he'll have some time with Jan during the wedding to reminisce.\n\nAt quarter to three, Peter stands at the entrance of the wedding hall in the castle. There's a big sign with 'Jan & Marieke 2020' above the door. He goes inside and sees a name tag on one of the tables that says 'Peter de W.', so he sits there. He doesn't know the other people at the table, but starts making small talk with them.\n\n\"Hello, I'm Peter. I'm a former school friend of Jan. Nice to meet you!\"\n\n\"Hi, I'm Sophie. Nice to meet you. I went to school with Marieke. Isn't it nice that two people with such a huge knack for languages are getting married now! If they have children, they'll definitely do something with language too.\"\n\n\"Oh! That surprises me, I have to be honest. In school, Jan was much better at math than language, but people can change a lot in such a long time. Do you know what job Jan has now?\"\n\n\"Didn't you know?\" Sophie replied. \"He's dean of the Faculty of Linguistics at Maastricht University. And Marieke also works at the university, that's where they met.\"\n\n\"Well well, what a surprise. I see I have a lot to catch up on with Jan.\"\n\n\"Hey, I think the wedding is starting.\"\n\nAt that moment, a romantic song started playing, and the bride and groom walked in together from the entrance of the hall. Peter turned around and couldn't believe his eyes. That was not his friend Jan at all. People can change a lot, but he was sure that man was not his childhood friend. Then he felt someone tap his shoulder.\n\n\"Hello. Sorry, but I think you're in my seat, I'm Jan's friend Peter de Waal. Or do you happen to be named that too?\"\n\n\"No, I'm Peter de Wit. I'm confused, maybe I'm at the wrong wedding. What is the groom's last name?\"\n\n\"Haha, Jan van Haag of course! Is there perhaps another Jan marrying a Marieke today?\"\n\n\"Oh no! My friend's name is Jan Smits. So I really am at the wrong wedding. I'm sorry.\"\n\nPeter walked out as discreetly as possible and quickly went online on his phone to look up the castle's name again. He saw that he had made a mistake and that Jan's wedding was at Castle De Poort, but he was at Castle Het Paard. What a big mistake of his. Fortunately, he could quickly find a taxi that took him to Castle De Poort. Peter was just in time for the last part of the wedding. He then went to Jan to congratulate him and Jan said:\n\n\"How nice that you could come. Emmen is so far too. Better late than never, right.\"\n\n\"Jan, you'll never believe what happened,\" Peter said, \"but before I tell you, I'm very curious about one thing. Did you become a linguist?\"\n\n\"No,\" said Jan, \"I absolutely don't have a knack for languages, you know that! I've been a math teacher for 12 years.\"\n\nPeter had to laugh, and Jan did too when he heard the whole story of Peter's mistake. From that day on, they saw each other at least once a year and every time they laughed again about what happened on Jan's wedding day.",
+      "settings": ["house", "garden", "neighborhood"],
+      "summaryDutch": "Jip wordt wakker op zijn verjaardag. Hij is vijf jaar geworden! Mama geeft hem een kus. Papa heeft een cadeautje. Jip mag een vriendje uitnodigen. Janneke komt langs. Ze spelen samen en eten taart. Het is een fijne dag.",
+      "summaryEnglish": "Jip wakes up on his birthday. He has turned five years old! Mom gives him a kiss. Dad has a present. Jip can invite a friend. Janneke comes over. They play together and eat cake. It's a nice day.",
+      "fullTextDutch": "Jip wordt wakker. De zon schijnt. Het is een mooie dag.\n\n\"Mama!\" roept Jip. \"Is het vandaag mijn verjaardag?\"\n\n\"Ja, lieve Jip,\" zegt mama. \"Je bent nu vijf jaar!\"\n\nMama geeft Jip een dikke kus. Jip lacht. Hij is heel blij.\n\nPapa komt binnen. \"Hallo, grote jongen!\" zegt papa. \"Ik heb een cadeautje voor jou.\"\n\nPapa geeft Jip een doos. Jip maakt de doos open. Er zit een rode bal in! Jip vindt de bal heel mooi.\n\n\"Dank je wel, papa!\" zegt Jip.\n\n\"Wat wil je doen vandaag?\" vraagt mama.\n\n\"Ik wil met Janneke spelen!\" zegt Jip.\n\nJanneke is de beste vriendin van Jip. Ze wonen naast elkaar.\n\nJip belt bij Janneke aan. \"Ding dong!\"\n\nJanneke doet de deur open. \"Hallo Jip!\" zegt ze. \"Is het jouw verjaardag?\"\n\n\"Ja! Ik ben vijf jaar!\" zegt Jip trots. \"Wil je komen spelen?\"\n\n\"Ja, leuk!\" zegt Janneke. \"Ik kom meteen!\"\n\nJanneke pakt haar jas en gaat met Jip mee.\n\nZe spelen in de tuin. Jip gooit de rode bal hoog in de lucht. Janneke vangt de bal. Ze gooien de bal naar elkaar. Ze lachen heel hard.\n\nMama roept: \"Kom eten! Er is taart!\"\n\nJip en Janneke rennen naar binnen. Op tafel staat een grote taart met vijf kaarsjes. De kaarsjes branden.\n\n\"Jij mag de kaarsjes uitblazen, Jip!\" zegt mama.\n\nJip doet zijn ogen dicht. Hij wenst iets. Dan blaast hij hard. Puf! Alle kaarsjes gaan uit.\n\n\"Hoera! Hoera!\" roepen papa en mama en Janneke.\n\nJip krijgt een groot stuk taart. Janneke krijgt ook een stuk. De taart is heel lekker.\n\nNa de taart spelen Jip en Janneke nog een tijdje. Ze bouwen een hut met kussens en dekens. De hut is klein en gezellig.\n\nAls de zon ondergaat, gaat Janneke naar huis.\n\n\"Dag Jip!\" zegt Janneke. \"Het was een leuke dag!\"\n\n\"Dag Janneke!\" zegt Jip. \"Tot morgen!\"\n\nJip gaat naar bed. Hij is moe maar gelukkig. Wat een fijne verjaardag was dit!",
+      "fullTextEnglish": "Jip wakes up. The sun is shining. It's a beautiful day.\n\n\"Mom!\" Jip shouts. \"Is it my birthday today?\"\n\n\"Yes, dear Jip,\" says mom. \"You are now five years old!\"\n\nMom gives Jip a big kiss. Jip laughs. He is very happy.\n\nDad comes in. \"Hello, big boy!\" says dad. \"I have a present for you.\"\n\nDad gives Jip a box. Jip opens the box. There's a red ball inside! Jip thinks the ball is very beautiful.\n\n\"Thank you, dad!\" says Jip.\n\n\"What do you want to do today?\" asks mom.\n\n\"I want to play with Janneke!\" says Jip.\n\nJanneke is Jip's best friend. They live next to each other.\n\nJip rings Janneke's bell. \"Ding dong!\"\n\nJanneke opens the door. \"Hello Jip!\" she says. \"Is it your birthday?\"\n\n\"Yes! I am five years old!\" says Jip proudly. \"Do you want to come play?\"\n\n\"Yes, fun!\" says Janneke. \"I'll come right away!\"\n\nJanneke grabs her coat and goes with Jip.\n\nThey play in the garden. Jip throws the red ball high in the air. Janneke catches the ball. They throw the ball to each other. They laugh very hard.\n\nMom calls: \"Come eat! There's cake!\"\n\nJip and Janneke run inside. On the table is a big cake with five candles. The candles are burning.\n\n\"You get to blow out the candles, Jip!\" says mom.\n\nJip closes his eyes. He makes a wish. Then he blows hard. Puff! All the candles go out.\n\n\"Hooray! Hooray!\" shout dad, mom, and Janneke.\n\nJip gets a big piece of cake. Janneke also gets a piece. The cake is very tasty.\n\nAfter cake, Jip and Janneke play for a while longer. They build a fort with pillows and blankets. The fort is small and cozy.\n\nAs the sun sets, Janneke goes home.\n\n\"Bye Jip!\" says Janneke. \"It was a fun day!\"\n\n\"Bye Janneke!\" says Jip. \"See you tomorrow!\"\n\nJip goes to bed. He is tired but happy. What a nice birthday this was!",
       "difficulty": {
-        "level": "A2",
-        "estimatedReadTime": 8,
-        "wordCount": 1250,
-        "uniqueWords": 420,
-        "sentenceCount": 98
+        "level": "A1",
+        "estimatedReadTime": 5,
+        "wordCount": 450,
+        "uniqueWords": 120,
+        "sentenceCount": 65
       },
       "grammarPoints": [
         {
-          "title": "Present Perfect Tense (Voltooid Tegenwoordige Tijd)",
+          "title": "Present Tense (Tegenwoordige Tijd)",
           "examples": [
-            {"dutch": "Ze hebben elkaar al 18 jaar niet gezien", "english": "They haven't seen each other for 18 years"},
-            {"dutch": "Wat hebben ze daarna veel problemen gehad", "english": "What a lot of problems they had afterwards"},
-            {"dutch": "Ik heb me vergist", "english": "I made a mistake"}
+            {"dutch": "Jip wordt wakker", "english": "Jip wakes up"},
+            {"dutch": "De zon schijnt", "english": "The sun shines"},
+            {"dutch": "Ze spelen samen", "english": "They play together"}
           ],
-          "explanation": "The present perfect is formed with 'hebben/zijn' + past participle. Used for past actions with relevance to present."
+          "explanation": "Present tense is used for actions happening now or generally. Regular verbs: stem + t for hij/zij/het."
         },
         {
-          "title": "Modal Verbs (Modal Werkwoorden)",
+          "title": "Questions with inversion",
           "examples": [
-            {"dutch": "Peter zal dus zeker naar de bruiloft gaan", "english": "Peter will definitely go to the wedding"},
-            {"dutch": "Je zal nooit geloven wat er is gebeurd", "english": "You'll never believe what happened"}
+            {"dutch": "Is het vandaag mijn verjaardag?", "english": "Is it my birthday today?"},
+            {"dutch": "Wat wil je doen vandaag?", "english": "What do you want to do today?"},
+            {"dutch": "Wil je komen spelen?", "english": "Do you want to come play?"}
           ],
-          "explanation": "Modal verbs (kunnen, zullen, moeten, willen, mogen) express possibility, necessity, or intention."
+          "explanation": "In Dutch questions, the verb comes first, then the subject."
         }
       ],
       "commonPhrases": [
-        {"phrase": "het spijt me", "meaning": "I'm sorry", "context": "Apologizing", "example": "Het spijt me, ik ben op de verkeerde bruiloft."},
-        {"phrase": "beter laat dan nooit", "meaning": "better late than never", "context": "Jan says this when Peter arrives late", "example": "Beter laat dan nooit, hè?"},
-        {"phrase": "aangenaam kennis met je te maken", "meaning": "nice to meet you", "context": "Formal introduction", "example": "Aangenaam kennis met je te maken!"},
-        {"phrase": "in de war zijn", "meaning": "to be confused", "context": "Peter says this when he realizes his mistake", "example": "Ik ben even in de war."}
+        {"phrase": "Dank je wel", "meaning": "Thank you very much", "context": "Polite thanks", "example": "Dank je wel, papa!"},
+        {"phrase": "Wat fijn", "meaning": "How nice", "context": "Expressing pleasure", "example": "Wat een fijne verjaardag!"},
+        {"phrase": "Tot morgen", "meaning": "See you tomorrow", "context": "Farewell", "example": "Tot morgen, Janneke!"},
+        {"phrase": "Ding dong", "meaning": "Ring ring (doorbell)", "context": "Onomatopoeia", "example": "Jip belt aan. Ding dong!"}
       ],
       "vocabulary": [
-        {"dutch": "trouwzaal", "english": "wedding venue", "category": "place", "frequency": "uncommon"},
-        {"dutch": "kasteel", "english": "castle", "category": "place", "frequency": "common"},
-        {"dutch": "bord", "english": "sign", "category": "object", "frequency": "common"},
+        {"dutch": "wakker", "english": "awake", "category": "adjective", "frequency": "common"},
+        {"dutch": "schijnt", "english": "shines", "category": "verb", "frequency": "common"},
+        {"dutch": "verjaardag", "english": "birthday", "category": "noun", "frequency": "very common"},
+        {"dutch": "vijf", "english": "five", "category": "number", "frequency": "very common"},
+        {"dutch": "jaar", "english": "year(s)", "category": "noun", "frequency": "very common"},
+        {"dutch": "kus", "english": "kiss", "category": "noun", "frequency": "common"},
+        {"dutch": "lacht", "english": "laughs", "category": "verb", "frequency": "common"},
+        {"dutch": "blij", "english": "happy", "category": "adjective", "frequency": "very common"},
         {"dutch": "binnen", "english": "inside", "category": "preposition", "frequency": "very common"},
-        {"dutch": "naamkaartje", "english": "nametag", "category": "object", "frequency": "uncommon"},
-        {"dutch": "kent", "english": "knows", "category": "verb", "frequency": "very common"},
-        {"dutch": "mensen", "english": "people", "category": "noun", "frequency": "very common"},
-        {"dutch": "maar", "english": "but", "category": "conjunction", "frequency": "very common"},
-        {"dutch": "begint", "english": "starts", "category": "verb", "frequency": "very common"},
-        {"dutch": "praatje", "english": "chat", "category": "noun", "frequency": "common"},
-        {"dutch": "vroegere", "english": "former", "category": "adjective", "frequency": "common"},
-        {"dutch": "aangenaam", "english": "pleased", "category": "adjective", "frequency": "common"},
-        {"dutch": "taalknobbel", "english": "knack for languages", "category": "noun", "frequency": "rare"},
-        {"dutch": "vast", "english": "surely", "category": "adverb", "frequency": "common"},
-        {"dutch": "taal", "english": "language", "category": "noun", "frequency": "very common"},
-        {"dutch": "verrast", "english": "surprises", "category": "verb", "frequency": "common"},
-        {"dutch": "wiskunde", "english": "mathematics", "category": "noun", "frequency": "common"},
-        {"dutch": "veranderen", "english": "to change", "category": "verb", "frequency": "very common"},
-        {"dutch": "antwoordde", "english": "answered", "category": "verb", "frequency": "very common"},
-        {"dutch": "taalwetenschappen", "english": "linguistics", "category": "noun", "frequency": "uncommon"},
-        {"dutch": "leren kennen", "english": "to meet", "category": "phrase", "frequency": "common"},
-        {"dutch": "bij te praten", "english": "to catch up", "category": "phrase", "frequency": "common"},
-        {"dutch": "kwamen", "english": "came", "category": "verb", "frequency": "very common"},
-        {"dutch": "bruid", "english": "bride", "category": "noun", "frequency": "common"},
-        {"dutch": "bruidegom", "english": "groom", "category": "noun", "frequency": "common"},
-        {"dutch": "draaide", "english": "turned", "category": "verb", "frequency": "common"},
-        {"dutch": "ogen", "english": "eyes", "category": "noun", "frequency": "very common"},
-        {"dutch": "geloven", "english": "to believe", "category": "verb", "frequency": "very common"},
-        {"dutch": "zeker", "english": "sure", "category": "adjective", "frequency": "very common"},
-        {"dutch": "voelde", "english": "felt", "category": "verb", "frequency": "very common"},
-        {"dutch": "iemand", "english": "someone", "category": "pronoun", "frequency": "very common"},
-        {"dutch": "schouder", "english": "shoulder", "category": "noun", "frequency": "common"},
-        {"dutch": "volgens", "english": "according to", "category": "preposition", "frequency": "very common"},
-        {"dutch": "plaats", "english": "spot", "category": "noun", "frequency": "very common"},
-        {"dutch": "toevallig", "english": "by chance", "category": "adverb", "frequency": "common"},
-        {"dutch": "in de war", "english": "confused", "category": "phrase", "frequency": "common"},
-        {"dutch": "misschien", "english": "maybe", "category": "adverb", "frequency": "very common"},
-        {"dutch": "verkeerde", "english": "wrong", "category": "adjective", "frequency": "very common"},
-        {"dutch": "achternaam", "english": "last name", "category": "noun", "frequency": "common"},
-        {"dutch": "natuurlijk", "english": "of course", "category": "adverb", "frequency": "very common"},
-        {"dutch": "het spijt me", "english": "I'm sorry", "category": "phrase", "frequency": "very common"},
-        {"dutch": "onopvallend", "english": "discretely", "category": "adverb", "frequency": "uncommon"},
-        {"dutch": "buiten", "english": "outside", "category": "adverb", "frequency": "very common"},
-        {"dutch": "opnieuw", "english": "again", "category": "adverb", "frequency": "very common"},
-        {"dutch": "zag", "english": "saw", "category": "verb", "frequency": "very common"},
-        {"dutch": "vergist", "english": "mistaken", "category": "adjective", "frequency": "common"},
-        {"dutch": "fout", "english": "mistake", "category": "noun", "frequency": "very common"},
-        {"dutch": "gelukkig", "english": "fortunately", "category": "adverb", "frequency": "very common"},
-        {"dutch": "bracht", "english": "brought", "category": "verb", "frequency": "very common"},
-        {"dutch": "net", "english": "just", "category": "adverb", "frequency": "very common"},
-        {"dutch": "laatste", "english": "last", "category": "adjective", "frequency": "very common"},
-        {"dutch": "ging", "english": "went", "category": "verb", "frequency": "very common"},
-        {"dutch": "kon", "english": "could", "category": "verb", "frequency": "very common"},
-        {"dutch": "ver", "english": "far", "category": "adjective", "frequency": "very common"},
-        {"dutch": "nooit", "english": "never", "category": "adverb", "frequency": "very common"},
-        {"dutch": "gebeurd", "english": "happened", "category": "verb", "frequency": "very common"},
-        {"dutch": "voordat", "english": "before", "category": "conjunction", "frequency": "very common"},
-        {"dutch": "nieuwsgierig", "english": "curious", "category": "adjective", "frequency": "common"},
-        {"dutch": "taalwetenschapper", "english": "linguist", "category": "profession", "frequency": "uncommon"},
-        {"dutch": "wiskundeleraar", "english": "math teacher", "category": "profession", "frequency": "common"},
-        {"dutch": "lachen", "english": "to laugh", "category": "verb", "frequency": "very common"},
-        {"dutch": "verhaal", "english": "story", "category": "noun", "frequency": "very common"},
-        {"dutch": "hoorde", "english": "heard", "category": "verb", "frequency": "very common"},
-        {"dutch": "zagen", "english": "saw", "category": "verb", "frequency": "very common"},
-        {"dutch": "minstens", "english": "at least", "category": "adverb", "frequency": "common"},
-        {"dutch": "iedere keer", "english": "every time", "category": "phrase", "frequency": "common"},
-        {"dutch": "trouwdag", "english": "wedding day", "category": "time", "frequency": "common"}
+        {"dutch": "cadeautje", "english": "little present", "category": "noun", "frequency": "common"},
+        {"dutch": "doos", "english": "box", "category": "noun", "frequency": "common"},
+        {"dutch": "open", "english": "open", "category": "adjective", "frequency": "very common"},
+        {"dutch": "rode", "english": "red", "category": "adjective", "frequency": "very common"},
+        {"dutch": "bal", "english": "ball", "category": "noun", "frequency": "common"},
+        {"dutch": "mooi", "english": "beautiful", "category": "adjective", "frequency": "very common"},
+        {"dutch": "spelen", "english": "to play", "category": "verb", "frequency": "very common"},
+        {"dutch": "beste vriendin", "english": "best friend (female)", "category": "noun", "frequency": "common"},
+        {"dutch": "wonen", "english": "live", "category": "verb", "frequency": "very common"},
+        {"dutch": "naast elkaar", "english": "next to each other", "category": "phrase", "frequency": "common"},
+        {"dutch": "belt aan", "english": "rings the bell", "category": "phrase", "frequency": "common"},
+        {"dutch": "deur", "english": "door", "category": "noun", "frequency": "very common"},
+        {"dutch": "trots", "english": "proud", "category": "adjective", "frequency": "common"},
+        {"dutch": "jas", "english": "coat", "category": "noun", "frequency": "very common"},
+        {"dutch": "tuin", "english": "garden", "category": "noun", "frequency": "very common"},
+        {"dutch": "gooit", "english": "throws", "category": "verb", "frequency": "common"},
+        {"dutch": "hoog", "english": "high", "category": "adjective", "frequency": "very common"},
+        {"dutch": "lucht", "english": "air/sky", "category": "noun", "frequency": "very common"},
+        {"dutch": "vangt", "english": "catches", "category": "verb", "frequency": "common"},
+        {"dutch": "taart", "english": "cake", "category": "food", "frequency": "common"},
+        {"dutch": "kaarsjes", "english": "little candles", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "branden", "english": "burn", "category": "verb", "frequency": "common"},
+        {"dutch": "uitblazen", "english": "to blow out", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "ogen dicht", "english": "eyes closed", "category": "phrase", "frequency": "common"},
+        {"dutch": "wenst", "english": "wishes", "category": "verb", "frequency": "common"},
+        {"dutch": "blaast", "english": "blows", "category": "verb", "frequency": "common"},
+        {"dutch": "puf", "english": "puff (sound)", "category": "interjection", "frequency": "uncommon"},
+        {"dutch": "hoera", "english": "hooray", "category": "interjection", "frequency": "common"},
+        {"dutch": "stuk", "english": "piece", "category": "noun", "frequency": "very common"},
+        {"dutch": "lekker", "english": "tasty/nice", "category": "adjective", "frequency": "very common"},
+        {"dutch": "bouwen", "english": "to build", "category": "verb", "frequency": "common"},
+        {"dutch": "hut", "english": "fort/hut", "category": "noun", "frequency": "common"},
+        {"dutch": "kussens", "english": "pillows", "category": "noun", "frequency": "common"},
+        {"dutch": "dekens", "english": "blankets", "category": "noun", "frequency": "common"},
+        {"dutch": "gezellig", "english": "cozy/pleasant", "category": "adjective", "frequency": "very common"},
+        {"dutch": "gaat onder", "english": "sets", "category": "verb", "frequency": "common"},
+        {"dutch": "moe", "english": "tired", "category": "adjective", "frequency": "very common"},
+        {"dutch": "gelukkig", "english": "happy/fortunate", "category": "adjective", "frequency": "very common"},
+        {"dutch": "fijn", "english": "nice/pleasant", "category": "adjective", "frequency": "very common"}
       ],
+      "vocabularyCategories": {
+        "emotions": ["blij", "trots", "gelukkig", "lekker"],
+        "actions": ["spelen", "gooit", "vangt", "bouwen", "rennen", "lacht", "wenst", "blaast"],
+        "objects": ["cadeautje", "doos", "bal", "taart", "kaarsjes", "hut", "kussens", "dekens"],
+        "people": ["mama", "papa", "Jip", "Janneke"],
+        "places": ["tuin", "lucht", "binnen", "deur"]
+      },
       "questions": [
         {
           "id": 1,
-          "text": "Hoe lang heeft Peter Jan al niet meer gezien?",
-          "options": ["3 jaar", "10 jaar", "18 jaar", "25 jaar"],
+          "text": "Hoe oud wordt Jip?",
+          "options": ["Drie jaar", "Vier jaar", "Vijf jaar", "Zes jaar"],
           "correctIndex": 2,
-          "explanation": "In de eerste alinea staat: 'Ze hebben elkaar al 18 jaar niet gezien'.",
+          "explanation": "Mama zegt: 'Je bent nu vijf jaar!'",
           "difficulty": "easy",
           "questionType": "factual"
         },
         {
           "id": 2,
-          "text": "Waar is de bruiloft?",
-          "options": ["In Emmen", "In Utrecht", "In Amsterdam", "In Maastricht"],
-          "correctIndex": 3,
-          "explanation": "De bruiloft is in een mooi kasteel in Maastricht.",
+          "text": "Wat krijgt Jip van papa?",
+          "options": ["Een bal", "Een boek", "Een auto", "Een taart"],
+          "correctIndex": 0,
+          "explanation": "In de doos zit een rode bal.",
           "difficulty": "easy",
           "questionType": "factual"
         },
         {
           "id": 3,
-          "text": "Wat is Jans volledige naam?",
-          "options": ["Jan de Wit", "Jan Smits", "Jan van Haag", "Jan Steen"],
-          "correctIndex": 1,
-          "explanation": "Peter zegt: 'Mijn vriend heet Jan Smits.'",
-          "difficulty": "medium",
+          "text": "Wie is de beste vriendin van Jip?",
+          "options": ["Mama", "Papa", "Janneke", "Zijn zus"],
+          "correctIndex": 2,
+          "explanation": "Janneke is de beste vriendin van Jip.",
+          "difficulty": "easy",
           "questionType": "factual"
         },
         {
           "id": 4,
-          "text": "Hoe ging Peter van het verkeerde naar het juiste kasteel?",
-          "options": ["Met een taxi", "Met de trein", "Te voet", "Met de bus"],
-          "correctIndex": 0,
-          "explanation": "Gelukkig kon hij snel een taxi vinden die hem naar Kasteel De Poort bracht.",
+          "text": "Wat doen Jip en Janneke in de tuin?",
+          "options": ["Ze eten taart", "Ze slapen", "Ze spelen met een bal", "Ze lezen een boek"],
+          "correctIndex": 2,
+          "explanation": "Ze gooien de bal naar elkaar.",
           "difficulty": "easy",
           "questionType": "factual"
         },
         {
           "id": 5,
-          "text": "Wat is de baan van Peters vriend Jan?",
-          "options": ["Treinconducteur", "Taalwetenschapper", "Bruidegom", "Wiskundeleraar"],
-          "correctIndex": 3,
-          "explanation": "Jan zegt: 'Ik ben al 12 jaar wiskundeleraar.'",
+          "text": "Waar bouwen Jip en Janneke een hut van?",
+          "options": ["Hout en stenen", "Kussens en dekens", "Papier en lijm", "Takken en bladeren"],
+          "correctIndex": 1,
+          "explanation": "Ze bouwen een hut met kussens en dekens.",
           "difficulty": "medium",
-          "questionType": "inferential"
+          "questionType": "factual"
         }
       ],
-      "themeTags": ["wedding", "friendship", "mistakes", "humor", "surprise"],
+      "themeTags": ["birthday", "friendship", "family", "play", "celebration"],
       "culturalNotes": [
         {
-          "title": "Dutch Weddings",
-          "content": "Dutch weddings often take place in castles (kastelen) and can be quite informal. It's common to have a wedding reception (bruiloftsreceptie) where guests mingle and eat."
+          "title": "Dutch Birthdays",
+          "content": "In the Netherlands, birthdays are very important. People often bring cake (taart) to work or school. Children celebrate with friends and family, and 'hoera' is a common cheer."
         },
         {
-          "title": "Train Travel in Netherlands",
-          "content": "The Netherlands has an extensive train network (NS). A 4-hour train journey from Emmen to Maastricht is considered long by Dutch standards, as the country is quite small."
+          "title": "Jip en Janneke",
+          "content": "Jip en Janneke are the most famous Dutch children's book characters, created by Annie M.G. Schmidt. The books use simple language and are often the first books Dutch children read. They are known for their short sentences and everyday situations."
         }
       ],
       "nextStory": 2,
@@ -196,254 +183,1168 @@
     },
     {
       "id": 2,
-      "title": "Babettes nieuwe passie",
-      "titleEnglish": "Babette's New Passion",
-      "location": "Ameland",
-      "coordinates": {"lat": 53.4545, "lng": 5.7568},
+      "title": "Pluk van de Petteflet - Een Nieuwe Toren",
+      "titleEnglish": "Pluk from the Tower Block - A New Tower",
+      "location": "Petteflet (fictional building)",
+      "coordinates": {"lat": 52.3702, "lng": 4.8952},
       "characters": [
-        {"name": "Babette", "role": "main", "description": "Least sporty of the group, discovers climbing"},
-        {"name": "Jaap", "role": "supporting", "description": "Most nervous, loses his backpack in the sea"},
-        {"name": "Dieuwke", "role": "supporting", "description": "Has fear of heights"},
-        {"name": "Tarek", "role": "supporting", "description": "Hurts his foot, lends camping gear"}
+        {"name": "Pluk", "role": "main", "description": "A little boy with red hair who drives a tow truck"},
+        {"name": "Meneer Pen", "role": "supporting", "description": "The caretaker with many pens"},
+        {"name": "Aagje", "role": "supporting", "description": "A girl who lives in the building"}
       ],
-      "settings": ["Ameland", "ferry", "tent", "shared house", "climbing school"],
-      "summaryDutch": "Vier studievrienden die bij elkaar wonen, gaan net voordat ze een belangrijk examen hebben een weekendje kamperen op een eiland. Het reisje zelf gaat prima, maar wanneer ze op de terugweg weer op de veerboot zitten, heeft Tarek een ongelukje met zijn voet en valt de rugzak van Jaap in zee. Als ze eenmaal terug zijn bij het huis hebben ze door dat niemand zijn sleutels bij zich heeft. Het minst sportieve meisje, Babette, moet op de schuur klimmen om zo via een raam het huis binnen te kunnen om de deur voor de anderen open te doen. Ze vond het klimmen eigenlijk wel leuk en besluit het uit te proberen als sport en ontdekt zo een nieuwe passie.",
-      "summaryEnglish": "Four college friends who share a house go camping for a weekend on an island, just before they have an important exam. The trip itself goes fine, but when they're on the ferry back, Tarek suffers an accident: he ends up hurting his foot, and Jaap's backpack falls into the sea. Once they get back to the house, they realize that nobody brought their keys. The least sporty girl, Babette, has to climb on top of the shed in order to enter the house through a window and open the door for the others. She actually quite enjoyed the climb and decides to try climbing out as a sport and discovers a new passion.",
-      "fullTextDutch": "Een groepje studievrienden die samen een huis delen, krijgen het idee om samen een weekendje te gaan kamperen op Ameland om zo te ontspannen tussen de examens. Het duurde even voordat ze Jaap, altijd de meest nerveuze van de vier, konden overhalen, omdat ze zondagmiddag terug zouden komen en allemaal op maandag een moeilijk examen hadden.\n\nDieuwke zei: — Kom op Jaap, je zei dat je al genoeg had gestudeerd, ga toch mee. Lekker uitwaaien zal je goed doen.\n\nBabette zei toen: — Ja Jaap, je hebt genoeg met je neus in de studieboeken gezeten. Je zei laatst nog dat je tijd in de natuur nodig had.\n\nGoed meiden, jullie hebben me overtuigd, — zei Jaap. — Ik ga ook mee. Jij toch ook, Tarek?\n\n— Natuurlijk! Ik zal jullie zelfs de tenten en slaapzakken lenen, — zei Tarek.\n\nIedereen ging zijn spullen inpakken, en op vrijdagmiddag gingen ze met de bus naar Holwerd om daar de veerboot te pakken naar Ameland. Het was juni en heerlijk weer, dus het was 's avonds niet te koud in de tent. Tarek, Dieuwke en Jaap huurden fietsen en fietsten ook veel rond het eiland en door de duinen. Babette bleef in de tent, want die hield helemaal niet van sport. Zij bleef rustig een boek lezen. Zo vloog het weekend voorbij. Zondagochtend pakten ze de tenten in en gingen ze naar de haven om met de veerboot naar het vasteland te varen.\n\nOnderweg liepen alle passagiers opeens naar één kant van de boot en begonnen te roepen en te wijzen.\n\n— Kijk daar eens! Daar zijn twee zeehonden aan het vechten!\n\nHet groepje studenten ging ook kijken, want ze hadden nog nooit zeehonden in het wild zien vechten. Tarek en Jaap hingen ver over de reling om een goede foto te kunnen maken. De boot begon opeens een beetje te schudden, waardoor er een grote man bovenop Tarek viel. Tarek viel toen tegen Jaap aan, die daardoor bijna uit de boot viel.\n\n— Au ... mijn voet! — zei Tarek.\n\n— Oh nee ... mijn rugzak! — zei Jaap.\n\nDe rugzak van Jaap was over de reling in het water gevallen. Dat was balen! Al zijn spullen waren weg.\n\n— Jaap, wees nou maar gewoon blij dat je niet zelf in de zee bent gevallen, — zei Babette. — Tarek, gaat het een beetje met je voet?\n\n— Oef, het doet wel pijn, — zei Tarek, — maar ik heb hem niet gebroken denk ik.\n\nNadat de veerboot bij Holwerd was aangekomen, droeg Jaap Tareks rugzak tot aan hun huis en de meisjes hielpen hem bij het lopen.\n\n— Dieuwke, ik heb de sleutels niet, want die zaten in mijn rugzak die in de zee is gevallen, — zei Jaap. — Kan jij even de deur opendoen?\n\nDieuwke antwoordde: — Oh, sorry, ik heb mijn sleutels niet meegenomen. En jij, Tarek?\n\n— Nee, die van mij zaten toevallig ook in Jaaps rugzak, — zei Tarek. — Doe jij maar open, Babette.\n\n— Jongens, dit is ongelofelijk, — zei Babette. — Ik heb ze ook niet meegenomen. Hoe komen we nu het huis in?\n\nDe nerveuze Jaap begon meteen te jammeren: — Zie je wel? Ik had niet mee moeten gaan. Nu kunnen we niet naar binnen. Ik wilde nog even studeren voor het examen van morgen.\n\nDieuwke zei: — Jaap, even rustig blijven. Laten we even praktisch nadenken. Één van ons moet gewoon via de schuur omhoog klimmen en mijn kamer ingaan. Mijn raam zit niet op slot. Maar ik heb hoogtevrees, dus ik durf het zelf niet.\n\n— Vanwege mijn voet kan ik natuurlijk niet klimmen nu, — zei Tarek.\n\n— Ik ben ook te bang om te proberen op de schuur te klimmen, — zei Jaap. — Jij zal moeten klimmen, Babette.\n\nIedereen keek hoopvol naar Babette. Ze had geen hoogtevrees, maar van alle vier was zij het minst sportief. Babette vond het helemaal geen fijn idee, maar ze dacht aan het examen van de volgende dag en ze wist dat niemand anders het kon doen.\n\n— Oké dan, — zei Babette, — Jaap en Dieuwke, helpen jullie me omhoog?\n\nBabette concentreerde zich en het lukte haar om eerst op de schuur te klimmen, en daarna via het raam Dieuwkes kamer in. Ze vond Dieuwkes sleutels en ging naar beneden om de deur voor de anderen open te doen.\n\nHaar vrienden waren allemaal heel erg dankbaar en feliciteerden haar. Jaap was zelfs zo opgelucht dat hij zei: — Je bent onze heldin, Babette! Je zou eens met klimmen moeten beginnen.\n\nBabette lachte en was zelf erg verbaasd over hoe spannend en leuk ze dat klimmen eigenlijk had gevonden. Na dit hele avontuur bestelden ze Indonesisch eten en oefenden ze allemaal nog even voor het examen. De volgende dag ging het examen bij iedereen goed en Tareks voet was alleen maar een beetje gekneusd. Babette bleef maar aan het klimmen denken en besloot een keer een dagje bij een klimschool te gaan kijken. Ze was na 1 proefles meteen verkocht. Ze werd binnen korte tijd een enorm fanatieke klimster en won na een paar jaar zelfs een paar wedstrijden. Zo weet je maar nooit hoe je een nieuwe passie kan ontdekken.",
-      "fullTextEnglish": "A group of study friends who share a house get the idea to go camping together on Ameland for a weekend to relax between exams. It took a while before they could convince Jaap, always the most nervous of the four, because they would return on Sunday afternoon and all had a difficult exam on Monday.\n\nDieuwke said: \"Come on Jaap, you said you had studied enough, just come along. Getting some fresh air will do you good.\"\n\nBabette then said: \"Yes Jaap, you've had your nose in the textbooks enough. You said recently that you needed time in nature.\"\n\n\"Alright girls, you've convinced me,\" said Jaap. \"I'll come too. You're coming too, right Tarek?\"\n\n\"Of course! I'll even lend you the tents and sleeping bags,\" said Tarek.\n\nEveryone went to pack their things, and on Friday afternoon they took the bus to Holwerd to catch the ferry to Ameland. It was June and the weather was wonderful, so it wasn't too cold in the tent at night. Tarek, Dieuwke and Jaap rented bikes and cycled a lot around the island and through the dunes. Babette stayed in the tent, because she didn't like sports at all. She quietly stayed reading a book. That's how the weekend flew by. On Sunday morning they packed up the tents and went to the harbor to take the ferry to the mainland.\n\nOn the way, all the passengers suddenly went to one side of the boat and started shouting and pointing.\n\n\"Look over there! There are two seals fighting!\"\n\nThe group of students also went to look, because they had never seen seals fighting in the wild. Tarek and Jaap leaned far over the railing to get a good photo. The boat suddenly started shaking a bit, causing a large man to fall on top of Tarek. Tarek then fell against Jaap, who almost fell out of the boat.\n\n\"Ow... my foot!\" said Tarek.\n\n\"Oh no... my backpack!\" said Jaap.\n\nJaap's backpack had fallen over the railing into the water. That was bad luck! All his things were gone.\n\n\"Jaap, just be glad you didn't fall into the sea yourself,\" said Babette. \"Tarek, how's your foot?\"\n\n\"Oof, it hurts,\" said Tarek, \"but I don't think I broke it.\"\n\nAfter the ferry arrived at Holwerd, Jaap carried Tarek's backpack to their house and the girls helped him walk.\n\n\"Dieuwke, I don't have the keys because they were in my backpack that fell into the sea,\" said Jaap. \"Can you open the door?\"\n\nDieuwke replied: \"Oh, sorry, I didn't bring my keys. And you, Tarek?\"\n\n\"No, mine were also in Jaap's backpack,\" said Tarek. \"You open it, Babette.\"\n\n\"Guys, this is unbelievable,\" said Babette. \"I didn't bring them either. How are we going to get into the house?\"\n\nThe nervous Jaap immediately started whining: \"See? I shouldn't have come. Now we can't get inside. I wanted to study some more for tomorrow's exam.\"\n\nDieuwke said: \"Jaap, stay calm. Let's think practically. One of us just needs to climb up via the shed and enter my room. My window isn't locked. But I have a fear of heights, so I don't dare do it myself.\"\n\n\"Because of my foot, I can't climb right now,\" said Tarek.\n\n\"I'm also too afraid to try climbing onto the shed,\" said Jaap. \"You'll have to climb, Babette.\"\n\nEveryone looked hopefully at Babette. She didn't have a fear of heights, but of the four, she was the least sporty. Babette didn't like the idea at all, but she thought about the next day's exam and knew no one else could do it.\n\n\"Alright then,\" said Babette, \"Jaap and Dieuwke, can you help me up?\"\n\nBabette concentrated and she managed to climb onto the shed first, and then through the window into Dieuwke's room. She found Dieuwke's keys and went downstairs to open the door for the others.\n\nHer friends were all very grateful and congratulated her. Jaap was even so relieved that he said: \"You're our heroine, Babette! You should take up climbing.\"\n\nBabette laughed and was very surprised at how exciting and fun she actually found that climbing. After this whole adventure, they ordered Indonesian food and all practiced a bit more for the exam. The next day, everyone did well on the exam and Tarek's foot was only a little bruised. Babette kept thinking about climbing and decided to go check out a climbing school for a day. After one trial class, she was immediately sold. Within a short time, she became an extremely fanatical climber and even won a few competitions after a couple of years. That's how you never know how you might discover a new passion.",
+      "settings": ["Petteflet apartment building", "playground", "roof"],
+      "summaryDutch": "Pluk woont in de Petteflet, een hoge flat. Hij heeft een kleine rode autootje. Op een dag kijkt Pluk uit het raam. Ziet hij een toren? Ja! Een nieuwe toren bij de speeltuin. Pluk gaat met zijn autootje naar de toren. Bovenin de toren woont een kleine vogel. De vogel is alleen. Pluk helpt de vogel. Nu is de vogel niet meer alleen!",
+      "summaryEnglish": "Pluk lives in the Petteflet, a tall apartment building. He has a little red car. One day, Pluk looks out the window. Does he see a tower? Yes! A new tower at the playground. Pluk goes to the tower in his little car. At the top of the tower lives a little bird. The bird is alone. Pluk helps the bird. Now the bird is not alone anymore!",
+      "fullTextDutch": "Pluk woont in de Petteflet. De Petteflet is een heel hoge flat. Pluk heeft een klein rood autootje. Dat is zijn allerbeste vriend.\n\nOp een morgen kijkt Pluk uit het raam. De zon komt op. Pluk ziet iets bij de speeltuin.\n\n\"Wat is dat?\" vraagt Pluk aan zichzelf.\n\nHij kijkt goed. Ja, hij ziet het goed! Er staat een toren bij de speeltuin. Een nieuwe toren!\n\n\"Hij is heel hoog!\" zegt Pluk.\n\nPluk wil naar de toren. Hij stapt in zijn rode autootje. Brrm brrm! Het autootje rijdt snel.\n\nMeneer Pen, de huismeester, ziet Pluk. \"Dag Pluk!\" roept hij. \"Waar ga je heen?\"\n\n\"Ik ga naar de nieuwe toren!\" roept Pluk terug.\n\nPluk rijdt naar de speeltuin. De toren staat daar echt. Hij is wit en blauw. Hij is heel erg hoog.\n\nPluk stapt uit zijn autootje. Hij wil naar boven. Maar hoe komt hij omhoog? Er is een kleine deur. Pluk doet de deur open.\n\nBinnen is het donker. Pluk ziet trapjes. Kleine trapjes. Hele kleine trapjes.\n\nPluk klimt omhoog. Eén trapje, twee trapjes, drie trapjes. Pluk klimt en klimt.\n\nNa heel veel trapjes ziet Pluk licht. Hij is bijna boven! Nog een paar trapjes.\n\nPluk komt boven. De zon schijnt. Het is mooi boven. Pluk ziet de hele stad.\n\nDan hoort Pluk een geluidje. Piep piep.\n\n\"Wie is daar?\" vraagt Pluk.\n\nEen klein vogeltje komt tevoorschijn. Het vogeltje is helemaal alleen.\n\n\"Hallo!\" zegt Pluk. \"Waarom ben je alleen?\"\n\nHet vogeltje zegt: \"Ik heb geen vriendjes. Ik woon hier alleen in de toren.\"\n\n\"Dat is jammer,\" zegt Pluk. \"Ik wil jouw vriendje zijn!\"\n\nHet vogeltje is heel blij. \"Echt waar?\" piept het.\n\n\"Ja, echt waar!\" zegt Pluk.\n\nPluk en het vogeltje worden vrienden. Ze spelen samen op de top van de toren. Ze kijken naar de wolken.\n\nAls de zon ondergaat, moet Pluk naar huis.\n\n\"Ik kom je morgen weer zien!\" zegt Pluk.\n\n\"Dag Pluk!\" piept het vogeltje. \"Tot morgen!\"\n\nPluk klimt naar beneden. Hij stapt in zijn rode autootje. Brrm brrm! Hij rijdt naar de Petteflet.\n\nPluk is moe maar blij. Hij heeft een nieuw vriendje!",
+      "fullTextEnglish": "Pluk lives in the Petteflet. The Petteflet is a very tall apartment building. Pluk has a little red car. That is his very best friend.\n\nOne morning, Pluk looks out the window. The sun is rising. Pluk sees something at the playground.\n\n\"What is that?\" Pluk asks himself.\n\nHe looks carefully. Yes, he sees it right! There is a tower at the playground. A new tower!\n\n\"It's very tall!\" says Pluk.\n\nPluk wants to go to the tower. He gets into his little red car. Brrm brrm! The little car drives fast.\n\nMeneer Pen, the caretaker, sees Pluk. \"Hello Pluk!\" he shouts. \"Where are you going?\"\n\n\"I'm going to the new tower!\" Pluk shouts back.\n\nPluk drives to the playground. The tower is really there. It is white and blue. It is very, very tall.\n\nPluk gets out of his little car. He wants to go up. But how does he get up? There is a little door. Pluk opens the door.\n\nInside it is dark. Pluk sees little stairs. Very little stairs.\n\nPluk climbs up. One step, two steps, three steps. Pluk climbs and climbs.\n\nAfter many steps, Pluk sees light. He is almost at the top! A few more steps.\n\nPluk reaches the top. The sun shines. It is beautiful at the top. Pluk sees the whole city.\n\nThen Pluk hears a little sound. Peep peep.\n\n\"Who is there?\" asks Pluk.\n\nA little bird appears. The little bird is all alone.\n\n\"Hello!\" says Pluk. \"Why are you alone?\"\n\nThe little bird says: \"I have no friends. I live here alone in the tower.\"\n\n\"That's too bad,\" says Pluk. \"I want to be your friend!\"\n\nThe little bird is very happy. \"Really?\" it peeps.\n\n\"Yes, really!\" says Pluk.\n\nPluk and the little bird become friends. They play together at the top of the tower. They look at the clouds.\n\nAs the sun sets, Pluk has to go home.\n\n\"I'll come see you again tomorrow!\" says Pluk.\n\n\"Bye Pluk!\" peeps the little bird. \"See you tomorrow!\"\n\nPluk climbs down. He gets into his little red car. Brrm brrm! He drives to the Petteflet.\n\nPluk is tired but happy. He has a new little friend!",
       "difficulty": {
-        "level": "A2",
-        "estimatedReadTime": 9,
-        "wordCount": 1380,
-        "uniqueWords": 460,
-        "sentenceCount": 110
+        "level": "A1",
+        "estimatedReadTime": 5,
+        "wordCount": 500,
+        "uniqueWords": 140,
+        "sentenceCount": 70
       },
       "grammarPoints": [
         {
-          "title": "Separable Verbs (Scheidbare Werkwoorden)",
+          "title": "Word Order in Main Clauses",
           "examples": [
-            {"dutch": "Ze pakten de tenten in", "english": "They packed the tents"},
-            {"dutch": "Hij viel bijna uit de boot", "english": "He almost fell out of the boat"}
+            {"dutch": "Pluk woont in de Petteflet", "english": "Pluk lives in the Petteflet"},
+            {"dutch": "Hij heeft een klein rood autootje", "english": "He has a little red car"}
           ],
-          "explanation": "Separable verbs split into prefix and main verb. The prefix goes to the end of the clause."
+          "explanation": "In Dutch main clauses, the verb is always in second position."
         }
       ],
       "commonPhrases": [
-        {"phrase": "dat was balen", "meaning": "that was bad luck", "context": "Expressing disappointment", "example": "Dat was balen! Al zijn spullen waren weg."},
-        {"phrase": "zie je wel", "meaning": "you see", "context": "Used when a fear or prediction comes true", "example": "Zie je wel? Ik had niet mee moeten gaan."},
-        {"phrase": "rustig blijven", "meaning": "stay calm", "context": "Calming someone down", "example": "Jaap, even rustig blijven."}
+        {"phrase": "Dag Pluk", "meaning": "Hello/Bye Pluk", "context": "Greeting/farewell", "example": "Dag Pluk! Tot morgen!"},
+        {"phrase": "Echt waar", "meaning": "Really/True", "context": "Confirming truth", "example": "Ja, echt waar!"},
+        {"phrase": "Dat is jammer", "meaning": "That's too bad/pity", "context": "Expressing sympathy", "example": "Dat is jammer, zegt Pluk."}
       ],
       "vocabulary": [
-        {"dutch": "lenen", "english": "to lend", "category": "verb", "frequency": "common"},
-        {"dutch": "iedereen", "english": "everybody", "category": "pronoun", "frequency": "very common"},
-        {"dutch": "spullen", "english": "things", "category": "noun", "frequency": "common"},
-        {"dutch": "inpakken", "english": "to pack", "category": "verb", "frequency": "common"},
-        {"dutch": "veerboot", "english": "ferry", "category": "transport", "frequency": "common"},
-        {"dutch": "heerlijk", "english": "wonderful", "category": "adjective", "frequency": "common"},
-        {"dutch": "weer", "english": "weather", "category": "noun", "frequency": "very common"},
-        {"dutch": "koud", "english": "cold", "category": "adjective", "frequency": "very common"},
-        {"dutch": "huurden", "english": "rented", "category": "verb", "frequency": "common"},
-        {"dutch": "fietsten", "english": "cycled", "category": "verb", "frequency": "common"},
-        {"dutch": "eiland", "english": "island", "category": "place", "frequency": "common"},
-        {"dutch": "duinen", "english": "dunes", "category": "place", "frequency": "common"},
-        {"dutch": "hield", "english": "liked", "category": "verb", "frequency": "very common"},
-        {"dutch": "helemaal niet", "english": "not at all", "category": "adverb", "frequency": "very common"},
-        {"dutch": "bleef", "english": "stayed", "category": "verb", "frequency": "very common"},
-        {"dutch": "vloog voorbij", "english": "flew by", "category": "phrase", "frequency": "common"},
-        {"dutch": "haven", "english": "port", "category": "place", "frequency": "common"},
-        {"dutch": "vasteland", "english": "mainland", "category": "place", "frequency": "common"},
-        {"dutch": "onderweg", "english": "on the way", "category": "adverb", "frequency": "common"},
-        {"dutch": "opeens", "english": "suddenly", "category": "adverb", "frequency": "common"},
-        {"dutch": "kant", "english": "side", "category": "noun", "frequency": "very common"},
-        {"dutch": "begonnen", "english": "started", "category": "verb", "frequency": "very common"},
-        {"dutch": "roepen", "english": "to call", "category": "verb", "frequency": "very common"},
-        {"dutch": "wijzen", "english": "to point", "category": "verb", "frequency": "very common"},
-        {"dutch": "kijk", "english": "look", "category": "verb", "frequency": "very common"},
-        {"dutch": "zeehonden", "english": "seals", "category": "animals", "frequency": "uncommon"},
-        {"dutch": "aan het vechten", "english": "fighting", "category": "phrase", "frequency": "common"},
-        {"dutch": "ook", "english": "also", "category": "adverb", "frequency": "very common"},
-        {"dutch": "in het wild", "english": "in the wild", "category": "phrase", "frequency": "common"},
-        {"dutch": "reling", "english": "railing", "category": "object", "frequency": "uncommon"},
-        {"dutch": "beetje", "english": "little bit", "category": "noun", "frequency": "very common"},
-        {"dutch": "schudde", "english": "shook", "category": "verb", "frequency": "common"},
-        {"dutch": "waardoor", "english": "because of which", "category": "conjunction", "frequency": "common"},
-        {"dutch": "bovenop", "english": "on top of", "category": "preposition", "frequency": "common"},
-        {"dutch": "viel", "english": "fell", "category": "verb", "frequency": "very common"},
-        {"dutch": "voet", "english": "foot", "category": "body", "frequency": "very common"},
-        {"dutch": "rugzak", "english": "backpack", "category": "object", "frequency": "common"},
-        {"dutch": "gevallen", "english": "fallen", "category": "verb", "frequency": "very common"},
-        {"dutch": "balen", "english": "bad luck", "category": "noun", "frequency": "common"},
-        {"dutch": "weg", "english": "gone", "category": "adjective", "frequency": "very common"},
-        {"dutch": "blij", "english": "happy", "category": "adjective", "frequency": "very common"},
-        {"dutch": "zee", "english": "sea", "category": "place", "frequency": "very common"},
-        {"dutch": "het doet pijn", "english": "it hurts", "category": "phrase", "frequency": "common"},
-        {"dutch": "gebroken", "english": "broken", "category": "adjective", "frequency": "very common"},
-        {"dutch": "aangekomen", "english": "arrived", "category": "verb", "frequency": "very common"},
-        {"dutch": "meisjes", "english": "girls", "category": "noun", "frequency": "very common"},
-        {"dutch": "hielpen", "english": "helped", "category": "verb", "frequency": "very common"},
-        {"dutch": "lopen", "english": "to walk", "category": "verb", "frequency": "very common"},
-        {"dutch": "sleutels", "english": "keys", "category": "object", "frequency": "very common"},
-        {"dutch": "deur", "english": "door", "category": "object", "frequency": "very common"},
-        {"dutch": "opendoen", "english": "to open", "category": "verb", "frequency": "common"},
-        {"dutch": "ongelofelijk", "english": "unbelievable", "category": "adjective", "frequency": "common"},
-        {"dutch": "meteen", "english": "immediately", "category": "adverb", "frequency": "very common"},
-        {"dutch": "jammeren", "english": "to whine", "category": "verb", "frequency": "uncommon"},
-        {"dutch": "zie je wel", "english": "you see", "category": "phrase", "frequency": "common"},
-        {"dutch": "wilde", "english": "wanted", "category": "verb", "frequency": "very common"},
-        {"dutch": "rustig blijven", "english": "stay calm", "category": "phrase", "frequency": "common"},
-        {"dutch": "nadenken", "english": "to think", "category": "verb", "frequency": "very common"},
-        {"dutch": "schuur", "english": "shed", "category": "place", "frequency": "common"},
-        {"dutch": "klimmen", "english": "to climb", "category": "verb", "frequency": "common"},
-        {"dutch": "raam", "english": "window", "category": "object", "frequency": "very common"},
-        {"dutch": "op slot", "english": "locked", "category": "phrase", "frequency": "common"},
-        {"dutch": "hoogtevrees", "english": "fear of heights", "category": "noun", "frequency": "uncommon"},
-        {"dutch": "durf", "english": "dare", "category": "verb", "frequency": "common"},
-        {"dutch": "vanwege", "english": "because of", "category": "preposition", "frequency": "common"},
-        {"dutch": "bang", "english": "afraid", "category": "adjective", "frequency": "very common"},
-        {"dutch": "proberen", "english": "to try", "category": "verb", "frequency": "very common"},
-        {"dutch": "hoopvol", "english": "hopeful", "category": "adjective", "frequency": "common"},
-        {"dutch": "het minst", "english": "the least", "category": "phrase", "frequency": "common"},
-        {"dutch": "dacht", "english": "thought", "category": "verb", "frequency": "very common"},
-        {"dutch": "omhoog", "english": "up", "category": "adverb", "frequency": "very common"},
-        {"dutch": "lukte", "english": "managed", "category": "verb", "frequency": "common"},
-        {"dutch": "eerst", "english": "first", "category": "adverb", "frequency": "very common"},
-        {"dutch": "vond", "english": "found", "category": "verb", "frequency": "very common"},
-        {"dutch": "beneden", "english": "downstairs", "category": "adverb", "frequency": "common"},
-        {"dutch": "dankbaar", "english": "grateful", "category": "adjective", "frequency": "common"},
-        {"dutch": "opgelucht", "english": "relieved", "category": "adjective", "frequency": "common"},
-        {"dutch": "heldin", "english": "heroine", "category": "noun", "frequency": "uncommon"},
-        {"dutch": "beginnen", "english": "to start", "category": "verb", "frequency": "very common"},
-        {"dutch": "lachte", "english": "laughed", "category": "verb", "frequency": "very common"},
-        {"dutch": "zelf", "english": "herself", "category": "pronoun", "frequency": "very common"},
-        {"dutch": "verbaasd", "english": "surprised", "category": "adjective", "frequency": "very common"},
-        {"dutch": "spannend", "english": "exciting", "category": "adjective", "frequency": "very common"},
-        {"dutch": "na", "english": "after", "category": "preposition", "frequency": "very common"},
-        {"dutch": "avontuur", "english": "adventure", "category": "noun", "frequency": "common"},
-        {"dutch": "bestelden", "english": "ordered", "category": "verb", "frequency": "common"},
-        {"dutch": "Indonesisch eten", "english": "Indonesian food", "category": "food", "frequency": "uncommon"},
-        {"dutch": "oefenden", "english": "practiced", "category": "verb", "frequency": "common"},
-        {"dutch": "gekneusd", "english": "bruised", "category": "adjective", "frequency": "uncommon"},
-        {"dutch": "bleef", "english": "continued", "category": "verb", "frequency": "very common"},
-        {"dutch": "besloot", "english": "decided", "category": "verb", "frequency": "very common"},
-        {"dutch": "klimschool", "english": "climbing school", "category": "place", "frequency": "uncommon"},
-        {"dutch": "proefles", "english": "trial class", "category": "noun", "frequency": "uncommon"},
-        {"dutch": "verkocht", "english": "sold", "category": "verb", "frequency": "very common"},
-        {"dutch": "werd", "english": "became", "category": "verb", "frequency": "very common"},
-        {"dutch": "won", "english": "won", "category": "verb", "frequency": "very common"},
-        {"dutch": "een paar jaar", "english": "a couple of years", "category": "time", "frequency": "common"},
-        {"dutch": "wedstrijden", "english": "competitions", "category": "noun", "frequency": "common"},
-        {"dutch": "passie", "english": "passion", "category": "noun", "frequency": "common"},
-        {"dutch": "ontdekken", "english": "to discover", "category": "verb", "frequency": "common"}
+        {"dutch": "flat", "english": "apartment building", "category": "noun", "frequency": "common"},
+        {"dutch": "autootje", "english": "little car", "category": "noun", "frequency": "common"},
+        {"dutch": "vriend", "english": "friend", "category": "noun", "frequency": "very common"},
+        {"dutch": "raam", "english": "window", "category": "noun", "frequency": "very common"},
+        {"dutch": "speeltuin", "english": "playground", "category": "place", "frequency": "common"},
+        {"dutch": "toren", "english": "tower", "category": "noun", "frequency": "common"},
+        {"dutch": "nieuwe", "english": "new", "category": "adjective", "frequency": "very common"},
+        {"dutch": "stapt in", "english": "gets into", "category": "verb", "frequency": "common"},
+        {"dutch": "rijdt", "english": "drives", "category": "verb", "frequency": "common"},
+        {"dutch": "snel", "english": "fast", "category": "adjective", "frequency": "very common"},
+        {"dutch": "huismeester", "english": "caretaker", "category": "profession", "frequency": "uncommon"},
+        {"dutch": "echt", "english": "really", "category": "adverb", "frequency": "very common"},
+        {"dutch": "wit", "english": "white", "category": "adjective", "frequency": "very common"},
+        {"dutch": "blauw", "english": "blue", "category": "adjective", "frequency": "very common"},
+        {"dutch": "donker", "english": "dark", "category": "adjective", "frequency": "very common"},
+        {"dutch": "trapjes", "english": "little stairs", "category": "noun", "frequency": "common"},
+        {"dutch": "klimt", "english": "climbs", "category": "verb", "frequency": "common"},
+        {"dutch": "boven", "english": "upstairs/top", "category": "adverb", "frequency": "very common"},
+        {"dutch": "geluidje", "english": "little sound", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "vogeltje", "english": "little bird", "category": "noun", "frequency": "common"},
+        {"dutch": "alleen", "english": "alone", "category": "adjective", "frequency": "very common"},
+        {"dutch": "tevoorschijn", "english": "appears", "category": "adverb", "frequency": "uncommon"},
+        {"dutch": "vriendjes", "english": "little friends", "category": "noun", "frequency": "common"},
+        {"dutch": "jammer", "english": "too bad/pity", "category": "adjective", "frequency": "common"},
+        {"dutch": "worden", "english": "become", "category": "verb", "frequency": "very common"},
+        {"dutch": "wolken", "english": "clouds", "category": "noun", "frequency": "common"},
+        {"dutch": "beneden", "english": "downstairs", "category": "adverb", "frequency": "common"}
       ],
       "questions": [
         {
           "id": 1,
-          "text": "Hoe kennen de studenten elkaar?",
-          "options": ["Ze wonen samen", "Ze studeren samen", "Ze wonen en studeren samen", "Ze kennen elkaar van Ameland"],
-          "correctIndex": 2,
-          "explanation": "De eerste zin zegt: 'Een groepje studievrienden die samen een huis delen' - ze studeren én wonen samen.",
+          "text": "Waar woont Pluk?",
+          "options": ["In een huis", "In de Petteflet", "In een toren", "In een speeltuin"],
+          "correctIndex": 1,
+          "explanation": "Pluk woont in de Petteflet, een hoge flat.",
           "difficulty": "easy",
           "questionType": "factual"
         },
         {
           "id": 2,
-          "text": "Hoe gaan ze naar Ameland?",
-          "options": ["Met de fiets", "Met de bus", "Met de veerboot", "Met de bus en de veerboot"],
-          "correctIndex": 3,
-          "explanation": "Ze gaan met de bus naar Holwerd en dan met de veerboot naar Ameland.",
+          "text": "Wat heeft Pluk?",
+          "options": ["Een grote auto", "Een klein rood autootje", "Een fiets", "Een vliegtuig"],
+          "correctIndex": 1,
+          "explanation": "Pluk heeft een klein rood autootje.",
           "difficulty": "easy",
           "questionType": "factual"
         },
         {
           "id": 3,
-          "text": "Waarom gaat Babette niet mee fietsen op Ameland?",
-          "options": ["Ze had geen fiets meegenomen", "Ze kan niet fietsen", "Ze houdt niet van fietsen", "Ze was te moe om te fietsen"],
-          "correctIndex": 2,
-          "explanation": "De tekst zegt: 'Babette bleef in de tent, want die hield helemaal niet van sport.'",
+          "text": "Wat ziet Pluk bij de speeltuin?",
+          "options": ["Een nieuwe flat", "Een nieuwe toren", "Een nieuw vriendje", "Een nieuwe auto"],
+          "correctIndex": 1,
+          "explanation": "Er staat een nieuwe toren bij de speeltuin.",
           "difficulty": "easy",
           "questionType": "factual"
         },
         {
           "id": 4,
-          "text": "Wie hadden de sleutels wél meegenomen naar Ameland?",
-          "options": ["Niemand", "Tarek en Jaap", "Dieuwke en Babette", "Alle vier"],
+          "text": "Wie woont er in de toren?",
+          "options": ["Een kat", "Een vogeltje", "Meneer Pen", "Aagje"],
+          "correctIndex": 1,
+          "explanation": "Een klein vogeltje woont in de toren.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 5,
+          "text": "Waarom is het vogeltje verdrietig?",
+          "options": ["Het heeft honger", "Het is bang", "Het heeft geen vriendjes", "De toren is kapot"],
+          "correctIndex": 2,
+          "explanation": "Het vogeltje zegt: 'Ik heb geen vriendjes.'",
+          "difficulty": "medium",
+          "questionType": "inferential"
+        }
+      ],
+      "themeTags": ["friendship", "adventure", "helping others", "loneliness"],
+      "culturalNotes": [
+        {
+          "title": "Pluk van de Petteflet",
+          "content": "Written by Annie M.G. Schmidt, 'Pluk van de Petteflet' is a beloved Dutch children's book. Pluk is known for his red tow truck and his adventures in the Petteflet (a pun on 'flat' and 'pet' - a type of hat). The book teaches children about friendship and helping others."
+        }
+      ],
+      "nextStory": 3,
+      "previousStory": 1
+    },
+    {
+      "id": 3,
+      "title": "Kikker is Verliefd",
+      "titleEnglish": "Frog is in Love",
+      "location": "Pond and meadow",
+      "coordinates": {"lat": 52.0907, "lng": 5.1214},
+      "characters": [
+        {"name": "Kikker", "role": "main", "description": "A friendly frog"},
+        {"name": "Eend", "role": "supporting", "description": "Duck, one of Kikker's best friends"},
+        {"name": "Varkentje", "role": "supporting", "description": "Little pig"},
+        {"name": "Haas", "role": "supporting", "description": "Rabbit"}
+      ],
+      "settings": ["pond", "meadow", "forest"],
+      "summaryDutch": "Kikker voelt zich raar. Zijn hart klopt heel snel. Hij weet niet wat er is. Kikker gaat naar Eend. Hij wil het vragen. Maar hij is te verlegen. Dan gaat Kikker naar Varkentje. Varkentje zegt: 'Je bent verliefd!' Kikker is verliefd op Eend. Dat is een beetje gek, want Eend is anders. Maar liefde is voor iedereen.",
+      "summaryEnglish": "Frog feels strange. His heart beats very fast. He doesn't know what's wrong. Frog goes to Duck. He wants to ask her. But he is too shy. Then Frog goes to Little Pig. Little Pig says: 'You are in love!' Frog is in love with Duck. That is a little strange, because Duck is different. But love is for everyone.",
+      "fullTextDutch": "Kikker zit op een steen. Hij voelt zich raar. Zijn hart klopt heel snel. Bonk bonk bonk.\n\n\"Wat is er met mij?\" vraagt Kikker aan zichzelf.\n\nKikker kijkt naar de vijver. Daar zwemt Eend. Eend is mooi. Ze heeft witte veren en een gele snavel.\n\nKikker wil naar Eend toe gaan. Maar hij is bang. Hij is te verlegen.\n\nKikker gaat naar Varkentje. Varkentje eet een appel.\n\n\"Varkentje,\" zegt Kikker. \"Ik voel me raar. Mijn hart gaat heel snel.\"\n\nVarkentje denkt na. \"Hmmm,\" zegt Varkentje. \"Ik weet het! Je bent verliefd!\"\n\n\"Verliefd?\" zegt Kikker. \"Wat is dat?\"\n\n\"Verliefd zijn is...\" Varkentje denkt weer na. \"Je voelt je blij en een beetje gek. Je denkt de hele tijd aan iemand.\"\n\nKikker denkt aan Eend. Ja, hij denkt de hele tijd aan Eend.\n\n\"Maar ik ben een kikker,\" zegt Kikker. \"En Eend is een eend. Kunnen kikkers en eenden verliefd zijn?\"\n\n\"Waarom niet?\" zegt Varkentje. \"Liefde is voor iedereen.\"\n\nKikker gaat naar Eend. Zijn hart klopt heel hard.\n\n\"Eend,\" zegt Kikker. \"Ik... ik... ik vind je heel aardig.\"\n\nEend lacht. \"Ik vind jou ook aardig, Kikker.\"\n\n\"Echt waar?\" zegt Kikker.\n\n\"Ja, echt waar,\" zegt Eend. \"Wil je met mij naar de vijver gaan?\"\n\nKikker knikt. Ja, dat wil hij heel graag!\n\nKikker en Eend gaan naar de vijver. Ze zwemmen samen. De zon schijnt. Het water is mooi.\n\nKikker is niet meer raar. Hij is verliefd. En dat is heel fijn.",
+      "fullTextEnglish": "Frog sits on a stone. He feels strange. His heart beats very fast. Thump thump thump.\n\n\"What is wrong with me?\" Frog asks himself.\n\nFrog looks at the pond. Duck is swimming there. Duck is beautiful. She has white feathers and a yellow beak.\n\nFrog wants to go to Duck. But he is scared. He is too shy.\n\nFrog goes to Little Pig. Little Pig is eating an apple.\n\n\"Little Pig,\" says Frog. \"I feel strange. My heart is beating very fast.\"\n\nLittle Pig thinks. \"Hmmm,\" says Little Pig. \"I know! You are in love!\"\n\n\"In love?\" says Frog. \"What is that?\"\n\n\"Being in love is...\" Little Pig thinks again. \"You feel happy and a little crazy. You think about someone all the time.\"\n\nFrog thinks about Duck. Yes, he thinks about Duck all the time.\n\n\"But I am a frog,\" says Frog. \"And Duck is a duck. Can frogs and ducks be in love?\"\n\n\"Why not?\" says Little Pig. \"Love is for everyone.\"\n\nFrog goes to Duck. His heart beats very hard.\n\n\"Duck,\" says Frog. \"I... I... I like you very much.\"\n\nDuck laughs. \"I like you too, Frog.\"\n\n\"Really?\" says Frog.\n\n\"Yes, really,\" says Duck. \"Do you want to go to the pond with me?\"\n\nFrog nods. Yes, he wants that very much!\n\nFrog and Duck go to the pond. They swim together. The sun shines. The water is beautiful.\n\nFrog doesn't feel strange anymore. He is in love. And that is very nice.",
+      "difficulty": {
+        "level": "A1",
+        "estimatedReadTime": 4,
+        "wordCount": 380,
+        "uniqueWords": 110,
+        "sentenceCount": 55
+      },
+      "grammarPoints": [
+        {
+          "title": "Descriptions with 'zijn' and 'hebben'",
+          "examples": [
+            {"dutch": "Ik ben een kikker", "english": "I am a frog"},
+            {"dutch": "Ze heeft witte veren", "english": "She has white feathers"}
+          ],
+          "explanation": "'Zijn' (to be) is used for states and identities. 'Hebben' (to have) is for possession and physical attributes."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "Ik vind je aardig", "meaning": "I like you", "context": "Expressing affection", "example": "Ik vind je heel aardig, Eend."},
+        {"phrase": "Wil je met mij...", "meaning": "Do you want to ... with me?", "context": "Making an invitation", "example": "Wil je met mij naar de vijver gaan?"}
+      ],
+      "vocabulary": [
+        {"dutch": "kikker", "english": "frog", "category": "noun", "frequency": "common"},
+        {"dutch": "steen", "english": "stone", "category": "noun", "frequency": "common"},
+        {"dutch": "hart", "english": "heart", "category": "noun", "frequency": "very common"},
+        {"dutch": "klopt", "english": "beats", "category": "verb", "frequency": "common"},
+        {"dutch": "vijver", "english": "pond", "category": "place", "frequency": "common"},
+        {"dutch": "zwemt", "english": "swims", "category": "verb", "frequency": "common"},
+        {"dutch": "eend", "english": "duck", "category": "noun", "frequency": "common"},
+        {"dutch": "mooi", "english": "beautiful", "category": "adjective", "frequency": "very common"},
+        {"dutch": "veren", "english": "feathers", "category": "noun", "frequency": "common"},
+        {"dutch": "snavel", "english": "beak", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "bang", "english": "scared", "category": "adjective", "frequency": "very common"},
+        {"dutch": "verlegen", "english": "shy", "category": "adjective", "frequency": "common"},
+        {"dutch": "varkentje", "english": "little pig", "category": "noun", "frequency": "common"},
+        {"dutch": "appel", "english": "apple", "category": "food", "frequency": "very common"},
+        {"dutch": "denkt na", "english": "thinks", "category": "verb", "frequency": "very common"},
+        {"dutch": "verliefd", "english": "in love", "category": "adjective", "frequency": "common"},
+        {"dutch": "blij", "english": "happy", "category": "adjective", "frequency": "very common"},
+        {"dutch": "een beetje", "english": "a little bit", "category": "phrase", "frequency": "very common"},
+        {"dutch": "denkt aan", "english": "thinks about", "category": "verb", "frequency": "very common"},
+        {"dutch": "aardig", "english": "nice/kind", "category": "adjective", "frequency": "very common"},
+        {"dutch": "knikt", "english": "nods", "category": "verb", "frequency": "common"},
+        {"dutch": "graag", "english": "with pleasure", "category": "adverb", "frequency": "very common"},
+        {"dutch": "water", "english": "water", "category": "noun", "frequency": "very common"},
+        {"dutch": "raar", "english": "strange/weird", "category": "adjective", "frequency": "common"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Hoe voelt Kikker zich?",
+          "options": ["Blij", "Raar", "Boos", "Bang"],
+          "correctIndex": 1,
+          "explanation": "Kikker voelt zich raar en zijn hart klopt snel.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 2,
+          "text": "Op wie is Kikker verliefd?",
+          "options": ["Varkentje", "Haas", "Eend", "Zichzelf"],
+          "correctIndex": 2,
+          "explanation": "Kikker is verliefd op Eend.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Wie zegt dat Kikker verliefd is?",
+          "options": ["Eend", "Haas", "Varkentje", "Kikker zelf"],
+          "correctIndex": 2,
+          "explanation": "Varkentje zegt: 'Je bent verliefd!'",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Waarom is Kikker een beetje in de war?",
+          "options": ["Omdat hij een kikker is en Eend een eend", "Omdat hij Eend niet aardig vindt", "Omdat hij niet wil zwemmen", "Omdat Varkentje boos is"],
           "correctIndex": 0,
-          "explanation": "Geen van de vier had de sleutels meegenomen.",
+          "explanation": "Kikker vraagt of kikkers en eenden verliefd kunnen zijn.",
           "difficulty": "medium",
           "questionType": "inferential"
         },
         {
           "id": 5,
-          "text": "Wat ontdekte Babette nadat ze via de schuur het huis in moest klimmen?",
-          "options": ["Dat ze hoogtevrees heeft", "Dat Dieuwkes raam open stond", "Dat haar voet ook pijn deed", "Dat ze klimmen leuk vindt"],
-          "correctIndex": 3,
-          "explanation": "Babette was verbaasd over hoe spannend en leuk ze het klimmen vond.",
+          "text": "Wat zeggen Kikker en Eend aan het einde?",
+          "options": ["Ze worden boos", "Ze gaan samen zwemmen", "Ze gaan naar huis", "Ze eten een appel"],
+          "correctIndex": 1,
+          "explanation": "Ze zwemmen samen in de vijver.",
           "difficulty": "easy",
+          "questionType": "factual"
+        }
+      ],
+      "themeTags": ["love", "friendship", "emotions", "self-discovery"],
+      "culturalNotes": [
+        {
+          "title": "Kikker (Frog) series",
+          "content": "Written by Max Velthuijs, the 'Kikker' (Frog) books are beloved in the Netherlands and have been translated worldwide. They deal with themes like friendship, identity, and emotions in a gentle way for young children. The books won the Hans Christian Andersen Award."
+        }
+      ],
+      "nextStory": 4,
+      "previousStory": 2
+    },
+    {
+      "id": 4,
+      "title": "Rupsje Nooitgenoeg",
+      "titleEnglish": "The Very Hungry Caterpillar",
+      "location": "Garden",
+      "coordinates": {"lat": 52.1326, "lng": 5.2913},
+      "characters": [
+        {"name": "Rupsje", "role": "main", "description": "A very hungry caterpillar"},
+        {"name": "Vlinder", "role": "final", "description": "Beautiful butterfly (the caterpillar transformed)"}
+      ],
+      "settings": ["leaf", "garden", "cocoon"],
+      "summaryDutch": "Een klein rupsje komt uit een eitje. Het rupsje heeft honger. Het eet veel fruit: appel, peer, pruim, aardbei en sinaasappel. Maar het rupsje heeft nog meer honger. Het eet taart, worst, kaas en ander eten. Dan krijgt het rupsje buikpijn. Het eet een groen blad. Dat is goed. Het rupsje bouwt een cocon. Twee weken later komt er een mooie vlinder uit!",
+      "summaryEnglish": "A little caterpillar hatches from an egg. The caterpillar is hungry. It eats a lot of fruit: apple, pear, plum, strawberry, and orange. But the caterpillar is still hungry. It eats cake, sausage, cheese, and other food. Then the caterpillar gets a stomach ache. It eats a green leaf. That is good. The caterpillar builds a cocoon. Two weeks later, a beautiful butterfly comes out!",
+      "fullTextDutch": "Op een mooie dag, in het maanlicht, lag een klein eitje op een blad.\n\nOp een zondagochtend kwam het eitje open. Krak! Een klein en heel hongerig rupsje kroop eruit.\n\nHet rupsje zocht eten. Het was zo hongerig!\n\nOp maandag at het rupsje door één appel. Maar het rupsje was nog steeds hongerig.\n\nOp dinsdag at het rupsje door twee peren. Maar het rupsje was nog steeds hongerig.\n\nOp woensdag at het rupsje door drie pruimen. Maar het rupsje was nog steeds hongerig.\n\nOp donderdag at het rupsje door vier aardbeien. Maar het rupsje was nog steeds hongerig.\n\nOp vrijdag at het rupsje door vijf sinaasappels. Maar het rupsje was nog steeds hongerig.\n\nOp zaterdag at het rupsje door één stuk chocoladetaart, één ijsje, één augurk, één stuk kaas, één stuk worst, één lolly, één kersentaart, één worstje, één cupcake en één stuk watermeloen.\n\nDie nacht kreeg het rupsje buikpijn. Heel erg veel buikpijn.\n\nOp zondag at het rupsje door één mooi groen blad. Na dat blad voelde het rupsje zich veel beter.\n\nHet rupsje was niet meer klein. Het was een grote, dikke rups geworden.\n\nHet rupsje bouwde een kleine cocon. Het kroop erin. Het bleef twee weken binnen.\n\nOp een dag knaagde het rupsje door de cocon. Het kwam eruit.\n\nHet rupsje was geen rupsje meer. Het was een mooie, grote vlinder!\n\nDe vlinder vloog weg. Hij vloog naar de mooie tuin. En hij was heel gelukkig.",
+      "fullTextEnglish": "On a beautiful day, in the moonlight, a little egg lay on a leaf.\n\nOn a Sunday morning, the egg opened. Crack! A small and very hungry caterpillar crawled out.\n\nThe caterpillar looked for food. It was so hungry!\n\nOn Monday, the caterpillar ate through one apple. But the caterpillar was still hungry.\n\nOn Tuesday, the caterpillar ate through two pears. But the caterpillar was still hungry.\n\nOn Wednesday, the caterpillar ate through three plums. But the caterpillar was still hungry.\n\nOn Thursday, the caterpillar ate through four strawberries. But the caterpillar was still hungry.\n\nOn Friday, the caterpillar ate through five oranges. But the caterpillar was still hungry.\n\nOn Saturday, the caterpillar ate through one piece of chocolate cake, one ice cream, one pickle, one piece of cheese, one piece of sausage, one lollipop, one cherry pie, one sausage roll, one cupcake, and one piece of watermelon.\n\nThat night, the caterpillar got a stomach ache. A very, very bad stomach ache.\n\nOn Sunday, the caterpillar ate through one beautiful green leaf. After that leaf, the caterpillar felt much better.\n\nThe caterpillar was not small anymore. It had become a big, fat caterpillar.\n\nThe caterpillar built a small cocoon. It crawled inside. It stayed inside for two weeks.\n\nOne day, the caterpillar nibbled through the cocoon. It came out.\n\nThe caterpillar was no longer a caterpillar. It was a beautiful, big butterfly!\n\nThe butterfly flew away. It flew to the beautiful garden. And it was very happy.",
+      "difficulty": {
+        "level": "A1",
+        "estimatedReadTime": 4,
+        "wordCount": 380,
+        "uniqueWords": 100,
+        "sentenceCount": 45
+      },
+      "grammarPoints": [
+        {
+          "title": "Days of the week (Dagen van de week)",
+          "examples": [
+            {"dutch": "Op maandag at het rupsje...", "english": "On Monday the caterpillar ate..."},
+            {"dutch": "Op dinsdag at het rupsje...", "english": "On Tuesday the caterpillar ate..."}
+          ],
+          "explanation": "Days of the week in Dutch: maandag (Monday), dinsdag (Tuesday), woensdag (Wednesday), donderdag (Thursday), vrijdag (Friday), zaterdag (Saturday), zondag (Sunday)."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "nog steeds", "meaning": "still", "context": "Continuation", "example": "Het rupsje was nog steeds hongerig."},
+        {"phrase": "zich beter voelen", "meaning": "to feel better", "context": "Recovery", "example": "Het rupsje voelde zich veel beter."}
+      ],
+      "vocabulary": [
+        {"dutch": "maanlicht", "english": "moonlight", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "blad", "english": "leaf", "category": "noun", "frequency": "common"},
+        {"dutch": "zondagochtend", "english": "Sunday morning", "category": "time", "frequency": "common"},
+        {"dutch": "krak", "english": "crack", "category": "interjection", "frequency": "uncommon"},
+        {"dutch": "rupsje", "english": "caterpillar", "category": "noun", "frequency": "common"},
+        {"dutch": "kroop eruit", "english": "crawled out", "category": "verb", "frequency": "common"},
+        {"dutch": "hongerig", "english": "hungry", "category": "adjective", "frequency": "common"},
+        {"dutch": "zocht", "english": "looked for", "category": "verb", "frequency": "very common"},
+        {"dutch": "maandag", "english": "Monday", "category": "time", "frequency": "very common"},
+        {"dutch": "appel", "english": "apple", "category": "food", "frequency": "very common"},
+        {"dutch": "dinsdag", "english": "Tuesday", "category": "time", "frequency": "very common"},
+        {"dutch": "peer", "english": "pear", "category": "food", "frequency": "common"},
+        {"dutch": "woensdag", "english": "Wednesday", "category": "time", "frequency": "very common"},
+        {"dutch": "pruim", "english": "plum", "category": "food", "frequency": "uncommon"},
+        {"dutch": "donderdag", "english": "Thursday", "category": "time", "frequency": "very common"},
+        {"dutch": "aardbei", "english": "strawberry", "category": "food", "frequency": "common"},
+        {"dutch": "vrijdag", "english": "Friday", "category": "time", "frequency": "very common"},
+        {"dutch": "sinaasappel", "english": "orange", "category": "food", "frequency": "very common"},
+        {"dutch": "zaterdag", "english": "Saturday", "category": "time", "frequency": "very common"},
+        {"dutch": "chocoladetaart", "english": "chocolate cake", "category": "food", "frequency": "common"},
+        {"dutch": "ijsje", "english": "ice cream", "category": "food", "frequency": "common"},
+        {"dutch": "augurk", "english": "pickle", "category": "food", "frequency": "uncommon"},
+        {"dutch": "kaas", "english": "cheese", "category": "food", "frequency": "very common"},
+        {"dutch": "worst", "english": "sausage", "category": "food", "frequency": "common"},
+        {"dutch": "lolly", "english": "lollipop", "category": "food", "frequency": "uncommon"},
+        {"dutch": "watermeloen", "english": "watermelon", "category": "food", "frequency": "common"},
+        {"dutch": "nacht", "english": "night", "category": "time", "frequency": "very common"},
+        {"dutch": "buikpijn", "english": "stomach ache", "category": "noun", "frequency": "common"},
+        {"dutch": "dik", "english": "fat", "category": "adjective", "frequency": "very common"},
+        {"dutch": "cocon", "english": "cocoon", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "knaagde", "english": "nibbled/gnawed", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "vlinder", "english": "butterfly", "category": "noun", "frequency": "common"},
+        {"dutch": "vloog", "english": "flew", "category": "verb", "frequency": "common"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Wat komt er uit het eitje?",
+          "options": ["Een vlinder", "Een rupsje", "Een vogel", "Een appel"],
+          "correctIndex": 1,
+          "explanation": "Een klein en heel hongerig rupsje komt uit het eitje.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 2,
+          "text": "Hoeveel peren eet het rupsje op dinsdag?",
+          "options": ["Eén", "Twee", "Drie", "Vier"],
+          "correctIndex": 1,
+          "explanation": "Op dinsdag eet het rupsje door twee peren.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Wat krijgt het rupsje na zaterdag?",
+          "options": ["Honger", "Buikpijn", "Een vriendje", "Een cadeautje"],
+          "correctIndex": 1,
+          "explanation": "Die nacht krijgt het rupsje buikpijn.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Waardoor voelt het rupsje zich beter?",
+          "options": ["Door een appel", "Door een groen blad", "Door water", "Door slapen"],
+          "correctIndex": 1,
+          "explanation": "Na het groene blad voelt het rupsje zich veel beter.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 5,
+          "text": "Wat wordt het rupsje uiteindelijk?",
+          "options": ["Een mot", "Een kever", "Een vlinder", "Een bij"],
+          "correctIndex": 2,
+          "explanation": "Het rupsje wordt een mooie, grote vlinder.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        }
+      ],
+      "themeTags": ["transformation", "food", "nature", "growth"],
+      "culturalNotes": [
+        {
+          "title": "Rupsje Nooitgenoeg",
+          "content": "This is the Dutch translation of Eric Carle's 'The Very Hungry Caterpillar', one of the most beloved children's books worldwide. It teaches children about days of the week, counting, and the butterfly life cycle. The Dutch title 'Nooitgenoeg' means 'never enough', playing on the caterpillar's endless hunger."
+        }
+      ],
+      "nextStory": 5,
+      "previousStory": 3
+    },
+    {
+      "id": 5,
+      "title": "Nijntje - Nijntje aan Zee",
+      "titleEnglish": "Miffy - Miffy at the Beach",
+      "location": "Beach",
+      "coordinates": {"lat": 52.3731, "lng": 4.5622},
+      "characters": [
+        {"name": "Nijntje", "role": "main", "description": "A little white rabbit girl"},
+        {"name": "Vader", "role": "supporting", "description": "Nijntje's father"},
+        {"name": "Moeder", "role": "supporting", "description": "Nijntje's mother"}
+      ],
+      "settings": ["beach", "sand", "sea"],
+      "summaryDutch": "Nijntje gaat met haar vader en moeder naar het strand. Ze pakt haar emmer en schep. Op het strand bouwt Nijntje een zandkasteel. Ze raapt schelpen. Ze speelt in het water. De zon schijnt. Het is een fijne dag aan zee. Als de zon ondergaat, gaat Nijntje moe maar gelukkig naar huis.",
+      "summaryEnglish": "Miffy goes to the beach with her father and mother. She gets her bucket and shovel. At the beach, Miffy builds a sandcastle. She collects shells. She plays in the water. The sun shines. It's a lovely day at the sea. As the sun sets, Miffy goes home tired but happy.",
+      "fullTextDutch": "Nijntje wordt wakker. De zon schijnt. Het is een mooie dag!\n\n\"Vader! Moeder!\" roept Nijntje. \"Kunnen we naar het strand gaan?\"\n\n\"Ja, lieve Nijntje,\" zegt vader. \"We gaan naar het strand.\"\n\nNijntje pakt haar emmer. Ze pakt haar schep. Ze is er klaar voor!\n\nVader rijdt naar het strand. Nijntje kijkt uit het raam. Ze ziet de zee. Blauw en mooi.\n\n\"We zijn er!\" zegt moeder.\n\nNijntje rent naar het strand. Het zand is zacht. De zon is warm.\n\nNijntje gaat in het zand zitten. Ze pakt haar emmer en schep. Ze gaat een zandkasteel bouwen.\n\nZand in de emmer. Stampen maar. Emmer omdraaien. Voorzichtig... Ja! Een toren!\n\nNijntje bouwt nog meer torens. Ze maakt een muur. Het zandkasteel is klaar!\n\n\"Mooi!\" zegt moeder.\n\nNijntje raapt schelpen. Ze vindt een witte schelp. Ze vindt een roze schelp. Ze vindt een gekke schelp die op een spiraal lijkt.\n\nNijntje doet de schelpen in haar emmer.\n\nDan gaat Nijntje naar het water. Plas plas. Haar voeten worden nat. Het water is koud maar leuk.\n\nEen golf komt. Plons! Nijntje wordt nat. Ze lacht.\n\nVader roept: \"Nijntje! Kom eten!\"\n\nNijntje eet een broodje kaas. Het is heel lekker.\n\nNa het eten speelt Nijntje nog een tijdje. Ze rent over het strand. Ze vliegt als een vogel.\n\nDe zon begint te zakken. De lucht wordt oranje.\n\n\"Tijd om naar huis te gaan,\" zegt moeder.\n\nNijntje is moe. Maar ze is ook heel blij.\n\nIn de auto valt Nijntje bijna in slaap. Ze droomt van het strand. Van het zandkasteel. Van de schelpen. Van de zee.\n\nThuis gaat Nijntje naar bed. Morgen gaat ze weer naar het strand!",
+      "fullTextEnglish": "Miffy wakes up. The sun is shining. It's a beautiful day!\n\n\"Father! Mother!\" shouts Miffy. \"Can we go to the beach?\"\n\n\"Yes, dear Miffy,\" says father. \"We're going to the beach.\"\n\nMiffy gets her bucket. She gets her shovel. She's ready!\n\nFather drives to the beach. Miffy looks out the window. She sees the sea. Blue and beautiful.\n\n\"We're here!\" says mother.\n\nMiffy runs to the beach. The sand is soft. The sun is warm.\n\nMiffy sits in the sand. She grabs her bucket and shovel. She's going to build a sandcastle.\n\nSand in the bucket. Pack it down. Turn the bucket over. Carefully... Yes! A tower!\n\nMiffy builds more towers. She makes a wall. The sandcastle is ready!\n\n\"Beautiful!\" says mother.\n\nMiffy collects shells. She finds a white shell. She finds a pink shell. She finds a funny shell that looks like a spiral.\n\nMiffy puts the shells in her bucket.\n\nThen Miffy goes to the water. Splash splash. Her feet get wet. The water is cold but fun.\n\nA wave comes. Splash! Miffy gets wet. She laughs.\n\nFather calls: \"Miffy! Come eat!\"\n\nMiffy eats a cheese sandwich. It's very tasty.\n\nAfter eating, Miffy plays for a while. She runs on the beach. She flies like a bird.\n\nThe sun starts to set. The sky becomes orange.\n\n\"Time to go home,\" says mother.\n\nMiffy is tired. But she is also very happy.\n\nIn the car, Miffy almost falls asleep. She dreams of the beach. Of the sandcastle. Of the shells. Of the sea.\n\nAt home, Miffy goes to bed. Tomorrow she will go to the beach again!",
+      "difficulty": {
+        "level": "A1",
+        "estimatedReadTime": 4,
+        "wordCount": 350,
+        "uniqueWords": 105,
+        "sentenceCount": 52
+      },
+      "grammarPoints": [
+        {
+          "title": "Imperative (Gebiedende wijs)",
+          "examples": [
+            {"dutch": "Stampen maar", "english": "Pack it down"},
+            {"dutch": "Kijk!", "english": "Look!"}
+          ],
+          "explanation": "The imperative is used for commands or instructions. For regular verbs, use the stem of the verb."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "We zijn er!", "meaning": "We're here!", "context": "Arriving", "example": "We zijn er! zegt moeder."},
+        {"phrase": "Tijd om naar huis te gaan", "meaning": "Time to go home", "context": "Leaving", "example": "Tijd om naar huis te gaan, zegt moeder."}
+      ],
+      "vocabulary": [
+        {"dutch": "Nijntje", "english": "Miffy", "category": "name", "frequency": "common"},
+        {"dutch": "strand", "english": "beach", "category": "place", "frequency": "very common"},
+        {"dutch": "emmer", "english": "bucket", "category": "object", "frequency": "common"},
+        {"dutch": "schep", "english": "shovel", "category": "object", "frequency": "common"},
+        {"dutch": "klaar", "english": "ready", "category": "adjective", "frequency": "very common"},
+        {"dutch": "zand", "english": "sand", "category": "noun", "frequency": "very common"},
+        {"dutch": "zacht", "english": "soft", "category": "adjective", "frequency": "very common"},
+        {"dutch": "warm", "english": "warm", "category": "adjective", "frequency": "very common"},
+        {"dutch": "zandkasteel", "english": "sandcastle", "category": "noun", "frequency": "common"},
+        {"dutch": "toren", "english": "tower", "category": "noun", "frequency": "common"},
+        {"dutch": "muur", "english": "wall", "category": "noun", "frequency": "very common"},
+        {"dutch": "raapt", "english": "collects", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "schelp", "english": "shell", "category": "noun", "frequency": "common"},
+        {"dutch": "spiraal", "english": "spiral", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "plas", "english": "splash", "category": "interjection", "frequency": "uncommon"},
+        {"dutch": "nat", "english": "wet", "category": "adjective", "frequency": "very common"},
+        {"dutch": "golf", "english": "wave", "category": "noun", "frequency": "common"},
+        {"dutch": "plons", "english": "splash", "category": "interjection", "frequency": "uncommon"},
+        {"dutch": "broodje", "english": "sandwich/roll", "category": "food", "frequency": "common"},
+        {"dutch": "zakken", "english": "to set/go down", "category": "verb", "frequency": "common"},
+        {"dutch": "oranje", "english": "orange", "category": "adjective", "frequency": "common"},
+        {"dutch": "droomt", "english": "dreams", "category": "verb", "frequency": "common"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Waar gaat Nijntje naartoe?",
+          "options": ["Naar het bos", "Naar het strand", "Naar school", "Naar de stad"],
+          "correctIndex": 1,
+          "explanation": "Nijntje gaat met haar vader en moeder naar het strand.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 2,
+          "text": "Wat pakt Nijntje in voordat ze gaat?",
+          "options": ["Een bal en een boek", "Een emmer en een schep", "Een handdoek en een hoed", "Een tas en een fles"],
+          "correctIndex": 1,
+          "explanation": "Nijntje pakt haar emmer en haar schep.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Wat bouwt Nijntje op het strand?",
+          "options": ["Een huis", "Een toren", "Een zandkasteel", "Een boot"],
+          "correctIndex": 2,
+          "explanation": "Nijntje bouwt een zandkasteel met torens en een muur.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Wat vindt Nijntje in het zand?",
+          "options": ["Stenen", "Takken", "Schelpen", "Bloemen"],
+          "correctIndex": 2,
+          "explanation": "Nijntje raapt schelpen: een witte, een roze, en een gekke schelp.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 5,
+          "text": "Wat eet Nijntje op het strand?",
+          "options": ["Een appel", "Een broodje kaas", "Een ijsje", "Een banaan"],
+          "correctIndex": 1,
+          "explanation": "Nijntje eet een broodje kaas.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        }
+      ],
+      "themeTags": ["beach", "family", "summer", "nature", "playing"],
+      "culturalNotes": [
+        {
+          "title": "Nijntje (Miffy)",
+          "content": "Nijntje is a famous Dutch rabbit character created by Dick Bruna. The books use very simple shapes, clear colors, and easy words. They are perfect for very young children and Dutch learners. The name 'Nijntje' comes from 'konijntje' (little rabbit)."
+        },
+        {
+          "title": "Dutch Beaches",
+          "content": "The Netherlands has many beautiful beaches along the North Sea, such as Scheveningen, Zandvoort, and Texel. Beach visits are a popular summer activity for Dutch families."
+        }
+      ],
+      "nextStory": 6,
+      "previousStory": 4
+    },
+    {
+      "id": 6,
+      "title": "Dikkie Dik - In de Tuin",
+      "titleEnglish": "Dikkie Dik - In the Garden",
+      "location": "Garden",
+      "coordinates": {"lat": 52.0907, "lng": 5.1214},
+      "characters": [
+        {"name": "Dikkie Dik", "role": "main", "description": "A fat orange cat"},
+        {"name": "Vogeltje", "role": "supporting", "description": "A little bird"}
+      ],
+      "settings": ["garden", "grass", "tree"],
+      "summaryDutch": "Dikkie Dik is een dikke oranje kat. Hij ligt in de tuin. De zon schijnt. Het is warm. Dikkie Dik slaapt. Een vogeltje komt langs. Piep piep! Dikkie Dik wordt wakker. Hij kijkt naar het vogeltje. Het vogeltje is niet bang. Dikkie Dik is te lui om te jagen. Hij gaat weer slapen. Het vogeltje vliegt weg.",
+      "summaryEnglish": "Dikkie Dik is a fat orange cat. He is lying in the garden. The sun is shining. It is warm. Dikkie Dik is sleeping. A little bird comes by. Peep peep! Dikkie Dik wakes up. He looks at the little bird. The little bird is not scared. Dikkie Dik is too lazy to hunt. He goes back to sleep. The little bird flies away.",
+      "fullTextDutch": "Dikkie Dik is een kat. Hij is oranje. Hij is heel erg dik.\n\nDikkie Dik ligt in de tuin. Het gras is zacht. De zon schijnt.\n\nDikkie Dik slaapt. Hij droomt van vis. Mmmm, vis!\n\nPiep piep! Een vogeltje zit in de boom.\n\nDikkie Dik wordt wakker. Hij kijkt met zijn ogen. Waar komt dat geluid vandaan?\n\nHij ziet het vogeltje. Het vogeltje is klein en bruin.\n\nDikkie Dik staat langzaam op. Hij rekt zijn poten. Hij gaapt.\n\nHet vogeltje ziet Dikkie Dik. Maar het vogeltje is niet bang. Het vogeltje blijft zitten.\n\nDikkie Dik kijkt naar het vogeltje. Hij denkt: \"Moet ik jagen?\"\n\nDikkie Dik denkt na. Jagen is veel werk. Eerst sluipen. Dan springen. Dan rennen.\n\nDikkie Dik is moe. Hij is te dik om te rennen.\n\n\"Ach,\" denkt Dikkie Dik. \"Ik heb geen honger. De vis in mijn droom was lekkerder.\"\n\nDikkie Dik gaat weer liggen. Hij doet zijn ogen dicht.\n\nHet vogeltje piept nog een keer. Piep piep! Maar Dikkie Dik hoort het niet. Hij slaapt al weer.\n\nHet vogeltje vliegt weg. Het zoekt een ander avontuur.\n\nDikkie Dik droomt weer. Hij droomt van een grote kom melk. En van een zacht kussen.\n\nDe zon schijnt. De tuin is stil. Dikkie Dik slaapt tevreden.",
+      "fullTextEnglish": "Dikkie Dik is a cat. He is orange. He is very, very fat.\n\nDikkie Dik is lying in the garden. The grass is soft. The sun is shining.\n\nDikkie Dik is sleeping. He dreams of fish. Mmmm, fish!\n\nPeep peep! A little bird is sitting in the tree.\n\nDikkie Dik wakes up. He looks with his eyes. Where is that sound coming from?\n\nHe sees the little bird. The little bird is small and brown.\n\nDikkie Dik stands up slowly. He stretches his paws. He yawns.\n\nThe little bird sees Dikkie Dik. But the little bird is not scared. The little bird stays put.\n\nDikkie Dik looks at the little bird. He thinks: \"Should I hunt?\"\n\nDikkie Dik thinks about it. Hunting is a lot of work. First sneaking. Then jumping. Then running.\n\nDikkie Dik is tired. He is too fat to run.\n\n\"Oh well,\" thinks Dikkie Dik. \"I'm not hungry. The fish in my dream was tastier.\"\n\nDikkie Dik lies down again. He closes his eyes.\n\nThe little bird peeps one more time. Peep peep! But Dikkie Dik doesn't hear it. He is already sleeping again.\n\nThe little bird flies away. It looks for another adventure.\n\nDikkie Dik dreams again. He dreams of a big bowl of milk. And of a soft pillow.\n\nThe sun shines. The garden is quiet. Dikkie Dik sleeps contentedly.",
+      "difficulty": {
+        "level": "A1",
+        "estimatedReadTime": 3,
+        "wordCount": 300,
+        "uniqueWords": 90,
+        "sentenceCount": 42
+      },
+      "grammarPoints": [
+        {
+          "title": "Present Continuous with 'aan het'",
+          "examples": [
+            {"dutch": "Hij is aan het slapen", "english": "He is sleeping"},
+            {"dutch": "Hij is aan het dromen", "english": "He is dreaming"}
+          ],
+          "explanation": "To express an ongoing action, use 'zijn + aan het + infinitive'."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "Ach", "meaning": "Oh well", "context": "Expressing indifference", "example": "Ach, denkt Dikkie Dik."},
+        {"phrase": "Ik heb geen honger", "meaning": "I'm not hungry", "context": "Expressing lack of appetite", "example": "Ik heb geen honger, denkt Dikkie Dik."}
+      ],
+      "vocabulary": [
+        {"dutch": "kat", "english": "cat", "category": "noun", "frequency": "very common"},
+        {"dutch": "oranje", "english": "orange", "category": "adjective", "frequency": "common"},
+        {"dutch": "dik", "english": "fat", "category": "adjective", "frequency": "very common"},
+        {"dutch": "gras", "english": "grass", "category": "noun", "frequency": "very common"},
+        {"dutch": "slaapt", "english": "sleeps", "category": "verb", "frequency": "very common"},
+        {"dutch": "droomt", "english": "dreams", "category": "verb", "frequency": "common"},
+        {"dutch": "vis", "english": "fish", "category": "animals", "frequency": "very common"},
+        {"dutch": "vogeltje", "english": "little bird", "category": "noun", "frequency": "common"},
+        {"dutch": "boom", "english": "tree", "category": "noun", "frequency": "very common"},
+        {"dutch": "wordt wakker", "english": "wakes up", "category": "verb", "frequency": "very common"},
+        {"dutch": "geluid", "english": "sound", "category": "noun", "frequency": "very common"},
+        {"dutch": "vandaan", "english": "from", "category": "adverb", "frequency": "common"},
+        {"dutch": "klein", "english": "small", "category": "adjective", "frequency": "very common"},
+        {"dutch": "bruin", "english": "brown", "category": "adjective", "frequency": "very common"},
+        {"dutch": "langzaam", "english": "slowly", "category": "adverb", "frequency": "very common"},
+        {"dutch": "poten", "english": "paws/legs", "category": "noun", "frequency": "common"},
+        {"dutch": "gaapt", "english": "yawns", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "sluipen", "english": "to sneak", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "springen", "english": "to jump", "category": "verb", "frequency": "very common"},
+        {"dutch": "honger", "english": "hunger", "category": "noun", "frequency": "very common"},
+        {"dutch": "lekkerder", "english": "tastier", "category": "adjective", "frequency": "common"},
+        {"dutch": "gaat weer liggen", "english": "lies down again", "category": "verb", "frequency": "common"},
+        {"dutch": "kom", "english": "bowl", "category": "noun", "frequency": "common"},
+        {"dutch": "melk", "english": "milk", "category": "food", "frequency": "very common"},
+        {"dutch": "kussen", "english": "pillow/cushion", "category": "noun", "frequency": "common"},
+        {"dutch": "tevreden", "english": "content/satisfied", "category": "adjective", "frequency": "common"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Hoe ziet Dikkie Dik eruit?",
+          "options": ["Klein en wit", "Groot en zwart", "Oranje en dik", "Bruin en dun"],
+          "correctIndex": 2,
+          "explanation": "Dikkie Dik is een oranje kat en hij is heel erg dik.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 2,
+          "text": "Waar ligt Dikkie Dik?",
+          "options": ["In huis", "In de tuin", "Op de stoep", "In de keuken"],
+          "correctIndex": 1,
+          "explanation": "Dikkie Dik ligt in de tuin. Het gras is zacht.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Wat voor geluid maakt het vogeltje?",
+          "options": ["Tok tok", "Piep piep", "Kwek kwek", "Koekoe"],
+          "correctIndex": 1,
+          "explanation": "Het vogeltje maakt 'piep piep' geluid.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Waarom jaagt Dikkie Dik niet op het vogeltje?",
+          "options": ["Hij is bang", "Hij is te dik en te lui", "Het vogeltje is zijn vriend", "Hij ziet het vogeltje niet"],
+          "correctIndex": 1,
+          "explanation": "Dikkie Dik is te dik om te rennen en heeft geen honger.",
+          "difficulty": "medium",
+          "questionType": "inferential"
+        },
+        {
+          "id": 5,
+          "text": "Waar droomt Dikkie Dik over als hij weer slaapt?",
+          "options": ["Over een vogeltje", "Over een grote kom melk en een zacht kussen", "Over de tuin", "Over rennen"],
+          "correctIndex": 1,
+          "explanation": "Hij droomt van een grote kom melk en een zacht kussen.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        }
+      ],
+      "themeTags": ["animals", "laziness", "garden", "humor"],
+      "culturalNotes": [
+        {
+          "title": "Dikkie Dik",
+          "content": "Dikkie Dik is a famous Dutch cat character created by Jet Boeke. The books feature short, simple stories about a fat orange cat. The name 'Dikkie Dik' means 'Fatty Fat' - a playful name that children love. These books are often the first Dutch books young children read independently."
+        }
+      ],
+      "nextStory": 7,
+      "previousStory": 5
+    },
+    {
+      "id": 7,
+      "title": "Woezel en Pip - Samen Spelen",
+      "titleEnglish": "Woezel and Pip - Playing Together",
+      "location": "Tovertuin (Magic Garden)",
+      "coordinates": {"lat": 52.0907, "lng": 5.1214},
+      "characters": [
+        {"name": "Woezel", "role": "main", "description": "A friendly brown dog"},
+        {"name": "Pip", "role": "main", "description": "A white cat, Woezel's best friend"},
+        {"name": "Tante Perenboom", "role": "supporting", "description": "Wise pear tree"}
+      ],
+      "settings": ["Tovertuin (Magic Garden)", "flower field", "tree"],
+      "summaryDutch": "Woezel de hond en Pip de kat zijn beste vrienden. Ze spelen samen in de Tovertuin. Ze rennen door de bloemen. Ze verstoppen zich achter een boom. Ze lachen heel hard. Dan wordt het donker. Woezel is een beetje bang. Pip zegt: 'Wees niet bang, ik ben bij je!' Samen gaan ze naar huis. Vrienden zijn er voor elkaar.",
+      "summaryEnglish": "Woezel the dog and Pip the cat are best friends. They play together in the Magic Garden. They run through the flowers. They hide behind a tree. They laugh very hard. Then it gets dark. Woezel is a little scared. Pip says: 'Don't be afraid, I'm with you!' Together they go home. Friends are there for each other.",
+      "fullTextDutch": "Woezel is een hond. Hij is bruin en zacht. Pip is een kat. Zij is wit en klein.\n\nWoezel en Pip zijn beste vrienden. Ze wonen in de Tovertuin. De Tovertuin is een mooie plek.\n\nOp een dag zegt Woezel: \"Pip, zullen we gaan spelen?\"\n\n\"Ja!\" zegt Pip. \"Wat leuk!\"\n\nZe rennen door de bloemen. De bloemen zijn rood, geel en blauw. Ze zijn heel mooi.\n\nWoezel rent snel. Pip rent nog sneller. \"Ik win!\" roept Pip.\n\nDan spelen ze verstoppertje. Pip verstopt zich achter een boom. Woezel zoekt.\n\n\"Waar ben je, Pip?\" roept Woezel.\n\nPip zegt niets. Ze is stil.\n\nWoezel kijkt overal. Achter de struik. Naast de vijver. Onder de tafel.\n\nDan ziet Woezel iets wits. Daar! Achter de boom! \"Ik zie je!\" roept Woezel.\n\nPip komt tevoorschijn. Ze lachen allebei heel hard.\n\nDan wordt het donker. De zon gaat onder. De lucht wordt paars.\n\nWoezel kijkt omhoog. \"Oh,\" zegt hij. \"Het is donker.\"\n\nWoezel is een beetje bang in het donker.\n\nPip ziet dat Woezel bang is. Ze pakt zijn poot.\n\n\"Wees niet bang, Woezel,\" zegt Pip. \"Ik ben bij je. We gaan samen naar huis.\"\n\nSamen lopen Woezel en Pip naar huis. Het is donker, maar samen zijn ze niet bang.\n\nTante Perenboom staat bij het pad. Ze is een oude, wijze boom.\n\n\"Goed gedaan, Pip,\" zegt Tante Perenboom. \"Jij bent een echte vriend.\"\n\nPip glimlacht. \"Vrienden zijn er voor elkaar,\" zegt ze.\n\nWoezel en Pip gaan naar binnen. Het is warm en licht. Ze drinken een kom warme melk.\n\n\"Dank je wel, Pip,\" zegt Woezel. \"Jij bent de beste vriend.\"\n\nPip lacht. \"Jij ook, Woezel. Slaap lekker.\"\n\nWoezel valt in slaap. Hij droomt van bloemen en van zijn beste vriend Pip.",
+      "fullTextEnglish": "Woezel is a dog. He is brown and soft. Pip is a cat. She is white and small.\n\nWoezel and Pip are best friends. They live in the Magic Garden. The Magic Garden is a beautiful place.\n\nOne day, Woezel says: \"Pip, shall we go play?\"\n\n\"Yes!\" says Pip. \"How fun!\"\n\nThey run through the flowers. The flowers are red, yellow, and blue. They are very beautiful.\n\nWoezel runs fast. Pip runs even faster. \"I win!\" shouts Pip.\n\nThen they play hide and seek. Pip hides behind a tree. Woezel looks.\n\n\"Where are you, Pip?\" calls Woezel.\n\nPip says nothing. She is quiet.\n\nWoezel looks everywhere. Behind the bush. Next to the pond. Under the table.\n\nThen Woezel sees something white. There! Behind the tree! \"I see you!\" shouts Woezel.\n\nPip appears. They both laugh very hard.\n\nThen it gets dark. The sun sets. The sky becomes purple.\n\nWoezel looks up. \"Oh,\" he says. \"It's dark.\"\n\nWoezel is a little scared in the dark.\n\nPip sees that Woezel is scared. She grabs his paw.\n\n\"Don't be afraid, Woezel,\" says Pip. \"I'm with you. We'll go home together.\"\n\nTogether, Woezel and Pip walk home. It is dark, but together they are not scared.\n\nAunt Pear Tree stands by the path. She is an old, wise tree.\n\n\"Well done, Pip,\" says Aunt Pear Tree. \"You are a true friend.\"\n\nPip smiles. \"Friends are there for each other,\" she says.\n\nWoezel and Pip go inside. It is warm and light. They drink a bowl of warm milk.\n\n\"Thank you, Pip,\" says Woezel. \"You are the best friend.\"\n\nPip laughs. \"You too, Woezel. Sleep well.\"\n\nWoezel falls asleep. He dreams of flowers and of his best friend Pip.",
+      "difficulty": {
+        "level": "A1",
+        "estimatedReadTime": 5,
+        "wordCount": 420,
+        "uniqueWords": 115,
+        "sentenceCount": 60
+      },
+      "grammarPoints": [
+        {
+          "title": "Comparatives (Vergrotende trap)",
+          "examples": [
+            {"dutch": "Pip rent sneller", "english": "Pip runs faster"},
+            {"dutch": "Woezel is een beetje bang", "english": "Woezel is a little scared"}
+          ],
+          "explanation": "Comparatives are formed with -er: snel → sneller (faster), klein → kleiner (smaller)."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "Wees niet bang", "meaning": "Don't be afraid", "context": "Comforting someone", "example": "Wees niet bang, Woezel."},
+        {"phrase": "Vrienden zijn er voor elkaar", "meaning": "Friends are there for each other", "context": "About friendship", "example": "Vrienden zijn er voor elkaar, zegt Pip."}
+      ],
+      "vocabulary": [
+        {"dutch": "hond", "english": "dog", "category": "noun", "frequency": "very common"},
+        {"dutch": "bruin", "english": "brown", "category": "adjective", "frequency": "very common"},
+        {"dutch": "zacht", "english": "soft", "category": "adjective", "frequency": "very common"},
+        {"dutch": "wit", "english": "white", "category": "adjective", "frequency": "very common"},
+        {"dutch": "beste vrienden", "english": "best friends", "category": "noun", "frequency": "common"},
+        {"dutch": "Tovertuin", "english": "Magic Garden", "category": "place", "frequency": "rare"},
+        {"dutch": "plek", "english": "place", "category": "noun", "frequency": "very common"},
+        {"dutch": "rennen", "english": "to run", "category": "verb", "frequency": "very common"},
+        {"dutch": "bloemen", "english": "flowers", "category": "noun", "frequency": "very common"},
+        {"dutch": "rood", "english": "red", "category": "adjective", "frequency": "very common"},
+        {"dutch": "geel", "english": "yellow", "category": "adjective", "frequency": "very common"},
+        {"dutch": "blauw", "english": "blue", "category": "adjective", "frequency": "very common"},
+        {"dutch": "snel", "english": "fast", "category": "adjective", "frequency": "very common"},
+        {"dutch": "sneller", "english": "faster", "category": "adjective", "frequency": "common"},
+        {"dutch": "wint", "english": "wins", "category": "verb", "frequency": "very common"},
+        {"dutch": "verstoppertje", "english": "hide and seek", "category": "noun", "frequency": "common"},
+        {"dutch": "verstopt zich", "english": "hides", "category": "verb", "frequency": "common"},
+        {"dutch": "achter", "english": "behind", "category": "preposition", "frequency": "very common"},
+        {"dutch": "struik", "english": "bush", "category": "noun", "frequency": "common"},
+        {"dutch": "vijver", "english": "pond", "category": "noun", "frequency": "common"},
+        {"dutch": "onder", "english": "under", "category": "preposition", "frequency": "very common"},
+        {"dutch": "tevoorschijn", "english": "appears", "category": "adverb", "frequency": "uncommon"},
+        {"dutch": "lachen", "english": "to laugh", "category": "verb", "frequency": "very common"},
+        {"dutch": "donker", "english": "dark", "category": "adjective", "frequency": "very common"},
+        {"dutch": "paars", "english": "purple", "category": "adjective", "frequency": "common"},
+        {"dutch": "omhoog", "english": "up", "category": "adverb", "frequency": "very common"},
+        {"dutch": "bang", "english": "scared", "category": "adjective", "frequency": "very common"},
+        {"dutch": "poot", "english": "paw", "category": "noun", "frequency": "common"},
+        {"dutch": "samen", "english": "together", "category": "adverb", "frequency": "very common"},
+        {"dutch": "pad", "english": "path", "category": "noun", "frequency": "common"},
+        {"dutch": "oud", "english": "old", "category": "adjective", "frequency": "very common"},
+        {"dutch": "wijze", "english": "wise", "category": "adjective", "frequency": "common"},
+        {"dutch": "goed gedaan", "english": "well done", "category": "phrase", "frequency": "common"},
+        {"dutch": "echte vriend", "english": "true friend", "category": "noun", "frequency": "common"},
+        {"dutch": "glimlacht", "english": "smiles", "category": "verb", "frequency": "common"},
+        {"dutch": "warme melk", "english": "warm milk", "category": "food", "frequency": "common"},
+        {"dutch": "slaap lekker", "english": "sleep well", "category": "phrase", "frequency": "common"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Wat voor dieren zijn Woezel en Pip?",
+          "options": ["Allebei katten", "Allebei honden", "Een hond en een kat", "Een konijn en een muis"],
+          "correctIndex": 2,
+          "explanation": "Woezel is een hond en Pip is een kat.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 2,
+          "text": "Waar wonen Woezel en Pip?",
+          "options": ["In een huis", "In de Tovertuin", "In het bos", "In de stad"],
+          "correctIndex": 1,
+          "explanation": "Ze wonen in de Tovertuin (Magic Garden).",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Welk spelletje spelen ze?",
+          "options": ["Tikkertje", "Verstoppertje", "Voetbal", "Hinkelen"],
+          "correctIndex": 1,
+          "explanation": "Ze spelen verstoppertje. Pip verstopt zich achter een boom.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Waarom is Woezel bang?",
+          "options": ["Hij ziet een monster", "Het wordt donker", "Hij is Pip kwijt", "Hij heeft honger"],
+          "correctIndex": 1,
+          "explanation": "Woezel is een beetje bang als het donker wordt.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 5,
+          "text": "Wat zegt Tante Perenboom tegen Pip?",
+          "options": ["Je bent stout", "Goed gedaan, jij bent een echte vriend", "Ga naar huis", "Wees niet bang"],
+          "correctIndex": 1,
+          "explanation": "Tante Perenboom zegt: 'Goed gedaan, Pip. Jij bent een echte vriend.'",
+          "difficulty": "medium",
+          "questionType": "factual"
+        }
+      ],
+      "themeTags": ["friendship", "courage", "playing", "emotions"],
+      "culturalNotes": [
+        {
+          "title": "Woezel en Pip",
+          "content": "Created by Guusje Nederhorst, 'Woezel en Pip' is a popular Dutch children's series about a dog and a cat who are best friends. The stories focus on emotions, friendship, and social skills. The 'Tovertuin' (Magic Garden) is where all their adventures take place. The series has books, TV shows, and even a musical."
+        }
+      ],
+      "nextStory": 8,
+      "previousStory": 6
+    },
+    {
+      "id": 8,
+      "title": "De Gruffalo",
+      "titleEnglish": "The Gruffalo",
+      "location": "Deep dark forest",
+      "coordinates": {"lat": 52.0907, "lng": 5.1214},
+      "characters": [
+        {"name": "Muis", "role": "main", "description": "A clever little mouse"},
+        {"name": "Vos", "role": "supporting", "description": "Fox who wants to eat the mouse"},
+        {"name": "Uil", "role": "supporting", "description": "Owl who wants to eat the mouse"},
+        {"name": "Slang", "role": "supporting", "description": "Snake who wants to eat the mouse"},
+        {"name": "Gruffalo", "role": "supporting", "description": "A monster with terrible features"}
+      ],
+      "settings": ["forest", "tree", "rock", "lake"],
+      "summaryDutch": "Een kleine muis loopt door het donkere bos. Vos, uil en slang willen de muis eten. Maar de muis is slim. Hij zegt dat hij gaat eten met de Gruffalo. De Gruffalo is een monster met scherpe tanden en giftige wratten. De dieren worden bang en rennen weg. Maar dan komt de Gruffalo echt! De muis moet snel iets verzinnen. Hij zegt dat alle dieren bang zijn voor hem. De Gruffalo rent weg. De slimme muis is veilig.",
+      "summaryEnglish": "A little mouse walks through the deep dark forest. Fox, owl, and snake want to eat the mouse. But the mouse is clever. He says he is going to eat with the Gruffalo. The Gruffalo is a monster with sharp teeth and poisonous warts. The animals get scared and run away. But then the Gruffalo really appears! The mouse must quickly think of something. He says that all the animals are scared of him. The Gruffalo runs away. The clever mouse is safe.",
+      "fullTextDutch": "Een muis liep door het donkere bos. Een vos zag de muis.\n\n\"Waar ga je heen, kleine muis? Kom bij mij eten,\" zei de vos.\n\n\"Nee, dank je,\" zei de muis. \"Ik ga eten met een Gruffalo.\"\n\n\"Een Gruffalo? Wat is een Gruffalo?\" vroeg de vos.\n\n\"Een Gruffalo heeft scherpe tanden, en giftige wratten op zijn neus,\" zei de muis.\n\n\"En zijn knieën zijn knoestig, en zijn tenen zijn gebogen.\"\n\n\"Dag, muis,\" zei de vos. En hij rende weg.\n\nDe muis liep verder. Een uil zag de muis.\n\n\"Waar ga je heen, kleine muis? Kom thee drinken,\" zei de uil.\n\n\"Nee, dank je,\" zei de muis. \"Ik ga thee drinken met een Gruffalo.\"\n\n\"Een Gruffalo? Wat is een Gruffalo?\" vroeg de uil.\n\n\"Zijn ogen zijn oranje, zijn tong is zwart,\" zei de muis.\n\n\"En er zit een angel in zijn staart, die prikt heel erg.\"\n\n\"Dag, muis,\" zei de uil. En hij vloog weg.\n\nDe muis liep verder. Een slang zag de muis.\n\n\"Waar ga je heen, kleine muis? Kom hapjes eten,\" zei de slang.\n\n\"Nee, dank je,\" zei de muis. \"Ik ga hapjes eten met een Gruffalo.\"\n\n\"Een Gruffalo? Wat is een Gruffalo?\" vroeg de slang.\n\n\"Zijn rug heeft stekels, zijn buik is geel,\" zei de muis.\n\n\"En hij is heel erg groot en heel erg gemeen.\"\n\n\"Dag, muis,\" zei de slang. En hij gleed weg.\n\n\"Wat zijn die dieren toch dom,\" zei de muis. \"Er bestaat helemaal geen Gruffalo.\"\n\nMaar toen... Wat was dat? Daar was een Gruffalo!\n\nDe Gruffalo had scherpe tanden. Hij had giftige wratten. Zijn ogen waren oranje. Zijn tong was zwart.\n\n\"Ik eet je op!\" zei de Gruffalo.\n\n\"O nee!\" dacht de muis.\n\nMaar de muis was slim. Hij zei: \"Kijk eens achter je. Alle dieren zijn bang voor mij!\"\n\nDe vos, de uil en de slang stonden daar. Ze waren heel bang.\n\nDe Gruffalo keek. De dieren renden weg. Ze waren bang voor de muis?\n\n\"Ook de Gruffalo is bang voor mij,\" zei de muis.\n\nDe Gruffalo rende heel hard weg.\n\n\"Wat zijn die dieren toch dom,\" zei de muis. En hij liep verder door het donkere bos.",
+      "fullTextEnglish": "A mouse walked through the deep dark forest. A fox saw the mouse.\n\n\"Where are you going, little mouse? Come eat with me,\" said the fox.\n\n\"No, thank you,\" said the mouse. \"I'm going to eat with a Gruffalo.\"\n\n\"A Gruffalo? What is a Gruffalo?\" asked the fox.\n\n\"A Gruffalo has sharp teeth, and poisonous warts on his nose,\" said the mouse.\n\n\"And his knees are knobby, and his toes are bent.\"\n\n\"Goodbye, mouse,\" said the fox. And he ran away.\n\nThe mouse walked on. An owl saw the mouse.\n\n\"Where are you going, little mouse? Come drink tea,\" said the owl.\n\n\"No, thank you,\" said the mouse. \"I'm going to drink tea with a Gruffalo.\"\n\n\"A Gruffalo? What is a Gruffalo?\" asked the owl.\n\n\"His eyes are orange, his tongue is black,\" said the mouse.\n\n\"And there's a stinger in his tail, which stings very badly.\"\n\n\"Goodbye, mouse,\" said the owl. And he flew away.\n\nThe mouse walked on. A snake saw the mouse.\n\n\"Where are you going, little mouse? Come eat snacks,\" said the snake.\n\n\"No, thank you,\" said the mouse. \"I'm going to eat snacks with a Gruffalo.\"\n\n\"A Gruffalo? What is a Gruffalo?\" asked the snake.\n\n\"His back has spikes, his belly is yellow,\" said the mouse.\n\n\"And he is very, very big and very mean.\"\n\n\"Goodbye, mouse,\" said the snake. And he slithered away.\n\n\"How stupid those animals are,\" said the mouse. \"There is no Gruffalo at all.\"\n\nBut then... What was that? There was a Gruffalo!\n\nThe Gruffalo had sharp teeth. He had poisonous warts. His eyes were orange. His tongue was black.\n\n\"I'm going to eat you!\" said the Gruffalo.\n\n\"Oh no!\" thought the mouse.\n\nBut the mouse was clever. He said: \"Look behind you. All the animals are scared of me!\"\n\nThe fox, the owl, and the snake stood there. They were very scared.\n\nThe Gruffalo looked. The animals ran away. They were scared of the mouse?\n\n\"The Gruffalo is also scared of me,\" said the mouse.\n\nThe Gruffalo ran away very fast.\n\n\"How stupid those animals are,\" said the mouse. And he walked on through the deep dark forest.",
+      "difficulty": {
+        "level": "A2",
+        "estimatedReadTime": 6,
+        "wordCount": 520,
+        "uniqueWords": 145,
+        "sentenceCount": 65
+      },
+      "grammarPoints": [
+        {
+          "title": "Past Tense (Imperfectum)",
+          "examples": [
+            {"dutch": "Een muis liep door het bos", "english": "A mouse walked through the forest"},
+            {"dutch": "De vos zag de muis", "english": "The fox saw the mouse"}
+          ],
+          "explanation": "Strong verbs change their vowel in the past tense: lopen → liep, zien → zag. Weak verbs add -te(n) or -de(n)."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "Dag, muis", "meaning": "Goodbye, mouse", "context": "Farewell", "example": "Dag, muis, zei de vos."},
+        {"phrase": "Wat zijn die dieren dom", "meaning": "How stupid those animals are", "context": "Expressing amusement", "example": "Wat zijn die dieren toch dom, zei de muis."}
+      ],
+      "vocabulary": [
+        {"dutch": "muis", "english": "mouse", "category": "noun", "frequency": "very common"},
+        {"dutch": "liep", "english": "walked", "category": "verb", "frequency": "very common"},
+        {"dutch": "donker", "english": "dark", "category": "adjective", "frequency": "very common"},
+        {"dutch": "bos", "english": "forest", "category": "place", "frequency": "very common"},
+        {"dutch": "vos", "english": "fox", "category": "noun", "frequency": "common"},
+        {"dutch": "eten", "english": "to eat", "category": "verb", "frequency": "very common"},
+        {"dutch": "Gruffalo", "english": "Gruffalo", "category": "name", "frequency": "rare"},
+        {"dutch": "scherpe tanden", "english": "sharp teeth", "category": "noun", "frequency": "common"},
+        {"dutch": "giftige", "english": "poisonous", "category": "adjective", "frequency": "uncommon"},
+        {"dutch": "wratten", "english": "warts", "category": "noun", "frequency": "rare"},
+        {"dutch": "neus", "english": "nose", "category": "body", "frequency": "very common"},
+        {"dutch": "knieën", "english": "knees", "category": "body", "frequency": "very common"},
+        {"dutch": "gebogen", "english": "bent", "category": "adjective", "frequency": "common"},
+        {"dutch": "uil", "english": "owl", "category": "noun", "frequency": "common"},
+        {"dutch": "thee", "english": "tea", "category": "drink", "frequency": "very common"},
+        {"dutch": "ogen", "english": "eyes", "category": "body", "frequency": "very common"},
+        {"dutch": "tong", "english": "tongue", "category": "body", "frequency": "common"},
+        {"dutch": "zwart", "english": "black", "category": "adjective", "frequency": "very common"},
+        {"dutch": "angel", "english": "stinger", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "staart", "english": "tail", "category": "noun", "frequency": "common"},
+        {"dutch": "prikt", "english": "stings", "category": "verb", "frequency": "common"},
+        {"dutch": "slang", "english": "snake", "category": "noun", "frequency": "common"},
+        {"dutch": "hapjes", "english": "snacks", "category": "food", "frequency": "common"},
+        {"dutch": "stekels", "english": "spikes", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "buik", "english": "belly/stomach", "category": "body", "frequency": "common"},
+        {"dutch": "geel", "english": "yellow", "category": "adjective", "frequency": "very common"},
+        {"dutch": "groot", "english": "big", "category": "adjective", "frequency": "very common"},
+        {"dutch": "gemeen", "english": "mean", "category": "adjective", "frequency": "common"},
+        {"dutch": "dom", "english": "stupid", "category": "adjective", "frequency": "common"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Welke dieren wil de muis eten?",
+          "options": ["Vos, uil en slang", "Konijn, eekhoorn en beer", "Vogel, kat en hond", "Kikker, vis en vogel"],
+          "correctIndex": 0,
+          "explanation": "Vos, uil en slang willen de muis eten.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 2,
+          "text": "Wat zegt de muis tegen de vos?",
+          "options": ["Ik ben bang", "Ik ga eten met een Gruffalo", "Ik heb geen honger", "Ik wacht op mijn vriend"],
+          "correctIndex": 1,
+          "explanation": "De muis zegt dat hij gaat eten met een Gruffalo.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Hoe ziet de Gruffalo eruit volgens de muis?",
+          "options": ["Grote oren en een zachte staart", "Scherpe tanden, giftige wratten, oranje ogen en zwarte tong", "Blauwe vacht en lange poten", "Rode ogen en witte vleugels"],
+          "correctIndex": 1,
+          "explanation": "De muis beschrijft de Gruffalo met scherpe tanden, giftige wratten, oranje ogen en een zwarte tong.",
+          "difficulty": "medium",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Wat gebeurt er als de echte Gruffalo verschijnt?",
+          "options": ["De muis wordt opgegeten", "De muis rent weg", "De muis zegt dat alle dieren bang zijn voor hem", "De Gruffalo en de muis worden vrienden"],
+          "correctIndex": 2,
+          "explanation": "De slimme muis zegt dat alle dieren bang zijn voor hem, en de Gruffalo rent weg.",
+          "difficulty": "medium",
+          "questionType": "inferential"
+        },
+        {
+          "id": 5,
+          "text": "Wat is de boodschap van dit verhaal?",
+          "options": ["Wees niet bang voor monsters", "Slim zijn is beter dan sterk zijn", "Eet niet te veel", "Ga nooit alleen het bos in"],
+          "correctIndex": 1,
+          "explanation": "De muis is klein maar slim. Hij gebruikt zijn verstand om de dieren te slim af te zijn.",
+          "difficulty": "hard",
           "questionType": "inferential"
         }
       ],
-      "themeTags": ["friendship", "camping", "sports", "discovery", "adventure"],
+      "themeTags": ["cleverness", "forest", "animals", "humor", "imagination"],
       "culturalNotes": [
         {
-          "title": "Ameland",
-          "content": "Ameland is one of the West Frisian Islands in the north of the Netherlands. It's a popular tourist destination known for its beaches, dunes, and seal population."
-        },
-        {
-          "title": "Indonesian Food in Netherlands",
-          "content": "Due to historical ties with Indonesia (former Dutch colony), Indonesian cuisine is very popular in the Netherlands. Indo food (rijsttafel, saté, nasi goreng) is a common takeout option."
+          "title": "De Gruffalo",
+          "content": "This is the Dutch translation of Julia Donaldson's 'The Gruffalo', illustrated by Axel Scheffler. The book has been translated into over 70 languages and is a modern classic. The story teaches children that you can overcome bigger, stronger opponents using your brain, not your brawn."
         }
       ],
-      "nextStory": 3,
-      "previousStory": 1
+      "nextStory": 9,
+      "previousStory": 7
+    },
+    {
+      "id": 9,
+      "title": "Fien en Teun - Op de Boerderij",
+      "titleEnglish": "Fien and Teun - On the Farm",
+      "location": "Farm",
+      "coordinates": {"lat": 52.0907, "lng": 5.1214},
+      "characters": [
+        {"name": "Fien", "role": "main", "description": "A girl who lives on a farm"},
+        {"name": "Teun", "role": "main", "description": "A boy who lives on a farm, Fien's friend"}
+      ],
+      "settings": ["farm", "barn", "field", "farmhouse"],
+      "summaryDutch": "Fien en Teun wonen op een boerderij. Ze helpen de boer. Ze voeren de kippen. Ze melken de koeien. Ze aaien de pony. Dan is het tijd om te oogsten. De appels zijn rijp. Fien en Teun plukken appels. Ze maken appeltaart. De taart is heerlijk. Wat een fijne dag op de boerderij!",
+      "summaryEnglish": "Fien and Teun live on a farm. They help the farmer. They feed the chickens. They milk the cows. They pet the pony. Then it's time to harvest. The apples are ripe. Fien and Teun pick apples. They make apple pie. The pie is delicious. What a nice day on the farm!",
+      "fullTextDutch": "Fien en Teun wonen op de boerderij. Het is een mooie boerderij met witte muren en een rood dak.\n\nElke ochtend worden Fien en Teun vroeg wakker. De haan kraait: \"Kukelekuuu!\"\n\nTijd om te helpen!\n\nEerst gaan Fien en Teun naar de kippen. Tok tok tok. De kippen hebben honger.\n\nFien gooit graan op de grond. \"Kip kip kip!\" roept ze.\n\nDe kippen komen rennen. Ze pikken het graan op.\n\nDan gaan Fien en Teun naar de koeien. De koeien staan in de wei. Ze eten gras.\n\n\"Tijd om te melken,\" zegt Teun.\n\nTeun melkt de koe. Spuit spuit spuit. De melk stroomt in de emmer.\n\nFien geeft de koe een aai over haar rug.\n\nNa de koeien gaan Fien en Teun naar de pony. De pony heet Ster.\n\nSter is bruin met een witte vlek op zijn voorhoofd. Hij is heel zacht.\n\nFien en Teun aaien Ster. Ze geven hem een appel.\n\nSter knabbelt tevreden.\n\nDan roept de boer: \"Fien! Teun! De appels zijn rijp! Kom helpen plukken!\"\n\nFien en Teun rennen naar de boomgaard. Daar staan grote appelbomen.\n\nDe appels zijn rood en groen. Ze hangen hoog in de bomen.\n\nFien pakt een mand. Teun pakt een ladder.\n\nTeun klimt in de boom. Hij plukt de appels die hoog hangen.\n\nFien plukt de appels die laag hangen. Ze vallen niet.\n\nPlons! Een appel valt op de grond. Fien lacht.\n\nAl snel is de mand vol met appels.\n\n\"Wat hebben we veel appels!\" zegt Fien.\n\n\"Laten we appeltaart maken!\" zegt Teun.\n\nFien en Teun gaan naar de keuken. Ze wassen de appels. Ze schillen de appels. Ze snijden de appels in stukjes.\n\nMama maakt het deeg. Fien en Teun doen de appelstukjes in de taartvorm.\n\nDe taart gaat in de oven. Het ruikt heerlijk.\n\nNa een tijdje is de taart klaar. De taart is goudbruin.\n\nFien, Teun, de boer en mama eten een stuk taart. Het is heel erg lekker.\n\n\"Wat een fijne dag op de boerderij,\" zegt Fien.\n\n\"Ja,\" zegt Teun. \"Morgen gaan we weer helpen!\"",
+      "fullTextEnglish": "Fien and Teun live on the farm. It's a beautiful farm with white walls and a red roof.\n\nEvery morning, Fien and Teun wake up early. The rooster crows: \"Cock-a-doodle-doo!\"\n\nTime to help!\n\nFirst, Fien and Teun go to the chickens. Cluck cluck cluck. The chickens are hungry.\n\nFien throws grain on the ground. \"Chick chick chick!\" she calls.\n\nThe chickens come running. They peck up the grain.\n\nThen Fien and Teun go to the cows. The cows are in the meadow. They are eating grass.\n\n\"Time to milk,\" says Teun.\n\nTeun milks the cow. Squirt squirt squirt. The milk flows into the bucket.\n\nFien pets the cow on her back.\n\nAfter the cows, Fien and Teun go to the pony. The pony's name is Ster (Star).\n\nSter is brown with a white spot on his forehead. He is very soft.\n\nFien and Teun pet Ster. They give him an apple.\n\nSter nibbles contentedly.\n\nThen the farmer calls: \"Fien! Teun! The apples are ripe! Come help pick!\"\n\nFien and Teun run to the orchard. There are big apple trees there.\n\nThe apples are red and green. They hang high in the trees.\n\nFien grabs a basket. Teun grabs a ladder.\n\nTeun climbs the tree. He picks the apples that hang high.\n\nFien picks the apples that hang low. They don't fall.\n\nPlop! An apple falls on the ground. Fien laughs.\n\nSoon the basket is full of apples.\n\n\"We have so many apples!\" says Fien.\n\n\"Let's make apple pie!\" says Teun.\n\nFien and Teun go to the kitchen. They wash the apples. They peel the apples. They cut the apples into pieces.\n\nMom makes the dough. Fien and Teun put the apple pieces into the pie tin.\n\nThe pie goes into the oven. It smells delicious.\n\nAfter a while, the pie is ready. The pie is golden brown.\n\nFien, Teun, the farmer, and mom eat a piece of pie. It is very, very tasty.\n\n\"What a nice day on the farm,\" says Fien.\n\n\"Yes,\" says Teun. \"Tomorrow we'll help again!\"",
+      "difficulty": {
+        "level": "A1",
+        "estimatedReadTime": 5,
+        "wordCount": 480,
+        "uniqueWords": 125,
+        "sentenceCount": 65
+      },
+      "grammarPoints": [
+        {
+          "title": "Present Tense Verbs (Tegenwoordige tijd)",
+          "examples": [
+            {"dutch": "Fien en Teun wonen op de boerderij", "english": "Fien and Teun live on the farm"},
+            {"dutch": "Ze helpen de boer", "english": "They help the farmer"}
+          ],
+          "explanation": "Regular verbs: stem + en. For ik, use stem. For hij/zij/het/je/jij, add -t."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "Tijd om te helpen", "meaning": "Time to help", "context": "Starting work", "example": "Tijd om te helpen!"},
+        {"phrase": "Wat een fijne dag", "meaning": "What a nice day", "context": "Expressing enjoyment", "example": "Wat een fijne dag op de boerderij."}
+      ],
+      "vocabulary": [
+        {"dutch": "boerderij", "english": "farm", "category": "place", "frequency": "very common"},
+        {"dutch": "witte muren", "english": "white walls", "category": "noun", "frequency": "common"},
+        {"dutch": "rood dak", "english": "red roof", "category": "noun", "frequency": "common"},
+        {"dutch": "vroeg", "english": "early", "category": "adverb", "frequency": "very common"},
+        {"dutch": "haan", "english": "rooster", "category": "animals", "frequency": "common"},
+        {"dutch": "kraait", "english": "crows", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "kippen", "english": "chickens", "category": "animals", "frequency": "very common"},
+        {"dutch": "graan", "english": "grain", "category": "noun", "frequency": "common"},
+        {"dutch": "grond", "english": "ground", "category": "noun", "frequency": "very common"},
+        {"dutch": "pikken", "english": "peck", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "koeien", "english": "cows", "category": "animals", "frequency": "very common"},
+        {"dutch": "wei", "english": "meadow", "category": "place", "frequency": "common"},
+        {"dutch": "melken", "english": "to milk", "category": "verb", "frequency": "common"},
+        {"dutch": "stroomt", "english": "flows", "category": "verb", "frequency": "common"},
+        {"dutch": "aai", "english": "pet", "category": "verb", "frequency": "common"},
+        {"dutch": "rug", "english": "back", "category": "body", "frequency": "very common"},
+        {"dutch": "pony", "english": "pony", "category": "animals", "frequency": "common"},
+        {"dutch": "vlek", "english": "spot", "category": "noun", "frequency": "common"},
+        {"dutch": "voorhoofd", "english": "forehead", "category": "body", "frequency": "common"},
+        {"dutch": "knabbelt", "english": "nibbles", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "boer", "english": "farmer", "category": "profession", "frequency": "very common"},
+        {"dutch": "rijp", "english": "ripe", "category": "adjective", "frequency": "common"},
+        {"dutch": "boomgaard", "english": "orchard", "category": "place", "frequency": "uncommon"},
+        {"dutch": "appelbomen", "english": "apple trees", "category": "noun", "frequency": "common"},
+        {"dutch": "mand", "english": "basket", "category": "object", "frequency": "common"},
+        {"dutch": "ladder", "english": "ladder", "category": "object", "frequency": "common"},
+        {"dutch": "plukt", "english": "picks", "category": "verb", "frequency": "common"},
+        {"dutch": "laag", "english": "low", "category": "adjective", "frequency": "very common"},
+        {"dutch": "keuken", "english": "kitchen", "category": "place", "frequency": "very common"},
+        {"dutch": "wassen", "english": "to wash", "category": "verb", "frequency": "very common"},
+        {"dutch": "schillen", "english": "to peel", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "snijden", "english": "to cut", "category": "verb", "frequency": "very common"},
+        {"dutch": "stukjes", "english": "little pieces", "category": "noun", "frequency": "common"},
+        {"dutch": "deeg", "english": "dough", "category": "noun", "frequency": "common"},
+        {"dutch": "taartvorm", "english": "pie tin", "category": "noun", "frequency": "uncommon"},
+        {"dutch": "oven", "english": "oven", "category": "object", "frequency": "very common"},
+        {"dutch": "goudbruin", "english": "golden brown", "category": "adjective", "frequency": "uncommon"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Wie wonen er op de boerderij?",
+          "options": ["Fien en Teun", "De boer alleen", "Mama en papa", "Fien, Teun, de boer en mama"],
+          "correctIndex": 3,
+          "explanation": "Fien en Teun wonen op de boerderij met de boer en mama.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 2,
+          "text": "Wat doen Fien en Teun als eerste?",
+          "options": ["De koeien melken", "De kippen voeren", "De pony aaien", "Appels plukken"],
+          "correctIndex": 1,
+          "explanation": "Eerst gaan Fien en Teun naar de kippen om ze te voeren.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Hoe heet de pony?",
+          "options": ["Bruintje", "Ster", "Vlekje", "Appel"],
+          "correctIndex": 1,
+          "explanation": "De pony heet Ster, omdat hij een witte vlek op zijn voorhoofd heeft.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Wat maken Fien en Teun van de appels?",
+          "options": ["Appelsap", "Appelmoes", "Appeltaart", "Gedroogde appels"],
+          "correctIndex": 2,
+          "explanation": "Ze maken appeltaart van de geplukte appels.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 5,
+          "text": "Wat vinden Fien en Teun van het leven op de boerderij?",
+          "options": ["Ze vinden het saai", "Ze vinden het leuk en helpen graag", "Ze willen weg", "Ze zijn te moe"],
+          "correctIndex": 1,
+          "explanation": "Teun zegt: 'Morgen gaan we weer helpen!' Ze vinden het leuk op de boerderij.",
+          "difficulty": "medium",
+          "questionType": "inferential"
+        }
+      ],
+      "themeTags": ["farm", "helping", "animals", "cooking", "teamwork"],
+      "culturalNotes": [
+        {
+          "title": "Fien en Teun",
+          "content": "Fien en Teun are popular Dutch children's characters from the show 'Fien & Teun op de boerderij'. The series focuses on farm life, animals, and helping others. It's very popular among preschoolers and young children in the Netherlands."
+        },
+        {
+          "title": "Apple Pie in Netherlands",
+          "content": "Dutch apple pie (appeltaart) is famous worldwide. It's typically made with a buttery crust, cinnamon, and lots of apples. Many Dutch families have their own apple pie recipe passed down through generations."
+        }
+      ],
+      "nextStory": 10,
+      "previousStory": 8
+    },
+    {
+      "id": 10,
+      "title": "Papa en Mama Olifant - Twee Olifanten",
+      "titleEnglish": "Papa and Mama Elephant - Two Elephants",
+      "location": "Jungle",
+      "coordinates": {"lat": 52.0907, "lng": 5.1214},
+      "characters": [
+        {"name": "Papa Olifant", "role": "main", "description": "A big, strong elephant father"},
+        {"name": "Mama Olifant", "role": "main", "description": "A caring elephant mother"}
+      ],
+      "settings": ["jungle", "river", "clearing"],
+      "summaryDutch": "Papa Olifant is groot en sterk. Mama Olifant is lief en zorgzaam. Samen gaan ze op zoek naar water. De zon is heet. Ze hebben dorst. Onderweg helpen ze kleine dieren. Ze tillen een boom weg. Ze redden een vogeltje. Bij de rivier drinken ze water. Ze zijn moe maar blij. Samen zijn ze sterk.",
+      "summaryEnglish": "Papa Elephant is big and strong. Mama Elephant is sweet and caring. Together they go looking for water. The sun is hot. They are thirsty. Along the way, they help small animals. They lift a tree away. They save a little bird. At the river, they drink water. They are tired but happy. Together they are strong.",
+      "fullTextDutch": "Papa Olifant is heel groot. Hij is heel sterk. Mama Olifant is ook groot, maar zij is heel lief.\n\nDe zon schijnt. Het is warm. Papa en Mama Olifant hebben dorst.\n\n\"Laten we naar de rivier gaan,\" zegt Papa Olifant.\n\n\"Ja,\" zegt Mama Olifant. \"Ik heb dorst.\"\n\nZe lopen door de jungle. Het is een lange weg.\n\nOnderweg zien ze een boom. De boom ligt op de grond. Hij blokkeert het pad.\n\n\"Kijk,\" zegt Mama Olifant. \"Kleine dieren kunnen er niet langs.\"\n\nPapa Olifant pakt de boom met zijn slurf. Hij tilt de boom op. Hij legt de boom aan de kant.\n\n\"Dank je wel!\" roepen de kleine dieren.\n\nPapa en Mama Olifant lopen verder.\n\nDan horen ze een geluidje. Piep piep piep.\n\nEen klein vogeltje zit op de grond. Het kan niet vliegen. Een tak ligt op zijn vleugel.\n\nMama Olifant tilt de tak voorzichtig op. Ze is heel zacht.\n\nHet vogeltje kan bewegen. Het fladdert met zijn vleugels.\n\n\"Dank je wel!\" piept het vogeltje. Het vliegt weg.\n\nPapa en Mama Olifant lopen verder.\n\nDe zon wordt nog heter. Papa Olifant zweet. Mama Olifant is moe.\n\nMaar ze geven niet op.\n\nDan zien ze het water! De rivier is blauw en mooi.\n\nPapa en Mama Olifant rennen naar de rivier. Ze drinken water met hun slurven.\n\nSlurp slurp slurp. Het water is heerlijk.\n\nNa het drinken spelen ze in het water. Ze spetteren. Ze lachen.\n\n\"Wat was het warm,\" zegt Mama Olifant.\n\n\"Ja,\" zegt Papa Olifant. \"Maar samen zijn we sterk.\"\n\nZe rusten uit onder een grote boom. De zon gaat onder. De lucht wordt roze.\n\n\"Tijd om naar huis te gaan,\" zegt Papa Olifant.\n\nSamen lopen ze terug door de jungle. Ze zijn moe, maar hun hart is vol.\n\nZe hebben kleine dieren geholpen. Ze hebben water gevonden.\n\nEn ze hebben elkaar.\n\n\"Slaap lekker,\" zegt Mama Olifant.\n\n\"Slaap lekker,\" zegt Papa Olifant.\n\nDe sterren schijnen. Papa en Mama Olifant slapen tevreden.",
+      "fullTextEnglish": "Papa Elephant is very big. He is very strong. Mama Elephant is also big, but she is very sweet.\n\nThe sun is shining. It is warm. Papa and Mama Elephant are thirsty.\n\n\"Let's go to the river,\" says Papa Elephant.\n\n\"Yes,\" says Mama Elephant. \"I am thirsty.\"\n\nThey walk through the jungle. It is a long way.\n\nAlong the way, they see a tree. The tree lies on the ground. It blocks the path.\n\n\"Look,\" says Mama Elephant. \"Small animals can't get past.\"\n\nPapa Elephant grabs the tree with his trunk. He lifts the tree. He puts the tree to the side.\n\n\"Thank you!\" shout the small animals.\n\nPapa and Mama Elephant walk on.\n\nThen they hear a little sound. Peep peep peep.\n\nA little bird sits on the ground. It cannot fly. A branch lies on its wing.\n\nMama Elephant carefully lifts the branch. She is very gentle.\n\nThe little bird can move. It flutters its wings.\n\n\"Thank you!\" peeps the little bird. It flies away.\n\nPapa and Mama Elephant walk on.\n\nThe sun gets even hotter. Papa Elephant is sweating. Mama Elephant is tired.\n\nBut they don't give up.\n\nThen they see the water! The river is blue and beautiful.\n\nPapa and Mama Elephant run to the river. They drink water with their trunks.\n\nSlurp slurp slurp. The water is wonderful.\n\nAfter drinking, they play in the water. They splash. They laugh.\n\n\"It was so hot,\" says Mama Elephant.\n\n\"Yes,\" says Papa Elephant. \"But together we are strong.\"\n\nThey rest under a big tree. The sun sets. The sky becomes pink.\n\n\"Time to go home,\" says Papa Elephant.\n\nTogether they walk back through the jungle. They are tired, but their hearts are full.\n\nThey have helped small animals. They have found water.\n\nAnd they have each other.\n\n\"Sleep well,\" says Mama Elephant.\n\n\"Sleep well,\" says Papa Elephant.\n\nThe stars shine. Papa and Mama Elephant sleep contentedly.",
+      "difficulty": {
+        "level": "A1",
+        "estimatedReadTime": 5,
+        "wordCount": 460,
+        "uniqueWords": 120,
+        "sentenceCount": 58
+      },
+      "grammarPoints": [
+        {
+          "title": "Descriptions with 'heel'",
+          "examples": [
+            {"dutch": "Papa Olifant is heel groot", "english": "Papa Elephant is very big"},
+            {"dutch": "Hij is heel sterk", "english": "He is very strong"}
+          ],
+          "explanation": "'Heel' means 'very' and is used to intensify adjectives."
+        }
+      ],
+      "commonPhrases": [
+        {"phrase": "Dank je wel", "meaning": "Thank you very much", "context": "Gratitude", "example": "Dank je wel! roepen de kleine dieren."},
+        {"phrase": "Samen zijn we sterk", "meaning": "Together we are strong", "context": "About teamwork", "example": "Maar samen zijn we sterk, zegt Papa Olifant."}
+      ],
+      "vocabulary": [
+        {"dutch": "olifant", "english": "elephant", "category": "noun", "frequency": "very common"},
+        {"dutch": "groot", "english": "big", "category": "adjective", "frequency": "very common"},
+        {"dutch": "sterk", "english": "strong", "category": "adjective", "frequency": "very common"},
+        {"dutch": "lief", "english": "sweet/lovely", "category": "adjective", "frequency": "very common"},
+        {"dutch": "dorst", "english": "thirst", "category": "noun", "frequency": "very common"},
+        {"dutch": "rivier", "english": "river", "category": "place", "frequency": "very common"},
+        {"dutch": "jungle", "english": "jungle", "category": "place", "frequency": "common"},
+        {"dutch": "blokkeert", "english": "blocks", "category": "verb", "frequency": "common"},
+        {"dutch": "pad", "english": "path", "category": "noun", "frequency": "common"},
+        {"dutch": "slurf", "english": "trunk (elephant)", "category": "body", "frequency": "uncommon"},
+        {"dutch": "tilt op", "english": "lifts up", "category": "verb", "frequency": "common"},
+        {"dutch": "aan de kant", "english": "to the side", "category": "phrase", "frequency": "common"},
+        {"dutch": "vleugel", "english": "wing", "category": "body", "frequency": "common"},
+        {"dutch": "voorzichtig", "english": "carefully", "category": "adverb", "frequency": "very common"},
+        {"dutch": "fladdert", "english": "flutters", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "heter", "english": "hotter", "category": "adjective", "frequency": "common"},
+        {"dutch": "zweet", "english": "sweats", "category": "verb", "frequency": "common"},
+        {"dutch": "geven niet op", "english": "don't give up", "category": "verb", "frequency": "common"},
+        {"dutch": "spetteren", "english": "to splash", "category": "verb", "frequency": "uncommon"},
+        {"dutch": "rusten uit", "english": "rest", "category": "verb", "frequency": "common"},
+        {"dutch": "roze", "english": "pink", "category": "adjective", "frequency": "very common"},
+        {"dutch": "hart is vol", "english": "heart is full", "category": "phrase", "frequency": "common"},
+        {"dutch": "sterren", "english": "stars", "category": "noun", "frequency": "very common"},
+        {"dutch": "tevreden", "english": "contentedly", "category": "adverb", "frequency": "common"}
+      ],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Waar hebben Papa en Mama Olifant dorst van?",
+          "options": ["Van het lopen", "Van de warme zon", "Van het spelen", "Van het helpen"],
+          "correctIndex": 1,
+          "explanation": "De zon schijnt en het is warm, dus hebben ze dorst.",
+          "difficulty": "easy",
+          "questionType": "inferential"
+        },
+        {
+          "id": 2,
+          "text": "Wat doet Papa Olifant met de boom?",
+          "options": ["Hij eet de boom op", "Hij tilt de boom op en legt hem aan de kant", "Hij klimt in de boom", "Hij gaat om de boom heen"],
+          "correctIndex": 1,
+          "explanation": "Papa Olifant pakt de boom met zijn slurf, tilt hem op en legt hem aan de kant.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 3,
+          "text": "Wat is er met het vogeltje?",
+          "options": ["Het heeft honger", "Het is gevallen", "Een tak ligt op zijn vleugel", "Het is verdwaald"],
+          "correctIndex": 2,
+          "explanation": "Een tak ligt op de vleugel van het vogeltje, dus het kan niet vliegen.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 4,
+          "text": "Hoe drinken olifanten water?",
+          "options": ["Met hun mond", "Met hun slurven", "Met hun voeten", "Met hun oren"],
+          "correctIndex": 1,
+          "explanation": "Olifanten drinken water met hun slurven. Ze zuigen het water op en spuiten het in hun mond.",
+          "difficulty": "easy",
+          "questionType": "factual"
+        },
+        {
+          "id": 5,
+          "text": "Wat is de belangrijkste les van dit verhaal?",
+          "options": ["Olifanten zijn grote dieren", "De jungle is gevaarlijk", "Samen helpen en samen sterk zijn", "Water is belangrijk"],
+          "correctIndex": 2,
+          "explanation": "Papa Olifant zegt: 'Samen zijn we sterk.' Ze helpen kleine dieren en geven niet op.",
+          "difficulty": "medium",
+          "questionType": "inferential"
+        }
+      ],
+      "themeTags": ["family", "helping", "teamwork", "perseverance", "animals"],
+      "culturalNotes": [
+        {
+          "title": "Olifanten in Dutch Children's Books",
+          "content": "Elephants are popular characters in Dutch children's books because they represent strength, wisdom, and good memory. Stories about elephants often teach lessons about helping others and family values."
+        }
+      ],
+      "nextStory": null,
+      "previousStory": 9
     }
   ],
   "vocabularyMasterList": [
-    {"dutch": "trouwzaal", "english": "wedding venue", "category": "place", "frequency": "uncommon", "storyIds": [1]},
-    {"dutch": "kasteel", "english": "castle", "category": "place", "frequency": "common", "storyIds": [1]},
-    {"dutch": "bord", "english": "sign", "category": "object", "frequency": "common", "storyIds": [1]},
-    {"dutch": "binnen", "english": "inside", "category": "preposition", "frequency": "very common", "storyIds": [1]},
-    {"dutch": "naamkaartje", "english": "nametag", "category": "object", "frequency": "uncommon", "storyIds": [1]},
-    {"dutch": "kent", "english": "knows", "category": "verb", "frequency": "very common", "storyIds": [1]},
-    {"dutch": "mensen", "english": "people", "category": "noun", "frequency": "very common", "storyIds": [1, 2]},
-    {"dutch": "veranderen", "english": "to change", "category": "verb", "frequency": "very common", "storyIds": [1]},
-    {"dutch": "bruid", "english": "bride", "category": "noun", "frequency": "common", "storyIds": [1]},
-    {"dutch": "bruidegom", "english": "groom", "category": "noun", "frequency": "common", "storyIds": [1]},
-    {"dutch": "lenen", "english": "to lend", "category": "verb", "frequency": "common", "storyIds": [2]},
-    {"dutch": "iedereen", "english": "everybody", "category": "pronoun", "frequency": "very common", "storyIds": [2]},
-    {"dutch": "spullen", "english": "things", "category": "noun", "frequency": "common", "storyIds": [2]},
-    {"dutch": "veerboot", "english": "ferry", "category": "transport", "frequency": "common", "storyIds": [2]},
-    {"dutch": "heerlijk", "english": "wonderful", "category": "adjective", "frequency": "common", "storyIds": [2]},
-    {"dutch": "eiland", "english": "island", "category": "place", "frequency": "common", "storyIds": [2]},
-    {"dutch": "zeehonden", "english": "seals", "category": "animals", "frequency": "uncommon", "storyIds": [2]},
-    {"dutch": "rugzak", "english": "backpack", "category": "object", "frequency": "common", "storyIds": [2]},
-    {"dutch": "sleutels", "english": "keys", "category": "object", "frequency": "very common", "storyIds": [2]},
-    {"dutch": "klimmen", "english": "to climb", "category": "verb", "frequency": "common", "storyIds": [2]},
-    {"dutch": "passie", "english": "passion", "category": "noun", "frequency": "common", "storyIds": [2]},
-    {"dutch": "ontdekken", "english": "to discover", "category": "verb", "frequency": "common", "storyIds": [2]},
-    {"dutch": "dierentuin", "english": "zoo", "category": "place", "frequency": "common", "storyIds": [3]},
-    {"dutch": "aquarium", "english": "aquarium", "category": "place", "frequency": "common", "storyIds": [3]},
-    {"dutch": "poffertjes", "english": "tiny pancakes", "category": "food", "frequency": "uncommon", "storyIds": [3]},
-    {"dutch": "giraffen", "english": "giraffes", "category": "animals", "frequency": "common", "storyIds": [3]},
-    {"dutch": "olifanten", "english": "elephants", "category": "animals", "frequency": "common", "storyIds": [3]},
-    {"dutch": "beren", "english": "bears", "category": "animals", "frequency": "common", "storyIds": [3]},
-    {"dutch": "wolven", "english": "wolves", "category": "animals", "frequency": "common", "storyIds": [3]},
-    {"dutch": "ICT-technicus", "english": "IT technician", "category": "profession", "frequency": "uncommon", "storyIds": [4]},
-    {"dutch": "verlegen", "english": "shy", "category": "adjective", "frequency": "common", "storyIds": [4]},
-    {"dutch": "verjaardag", "english": "birthday", "category": "time", "frequency": "very common", "storyIds": [4]},
-    {"dutch": "kersenvlaai", "english": "cherry pie", "category": "food", "frequency": "uncommon", "storyIds": [4]},
-    {"dutch": "collega's", "english": "co-workers", "category": "noun", "frequency": "very common", "storyIds": [4]},
-    {"dutch": "assertiviteitscursus", "english": "assertiveness course", "category": "noun", "frequency": "rare", "storyIds": [4]},
-    {"dutch": "jurk", "english": "dress", "category": "clothing", "frequency": "common", "storyIds": [4]},
-    {"dutch": "oma", "english": "grandmother", "category": "family", "frequency": "very common", "storyIds": [4]}
+    {"dutch": "verjaardag", "english": "birthday", "category": "noun", "frequency": "very common", "storyIds": [1]},
+    {"dutch": "cadeautje", "english": "little present", "category": "noun", "frequency": "common", "storyIds": [1]},
+    {"dutch": "taart", "english": "cake", "category": "food", "frequency": "very common", "storyIds": [1, 9]},
+    {"dutch": "spelen", "english": "to play", "category": "verb", "frequency": "very common", "storyIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"dutch": "vriend", "english": "friend", "category": "noun", "frequency": "very common", "storyIds": [1, 2, 3, 7]},
+    {"dutch": "lachen", "english": "to laugh", "category": "verb", "frequency": "very common", "storyIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"dutch": "blij", "english": "happy", "category": "adjective", "frequency": "very common", "storyIds": [1, 3, 4, 5, 10]},
+    {"dutch": "mama", "english": "mom", "category": "family", "frequency": "very common", "storyIds": [1, 4, 5, 9, 10]},
+    {"dutch": "papa", "english": "dad", "category": "family", "frequency": "very common", "storyIds": [1, 4, 5, 10]},
+    {"dutch": "zon", "english": "sun", "category": "noun", "frequency": "very common", "storyIds": [1, 2, 3, 4, 5, 6, 10]},
+    {"dutch": "water", "english": "water", "category": "noun", "frequency": "very common", "storyIds": [3, 4, 10]},
+    {"dutch": "bos", "english": "forest", "category": "place", "frequency": "very common", "storyIds": [8]},
+    {"dutch": "dieren", "english": "animals", "category": "noun", "frequency": "very common", "storyIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"dutch": "samen", "english": "together", "category": "adverb", "frequency": "very common", "storyIds": [1, 2, 3, 4, 5, 7, 9, 10]},
+    {"dutch": "helpen", "english": "to help", "category": "verb", "frequency": "very common", "storyIds": [2, 3, 9, 10]},
+    {"dutch": "bang", "english": "scared", "category": "adjective", "frequency": "very common", "storyIds": [3, 6, 7]},
+    {"dutch": "donker", "english": "dark", "category": "adjective", "frequency": "very common", "storyIds": [2, 7, 8]},
+    {"dutch": "klein", "english": "small", "category": "adjective", "frequency": "very common", "storyIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"dutch": "groot", "english": "big", "category": "adjective", "frequency": "very common", "storyIds": [1, 4, 8, 9, 10]},
+    {"dutch": "lopen", "english": "to walk", "category": "verb", "frequency": "very common", "storyIds": [5, 7, 8, 10]},
+    {"dutch": "eten", "english": "to eat", "category": "verb", "frequency": "very common", "storyIds": [1, 4, 5, 8, 9]},
+    {"dutch": "drinken", "english": "to drink", "category": "verb", "frequency": "very common", "storyIds": [7, 8, 10]},
+    {"dutch": "slaap lekker", "english": "sleep well", "category": "phrase", "frequency": "common", "storyIds": [7, 10]},
+    {"dutch": "dank je wel", "english": "thank you very much", "category": "phrase", "frequency": "very common", "storyIds": [1, 8, 10]}
   ],
   "categories": {
-    "noun": ["trouwzaal", "kasteel", "bord", "naamkaartje", "mensen", "bruid", "bruidegom", "spullen", "veerboot", "eiland", "zeehonden", "rugzak", "sleutels", "passie", "dierentuin", "aquarium", "poffertjes", "giraffen", "olifanten", "beren", "wolven", "verjaardag", "kersenvlaai", "collega's", "assertiviteitscursus", "jurk", "oma"],
-    "verb": ["kent", "veranderen", "lenen", "klimmen", "ontdekken", "verrast", "antwoordde", "kwamen", "draaide", "geloven", "voelde", "ging", "kon", "gebeurd", "hoorde", "zagen", "bleef", "besloot", "werd", "won", "veranderen"],
-    "adjective": ["aangenaam", "verkeerde", "ver", "nieuwsgierig", "heerlijk", "koud", "blij", "gebroken", "verbaasd", "spannend", "opgelucht", "dankbaar", "verlegen", "trots", "verdrietig", "overstuur"],
-    "adverb": ["vast", "toevallig", "misschien", "natuurlijk", "onopvallend", "buiten", "opnieuw", "gelukkig", "net", "nooit", "minstens", "helemaal niet", "opeens", "ook", "meteen", "eerst", "beneden", "omhoog"],
-    "preposition": ["binnen", "volgens", "vanwege", "na", "bovenop"],
-    "conjunction": ["maar", "voordat", "waardoor"],
-    "pronoun": ["iemand", "iedereen", "zelf"],
-    "phrase": ["leren kennen", "bij te praten", "in de war", "het spijt me", "aan het vechten", "in het wild", "het doet pijn", "zie je wel", "rustig blijven", "op slot", "het minst", "een paar jaar", "beter laat dan nooit", "aangenaam kennis met je te maken"]
+    "animals": ["olifant", "muis", "vos", "uil", "slang", "kip", "koe", "pony", "haan", "vogeltje", "kat", "hond"],
+    "food": ["appel", "peer", "pruim", "aardbei", "sinaasappel", "kaas", "broodje", "appeltaart", "vis", "melk"],
+    "family": ["mama", "papa", "moeder", "vader"],
+    "place": ["boerderij", "strand", "tuin", "bos", "rivier", "jungle", "vijver", "Tovertuin"],
+    "emotions": ["blij", "bang", "verdrietig", "verliefd", "tevreden", "moe", "gelukkig"],
+    "actions": ["lopen", "rennen", "springen", "vliegen", "zwemmen", "eten", "drinken", "slapen", "helpen", "spelen", "lachen", "klimmen"]
   }
 }
