@@ -603,52 +603,40 @@
     
     // Load JSON Data
     function loadData() {
-        // Using the original content from story 10 as placeholder
-        // In production, this would load from dutch-stories.json
-        appData = {
-            metadata: { totalStories: 1, title: "Dutch Primary School Stories" },
-            stories: [
-                {
-                    id: 1,
-                    title: "Papa en Mama Olifant - Twee Olifanten",
-                    titleEnglish: "Papa and Mama Elephant - Two Elephants",
-                    location: "Jungle",
-                    summaryDutch: "Papa Olifant is groot en sterk. Mama Olifant is lief en zorgzaam. Samen gaan ze op zoek naar water.",
-                    summaryEnglish: "Papa Elephant is big and strong. Mama Elephant is caring. Together they search for water.",
-                    fullTextDutch: "Papa Olifant is heel groot. Hij is heel sterk. Mama Olifant is ook groot, maar zij is heel lief.\n\nDe zon schijnt. Het is warm. Papa en Mama Olifant hebben dorst.\n\n\"Laten we naar de rivier gaan,\" zegt Papa Olifant.\n\n\"Ja,\" zegt Mama Olifant. \"Ik heb dorst.\"\n\nZe lopen door de jungle. Het is een lange weg.\n\nOnderweg zien ze een boom. De boom ligt op de grond. Hij blokkeert het pad.\n\n\"Kijk,\" zegt Mama Olifant. \"Kleine dieren kunnen er niet langs.\"\n\nPapa Olifant pakt de boom met zijn slurf. Hij tilt de boom op. Hij legt de boom aan de kant.\n\n\"Dank je wel!\" roepen de kleine dieren.\n\nPapa en Mama Olifant lopen verder.\n\nDan horen ze een geluidje. Piep piep piep.\n\nEen klein vogeltje zit op de grond. Het kan niet vliegen. Een tak ligt op zijn vleugel.\n\nMama Olifant tilt de tak voorzichtig op. Ze is heel zacht.\n\nHet vogeltje kan bewegen. Het fladdert met zijn vleugels.\n\n\"Dank je wel!\" piept het vogeltje. Het vliegt weg.\n\nPapa en Mama Olifant lopen verder.\n\nDe zon wordt nog heter. Papa Olifant zweet. Mama Olifant is moe.\n\nMaar ze geven niet op.\n\nDan zien ze het water! De rivier is blauw en mooi.\n\nPapa en Mama Olifant rennen naar de rivier. Ze drinken water met hun slurven.\n\nSlurp slurp slurp. Het water is heerlijk.\n\nNa het drinken spelen ze in het water. Ze spetteren. Ze lachen.\n\n\"Wat was het warm,\" zegt Mama Olifant.\n\n\"Ja,\" zegt Papa Olifant. \"Maar samen zijn we sterk.\"\n\nZe rusten uit onder een grote boom. De zon gaat onder. De lucht wordt roze.\n\n\"Tijd om naar huis te gaan,\" zegt Papa Olifant.\n\nSamen lopen ze terug door de jungle. Ze zijn moe, maar hun hart is vol.\n\nZe hebben kleine dieren geholpen. Ze hebben water gevonden.\n\nEn ze hebben elkaar.\n\n\"Slaap lekker,\" zegt Mama Olifant.\n\n\"Slaap lekker,\" zegt Papa Olifant.\n\nDe sterren schijnen. Papa en Mama Olifant slapen tevreden.",
-                    fullTextEnglish: "Papa Elephant is very big. He is very strong. Mama Elephant is also big, but she is very sweet.\n\nThe sun is shining. It is warm. Papa and Mama Elephant are thirsty.\n\n\"Let's go to the river,\" says Papa Elephant.\n\n\"Yes,\" says Mama Elephant. \"I am thirsty.\"\n\nThey walk through the jungle. It is a long way.\n\nAlong the way, they see a tree. The tree lies on the ground. It blocks the path.\n\n\"Look,\" says Mama Elephant. \"Small animals can't get past.\"\n\nPapa Elephant grabs the tree with his trunk. He lifts the tree. He puts the tree to the side.\n\n\"Thank you!\" shout the small animals.\n\nPapa and Mama Elephant walk on.\n\nThen they hear a little sound. Peep peep peep.\n\nA little bird sits on the ground. It cannot fly. A branch lies on its wing.\n\nMama Elephant carefully lifts the branch. She is very gentle.\n\nThe little bird can move. It flutters its wings.\n\n\"Thank you!\" peeps the little bird. It flies away.\n\nPapa and Mama Elephant walk on.\n\nThe sun gets even hotter. Papa Elephant is sweating. Mama Elephant is tired.\n\nBut they don't give up.\n\nThen they see the water! The river is blue and beautiful.\n\nPapa and Mama Elephant run to the river. They drink water with their trunks.\n\nSlurp slurp slurp. The water is wonderful.\n\nAfter drinking, they play in the water. They splash. They laugh.\n\n\"It was so hot,\" says Mama Elephant.\n\n\"Yes,\" says Papa Elephant. \"But together we are strong.\"\n\nThey rest under a big tree. The sun sets. The sky becomes pink.\n\n\"Time to go home,\" says Papa Elephant.\n\nTogether they walk back through the jungle. They are tired, but their hearts are full.\n\nThey have helped small animals. They have found water.\n\nAnd they have each other.\n\n\"Sleep well,\" says Mama Elephant.\n\n\"Sleep well,\" says Papa Elephant.\n\nThe stars shine. Papa and Mama Elephant sleep contentedly.",
-                    difficulty: { level: "A1", estimatedReadTime: 5, wordCount: 460 },
-                    vocabulary: [
-                        { dutch: "olifant", english: "elephant", category: "noun" },
-                        { dutch: "groot", english: "big", category: "adjective" },
-                        { dutch: "sterk", english: "strong", category: "adjective" },
-                        { dutch: "lief", english: "sweet/lovely", category: "adjective" },
-                        { dutch: "dorst", english: "thirst", category: "noun" },
-                        { dutch: "rivier", english: "river", category: "noun" },
-                        { dutch: "jungle", english: "jungle", category: "noun" },
-                        { dutch: "slurf", english: "trunk", category: "noun" },
-                        { dutch: "voorzichtig", english: "carefully", category: "adverb" },
-                        { dutch: "samen", english: "together", category: "adverb" },
-                        { dutch: "helpen", english: "to help", category: "verb" },
-                        { dutch: "zwemmen", english: "to swim", category: "verb" },
-                        { dutch: "lachen", english: "to laugh", category: "verb" },
-                        { dutch: "slapen", english: "to sleep", category: "verb" },
-                        { dutch: "blij", english: "happy", category: "adjective" },
-                        { dutch: "moe", english: "tired", category: "adjective" }
-                    ],
-                    questions: [
-                        { id: 1, text: "Wat hebben Papa en Mama Olifant?", options: ["Honger", "Dorst", "Slaap", "Pijn"], correctIndex: 1, explanation: "De zon schijnt en het is warm, dus hebben ze dorst." },
-                        { id: 2, text: "Wat doen de olifanten met de boom?", options: ["Eten de boom op", "Tillen de boom op", "Klimmen in de boom", "Gaan om de boom heen"], correctIndex: 1, explanation: "Papa Olifant tilt de boom op en legt hem aan de kant." },
-                        { id: 3, text: "Welk dier wordt gered?", options: ["Een muis", "Een vogeltje", "Een slang", "Een kikker"], correctIndex: 1, explanation: "Mama Olifant redt een klein vogeltje met een tak op zijn vleugel." },
-                        { id: 4, text: "Hoe drinken olifanten water?", options: ["Met hun mond", "Met hun slurven", "Met hun voeten", "Met hun oren"], correctIndex: 1, explanation: "Olifanten drinken water met hun slurven." },
-                        { id: 5, text: "Wat is de boodschap van het verhaal?", options: ["Olifanten zijn groot", "Water is belangrijk", "Samen helpen en samen zijn", "De jungle is gevaarlijk"], correctIndex: 2, explanation: "Papa Olifant zegt: 'Samen zijn we sterk.'" }
-                    ]
+        // Load from the JSON file you created
+        $.getJSON('dutch-stories.json')
+            .done(function(data) {
+                appData = data;
+                console.log('Loaded', appData.stories.length, 'stories');
+                $('#loadingDiv').hide();
+                renderHomePage();
+                
+                // Initialize vocabulary learning tracker for all words
+                if (!userProgress.vocabularyLearning) {
+                    userProgress.vocabularyLearning = {};
+                    appData.stories.forEach(story => {
+                        if (story.vocabulary) {
+                            story.vocabulary.forEach(word => {
+                                if (!userProgress.vocabularyLearning[word.dutch]) {
+                                    userProgress.vocabularyLearning[word.dutch] = 0;
+                                }
+                            });
+                        }
+                    });
+                    saveUserProgress();
                 }
-            ]
-        };
-        
-        $('#loadingDiv').hide();
-        renderHomePage();
+            })
+            .fail(function(error) {
+                console.error('Error loading JSON:', error);
+                $('#loadingDiv').html(`
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Could not load dutch-stories.json. Make sure the file is in the same directory.
+                        <br><br>
+                        <small>Expected path: ./dutch-stories.json</small>
+                    </div>
+                `);
+            });
     }
     
     // Load User Progress from LocalStorage
